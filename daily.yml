@@ -1,0 +1,51 @@
+# kuda. — collects Banja Luka culture events every morning and publishes the site.
+name: Daily update
+
+on:
+  schedule:
+    - cron: "17 4 * * *"   # every day at 04:17 UTC = 05:17 in Banja Luka (06:17 in summer)
+  workflow_dispatch:        # adds a "Run workflow" button in the Actions tab
+  push:
+    branches: [main]        # also publish right after you change index.html or collect.py
+
+permissions:
+  contents: write   # saves the day's events in the repository
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Collect events
+        run: python3 collect.py
+
+      - name: Save the events in the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/events.json data/events.js
+          git diff --cached --quiet || git commit -m "Events for $(date -u +%Y-%m-%d)"
+          git push || (git pull --rebase && git push)
+
+      - name: Prepare the site
+        run: |
+          mkdir -p _site/data
+          cp index.html _site/
+          cp data/events.js data/events.json _site/data/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
