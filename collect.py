@@ -526,7 +526,8 @@ def collect_tec(src: dict, days: int, today: dt.date, log: list) -> list:
     return []
 
 def page_image(url: str) -> str | None:
-    """The main picture of an event page: og:image, twitter:image or the WordPress featured image."""
+    """The main picture of an event page: og:image, twitter:image, the WordPress featured image,
+    or else the first picture in the text."""
     page = get(url, "text/html").decode("utf-8", "replace")
     patterns = [
         r"<meta[^>]+property=[\"']og:image(?::url)?[\"'][^>]+content=[\"']([^\"']+)",
@@ -539,7 +540,9 @@ def page_image(url: str) -> str | None:
         m = re.search(pattern, page, re.I)
         if m:
             return urllib.parse.urljoin(url, html.unescape(m.group(1).strip()))
-    return None
+    # no main picture set: the first picture placed in the text, in its larger size
+    inline = re.search(r"(?is)<img[^>]+class=[\"'][^\"']*\bwp-image-\d+[^>]*>", page)
+    return best_src(inline.group(0), url) if inline else None
 
 
 def enrich_images(src: dict, events: list, log: list) -> None:

@@ -30,7 +30,8 @@
   --text: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; background: var(--paper); }
+html.at-end { background: var(--ink); }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 var(--text); }
 body:has(dialog[open]) { overflow: hidden; }
 a { color: inherit; }
@@ -64,12 +65,17 @@ svg { flex: none; }
 /* top area: days, the day's pick, filters */
 .lead { display: grid; gap: 12px; padding-top: 12px; }
 .lead > * { min-width: 0; } /* rows that scroll sideways stay inside the screen */
+.lead-rest { padding-top: 2px; }
+.daysbar { position: sticky; top: 0; z-index: 30; padding: 12px 0 10px; background: rgba(255, 255, 255, 0.92); -webkit-backdrop-filter: saturate(1.4) blur(12px); backdrop-filter: saturate(1.4) blur(12px); transition: box-shadow 0.2s ease; }
+.daysbar.stuck { box-shadow: 0 1px 0 var(--line), 0 10px 20px -14px rgba(15, 15, 15, 0.35); }
 .status { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .dot.stale { background: #8E8E86; }
-.dayhead { display: flex; flex-direction: column; gap: 4px; }
+.dayhead { display: flex; flex-direction: column; gap: 8px; padding: 8px 0 4px; }
+.dayhead .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 0.16em; color: var(--ink); }
+.dayhead .eyebrow::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
 .eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
-.daytitle { margin: 0; font: 800 clamp(30px, 9vw, 44px)/1.02 var(--display); letter-spacing: -0.03em; }
+.daytitle { margin: 0; font: 800 clamp(42px, 13vw, 60px)/0.94 var(--display); letter-spacing: -0.045em; }
 .daytitle .pt { color: var(--accent); }
 .day { flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; width: 62px; min-height: 74px; padding: 0; border: 1px solid var(--line-strong); border-radius: 16px; background: var(--paper); }
 .day small { font-size: 13px; font-weight: 600; color: var(--muted); }
@@ -249,7 +255,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   .scroller { flex-wrap: wrap; overflow: visible; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
   .lead { gap: 16px; padding-top: 24px; }
   .day { width: 66px; min-height: 78px; }
-  .daytitle { font-size: clamp(40px, 5vw, 56px); }
+  .daytitle { font-size: clamp(60px, 7vw, 92px); }
   .day b { font-size: 22px; }
   .feature { height: 360px; }
   .feature .media::after { background: linear-gradient(90deg, rgba(15, 15, 15, 0.9) 0%, rgba(15, 15, 15, 0.55) 42%, rgba(15, 15, 15, 0) 72%), linear-gradient(180deg, rgba(15, 15, 15, 0) 45%, rgba(15, 15, 15, 0.6) 100%); }
@@ -317,9 +323,12 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
 
 <main>
   <h1 class="sr-only">Kultura u Banjaluci: pozorište, koncerti, film, izložbe i razgovori</h1>
-  <section class="wrap lead" id="lead" aria-label="Izbor dana i kategorije">
+  <section class="wrap lead" aria-label="Kulturna mapa grada">
     <div class="dayhead"><p class="eyebrow">Kulturna mapa grada</p><h2 class="daytitle">Više od izlaska<span class="pt">.</span></h2></div>
-    <div class="scroller" id="days" role="group" aria-label="Izaberi dan"></div>
+  </section>
+  <div id="days-sentinel" aria-hidden="true"></div>
+  <div class="daysbar" id="daysbar"><div class="wrap"><div class="scroller" id="days" role="group" aria-label="Izaberi dan"></div></div></div>
+  <section class="wrap lead lead-rest" id="lead" aria-label="Izbor dana i kategorije">
     <div id="featured"></div>
     <div class="scroller" id="filters" role="group" aria-label="Filteri"></div>
   </section>
@@ -637,8 +646,8 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
       if (!items.length && !films.length) return "";
       const counts = [items.length ? `${items.length} ${plural(items.length)}` : "", films.length ? `${films.length} ${pluralFilm(films.length)}` : ""].filter(Boolean).join(" · ");
       const cinemas = [...new Set(films.map((e) => e.place))].join(", ");
-      return `<section class="group"${bare ? ` aria-label="${esc(d.rel)}"` : ` aria-labelledby="g-${key}"`}>
-        ${bare ? "" : `<h2 id="g-${key}">${d.rel}<span>${d.date} · ${counts}</span></h2>`}
+      return `<section class="group" aria-labelledby="g-${key}">
+        <h2 id="g-${key}">${d.rel}<span>${d.date}${bare ? "" : ` · ${counts}`}</span></h2>
         ${items.length ? `<div class="grid">${items.map(card).join("")}</div>` : ""}
         ${films.length ? `<div class="kino"><h3>U kinu<span>${esc(cinemas)} · ${films.length} ${pluralFilm(films.length)}</span></h3><div class="kino-row">${films.map(kinoCard).join("")}</div></div>` : ""}
       </section>`;
@@ -865,11 +874,11 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     else if (d.day) {
       state.day = d.day;
       render();
-      if (!t.closest("#days")) {  // "Svi kasniji događaji" at the bottom: back up to the day buttons
-        window.scrollTo({ top: 0 });
-        const on = $('#days [aria-pressed="true"]');
-        if (on) on.scrollIntoView({ block: "nearest", inline: "nearest" });
-      }
+      const on = $('#days [aria-pressed="true"]');
+      if (on) on.scrollIntoView({ block: "nearest", inline: "nearest" });
+      // scrolled down the list? go back to just under the tabs, where the new day's content starts
+      const top = $("#days-sentinel").getBoundingClientRect().top + scrollY;
+      if (scrollY > top + 1) window.scrollTo({ top, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
     }
     else if (d.cat) { state.cat = d.cat; render(); }
     else if (d.toggle === "free") { state.free = !state.free; render(); }
@@ -905,6 +914,15 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   window.addEventListener("hashchange", route);
   document.addEventListener("error", (ev) => { if (ev.target && ev.target.tagName === "IMG") ev.target.remove(); }, true);
   document.addEventListener("load", (ev) => { if (ev.target.classList && ev.target.classList.contains("fg")) markTall(ev.target); }, true);
+  // the tab bar gets a shadow once it sticks to the top
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([en]) => $("#daysbar").classList.toggle("stuck", !en.isIntersecting && en.boundingClientRect.top < 0))
+      .observe($("#days-sentinel"));
+  }
+  // pulling past the end of the page (iPhone bounce) shows the footer's dark colour, not a white strip
+  const atEnd = () => document.documentElement.classList.toggle("at-end", scrollY + innerHeight > document.documentElement.scrollHeight - 300);
+  addEventListener("scroll", atEnd, { passive: true });
+  addEventListener("resize", atEnd);
 
   renderStatus();
   render();
