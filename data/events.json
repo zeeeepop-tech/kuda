@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T15:59:19+01:00",
+  "generated_at": "2026-11-25T16:01:46+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -11,7 +11,7 @@
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 31 films, 120 film-days",
     "Banski dvor: pictures from event pages for 2 of 2 events",
-    "TMDB: sharper pictures for 0 of 24 films (0 looked up now) · add TMDB_API_KEY to look up new films"
+    "TMDB: sharper pictures for 21 of 24 films (24 looked up now)"
   ],
   "count": 161,
   "events": [
@@ -33,7 +33,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kristalni-planet/C6C01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Kristalni%20planet/planet_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/vFAvVXRyqzpf3GXp1mPp5TuLEFR.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/8DP7O3xpTbNsk6v9CnRKNQrApvQ.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kristalni-planet/6533",
       "description": "U režiji Arsena Antona Ostojića i prema originalnom scenariju legendarnog Dušana Vukotića, prvog hrvatskog dobitnika Oscara, u kina dolazi jedan od najvećih i najambicioznijih projekata suvremene hrvatske animacije – nezaboravna avantura za sve generacije. Na nedavno naseljenom…",
       "source": "Cinestar Delta Planet"
@@ -74,7 +76,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/87C01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
       "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
       "source": "Cinestar Delta Planet"
@@ -97,7 +101,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/F2C01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Shaun%20the%20Sheep%20The%20Beast%20of%20Mossy%20Bottom/shaun_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/luhCgKwlISVg583ZB68QeIceOEH.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/mG8tVv1RPAKnARWxKTND5dRgMpw.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/6539",
       "description": "Od studija Aardman Animations, višestrukih dobitnika Oscara i autora nezaboravnih hitova Wallace i Gromit te Bijeg iz kokošinjca, stiže treći nastavak urnebesne animirane avanture za cijelu obitelj! Stanovnici farme Mossy Bottom s veseljem iščekuju Noć vještica, no njihove…",
       "source": "Cinestar Delta Planet"
@@ -149,7 +155,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/CFB01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
@@ -178,7 +186,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/D8C01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/u38hNQbxvIicUdfrHpqa9puBnA9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
       "source": "Cinestar Delta Planet"
@@ -202,7 +212,9 @@
         }
       ],
       "note": "Domaći film",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Male%20stvari/male_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/8bXyvxdJclOcFRbDvWo1cxzdze1.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/9TW4zKd2FFZgqR8k5vf4oZofPMR.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/male-stvari/6627",
       "description": "Jednog zimskog vikenda, sestre Anica i Irena, koja dovodi i svoje dvoje male djece, dolaze posjetiti oca koji živi na otoku s njihovim bratom Ivanom, šutljivim osobenjakom. Motiv za posjetu je očeva odluka da proda obiteljsku zemlju. Dvije sestre, dvoje djece i dva muškarca koja…",
       "source": "Cinestar Delta Planet"
@@ -231,7 +243,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/14C01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sPID7NqwpNdSAEMhazCvidxxeNo.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
       "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
       "source": "Cinestar Delta Planet"
@@ -282,7 +296,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere-cinelady/1FB01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sWoP8TUgmdfJ9BllzL7OkBVPCwf.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere-cinelady/6643",
       "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
       "source": "Cinestar Delta Planet"
@@ -305,7 +321,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/B3C01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3uLA0ujne91bkzFStZICCYeqhnt.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
       "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
       "source": "Cinestar Delta Planet"
@@ -344,7 +362,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/druga-mama/D5C01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Other%20Mommy/OtherMommyBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/7FwbNobzLNQRkqScxRKYS49bwH5.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/smZ8BT4Vzw4iCEppTLCnN8jNYtn.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/druga-mama/6611",
       "description": "Mogu li da uđem u tvoje srce? Od producenta Jamesa Wana, jednog od najuticajnijih tvoraca moderne horor kinematografije, i studija Blumhouse Atomic Monster , koji stoji iza filmova Backrooms: Bez izlaza i Opsesija, stiže zastrašujuće ostvarenje perspektivnog žanrovskog reditelja…",
       "source": "Cinestar Delta Planet"
@@ -367,7 +387,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/talent-za-ubojstvo/E1C01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/A%20Talent%20for%20Murder/talent_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/xcOxmuBQBTagi9vXJOVlQt3axmX.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/b3EGc5Ucj7wIeUjFc64Wq4IYgkp.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/talent-za-ubojstvo/6601",
       "description": "Dobitnica nagrade Oscar® Helen Mirren utjelovljuje legendarnu spisateljicu Patriciju Highsmith u napetom psihološkom trileru u kojem se granica između književne fikcije i stvarnosti počinje opasno brisati. Tajanstveni mladi zaposlenik njujorške izdavačke kuće (Alden Ehrenreich)…",
       "source": "Cinestar Delta Planet"
@@ -408,7 +430,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/CCC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
       "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
       "source": "Cinestar Delta Planet"
@@ -449,7 +473,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/A1D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
       "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
       "source": "Cinestar Delta Planet"
@@ -495,7 +521,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/5AC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
@@ -524,7 +552,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/50D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/p6oLmq5KmuWY6uRXBQBL2q30jia.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/7QshsnWS3NIZp60qMgcYm1C6dxm.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
       "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
       "source": "Cinestar Delta Planet"
@@ -547,7 +577,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/BDC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sPID7NqwpNdSAEMhazCvidxxeNo.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
       "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
       "source": "Cinestar Delta Planet"
@@ -610,7 +642,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/FEC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/wtTiQYmdRsFLLOUeZMxX3e6fcB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/r4DTGm1f1r23cyjRJ5kFMh7qYlj.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
       "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
       "source": "Cinestar Delta Planet"
@@ -639,7 +673,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/ECC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sWoP8TUgmdfJ9BllzL7OkBVPCwf.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
       "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
       "source": "Cinestar Delta Planet"
@@ -662,7 +698,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/CDC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3uLA0ujne91bkzFStZICCYeqhnt.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
       "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
       "source": "Cinestar Delta Planet"
@@ -685,7 +723,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/03D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/u38hNQbxvIicUdfrHpqa9puBnA9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
       "source": "Cinestar Delta Planet"
@@ -726,7 +766,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/FCC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
       "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
       "source": "Cinestar Delta Planet"
@@ -767,7 +809,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/72D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
       "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
       "source": "Cinestar Delta Planet"
@@ -813,7 +857,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/6AC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
@@ -842,7 +888,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/21D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/p6oLmq5KmuWY6uRXBQBL2q30jia.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/7QshsnWS3NIZp60qMgcYm1C6dxm.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
       "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
       "source": "Cinestar Delta Planet"
@@ -865,7 +913,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/DDC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sPID7NqwpNdSAEMhazCvidxxeNo.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
       "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
       "source": "Cinestar Delta Planet"
@@ -906,7 +956,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/CFC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/wtTiQYmdRsFLLOUeZMxX3e6fcB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/r4DTGm1f1r23cyjRJ5kFMh7qYlj.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
       "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
       "source": "Cinestar Delta Planet"
@@ -935,7 +987,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/5DC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sWoP8TUgmdfJ9BllzL7OkBVPCwf.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
       "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
       "source": "Cinestar Delta Planet"
@@ -974,7 +1028,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/3EC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3uLA0ujne91bkzFStZICCYeqhnt.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
       "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
       "source": "Cinestar Delta Planet"
@@ -997,7 +1053,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/A3D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/u38hNQbxvIicUdfrHpqa9puBnA9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
       "source": "Cinestar Delta Planet"
@@ -1074,7 +1132,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/0DC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
       "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
       "source": "Cinestar Delta Planet"
@@ -1097,7 +1157,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ostrvo-sjecanja/2BC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Forgotten%20Island/island_300x400_bih.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/rVllj4zmmmNffcsblWjmR7tU887.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/2o9FzuBzCqrDTdlHRuEVnGD2d5h.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ostrvo-sjecanja/6544",
       "description": "\"Vrijedi se boriti za vaše najbolje prijateljstvo.\" Studio DreamWorks Animation, poznat po nezaboravnim vezama između dječaka i zmaja u Kako da dresirate svog zmaja, između ogra i magarca u Shreku, kao i između robota i guščeta u filmu Neukrotivi robot, donosi novu, blistavu i…",
       "source": "Cinestar Delta Planet"
@@ -1126,7 +1188,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/9BC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Animal%20Farm/animal%20farm_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yM9xRTolPXSjhyQWXwmkcV3Wtne.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/kGGYjn3KpB2FUa5X7wAGs7MZQFD.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/zivotinjska-farma/6599",
       "description": "Iz maštovitog svijeta Andyja Serkisa stiže nova, zabavna i pustolovna ekranizacija Orwellova bezvremenskoga klasika. Kada životinje preuzmu upravljanje farmom, vjeruju da ih očekuje pravedniji i bolji život. No njihove se velike zamisli ubrzo počinju mijenjati, a zajedništvo…",
       "source": "Cinestar Delta Planet"
@@ -1155,7 +1219,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/9EC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Shaun%20the%20Sheep%20The%20Beast%20of%20Mossy%20Bottom/shaun_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/luhCgKwlISVg583ZB68QeIceOEH.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/mG8tVv1RPAKnARWxKTND5dRgMpw.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/6539",
       "description": "Od studija Aardman Animations, višestrukih dobitnika Oscara i autora nezaboravnih hitova Wallace i Gromit te Bijeg iz kokošinjca, stiže treći nastavak urnebesne animirane avanture za cijelu obitelj! Stanovnici farme Mossy Bottom s veseljem iščekuju Noć vještica, no njihove…",
       "source": "Cinestar Delta Planet"
@@ -1196,7 +1262,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/7AC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
@@ -1219,7 +1287,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kristalni-planet/4BC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Kristalni%20planet/planet_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/vFAvVXRyqzpf3GXp1mPp5TuLEFR.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/8DP7O3xpTbNsk6v9CnRKNQrApvQ.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kristalni-planet/6533",
       "description": "U režiji Arsena Antona Ostojića i prema originalnom scenariju legendarnog Dušana Vukotića, prvog hrvatskog dobitnika Oscara, u kina dolazi jedan od najvećih i najambicioznijih projekata suvremene hrvatske animacije – nezaboravna avantura za sve generacije. Na nedavno naseljenom…",
       "source": "Cinestar Delta Planet"
@@ -1283,7 +1353,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/82D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
       "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
       "source": "Cinestar Delta Planet"
@@ -1335,7 +1407,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/31D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/p6oLmq5KmuWY6uRXBQBL2q30jia.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/7QshsnWS3NIZp60qMgcYm1C6dxm.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
       "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
       "source": "Cinestar Delta Planet"
@@ -1358,7 +1432,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/EDC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sPID7NqwpNdSAEMhazCvidxxeNo.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
       "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
       "source": "Cinestar Delta Planet"
@@ -1415,7 +1491,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/DFC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/wtTiQYmdRsFLLOUeZMxX3e6fcB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/r4DTGm1f1r23cyjRJ5kFMh7qYlj.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
       "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
       "source": "Cinestar Delta Planet"
@@ -1444,7 +1522,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/6DC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sWoP8TUgmdfJ9BllzL7OkBVPCwf.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
       "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
       "source": "Cinestar Delta Planet"
@@ -1467,7 +1547,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/4EC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3uLA0ujne91bkzFStZICCYeqhnt.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
       "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
       "source": "Cinestar Delta Planet"
@@ -1490,7 +1572,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/B3D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/u38hNQbxvIicUdfrHpqa9puBnA9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
       "source": "Cinestar Delta Planet"
@@ -1567,7 +1651,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/1DC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
       "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
       "source": "Cinestar Delta Planet"
@@ -1590,7 +1676,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ostrvo-sjecanja/3BC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Forgotten%20Island/island_300x400_bih.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/rVllj4zmmmNffcsblWjmR7tU887.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/2o9FzuBzCqrDTdlHRuEVnGD2d5h.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ostrvo-sjecanja/6544",
       "description": "\"Vrijedi se boriti za vaše najbolje prijateljstvo.\" Studio DreamWorks Animation, poznat po nezaboravnim vezama između dječaka i zmaja u Kako da dresirate svog zmaja, između ogra i magarca u Shreku, kao i između robota i guščeta u filmu Neukrotivi robot, donosi novu, blistavu i…",
       "source": "Cinestar Delta Planet"
@@ -1619,7 +1707,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/8BC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Animal%20Farm/animal%20farm_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yM9xRTolPXSjhyQWXwmkcV3Wtne.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/kGGYjn3KpB2FUa5X7wAGs7MZQFD.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/zivotinjska-farma/6599",
       "description": "Iz maštovitog svijeta Andyja Serkisa stiže nova, zabavna i pustolovna ekranizacija Orwellova bezvremenskoga klasika. Kada životinje preuzmu upravljanje farmom, vjeruju da ih očekuje pravedniji i bolji život. No njihove se velike zamisli ubrzo počinju mijenjati, a zajedništvo…",
       "source": "Cinestar Delta Planet"
@@ -1648,7 +1738,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/AEC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Shaun%20the%20Sheep%20The%20Beast%20of%20Mossy%20Bottom/shaun_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/luhCgKwlISVg583ZB68QeIceOEH.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/mG8tVv1RPAKnARWxKTND5dRgMpw.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/6539",
       "description": "Od studija Aardman Animations, višestrukih dobitnika Oscara i autora nezaboravnih hitova Wallace i Gromit te Bijeg iz kokošinjca, stiže treći nastavak urnebesne animirane avanture za cijelu obitelj! Stanovnici farme Mossy Bottom s veseljem iščekuju Noć vještica, no njihove…",
       "source": "Cinestar Delta Planet"
@@ -1689,7 +1781,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/8AC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
@@ -1712,7 +1806,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kristalni-planet/5BC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Kristalni%20planet/planet_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/vFAvVXRyqzpf3GXp1mPp5TuLEFR.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/8DP7O3xpTbNsk6v9CnRKNQrApvQ.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kristalni-planet/6533",
       "description": "U režiji Arsena Antona Ostojića i prema originalnom scenariju legendarnog Dušana Vukotića, prvog hrvatskog dobitnika Oscara, u kina dolazi jedan od najvećih i najambicioznijih projekata suvremene hrvatske animacije – nezaboravna avantura za sve generacije. Na nedavno naseljenom…",
       "source": "Cinestar Delta Planet"
@@ -1776,7 +1872,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/92D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
       "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
       "source": "Cinestar Delta Planet"
@@ -1844,7 +1942,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/41D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/p6oLmq5KmuWY6uRXBQBL2q30jia.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/7QshsnWS3NIZp60qMgcYm1C6dxm.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
       "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
       "source": "Cinestar Delta Planet"
@@ -1867,7 +1967,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/FDC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sPID7NqwpNdSAEMhazCvidxxeNo.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
       "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
       "source": "Cinestar Delta Planet"
@@ -1913,7 +2015,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/EFC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/wtTiQYmdRsFLLOUeZMxX3e6fcB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/r4DTGm1f1r23cyjRJ5kFMh7qYlj.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
       "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
       "source": "Cinestar Delta Planet"
@@ -1942,7 +2046,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/7DC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sWoP8TUgmdfJ9BllzL7OkBVPCwf.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
       "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
       "source": "Cinestar Delta Planet"
@@ -1965,7 +2071,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/5EC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3uLA0ujne91bkzFStZICCYeqhnt.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
       "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
       "source": "Cinestar Delta Planet"
@@ -1988,7 +2096,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/C3D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/u38hNQbxvIicUdfrHpqa9puBnA9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
       "source": "Cinestar Delta Planet"
@@ -2029,7 +2139,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/0CC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
       "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
       "source": "Cinestar Delta Planet"
@@ -2052,7 +2164,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/CBC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Animal%20Farm/animal%20farm_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yM9xRTolPXSjhyQWXwmkcV3Wtne.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/kGGYjn3KpB2FUa5X7wAGs7MZQFD.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/zivotinjska-farma/6599",
       "description": "Iz maštovitog svijeta Andyja Serkisa stiže nova, zabavna i pustolovna ekranizacija Orwellova bezvremenskoga klasika. Kada životinje preuzmu upravljanje farmom, vjeruju da ih očekuje pravedniji i bolji život. No njihove se velike zamisli ubrzo počinju mijenjati, a zajedništvo…",
       "source": "Cinestar Delta Planet"
@@ -2093,7 +2207,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/A2D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
       "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
       "source": "Cinestar Delta Planet"
@@ -2116,7 +2232,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/9AC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
@@ -2162,7 +2280,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/0EC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sPID7NqwpNdSAEMhazCvidxxeNo.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
       "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
       "source": "Cinestar Delta Planet"
@@ -2239,7 +2359,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/FFC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/wtTiQYmdRsFLLOUeZMxX3e6fcB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/r4DTGm1f1r23cyjRJ5kFMh7qYlj.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
       "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
       "source": "Cinestar Delta Planet"
@@ -2268,7 +2390,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/51D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/p6oLmq5KmuWY6uRXBQBL2q30jia.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/7QshsnWS3NIZp60qMgcYm1C6dxm.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
       "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
       "source": "Cinestar Delta Planet"
@@ -2297,7 +2421,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/2CC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sWoP8TUgmdfJ9BllzL7OkBVPCwf.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
       "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
       "source": "Cinestar Delta Planet"
@@ -2320,7 +2446,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/6EC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3uLA0ujne91bkzFStZICCYeqhnt.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
       "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
       "source": "Cinestar Delta Planet"
@@ -2343,7 +2471,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/D3D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/u38hNQbxvIicUdfrHpqa9puBnA9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
       "source": "Cinestar Delta Planet"
@@ -2384,7 +2514,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/5CC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
       "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
       "source": "Cinestar Delta Planet"
@@ -2425,7 +2557,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/B2D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
       "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
       "source": "Cinestar Delta Planet"
@@ -2471,7 +2605,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/AAC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
@@ -2500,7 +2636,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/61D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/p6oLmq5KmuWY6uRXBQBL2q30jia.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/7QshsnWS3NIZp60qMgcYm1C6dxm.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
       "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
       "source": "Cinestar Delta Planet"
@@ -2538,7 +2676,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/AFC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/wtTiQYmdRsFLLOUeZMxX3e6fcB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/r4DTGm1f1r23cyjRJ5kFMh7qYlj.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
       "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
       "source": "Cinestar Delta Planet"
@@ -2567,7 +2707,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/9CC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sWoP8TUgmdfJ9BllzL7OkBVPCwf.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
       "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
       "source": "Cinestar Delta Planet"
@@ -2607,7 +2749,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/00D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sPID7NqwpNdSAEMhazCvidxxeNo.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
       "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
       "source": "Cinestar Delta Planet"
@@ -2630,7 +2774,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/E3D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/u38hNQbxvIicUdfrHpqa9puBnA9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
       "source": "Cinestar Delta Planet"
@@ -2671,7 +2817,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6CC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
       "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
       "source": "Cinestar Delta Planet"
@@ -2712,7 +2860,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/C2D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
       "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
       "source": "Cinestar Delta Planet"
@@ -2758,7 +2908,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/BAC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
@@ -2787,7 +2939,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/71D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/p6oLmq5KmuWY6uRXBQBL2q30jia.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/7QshsnWS3NIZp60qMgcYm1C6dxm.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
       "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
       "source": "Cinestar Delta Planet"
@@ -2810,7 +2964,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/2EC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sPID7NqwpNdSAEMhazCvidxxeNo.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
       "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
       "source": "Cinestar Delta Planet"
@@ -2866,7 +3022,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/10D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/wtTiQYmdRsFLLOUeZMxX3e6fcB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/r4DTGm1f1r23cyjRJ5kFMh7qYlj.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
       "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
       "source": "Cinestar Delta Planet"
@@ -2895,7 +3053,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/ACC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/sWoP8TUgmdfJ9BllzL7OkBVPCwf.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
       "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
       "source": "Cinestar Delta Planet"
@@ -2934,7 +3094,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/8EC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3uLA0ujne91bkzFStZICCYeqhnt.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
       "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
       "source": "Cinestar Delta Planet"
@@ -2957,7 +3119,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/F3D01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/u38hNQbxvIicUdfrHpqa9puBnA9.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
       "source": "Cinestar Delta Planet"
@@ -2981,7 +3145,9 @@
         }
       ],
       "note": "Ulaznice u pretprodaji",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune/dune_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/y6060XXjUhKx6A8IHPz1TKuDPrb.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/xS0g3s4blsiPmtpjjb7chFjI1ip.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-re-release/6641",
       "description": "Prije epske završnice, vratite se početku. DINA ponovno na velikom platnu. Uoči završnog poglavlja trilogije, spektakl Denisa Villeneuvea vraća se u kina — prilika da ponovno doživite početak velike sage ili prvi put zakoračite u njezin svijet na velikom platnu. DINA donosi…",
       "source": "Cinestar Delta Planet"
@@ -3045,7 +3211,9 @@
         }
       ],
       "note": "Ulaznice u pretprodaji",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune/dune_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/y6060XXjUhKx6A8IHPz1TKuDPrb.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/xS0g3s4blsiPmtpjjb7chFjI1ip.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-re-release/6641",
       "description": "Prije epske završnice, vratite se početku. DINA ponovno na velikom platnu. Uoči završnog poglavlja trilogije, spektakl Denisa Villeneuvea vraća se u kina — prilika da ponovno doživite početak velike sage ili prvi put zakoračite u njezin svijet na velikom platnu. DINA donosi…",
       "source": "Cinestar Delta Planet"
@@ -3109,7 +3277,9 @@
         }
       ],
       "note": "Ulaznice u pretprodaji",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune/dune_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/y6060XXjUhKx6A8IHPz1TKuDPrb.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/xS0g3s4blsiPmtpjjb7chFjI1ip.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-re-release/6641",
       "description": "Prije epske završnice, vratite se početku. DINA ponovno na velikom platnu. Uoči završnog poglavlja trilogije, spektakl Denisa Villeneuvea vraća se u kina — prilika da ponovno doživite početak velike sage ili prvi put zakoračite u njezin svijet na velikom platnu. DINA donosi…",
       "source": "Cinestar Delta Planet"
@@ -3186,7 +3356,9 @@
         }
       ],
       "note": "Ulaznice u pretprodaji",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune/dune_300x400_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/y6060XXjUhKx6A8IHPz1TKuDPrb.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/xS0g3s4blsiPmtpjjb7chFjI1ip.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-re-release/6641",
       "description": "Prije epske završnice, vratite se početku. DINA ponovno na velikom platnu. Uoči završnog poglavlja trilogije, spektakl Denisa Villeneuvea vraća se u kina — prilika da ponovno doživite početak velike sage ili prvi put zakoračite u njezin svijet na velikom platnu. DINA donosi…",
       "source": "Cinestar Delta Planet"
@@ -3297,7 +3469,9 @@
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/EBC01000023IXUNOEM"
         }
       ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
@@ -3337,7 +3511,9 @@
         }
       ],
       "note": "Ulaznice u pretprodaji",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Asterix%20The%20Kingdom%20of%20Nubia/AsterixBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/qiJcTzvbjbqDNa4paTkOpRrzH6x.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/sXkqpLj3Ew146Qxuq7SSodKW0xv.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/asterix-kraljevstvo-nubije/6607",
       "description": "Najhrabriji galski junaci ponovno kreću u nezaboravnu pustolovinu – samo što su ovog puta neustrašivi ratnici pretvoreni u nestašnu djecu! Kada rijedak eliksir mladosti slučajno završi u čarobnom napitku, nepokorivi Gali pretvore se u bezopasne mališane. Kako bi pronašli…",
       "source": "Cinestar Delta Planet"
@@ -3377,7 +3553,9 @@
         }
       ],
       "note": "Ulaznice u pretprodaji",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Asterix%20The%20Kingdom%20of%20Nubia/AsterixBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/qiJcTzvbjbqDNa4paTkOpRrzH6x.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/sXkqpLj3Ew146Qxuq7SSodKW0xv.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/asterix-kraljevstvo-nubije/6607",
       "description": "Najhrabriji galski junaci ponovno kreću u nezaboravnu pustolovinu – samo što su ovog puta neustrašivi ratnici pretvoreni u nestašnu djecu! Kada rijedak eliksir mladosti slučajno završi u čarobnom napitku, nepokorivi Gali pretvore se u bezopasne mališane. Kako bi pronašli…",
       "source": "Cinestar Delta Planet"
@@ -3429,7 +3607,9 @@
         }
       ],
       "note": "Ulaznice u pretprodaji",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Asterix%20The%20Kingdom%20of%20Nubia/AsterixBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/qiJcTzvbjbqDNa4paTkOpRrzH6x.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/sXkqpLj3Ew146Qxuq7SSodKW0xv.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/asterix-kraljevstvo-nubije/6607",
       "description": "Najhrabriji galski junaci ponovno kreću u nezaboravnu pustolovinu – samo što su ovog puta neustrašivi ratnici pretvoreni u nestašnu djecu! Kada rijedak eliksir mladosti slučajno završi u čarobnom napitku, nepokorivi Gali pretvore se u bezopasne mališane. Kako bi pronašli…",
       "source": "Cinestar Delta Planet"
@@ -3481,7 +3661,9 @@
         }
       ],
       "note": "Ulaznice u pretprodaji",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Asterix%20The%20Kingdom%20of%20Nubia/AsterixBIH.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/qiJcTzvbjbqDNa4paTkOpRrzH6x.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/sXkqpLj3Ew146Qxuq7SSodKW0xv.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/asterix-kraljevstvo-nubije/6607",
       "description": "Najhrabriji galski junaci ponovno kreću u nezaboravnu pustolovinu – samo što su ovog puta neustrašivi ratnici pretvoreni u nestašnu djecu! Kada rijedak eliksir mladosti slučajno završi u čarobnom napitku, nepokorivi Gali pretvore se u bezopasne mališane. Kako bi pronašli…",
       "source": "Cinestar Delta Planet"
@@ -3524,7 +3706,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/olPkCB4huWwnI1sf6pWVq00f44o.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
       "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
       "source": "Cinestar Delta Planet"
@@ -3582,7 +3766,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Avengers%20Doomsday/avemgers_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/5yCrlf1AoDgdxmq0xnRGPtEJcDl.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/rObL4of4eFA8yWaN9pRFo9aOVNi.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/6612",
       "description": "Svemiri se sudaraju, a saga o Multiverzumu ulazi u svoje završno poglavlje u filmu Avengers: Uspon Doktora Dooma. Voljeni junaci iz tri različita svemira bit će nepovratno dovedeni u smrtonosni sukob te će se naposljetku suočiti s egzistencijalnom prijetnjom kakvu dosad nikada…",
       "source": "Cinestar Delta Planet"
@@ -3612,7 +3798,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/olPkCB4huWwnI1sf6pWVq00f44o.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
       "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
       "source": "Cinestar Delta Planet"
@@ -3658,7 +3846,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Avengers%20Doomsday/avemgers_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/5yCrlf1AoDgdxmq0xnRGPtEJcDl.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/rObL4of4eFA8yWaN9pRFo9aOVNi.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/6612",
       "description": "Svemiri se sudaraju, a saga o Multiverzumu ulazi u svoje završno poglavlje u filmu Avengers: Uspon Doktora Dooma. Voljeni junaci iz tri različita svemira bit će nepovratno dovedeni u smrtonosni sukob te će se naposljetku suočiti s egzistencijalnom prijetnjom kakvu dosad nikada…",
       "source": "Cinestar Delta Planet"
@@ -3688,7 +3878,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/olPkCB4huWwnI1sf6pWVq00f44o.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
       "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
       "source": "Cinestar Delta Planet"
@@ -3734,7 +3926,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Avengers%20Doomsday/avemgers_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/5yCrlf1AoDgdxmq0xnRGPtEJcDl.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/rObL4of4eFA8yWaN9pRFo9aOVNi.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/6612",
       "description": "Svemiri se sudaraju, a saga o Multiverzumu ulazi u svoje završno poglavlje u filmu Avengers: Uspon Doktora Dooma. Voljeni junaci iz tri različita svemira bit će nepovratno dovedeni u smrtonosni sukob te će se naposljetku suočiti s egzistencijalnom prijetnjom kakvu dosad nikada…",
       "source": "Cinestar Delta Planet"
@@ -3764,7 +3958,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/olPkCB4huWwnI1sf6pWVq00f44o.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
       "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
       "source": "Cinestar Delta Planet"
@@ -3794,7 +3990,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Avengers%20Doomsday/avemgers_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/5yCrlf1AoDgdxmq0xnRGPtEJcDl.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/rObL4of4eFA8yWaN9pRFo9aOVNi.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/6612",
       "description": "Svemiri se sudaraju, a saga o Multiverzumu ulazi u svoje završno poglavlje u filmu Avengers: Uspon Doktora Dooma. Voljeni junaci iz tri različita svemira bit će nepovratno dovedeni u smrtonosni sukob te će se naposljetku suočiti s egzistencijalnom prijetnjom kakvu dosad nikada…",
       "source": "Cinestar Delta Planet"
@@ -3824,7 +4022,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/olPkCB4huWwnI1sf6pWVq00f44o.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
       "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
       "source": "Cinestar Delta Planet"
@@ -3854,7 +4054,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Avengers%20Doomsday/avemgers_300x400_hr.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/5yCrlf1AoDgdxmq0xnRGPtEJcDl.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/rObL4of4eFA8yWaN9pRFo9aOVNi.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/6612",
       "description": "Svemiri se sudaraju, a saga o Multiverzumu ulazi u svoje završno poglavlje u filmu Avengers: Uspon Doktora Dooma. Voljeni junaci iz tri različita svemira bit će nepovratno dovedeni u smrtonosni sukob te će se naposljetku suočiti s egzistencijalnom prijetnjom kakvu dosad nikada…",
       "source": "Cinestar Delta Planet"
@@ -3884,7 +4086,9 @@
         }
       ],
       "note": "Pretpremijera",
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "image": "https://image.tmdb.org/t/p/w780/olPkCB4huWwnI1sf6pWVq00f44o.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/i5E9H7Ik0u61ylDDTbmUpTL3Yw.jpg",
+      "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
       "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
       "source": "Cinestar Delta Planet"
