@@ -1,74 +1,15 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-24T15:50:18+01:00",
+  "generated_at": "2026-11-25T06:20:48+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
   "log": [
-    "Narodno pozorište RS: REST API, 25 events",
+    "Narodno pozorište RS: REST API, 24 events",
     "Banski dvor: REST API, 5 events",
     "SC Borik: table on /?page_id=6913, 103 rows with a date"
   ],
-  "count": 37,
+  "count": 35,
   "events": [
-    {
-      "id": "bd-40320",
-      "title": "Promocija knjige „Taksim BOP“ autora Karla Ilića",
-      "title_original": "Промоција књиге „TAKSIM BOP“ аутора КАРЛА ИЛИЋА",
-      "category": "Razgovori",
-      "start": "2026-11-24T18:30:00+01:00",
-      "end": "2026-11-24T19:30:00+01:00",
-      "all_day": false,
-      "venue": "Banski dvor Kulturni centar",
-      "hall": "Vijećnica Banskog dvora",
-      "url": "https://banskidvor.org/event/promocija-knjige-taksim-bop-autora-karla-ilica/",
-      "description": "U utorak, 24. novembra, u 18.30 časova, u Vijećnici Banskog dvora biće održana promocija knjige „TAKSIM BOP“ AUTORA KARLA ILIĆA, u saradnji sa Udruženjem za promociju i popularizaciju književnosti „Imperativ“. O knjizi i njenom nastanku sa autorom će razgovarati Branislav…",
-      "source": "Banski dvor"
-    },
-    {
-      "id": "bd-40323",
-      "title": "Koncert Tamara Obrovac Transhistria Ensemble",
-      "title_original": "Концерт ТАМАРА ОБРОВАЦ TRANSHISTRIA ENSEMBLE",
-      "category": "Muzika",
-      "start": "2026-11-24T20:00:00+01:00",
-      "end": "2026-11-24T21:30:00+01:00",
-      "all_day": false,
-      "venue": "Banski dvor Kulturni centar",
-      "hall": "Koncertna dvorana",
-      "price": "10 KM",
-      "image": "https://banskidvor.org/wp-content/uploads/2026/11/Тамара-Обровац-промо-scaled.jpg",
-      "url": "https://banskidvor.org/event/koncert-tamara-obrovac-transhistria-ensemble/",
-      "description": "U utorak, 24. novembra, u 20.00 časova, publiku očekuje koncert TAMARA OBROVAC TRANSHISTRIA ENSEMBLE-A, jednog od najosobenijih ansambala savremene evropske džez scene. Kroz spoj improvizacije, savremenog džeza, istarske muzičke tradicije i mediteranskog nasljeđa, ovaj ansambl…",
-      "source": "Banski dvor"
-    },
-    {
-      "id": "borik-0556aa5f0e",
-      "title": "Stendap Neše Bridžisa",
-      "title_original": "СТЕНДАП НЕШЕ БРИЏИСА",
-      "category": "Pozorište",
-      "start": "2026-11-24T20:00:00+01:00",
-      "all_day": false,
-      "venue": "SC Borik",
-      "hall": "Pozorišna sala",
-      "organizer": "Fabrika Zabave M&M",
-      "url": "https://scborik.com/?page_id=6913",
-      "source": "SC Borik"
-    },
-    {
-      "id": "np-25642",
-      "title": "Sedam dana",
-      "title_original": "Седам дана",
-      "category": "Pozorište",
-      "start": "2026-11-24T20:30:00+01:00",
-      "end": "2026-11-24T21:50:00+01:00",
-      "all_day": false,
-      "venue": "Narodno pozorište Republike Srpske",
-      "hall": "Scena „Petar Kočić“",
-      "age": "16+",
-      "image": "https://www.np.rs.ba/wp-content/uploads/2026/03/sedam-dana-predstava-10.jpg",
-      "url": "https://www.np.rs.ba/predstava/sedam-dana-7/",
-      "description": "Autor: Tena Štivičić Režija: Anđela Krunić Dramaturg: Aleksandar Vasiljević Scenograf: Sara Stjepanović Kostimograf: Vladimirka Velaga Kompozitor: Igor Božanić Lektor: Nataša Kecman Producent: Katarina Lazić Sufler i inspicijent: Vesna Maksimović Uloge: Nataša: Sandra Pravuljac…",
-      "source": "Narodno pozorište RS"
-    },
     {
       "id": "bd-40326",
       "title": "Koncert Nenad Vasilić Trio",
@@ -246,6 +187,21 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "bd-40345",
+      "title": "Koncert „Piazzolla 105“ tango ansambla Libercuatro (Beograd)",
+      "title_original": "Kонцерт „Piazzolla 105“ танго ансамбла LIBERCUATRO (Београд)",
+      "category": "Muzika",
+      "start": "2026-11-30T20:00:00+01:00",
+      "end": "2026-11-30T21:00:00+01:00",
+      "all_day": false,
+      "venue": "Banski dvor Kulturni centar",
+      "hall": "Koncertna dvorana",
+      "image": "https://banskidvor.org/wp-content/uploads/2026/11/liberkvatro-post-scaled.jpg",
+      "url": "https://banskidvor.org/event/koncert-tango-ansambla-libercuatro-piazzolla-105-beograd/",
+      "description": "U Koncertnoj dvorani Banskog dvora 30. novembra (ponedjeljak) 2026. godine, sa početkom u 20.00 časova, biće održan koncert posvećen obilježavanju 105 godina od rođenja Astora Pjacole, jednog od najznačajnijih kompozitora XX vijeka i tvorca revolucionarnog muzičkog pravca tango…",
+      "source": "Banski dvor"
+    },
+    {
       "id": "borik-b2f4d819ce",
       "title": "Kroz Život sa Veljom",
       "title_original": "ПРЕДСТАВА: КРОЗ ЖИВОТ СА ВЕЉОМ",
@@ -272,6 +228,20 @@ window.KUDA_DATA = {
       "url": "https://www.np.rs.ba/predstava/poezi%d1%98a-i-p%d1%98esma-zivota-marko-milosevic-i-bend/",
       "description": "POEZIJA I PJESMA ŽIVOTA Marko Milošević i bend DETALJI Datum: 22/10/2026 Vrijeme: 20:00 – 21:00 Kategorija događaja: Repertoar ORGANIZATOR Narodno pozorište RS Telefon: 051-317-996",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "bd-40351",
+      "title": "Koncert Tamare Dojčinović (viola) dobitnice plakete Banskog",
+      "title_original": "Концерт Тамаре Дојчиновић (виола) добитнице плакете Банског",
+      "category": "Muzika",
+      "start": "2026-12-02T20:00:00+01:00",
+      "end": "2026-12-02T21:30:00+01:00",
+      "all_day": false,
+      "venue": "Banski dvor Kulturni centar",
+      "hall": "Koncertna dvorana",
+      "url": "https://banskidvor.org/event/koncert-tamare-dojcinovic-viola-dobitnice-plakete-banskog/",
+      "description": "U Koncertnoj dvorani Banskog dvora 2. decembra (srijeda) 2026. godine u 20.00 časova odžaće se koncert Tamare Dojčinović (viola), dobitnice plakete Banskog dvora za najuspješnijeg studenta Studijskog programa muzičke umjetnosti Akademije umjetnosti Univerziteta u Banjoj Luci, uz…",
+      "source": "Banski dvor"
     },
     {
       "id": "np-25646",
