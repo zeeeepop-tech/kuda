@@ -6,7 +6,7 @@ on:
     - cron: "17 4 * * *"   # every day at 04:17 UTC = 05:17 in Banja Luka (06:17 in summer)
   workflow_dispatch:        # adds a "Run workflow" button in the Actions tab
   push:
-    branches: [main]        # also publish right after you change index.html or collect.py
+    branches: [main]        # also publish right after you change a file
 
 permissions:
   contents: write   # saves the day's events in the repository
@@ -26,8 +26,19 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Restore saved pictures
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: kuda-cache-${{ github.run_id }}
+          restore-keys: kuda-cache-
+
       - name: Collect events
-        run: python3 collect.py
+        run: python collect.py
 
       - name: Save the events in the repository
         run: |
@@ -37,11 +48,10 @@ jobs:
           git diff --cached --quiet || git commit -m "Events for $(date -u +%Y-%m-%d)"
           git push || (git pull --rebase && git push)
 
-      - name: Prepare the site
+      - name: Build the site (event pages, pictures, share image)
         run: |
-          mkdir -p _site/data
-          cp index.html _site/
-          cp data/events.js data/events.json _site/data/
+          python -m pip install --quiet pillow
+          python build.py
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
