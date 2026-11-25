@@ -1,0 +1,73 @@
+# kuda. — collects Banja Luka culture events every morning and publishes the site.
+name: Daily update
+
+on:
+  schedule:
+    - cron: "17 4 * * *"   # every day at 04:17 UTC = 05:17 in Banja Luka (06:17 in summer)
+  workflow_dispatch:        # adds a "Run workflow" button in the Actions tab
+  push:
+    branches: [main]        # also publish right after you change a file
+
+permissions:
+  contents: write   # saves the day's events in the repository
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Restore saved pictures
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: kuda-cache-${{ github.run_id }}
+          restore-keys: kuda-cache-
+
+      - name: Collect events
+        run: python collect.py
+
+      - name: Save the events in the repository
+        continue-on-error: true   # if saving fails, the site is still built and published
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp data/events.json data/events.js "$RUNNER_TEMP/"
+          # Start from the newest version on GitHub (your uploads included) and put today's events on top,
+          # so files uploaded while this job runs can't clash with it.
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --quiet --hard origin/main
+            cp "$RUNNER_TEMP/events.json" "$RUNNER_TEMP/events.js" data/
+            git add data/events.json data/events.js
+            if git diff --cached --quiet; then exit 0; fi
+            git commit --quiet -m "Events for $(date -u +%Y-%m-%d)"
+            if git push --quiet origin HEAD:main; then exit 0; fi
+            sleep 5
+          done
+          exit 1
+
+      - name: Build the site (event pages, pictures, share image)
+        run: |
+          python -m pip install --quiet pillow
+          python build.py
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
