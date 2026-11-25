@@ -106,6 +106,16 @@ def credits(s: str) -> str:
 # ------------------------------------------------------------------ pictures
 
 
+WP_SIZED = re.compile(r"-\d{2,4}x\d{2,4}(?=\.(?:jpe?g|png|webp)$)", re.I)
+
+
+def download(url: str) -> bytes:
+    url = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~")  # spaces, č, ć … in file names
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "image/avif,image/webp,image/*;q=0.9,*/*;q=0.5"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read(30_000_000)
+
+
 def fetch(src: str) -> bytes | None:
     """A picture from the web (cached) or from a file in this folder."""
     if not re.match(r"https?://", src):
@@ -114,13 +124,19 @@ def fetch(src: str) -> bytes | None:
     path = CACHE / "src" / hashlib.sha1(src.encode()).hexdigest()[:24]
     if path.exists():
         return path.read_bytes()
-    try:
-        url = urllib.parse.quote(src, safe=":/?#[]@!$&'()*+,;=%~")  # spaces, č, ć … in file names
-        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "image/avif,image/webp,image/*;q=0.9,*/*;q=0.5"})
-        with urllib.request.urlopen(req, timeout=30) as r:
-            data = r.read(30_000_000)
-    except Exception as ex:
-        print(f"  picture not downloaded: {src} ({ex})")
+    tries = [src]
+    plain = src.split("?")[0]
+    if "/wp-content/uploads/" in plain and WP_SIZED.search(plain):
+        tries.insert(0, WP_SIZED.sub("", plain))  # "…-732x1024.jpg" → the original "….jpg"
+    data, problem = None, None
+    for url in tries:
+        try:
+            data = download(url)
+            break
+        except Exception as ex:
+            problem = ex
+    if not data:
+        print(f"  picture not downloaded: {src} ({problem})")
         return None
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(data)
@@ -151,7 +167,8 @@ def pictures(e: dict) -> dict:
     if not src or Image is None:
         return {}
     kino = e.get("kind") == "kino"
-    key = hashlib.sha1(f"{src}|2".encode()).hexdigest()[:16] + ("k" if kino else "")  # |2: posters now fill the frame
+    wide = e.get("backdrop")  # a film's wide still from TMDB
+    key = hashlib.sha1((f"{src}|{wide}|2" if wide else f"{src}|2").encode()).hexdigest()[:16] + ("k" if kino else "")
     names = {"thumb": f"img/{key}-t.webp", "large": f"img/{key}-l.webp", "og": f"img/{key}-og.jpg"}
     store = CACHE / "out"
     if not all((store / n).exists() for n in names.values()):
@@ -166,14 +183,21 @@ def pictures(e: dict) -> dict:
         if im.width < 300 or im.height < 200:  # too small to look good large
             return {}
         portrait = im.height > im.width * 1.05
+        big = im
+        if wide and (wdata := fetch(wide)):
+            try:
+                big = ImageOps.exif_transpose(Image.open(io.BytesIO(wdata))).convert("RGB")
+            except Exception:
+                big = im
+        tall = big.height > big.width * 1.05
         (store / "img").mkdir(parents=True, exist_ok=True)
         if kino:  # film posters stay posters: the page shows them upright
             thumb = shrunk(im, 360, 540)
         else:
             thumb = framed(im, 720, 540) if portrait else shrunk(im, 720, 540)
         thumb.save(store / names["thumb"], "WEBP", quality=78, method=6)
-        (framed(im, 1400, 800) if portrait else shrunk(im, 1600, 1000)).save(store / names["large"], "WEBP", quality=80, method=6)
-        og = framed(im, 1200, 630) if portrait else ImageOps.fit(im, (1200, 630), Image.LANCZOS, centering=(0.5, 0.4))
+        (framed(big, 1400, 800) if tall else shrunk(big, 1600, 1000)).save(store / names["large"], "WEBP", quality=80, method=6)
+        og = framed(big, 1200, 630) if tall else ImageOps.fit(big, (1200, 630), Image.LANCZOS, centering=(0.5, 0.4))
         og.save(store / names["og"], "JPEG", quality=84, optimize=True, progressive=True)
     for n in names.values():
         (OUT / n).parent.mkdir(parents=True, exist_ok=True)
@@ -449,8 +473,10 @@ def event_page(e: dict, others: list, sources: list) -> str:
             f'{"" if o.get("all_day") or o.get("showtimes") else " · " + dt.datetime.fromisoformat(o["start"]).strftime("%H:%M")}</a>'
             for o in others) + "</div></div>")
     source_link = f' · <a href="{esc(url)}" target="_blank" rel="noopener">originalna objava</a>' if url else ""
+    tmdb = (" Poster i fotografija filma: TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB."
+            if e.get("image_credit") == "TMDB" else "")
     blocks.append(f'<p class="source">Izvor: <b>{esc(e.get("source"))}</b>{source_link}. Podaci se preuzimaju automatski, '
-                  f'pa konačne informacije provjeri kod izvora.</p>')
+                  f'pa konačne informacije provjeri kod izvora.{tmdb}</p>')
     jsonld = json.dumps(schema(e, start, end, page_url, og), ensure_ascii=False).replace("</", "<\\/")
     return head(title, description, page_url, og, "../../", f'<script type="application/ld+json">{jsonld}</script>\n') + f"""
 <body>
@@ -458,7 +484,7 @@ def event_page(e: dict, others: list, sources: list) -> str:
 <span class="city">Banjaluka</span><a class="back" href="../../">{icon("back", 18)}Svi događaji</a></div></header>
 <main class="wrap event">
 <figure class="hero"><div class="tile" style="background:{bg};color:{fg}" aria-hidden="true">{esc(e['title'])}</div>{picture}
-{f'<figcaption>Foto: {esc(e.get("source"))}</figcaption>' if picture else ''}</figure>
+{f'<figcaption>Foto: {esc(e.get("image_credit") or e.get("source"))}</figcaption>' if picture else ''}</figure>
 <div class="body">
 <div><p class="eyebrow">{esc(e.get('category'))}</p><h1>{esc(e['title'])}</h1></div>
 {f'<p class="desc clamp" id="desc">{esc(credits(e["description"]))}</p><button class="more" type="button" data-more aria-expanded="false" aria-controls="desc" hidden>Prikaži više</button>' if e.get("description") else ""}
@@ -555,7 +581,7 @@ def main() -> int:
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
 
     # keep the picture cache to what the current events use, so it doesn't grow forever
-    used_src = {hashlib.sha1(e["image"].encode()).hexdigest()[:24] for e in events if e.get("image")}
+    used_src = {hashlib.sha1(e[k].encode()).hexdigest()[:24] for e in events for k in ("image", "backdrop") if e.get(k)}
     used_out = {Path(e[k]).name for e in events for k in ("thumb", "large", "og") if e.get(k)}
     for f in (CACHE / "src").glob("*") if (CACHE / "src").exists() else []:
         if f.name not in used_src:

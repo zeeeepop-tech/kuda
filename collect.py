@@ -27,6 +27,7 @@ import datetime as dt
 import hashlib
 import html
 import json
+import os
 import re
 import ssl
 import subprocess
@@ -567,6 +568,109 @@ def enrich_images(src: dict, events: list, log: list) -> None:
     if todo:
         log.append(f"{src['name']}: pictures from event pages for {added} of {len(todo)} events")
 
+# ------------------------------------------------------------------ sharper film pictures from TMDB
+
+TMDB = "https://api.themoviedb.org/3"
+FILMS_CACHE = Path(__file__).resolve().parent / ".cache" / "films.json"  # kept between runs by the GitHub workflow
+
+
+def _tmdb(path: str, **params) -> dict:
+    """One TMDB API call. TMDB_API_KEY may hold the short API key or the long read access token."""
+    key = os.environ.get("TMDB_API_KEY", "").strip()
+    headers = {"Accept": "application/json", "User-Agent": UA}
+    if key.startswith("eyJ"):
+        headers["Authorization"] = f"Bearer {key}"
+    else:
+        params["api_key"] = key
+    query = urllib.parse.urlencode({k: v for k, v in params.items() if v not in (None, "")})
+    with urllib.request.urlopen(urllib.request.Request(f"{TMDB}{path}?{query}", headers=headers), timeout=20) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def _film_page_facts(url: str) -> tuple:
+    """The original title and the year from a Cinestar film page ("Izvorni naslov", "Početak prikazivanja")."""
+    page = get(url, "text/html").decode("utf-8", "replace")
+    gap = r"\s*(?:</[^>]+>\s*)*(?:<[^>]+>\s*)*"  # tags may sit between a label and its value
+    orig = re.search(rf"(?is)Izvorni naslov:?{gap}([^<]{{1,150}})", page)
+    when = re.search(rf"(?is)Početak prikazivanja:?{gap}(\d{{1,2}})\.\s*(\d{{1,2}})\.\s*(\d{{4}})", page)
+    title = re.sub(r"^[\s:–-]+", "", one_line(html.unescape(orig.group(1)))) if orig else ""
+    return (title or None, int(when.group(3)) if when else None)
+
+
+def _tmdb_match(titles: list, year) -> dict | None:
+    """The TMDB film with exactly this title (original or local), preferring the right year."""
+    norm = lambda t: re.sub(r"[^a-z0-9]+", "", fold(t or ""))
+    titles = [t for t in dict.fromkeys(titles) if t]
+    wanted = {norm(t) for t in titles}
+    for query in titles:
+        for y in ([year, year - 1, None] if year else [None]):
+            found = _tmdb("/search/movie", query=query, primary_release_year=y, include_adult="false", language="hr-HR")
+            hits = [m for m in found.get("results", []) if m.get("poster_path")
+                    and wanted & {norm(m.get("title")), norm(m.get("original_title"))}]
+            if hits:
+                return max(hits, key=lambda m: m.get("popularity") or 0)
+    return None
+
+
+def _tmdb_pictures(movie_id: int) -> tuple:
+    """A poster (the local one when TMDB has it) and a wide still without text."""
+    m = _tmdb(f"/movie/{movie_id}", append_to_response="images", include_image_language="hr,sr,bs,en,null")
+    imgs = m.get("images") or {}
+    best = lambda items: sorted(items, key=lambda i: (i.get("vote_average") or 0, i.get("width") or 0), reverse=True)
+    posters = (best([p for p in imgs.get("posters", []) if p.get("iso_639_1") in ("hr", "sr", "bs")])
+               or best([p for p in imgs.get("posters", []) if p.get("iso_639_1") == "en"]))
+    stills = best([b for b in imgs.get("backdrops", []) if not b.get("iso_639_1")])
+    poster = posters[0]["file_path"] if posters else m.get("poster_path")
+    still = stills[0]["file_path"] if stills else m.get("backdrop_path")
+    return (f"https://image.tmdb.org/t/p/w780{poster}" if poster else None,
+            f"https://image.tmdb.org/t/p/w1280{still}" if still else None)
+
+
+def film_pictures(events: list, log: list, offline: bool = False) -> None:
+    """Sharper posters and wide stills for the cinema's films from TMDB (needs TMDB_API_KEY). Each film is looked up
+    once and remembered in .cache/films.json; a film TMDB doesn't know yet is asked about again after a week."""
+    films: dict = {}
+    for e in events:
+        if e.get("kind") == "kino" and e.get("url"):
+            films.setdefault(e["url"], []).append(e)
+    if not films:
+        return
+    try:
+        cache = json.loads(FILMS_CACHE.read_text(encoding="utf-8"))
+    except (FileNotFoundError, ValueError):
+        cache = {}
+    today = dt.date.today()
+    can_ask = bool(os.environ.get("TMDB_API_KEY", "").strip()) and not offline
+    asked = found = 0
+    for url, items in films.items():
+        known = cache.get(url)
+        stale = known and not known.get("poster") and known.get("checked", "") < (today - dt.timedelta(days=7)).isoformat()
+        if can_ask and (not known or stale):
+            asked += 1
+            try:
+                original, year = _film_page_facts(url)
+                hit = _tmdb_match([original, items[0]["title"]], year)
+                poster, still = _tmdb_pictures(hit["id"]) if hit else (None, None)
+                known = cache[url] = {"tmdb": hit["id"] if hit else None, "poster": poster, "backdrop": still,
+                                      "checked": today.isoformat()}
+            except Exception as ex:
+                log.append(f"TMDB: {items[0]['title']} not looked up ({err(ex)})")
+                if "401" in str(ex):  # wrong key: don't try every film
+                    can_ask = False
+                continue
+        if known:
+            known["seen"] = today.isoformat()
+            if known.get("poster"):
+                found += 1
+                for e in items:
+                    e["image"], e["backdrop"], e["image_credit"] = known["poster"], known.get("backdrop"), "TMDB"
+    keep_from = (today - dt.timedelta(days=60)).isoformat()
+    cache = {u: v for u, v in cache.items() if v.get("seen", "") >= keep_from}
+    FILMS_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    FILMS_CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
+    log.append(f"TMDB: sharper pictures for {found} of {len(films)} films ({asked} looked up now)"
+               + ("" if os.environ.get("TMDB_API_KEY") or offline else " · add TMDB_API_KEY to look up new films"))
+
 # ------------------------------------------------------------------ probing sources that are still being added
 
 PROBE: list = []  # (source, page, regex of links on it to save too). Add a new site here before writing its reader.
@@ -1033,8 +1137,8 @@ def categorize(e: dict, default: str) -> str:
 # ------------------------------------------------------------------ output
 
 FIELDS = ["id", "kind", "title", "title_original", "category", "start", "end", "all_day", "venue", "hall", "price", "age",
-          "organizer", "genre", "duration", "showtimes", "note", "image", "url", "ticket_url", "description", "source",
-          "also_listed_at", "highlight", "reason"]
+          "organizer", "genre", "duration", "showtimes", "note", "image", "backdrop", "image_credit", "url", "ticket_url",
+          "description", "source", "also_listed_at", "highlight", "reason"]
 
 
 def make_id(key: str, e: dict) -> str:
@@ -1162,6 +1266,7 @@ def main() -> int:
     for src in SOURCES:
         if src.get("enrich_images") and not (args.only and src["key"] != args.only):
             enrich_images(src, kept + review, log)
+    film_pictures(kept, log, args.offline)
     if args.probe and not args.offline:
         probe(log)
 
