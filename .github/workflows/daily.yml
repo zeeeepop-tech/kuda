@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
 
@@ -70,4 +70,11 @@ jobs:
         with:
           path: _site
       - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true   # GitHub's publishing sometimes fails for a moment: wait and try once more
+      - name: Wait a moment before trying again
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 45
+      - id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
