@@ -41,6 +41,7 @@ jobs:
         run: python collect.py
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}   # sharper film pictures; saved in Settings → Secrets and variables → Actions
+          SHEET_URL: ${{ secrets.SHEET_URL }}         # your Google Sheet: events and pictures added by hand
 
       - name: Save the events in the repository
         continue-on-error: true   # if saving fails, the site is still built and published
