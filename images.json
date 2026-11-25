@@ -1,0 +1,5 @@
+{
+  "_help": "Better pictures. 'events': a word from an event's title -> a picture (a web address, or a file in this folder such as photos/jazavac.jpg). 'venues': a venue's name -> a photo used when its events have no picture.",
+  "events": {},
+  "venues": {}
+}

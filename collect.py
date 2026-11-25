@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-kuda. — collector for culture events in Banja Luka (v0.3)
+kuda. — collector for culture events in Banja Luka (v0.5)
 
 Sources (v1): Narodno pozorište RS, Banski dvor, SC Borik.
 Culture only: sport and folk music are dropped. Unclear items (folklore, sevdah,
@@ -10,6 +10,7 @@ Run:   python3 collect.py               # looks 90 days ahead
        python3 collect.py --days 60
        python3 collect.py --only borik  # one source (np, bd, borik)
        python3 collect.py --offline     # re-run on the pages saved last time (no internet needed)
+       python3 collect.py --probe       # also save pages of sources that are still being added
 
 Needs only Python 3.9+, nothing to install. If Python's SSL certificates are
 missing (common on macOS), it falls back to curl.
@@ -46,7 +47,7 @@ try:
 except Exception:  # very old Python or no time-zone database
     TZ = None
 
-UA = "kuda-collector/0.3 (Banja Luka culture listings; one visit per day)"
+UA = "kuda-collector/0.5 (Banja Luka culture listings; one visit per day)"
 DELAY_SECONDS = 1.0  # pause between requests to the same run
 
 SOURCES = [
@@ -59,14 +60,32 @@ SOURCES = [
     {
         "key": "bd", "name": "Banski dvor", "venue": "Banski dvor Kulturni centar",
         "aliases": ["Banski dvor Kulturni centar", "Kulturni centar Banski dvor", "Banski dvor"],
+        "enrich_images": True,  # the feed often has no picture, but each event page does
         "base": "https://banskidvor.org", "kind": "tec", "trust": "culture", "default_category": "Ostalo",
         "ics": ["/events/?ical=1", "/events/list/?ical=1"], "html": ["/events/"],
     },
     {
+        "key": "gpj", "name": "Gradsko pozorište Jazavac", "venue": "Gradsko pozorište Jazavac",
+        "aliases": ["Gradsko pozorište Jazavac"], "base": "https://gpj.ba", "kind": "mec", "trust": "culture",
+        "default_category": "Pozorište", "html": ["/repertoar/"],
+    },
+    {
         "key": "borik", "name": "SC Borik", "venue": "SC Borik", "aliases": ["SC Borik", "Sportski centar Borik"],
+        "hall_venues": {"pozorisna sala": "Gradsko pozorište Jazavac"},  # Borik's theatre hall is Jazavac's stage
         "base": "https://scborik.com", "kind": "table", "trust": "mixed", "default_category": "Muzika",
         "html": ["/?page_id=6913"],
     },
+    {
+        "key": "gig", "name": "Gigstix", "venue": "Banjaluka", "aliases": [], "base": "https://gigstix.ba",
+        "kind": "gigstix", "trust": "mixed", "default_category": "Muzika",
+        "html": ["/location/banja-luka/?post_type=event"],
+    },
+    {
+        "key": "cs", "name": "Cinestar Delta Planet", "venue": "Cinestar Delta Planet", "aliases": ["Cinestar"],
+        "base": "https://cinestarcinemas.ba", "kind": "cinestar", "trust": "culture", "default_category": "Kino",
+        "html": ["/banja-luka-delta-planet"],
+    },
+    # Cineplexx Palas is left out on purpose: its robots.txt asks bots not to collect from the site.
 ]
 
 # ------------------------------------------------------------------ fetching
@@ -481,6 +500,286 @@ def collect_tec(src: dict, days: int, today: dt.date, log: list) -> list:
             log.append(f"{src['name']}: page {path} failed ({err(ex)})")
     return []
 
+def page_image(url: str) -> str | None:
+    """The main picture of an event page: og:image, twitter:image or the WordPress featured image."""
+    page = get(url, "text/html").decode("utf-8", "replace")
+    patterns = [
+        r"<meta[^>]+property=[\"']og:image(?::url)?[\"'][^>]+content=[\"']([^\"']+)",
+        r"<meta[^>]+content=[\"']([^\"']+)[\"'][^>]+property=[\"']og:image(?::url)?[\"']",
+        r"<meta[^>]+name=[\"']twitter:image[\"'][^>]+content=[\"']([^\"']+)",
+        r"<img[^>]+class=[\"'][^\"']*wp-post-image[^\"']*[\"'][^>]+src=[\"']([^\"']+)",
+        r"<img[^>]+src=[\"']([^\"']+)[\"'][^>]+class=[\"'][^\"']*wp-post-image",
+    ]
+    for pattern in patterns:
+        m = re.search(pattern, page, re.I)
+        if m:
+            return urllib.parse.urljoin(url, html.unescape(m.group(1).strip()))
+    return None
+
+
+def enrich_images(src: dict, events: list, log: list) -> None:
+    """Fill missing pictures from each event's own page; skip a picture several different events share (a site logo)."""
+    todo = [e for e in events if e["source"] == src["name"] and not e.get("image") and e.get("url")][:40]
+    found = {}
+    for e in todo:
+        try:
+            found[e["id"]] = page_image(e["url"])
+        except Exception as ex:
+            log.append(f"{src['name']}: no picture from {e['url']} ({err(ex)})")
+    titles = {}
+    for e in todo:
+        if found.get(e["id"]):
+            titles.setdefault(found[e["id"]], set()).add(fold(e["title"]))
+    added = 0
+    for e in todo:
+        img = found.get(e["id"])
+        if img and len(titles[img]) == 1:
+            e["image"] = img
+            added += 1
+    if todo:
+        log.append(f"{src['name']}: pictures from event pages for {added} of {len(todo)} events")
+
+# ------------------------------------------------------------------ probing sources that are still being added
+
+PROBE: list = []  # (source, page, regex of links on it to save too). Add a new site here before writing its reader.
+
+
+def probe(log: list) -> None:
+    report = []
+    for name, url, link_rx in PROBE:
+        try:
+            body = get(url, "text/html,application/json;q=0.9,*/*;q=0.8")
+        except Exception as ex:
+            report.append({"source": name, "url": url, "error": err(ex)})
+            continue
+        report.append({"source": name, "url": url, "file": _raw_path(url).name, "bytes": len(body)})
+        if not link_rx:
+            continue
+        links = []
+        for href in re.findall(r"href=[\"']([^\"'#]+)", body.decode("utf-8", "replace"), re.I):
+            link = urllib.parse.urljoin(url, html.unescape(href.strip()))
+            if re.match(link_rx, link) and link != url and link not in links:
+                links.append(link)
+        for link in links[:4]:
+            try:
+                b = get(link, "text/html")
+                report.append({"source": name, "url": link, "file": _raw_path(link).name, "bytes": len(b)})
+            except Exception as ex:
+                report.append({"source": name, "url": link, "error": err(ex)})
+    (RAW["dir"] / "probe.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    ok = sum(1 for r in report if "file" in r)
+    log.append(f"probe: saved {ok} of {len(report)} pages from new sources")
+
+def best_src(img_tag: str, base: str) -> str | None:
+    """A mid-size picture (about 800px wide) from an <img> tag's srcset, else its src."""
+    srcset = re.search(r"srcset=[\"']([^\"']+)", img_tag)
+    if srcset:
+        options = []
+        for part in srcset.group(1).split(","):
+            bits = part.strip().split()
+            if len(bits) == 2 and bits[1].endswith("w") and bits[1][:-1].isdigit():
+                options.append((int(bits[1][:-1]), bits[0]))
+        if options:
+            options.sort()
+            wide = [u for w, u in options if w >= 600]
+            return urllib.parse.urljoin(base, html.unescape(wide[0] if wide else options[-1][1]))
+    src = re.search(r"src=[\"']([^\"']+)", img_tag)
+    return urllib.parse.urljoin(base, html.unescape(src.group(1))) if src else None
+
+
+def _day_start(day: dt.date, hm=None) -> dt.datetime:
+    return local(dt.datetime(day.year, day.month, day.day, *(hm or (0, 0))))
+
+# ------------------------------------------------------------------ Gradsko pozorište Jazavac (Modern Events Calendar)
+
+def _split_caps_title(raw: str) -> tuple:
+    """'ŠEĆER JE SITAN, OSIM KAD JE KOCKA, komedija N. Pejakovića' -> (caps title, 'komedija N. Pejakovića')."""
+    best = (raw, "")
+    for m in re.finditer(r",\s+", raw):
+        head = raw[:m.start()]
+        if head and not any(c.islower() for c in head):
+            best = (head, raw[m.end():])
+    return best
+
+
+def _mec_times(base: str, event_id: str, page_url: str) -> tuple:
+    """(start, end, None) from the event's iCal export, or (None, None, (h, m)) from its page, or nothing."""
+    try:
+        text = get(f"{base}/?method=ical&id={event_id}", "text/calendar").decode("utf-8", "replace")
+        if "BEGIN:VEVENT" in text:
+            ev = parse_ics(text)[0]
+            start, all_day = _ics_time(ev.get("DTSTART"))
+            if start and not all_day:
+                return start, _ics_time(ev.get("DTEND"))[0], None
+    except Exception:
+        pass
+    try:
+        page = get(page_url, "text/html").decode("utf-8", "replace")
+        block = re.search(r"(?is)mec-single-event-time.{0,800}", page)
+        hm = time_from_text(strip_html(block.group(0))) if block else None
+        if hm:
+            return None, None, hm
+    except Exception:
+        pass
+    return None, None, None
+
+
+def collect_mec(src: dict, today: dt.date, horizon: dt.date, log: list) -> list:
+    url = src["base"] + src["html"][0]
+    try:
+        page = get(url, "text/html").decode("utf-8", "replace")
+    except Exception as ex:
+        log.append(f"{src['name']}: {src['html'][0]} failed ({err(ex)})")
+        return []
+    events, timed = [], 0
+    for art in re.findall(r"(?is)<article[^>]*mec-event-article.*?</article>", page):
+        label = re.search(r"mec-start-date-label[^>]*>([^<]+)<", art)
+        link = re.search(r"(?is)<h4[^>]*mec-event-title[^>]*>\s*<a[^>]*data-event-id=\"(\d+)\"[^>]*href=\"([^\"]+)\"[^>]*>(.*?)</a>", art)
+        day = date_from_text(label.group(1), today) if label else None
+        if not (link and day) or day < today or day > horizon:
+            continue
+        event_id, href = link.group(1), html.unescape(link.group(2))
+        title, subtitle = _split_caps_title(one_line(link.group(3)))
+        start, end, hm = _mec_times(src["base"], event_id, href) if len(events) < 30 else (None, None, None)
+        if hm:
+            start = _day_start(day, hm)
+        timed += start is not None
+        img = re.search(r"<img[^>]+>", art)
+        soldout = re.search(r"class=[\"']?soldout[\"']?>([^<]+)<", art)
+        events.append({
+            "source_id": event_id, "title_original": title, "title": to_latin(title),
+            "start": start or _day_start(day), "end": end, "all_day": start is None,
+            "hall": None, "price": None, "image": best_src(img.group(0), url) if img else None,
+            "url": href, "ticket_url": None, "description": to_latin(subtitle) or None,
+            "note": one_line(soldout.group(1)) if soldout else None, "source_categories": [],
+        })
+    log.append(f"{src['name']}: repertoire page, {len(events)} shows ({timed} with a start time)")
+    return events
+
+# ------------------------------------------------------------------ Gigstix (ticket site)
+
+def collect_gigstix(src: dict, today: dt.date, horizon: dt.date, log: list) -> list:
+    url = src["base"] + src["html"][0]
+    try:
+        page = get(url, "text/html").decode("utf-8", "replace")
+    except Exception as ex:
+        log.append(f"{src['name']}: listing failed ({err(ex)})")
+        return []
+    events = []
+    for card in re.split(r"<div class=\"gt-event-style-1\"", page)[1:]:
+        link = re.search(r"(?is)<div class=\"gt-title\">\s*<a href=\"([^\"]+)\"[^>]*>(.*?)</a>", card)
+        date_txt = re.search(r"(?is)<div class=\"gt-date\">.*?<span>([^<]+)</span>", card)
+        day = date_from_text(date_txt.group(1), today) if date_txt else None
+        if not (link and day) or day < today or day > horizon:
+            continue
+        href, title = html.unescape(link.group(1)), one_line(link.group(2))
+        cats = re.search(r"(?is)<div class=\"gt-category\">(.*?)</div>", card)
+        info = re.search(r"(?is)<div class=\"gt-text\">(.*?)</div>", card)
+        parts = [p.strip() for p in one_line(info.group(1)).split("|")] if info else []
+        img = re.search(r"<img[^>]+>", card)
+        e = {
+            "source_id": href.rstrip("/").rsplit("/", 1)[-1][:60], "title_original": title, "title": to_latin(title),
+            "start": _day_start(day), "end": None, "all_day": True,
+            "venue": to_latin(parts[2]) if len(parts) >= 3 else None, "hall": None, "price": None,
+            "image": best_src(img.group(0), url) if img else None, "url": href, "ticket_url": None,
+            "description": None,
+            "source_categories": [to_latin(one_line(c)) for c in re.findall(r"<a[^>]*>([^<]+)</a>", cats.group(1))] if cats else [],
+        }
+        try:
+            detail = get(href, "text/html").decode("utf-8", "replace")
+            about = re.search(r"(?is)gt-section-title\">\s*O doga\w*\s*</div>\s*<div class=\"gt-content\">(.*?)</div>", detail)
+            if about:
+                paragraphs = [one_line(p) for p in re.findall(r"(?is)<p[^>]*>(.*?)</p>", about.group(1))]
+                hm = time_from_text(" ".join(paragraphs[:2]))
+                if hm:
+                    e["start"], e["all_day"] = _day_start(day, hm), False
+                e["description"] = to_latin(one_line(" ".join(paragraphs[1:] or paragraphs), 280)) or None
+            ticket = re.search(r"href=\"(https://bilet\.gigstix\.ba/[^\"]*sectionGroup[^\"]*)\"", detail)
+            e["ticket_url"] = ticket.group(1) if ticket else None
+        except Exception as ex:
+            log.append(f"{src['name']}: event page {href} failed ({err(ex)})")
+        events.append(e)
+    log.append(f"{src['name']}: listing, {len(events)} events in Banja Luka")
+    return events
+
+# ------------------------------------------------------------------ Cinestar (films with showtimes)
+
+def collect_cinestar(src: dict, today: dt.date, horizon: dt.date, log: list) -> list:
+    url = src["base"] + src["html"][0]
+    try:
+        page = get(url, "text/html").decode("utf-8", "replace")
+    except Exception as ex:
+        log.append(f"{src['name']}: programme failed ({err(ex)})")
+        return []
+    events, films = [], 0
+    for block in re.split(r"<div class=\"movie-item", page)[1:]:
+        link = re.search(r"(?is)<a href=\"([^\"]+)\">\s*<h2>(.*?)</h2>", block)
+        if not link:
+            continue
+        films += 1
+        href = html.unescape(link.group(1))
+        # badges such as "Pretprodaja" or "Ponosni na domaći film" sit inside the title as <span class='filmlabel'>
+        labels = [one_line(x) for x in re.findall(r"(?is)filmlabel[^>]*>(.*?)</span>", link.group(2))]
+        title = one_line(re.sub(r"(?is)<span[^>]*filmlabel.*?</span>", " ", link.group(2)))
+        label_text = {"pretprodaja": "Ulaznice u pretprodaji", "ponosni na domaci film": "Domaći film"}
+        genre_m = re.search(r"data-genre=\"([^\"]*)\"", block)
+        genre = genre_m.group(1).split("/")[0].strip() if genre_m else ""
+        poster = re.search(r"(?is)class=\"poster-wrapper\">\s*<img[^>]+src=\"([^\"]+)\"", block)
+        duration = re.search(r"class=\"duration\">\s*([^<]+?)\s*<", block)
+        desc = re.search(r"(?is)</div>\s*<p>(.*?)</p>", block)
+        film_id = (re.search(r"/(\d+)/?$", href) or re.search(r"(\d+)", href) or re.search(r"(.+)", title)).group(1)
+        kind = fold(genre)
+        base_event = {
+            "title_original": title, "title": to_latin(title), "end": None, "all_day": False, "price": None,
+            "image": urllib.parse.urljoin(url, html.unescape(poster.group(1))) if poster else None,
+            "url": href, "description": to_latin(one_line(desc.group(1), 280)) if desc else None,
+            "genre": to_latin(genre) or None, "duration": one_line(duration.group(1)) if duration else None,
+            "category": {"opera": "Muzika", "balet": "Pozorište"}.get(kind, "Kino"),
+            "note": " · ".join(label_text.get(fold(x), x) for x in labels) or None,
+            "source_categories": [genre] if genre else [],
+        }
+        for day_html in re.split(r"<div class=\"day-wrapper\">", block)[1:]:
+            label = re.search(r"<div class=\"day\">([^<]+)</div>", day_html)
+            day = date_from_text(label.group(1), today) if label else None
+            if not day or day < today or day > horizon:
+                continue
+            shows = []
+            for perf_href, inner in re.findall(r"(?is)<a href=\"([^\"]+)\" class=\"perf\"[^>]*>(.*?)</a>", day_html):
+                t = re.search(r"class=\"time\">\s*([^<]+?)\s*<", inner)
+                hm = time_from_text(t.group(1)) if t else None
+                if not hm:
+                    continue
+                hall = re.search(r"class=\"venue\">\s*([^<]+?)\s*<", inner)
+                fmt = re.search(r"class=\"format\"[^>]*>\s*([^<]+?)\s*<", inner)
+                shows.append({"time": f"{hm[0]:02d}:{hm[1]:02d}", "hall": hall.group(1) if hall else None,
+                              "format": fmt.group(1) if fmt else None, "ticket": html.unescape(perf_href)})
+            if not shows:
+                continue
+            shows.sort(key=lambda s: s["time"])
+            if kind in ("opera", "balet"):  # opera and ballet broadcasts are one-off events
+                for s in shows:
+                    hm = tuple(map(int, s["time"].split(":")))
+                    events.append(dict(base_event, source_id=f"{film_id}-{day:%Y%m%d}-{hm[0]:02d}{hm[1]:02d}",
+                                       start=_day_start(day, hm), hall=s["hall"], ticket_url=s["ticket"]))
+            else:
+                hm = tuple(map(int, shows[0]["time"].split(":")))
+                events.append(dict(base_event, source_id=f"{film_id}-{day:%Y%m%d}", kind="kino", showtimes=shows,
+                                   start=_day_start(day, hm), hall=None, ticket_url=None))
+    log.append(f"{src['name']}: programme, {films} films, {len(events)} film-days")
+    return events
+
+
+def load_rules(path: Path) -> tuple:
+    """rules.json: {"keep": [...], "drop": [...]} words in titles that override the automatic culture filter."""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return [], []
+    except ValueError as ex:
+        print(f"rules.json is not valid JSON, ignoring it ({ex})")
+        return [], []
+    return ([fold(x) for x in data.get("keep", []) if x], [fold(x) for x in data.get("drop", []) if x])
+
 # ------------------------------------------------------------------ plain HTML tables (SC Borik)
 
 class _TableParser(HTMLParser):
@@ -626,7 +925,7 @@ SPORT = [r"\bliga\b", r"\bligi\b", r"\bligu\b", r"superlig", r"premijer\s*lig", 
          r"turnir", r"prvenstv", r"takmicenj", r"rukomet", r"kosark", r"fudbal", r"futsal", r"odbojk", r"karate",
          r"dzudo", r"\bjudo\b", r"tekvondo", r"taekwondo", r"kik\s*-?\s*boks", r"kickbox", r"\bboks", r"\bmma\b",
          r"plivan", r"kuglan", r"atletik", r"gimnastik", r"\bsah\b", r"\bsaha\b", r"tenis", r"hokej", r"memorijal",
-         r"sportsk", r"trening", r"rekreativ", r"maraton", r"\bvs\.?\b", r"\b(kk|rk|fk|zrk|zok|zkk)\s",
+         r"sportsk\w*\s+(dan|takmi|igre|igara|manifest|susret|kamp|skol)", r"trening", r"rekreativ", r"maraton", r"\bvs\.?\b", r"\b(kk|rk|fk|zrk|zok|zkk)\s",
          r"seniori", r"juniori", r"kadeti", r"pioniri", r"veterani", r"klizanj", r"biciklis", r"streljast",
          r"rvanj", r"badminton", r"olimpijad"]
 
@@ -701,8 +1000,9 @@ def categorize(e: dict, default: str) -> str:
 
 # ------------------------------------------------------------------ output
 
-FIELDS = ["id", "title", "title_original", "category", "start", "end", "all_day", "venue", "hall", "price", "age",
-          "organizer", "image", "url", "ticket_url", "description", "source", "also_listed_at", "reason"]
+FIELDS = ["id", "kind", "title", "title_original", "category", "start", "end", "all_day", "venue", "hall", "price", "age",
+          "organizer", "genre", "duration", "showtimes", "note", "image", "url", "ticket_url", "description", "source",
+          "also_listed_at", "reason"]
 
 
 def make_id(key: str, e: dict) -> str:
@@ -721,6 +1021,8 @@ def dedupe(events: list) -> list:
             seen[key] = e
             out.append(e)
             continue
+        if first.get("all_day") and not e.get("all_day"):  # e.g. Jazavac lists the date, Borik the time
+            first["start"], first["end"], first["all_day"] = e["start"], e.get("end"), False
         for k, v in e.items():  # fill gaps in the first copy
             if first.get(k) in (None, "", []) and v not in (None, "", []):
                 first[k] = v
@@ -753,6 +1055,7 @@ def main() -> int:
     ap.add_argument("--only", choices=[s["key"] for s in SOURCES], help="run one source")
     ap.add_argument("--out", default=str(Path(__file__).resolve().parent / "data"), help="output folder")
     ap.add_argument("--offline", action="store_true", help="re-run on the pages saved by the last online run")
+    ap.add_argument("--probe", action="store_true", help="also save pages of sources that are still being added")
     ap.add_argument("--today", help=argparse.SUPPRESS)  # YYYY-MM-DD, for testing
     args = ap.parse_args()
 
@@ -771,11 +1074,24 @@ def main() -> int:
     log: list = []
     kept, review, excluded = [], [], []
     fetched = 0
+    keep_rules, drop_rules = load_rules(Path(__file__).resolve().parent / "rules.json")
 
     for src in SOURCES:
         if args.only and src["key"] != args.only:
             continue
-        raw = collect_tec(src, args.days, today, log) if src["kind"] == "tec" else collect_table(src, today, log)
+        kind = src["kind"]
+        if kind == "tec":
+            raw = collect_tec(src, args.days, today, log)
+        elif kind == "table":
+            raw = collect_table(src, today, log)
+        elif kind == "mec":
+            raw = collect_mec(src, today, horizon, log)
+        elif kind == "gigstix":
+            raw = collect_gigstix(src, today, horizon, log)
+        elif kind == "cinestar":
+            raw = collect_cinestar(src, today, horizon, log)
+        else:
+            raw = []
         fetched += len(raw)
         if not raw:
             log.append(f"WARNING: {src['name']} gave 0 events. The site may have changed.")
@@ -785,14 +1101,33 @@ def main() -> int:
             last_day = (e.get("end") or e["start"]).date()
             if e["start"].date() > horizon or last_day < today:
                 continue
-            e.update(source=src["name"], venue=src["venue"])
+            e["source"] = src["name"]
+            if not e.get("venue"):
+                e["venue"] = src["venue"]
             e["id"] = make_id(src["key"], e)
-            e["category"] = categorize(e, src["default_category"])
+            e["category"] = e.get("category") or categorize(e, src["default_category"])
             e["title"] = smart_case(re.sub(r"(?i)^\s*predstav[ae]\s*:\s*", "", e["title"]).strip()) or e["title"]
             e["hall"] = clean_hall(e.get("hall"), src.get("aliases", []))
-            verdict, reason = classify(e, src["trust"])
+            venue_by_hall = src.get("hall_venues", {})
+            if e.get("hall") and fold(e["hall"]) in venue_by_hall:
+                e["venue"], e["hall"] = venue_by_hall[fold(e["hall"])], None
+            if e.get("kind") == "kino":
+                verdict, reason = "kept", ""
+            else:
+                verdict, reason = classify(e, src["trust"])
+                words = fold(f"{e.get('title_original') or ''} {e['title']}")
+                if any(k in words for k in drop_rules):
+                    verdict, reason = "excluded", "removed in rules.json"
+                elif any(k in words for k in keep_rules):
+                    verdict, reason = "kept", ""
             e["reason"] = reason or None
             {"kept": kept, "review": review, "excluded": excluded}[verdict].append(e)
+
+    for src in SOURCES:
+        if src.get("enrich_images") and not (args.only and src["key"] != args.only):
+            enrich_images(src, kept + review, log)
+    if args.probe and not args.offline:
+        probe(log)
 
     kept = sorted(dedupe(kept), key=lambda e: e["start"])
     review.sort(key=lambda e: e["start"])
@@ -813,7 +1148,7 @@ def main() -> int:
     reasons: dict = {}
     for e in excluded:
         reasons[e["reason"]] = reasons.get(e["reason"], 0) + 1
-    print(f"kuda. collector v0.3 · {now:%d.%m.%Y %H:%M}" + (" · offline re-run" if args.offline else ""))
+    print(f"kuda. collector v0.5 · {now:%d.%m.%Y %H:%M}" + (" · offline re-run" if args.offline else ""))
     for line in log:
         print("  " + line)
     print(f"\nKept {len(kept)} · to review {len(review)} · excluded {len(excluded)}"
