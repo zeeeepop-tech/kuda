@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-25T16:35:01+01:00",
+  "generated_at": "2026-11-25T16:39:54+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -10,7 +10,7 @@ window.KUDA_DATA = {
     "SC Borik: table on /?page_id=6913, 103 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 31 films, 120 film-days",
-    "Sheet: 0 events added by hand, 0 picture swaps",
+    "Sheet: 0 events added by hand, 1 picture swaps",
     "Banski dvor: pictures from event pages for 2 of 2 events",
     "TMDB: sharper pictures for 21 of 24 films (0 looked up now)"
   ],
@@ -3308,7 +3308,7 @@ window.KUDA_DATA = {
       "start": "2026-12-05T21:00:00+01:00",
       "all_day": false,
       "venue": "KSB – Klub studenata Banjaluka",
-      "image": "https://gigstix.ba/wp-content/uploads/2026/10/zoster_0512_800-800x579.jpg",
+      "image": "https://www.beerka.ba/speaker/zoster/",
       "url": "https://gigstix.ba/event/zoster-banja-luka-05-decembar-2026/",
       "ticket_url": "https://bilet.gigstix.ba/ba/store/gigstix/sectionGroup/index/232",
       "description": "Bend ZOSTER održaće koncert u Klubu studenata Banjaluka 05. decembra 2026. godine, sa početkom u 21:00. Zoster, prepoznatljiv po svom jedinstvenom spoju reggae zvuka, rocka i društveno angažovanih tekstova, već gotovo dvije decenije slovi za jedan od najvažnijih bendova…",
