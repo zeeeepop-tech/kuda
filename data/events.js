@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-25T14:07:51+01:00",
+  "generated_at": "2026-11-25T14:38:11+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -10,7 +10,7 @@ window.KUDA_DATA = {
     "SC Borik: table on /?page_id=6913, 103 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 31 films, 120 film-days",
-    "Banski dvor: pictures from event pages for 1 of 2 events"
+    "Banski dvor: pictures from event pages for 2 of 2 events"
   ],
   "count": 161,
   "events": [
@@ -246,6 +246,7 @@ window.KUDA_DATA = {
       "venue": "Banski dvor Kulturni centar",
       "hall": "Koncertna dvorana",
       "price": "10 KM",
+      "image": "https://banskidvor.org/wp-content/uploads/2026/11/Ненад-Василић-промо-768x960.jpg",
       "url": "https://banskidvor.org/event/koncert-nenad-vasilic-trio/",
       "description": "U srijedu, 25. novembra, u 20.00 časova, nastupiće NENAD VASILIĆ TRIO, predvođen jednim od najistaknutijih evropskih džez kontrabasista i kompozitora sa Balkana. Muzika Nenada Vasilića zasniva se na slobodnom dijalogu džeza, improvizacije i balkanskog muzičkog nasljeđa, pri čemu…",
       "source": "Banski dvor"
@@ -3249,7 +3250,7 @@ window.KUDA_DATA = {
       "all_day": false,
       "venue": "Narodno pozorište Republike Srpske",
       "hall": "Velika scena",
-      "image": "https://www.np.rs.ba/wp-content/uploads/2023/10/koncert-2.jpg",
+      "image": "https://www.np.rs.ba/wp-content/uploads/2026/11/neklasicni-zur-repertoar.png",
       "url": "https://www.np.rs.ba/predstava/ciklus-koncerata-so-nprs-neklasicni-zur/",
       "description": "Gudački orkestar Narodnog pozorišta Republike Srpske solisti: Marija Pilipović , flauta (Banja Luka) Vladimir Stanišić , klarinet (Beograd) Luka Lopičić , harmonika (Beograd) dirigent: Natalija Mićić (Beograd) na programu: Bartok, Holst, Babić i Di Marino RIJEČ DIRIGENTA: Šta…",
       "source": "Narodno pozorište RS"
