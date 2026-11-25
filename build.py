@@ -129,11 +129,12 @@ def fetch(src: str) -> bytes | None:
 
 
 def framed(im, w: int, h: int):
-    """The whole picture centred on a blurred, darkened copy of itself, so posters keep their text."""
+    """The whole picture centred on a blurred, darkened copy of itself, so posters keep their text.
+    Small pictures are enlarged to fill the height (up to 2.5×): Cinestar's posters are only 300×400."""
     back = ImageOps.fit(im, (w, h), Image.LANCZOS).filter(ImageFilter.GaussianBlur(max(w, h) // 40))
     back = Image.blend(back, Image.new("RGB", (w, h), (15, 15, 15)), 0.5)
-    front = im.copy()
-    front.thumbnail((w, h), Image.LANCZOS)
+    scale = min(w / im.width, h / im.height, 2.5)
+    front = im.resize((max(1, round(im.width * scale)), max(1, round(im.height * scale))), Image.LANCZOS)
     back.paste(front, ((w - front.width) // 2, (h - front.height) // 2))
     return back
 
@@ -150,7 +151,7 @@ def pictures(e: dict) -> dict:
     if not src or Image is None:
         return {}
     kino = e.get("kind") == "kino"
-    key = hashlib.sha1(src.encode()).hexdigest()[:16] + ("k" if kino else "")
+    key = hashlib.sha1(f"{src}|2".encode()).hexdigest()[:16] + ("k" if kino else "")  # |2: posters now fill the frame
     names = {"thumb": f"img/{key}-t.webp", "large": f"img/{key}-l.webp", "og": f"img/{key}-og.jpg"}
     store = CACHE / "out"
     if not all((store / n).exists() for n in names.values()):
@@ -266,6 +267,7 @@ a{color:inherit}:focus-visible{outline:2px solid #2B4BFF;outline-offset:2px}butt
 .hero{position:relative;margin:0;border-radius:20px;overflow:hidden;background:var(--soft-2);aspect-ratio:4/3}
 .hero .bg{filter:blur(22px) brightness(.6);transform:scale(1.15)}.hero .fg{object-fit:contain}
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .tile:has(~ img){opacity:0}
 .hero figcaption{position:absolute;right:10px;bottom:10px;padding:3px 9px;border-radius:999px;background:rgba(255,255,255,.92);font-size:11px;font-weight:600}
 .tile{position:absolute;inset:0;padding:22px;font:800 clamp(30px,6vw,56px)/.95 var(--display);letter-spacing:-.03em;text-transform:uppercase;overflow:hidden}
 .eyebrow{margin:0;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}

@@ -30,8 +30,8 @@
   --text: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; background: var(--paper); }
-html.at-end { background: var(--ink); }
+html { -webkit-text-size-adjust: 100%; background: var(--ink); }
+html.at-top { background: var(--paper); }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 var(--text); }
 body:has(dialog[open]) { overflow: hidden; }
 a { color: inherit; }
@@ -72,10 +72,9 @@ svg { flex: none; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .dot.stale { background: #8E8E86; }
 .dayhead { display: flex; flex-direction: column; gap: 8px; padding: 8px 0 4px; }
-.dayhead .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 0.16em; color: var(--ink); }
-.dayhead .eyebrow::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+.dayhead .eyebrow { font-size: 13px; font-weight: 500; letter-spacing: 0.1em; color: #5e5e58; }
 .eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
-.daytitle { margin: 0; font: 800 clamp(42px, 13vw, 60px)/0.94 var(--display); letter-spacing: -0.045em; }
+.daytitle { margin: 0; font: 800 clamp(36px, 11vw, 52px)/0.96 var(--display); letter-spacing: -0.04em; }
 .daytitle .pt { color: var(--accent); }
 .day { flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; width: 62px; min-height: 74px; padding: 0; border: 1px solid var(--line-strong); border-radius: 16px; background: var(--paper); }
 .day small { font-size: 13px; font-weight: 600; color: var(--muted); }
@@ -152,6 +151,9 @@ svg { flex: none; }
 
 /* generated poster when an event has no picture */
 .tile { position: absolute; inset: 0; overflow: hidden; }
+.tile:has(~ img) { opacity: 0; } /* the colour tile only shows when there is no picture (or it fails) */
+.thumb img, .media img, .kthumb img, .nthumb img { opacity: 0; transition: opacity 0.35s ease, transform 0.4s ease; }
+.thumb img.in, .media img.in, .kthumb img.in, .nthumb img.in { opacity: 1; }
 .tile::after { content: ""; position: absolute; background: currentColor; }
 .tile span { position: absolute; left: 7px; right: 7px; top: 5px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; padding-top: 0.14em; font: 800 12px/0.95 var(--display); letter-spacing: -0.02em; text-transform: uppercase; }
 .tile.big span { left: 24px; right: 24px; top: 18px; font-size: clamp(34px, 4vw, 54px); }
@@ -255,7 +257,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   .scroller { flex-wrap: wrap; overflow: visible; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
   .lead { gap: 16px; padding-top: 24px; }
   .day { width: 66px; min-height: 78px; }
-  .daytitle { font-size: clamp(60px, 7vw, 92px); }
+  .daytitle { font-size: clamp(52px, 6vw, 76px); }
   .day b { font-size: 22px; }
   .feature { height: 360px; }
   .feature .media::after { background: linear-gradient(90deg, rgba(15, 15, 15, 0.9) 0%, rgba(15, 15, 15, 0.55) 42%, rgba(15, 15, 15, 0) 72%), linear-gradient(180deg, rgba(15, 15, 15, 0) 45%, rgba(15, 15, 15, 0.6) 100%); }
@@ -742,6 +744,8 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     renderFilters();
     renderFeatured();
     renderList();
+    // pictures the browser already had show at once (their fade-in is for pictures still loading)
+    document.querySelectorAll("main img:not(.in)").forEach((im) => { if (im.complete && im.naturalWidth) im.classList.add("in"); });
   }
 
   function gcal(e) {
@@ -844,6 +848,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
       const desc = dlg.querySelector(".desc-full"), more = dlg.querySelector("[data-more]");
       if (desc && more) more.hidden = desc.scrollHeight <= desc.clientHeight + 2;  // "Prikaži više" only when it's cut
       dlg.querySelectorAll("img.fg").forEach(markTall);
+      dlg.querySelectorAll("img").forEach((im) => { if (im.complete && im.naturalWidth) im.classList.add("in"); });
       return;
     }
     if (dlg.open) dlg.close();
@@ -913,16 +918,22 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   });
   window.addEventListener("hashchange", route);
   document.addEventListener("error", (ev) => { if (ev.target && ev.target.tagName === "IMG") ev.target.remove(); }, true);
-  document.addEventListener("load", (ev) => { if (ev.target.classList && ev.target.classList.contains("fg")) markTall(ev.target); }, true);
+  document.addEventListener("load", (ev) => {
+    if (ev.target.tagName !== "IMG") return;
+    ev.target.classList.add("in");
+    if (ev.target.classList.contains("fg")) markTall(ev.target);
+  }, true);
   // the tab bar gets a shadow once it sticks to the top
   if ("IntersectionObserver" in window) {
     new IntersectionObserver(([en]) => $("#daysbar").classList.toggle("stuck", !en.isIntersecting && en.boundingClientRect.top < 0))
       .observe($("#days-sentinel"));
   }
-  // pulling past the end of the page (iPhone bounce) shows the footer's dark colour, not a white strip
-  const atEnd = () => document.documentElement.classList.toggle("at-end", scrollY + innerHeight > document.documentElement.scrollHeight - 300);
-  addEventListener("scroll", atEnd, { passive: true });
-  addEventListener("resize", atEnd);
+  // iPhone bounce: below the footer the page shows its dark background; once the visitor has scrolled,
+  // being near the top turns it white so pulling down above the header shows white too
+  addEventListener("scroll", () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    document.documentElement.classList.toggle("at-top", scrollY < max / 2);
+  }, { passive: true });
 
   renderStatus();
   render();
