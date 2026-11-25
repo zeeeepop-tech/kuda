@@ -1,15 +1,240 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-25T06:20:48+01:00",
+  "generated_at": "2026-11-25T10:40:55+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
   "log": [
     "Narodno pozorište RS: REST API, 24 events",
     "Banski dvor: REST API, 5 events",
-    "SC Borik: table on /?page_id=6913, 103 rows with a date"
+    "Gradsko pozorište Jazavac: repertoire page, 8 shows (8 with a start time)",
+    "SC Borik: table on /?page_id=6913, 103 rows with a date",
+    "Gigstix: listing, 3 events in Banja Luka",
+    "Cinestar Delta Planet: programme, 31 films, 120 film-days",
+    "Banski dvor: pictures from event pages for 1 of 2 events"
   ],
-  "count": 35,
+  "count": 161,
   "events": [
+    {
+      "id": "cs-6533-20261125",
+      "kind": "kino",
+      "title": "Kristalni planet",
+      "category": "Kino",
+      "start": "2026-11-25T16:25:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 37min",
+      "showtimes": [
+        {
+          "time": "16:25",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kristalni-planet/C6C01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Kristalni%20planet/planet_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kristalni-planet/6533",
+      "description": "U režiji Arsena Antona Ostojića i prema originalnom scenariju legendarnog Dušana Vukotića, prvog hrvatskog dobitnika Oscara, u kina dolazi jedan od najvećih i najambicioznijih projekata suvremene hrvatske animacije – nezaboravna avantura za sve generacije. Na nedavno naseljenom…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6516-20261125",
+      "kind": "kino",
+      "title": "Igre gladi: Svitanje nad žetvom",
+      "category": "Kino",
+      "start": "2026-11-25T16:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 38min",
+      "showtimes": [
+        {
+          "time": "16:30",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/15C01000023IXUNOEM"
+        },
+        {
+          "time": "18:30",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/27C01000023IXUNOEM"
+        },
+        {
+          "time": "19:15",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/78C01000023IXUNOEM"
+        },
+        {
+          "time": "21:30",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/87C01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
+      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6539-20261125",
+      "kind": "kino",
+      "title": "Janko Strižić film: Bundevasti kaos",
+      "category": "Kino",
+      "start": "2026-11-25T16:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 21min",
+      "showtimes": [
+        {
+          "time": "16:30",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/F2C01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Shaun%20the%20Sheep%20The%20Beast%20of%20Mossy%20Bottom/shaun_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/6539",
+      "description": "Od studija Aardman Animations, višestrukih dobitnika Oscara i autora nezaboravnih hitova Wallace i Gromit te Bijeg iz kokošinjca, stiže treći nastavak urnebesne animirane avanture za cijelu obitelj! Stanovnici farme Mossy Bottom s veseljem iščekuju Noć vještica, no njihove…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6557-20261125",
+      "kind": "kino",
+      "title": "Ebenezer - Božićna priča",
+      "category": "Kino",
+      "start": "2026-11-25T16:55:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Fantazija",
+      "duration": "1h 57min",
+      "showtimes": [
+        {
+          "time": "16:55",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ebenezer-bozicna-prica/48C01000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ebenezer-bozicna-prica/75C01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Ebenezer%20A%20Christmas%20Carol/Ebenezer%20poster%20300x400px%20CineStar%20BiH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ebenezer-bozicna-prica/6557",
+      "description": "Ovog novembra, Johnny Depp je Ebenezer Scrooge. Ime koje znate, priča koju ne znate. Film EBENEZER - BOŽIĆNA PRIČA\" režirao je Ti West, a u glavnim ulogama gledaćemo i Ruperta Grinta, Andreu Riseborough, Sama Claflina, Daisy Ridley, Arthur Conti, Ellie Bamber, Henry…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261125",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-11-25T17:05:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "17:05",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/CFB01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6618-20261125",
+      "kind": "kino",
+      "title": "Kako opljačkati banku",
+      "category": "Kino",
+      "start": "2026-11-25T17:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 2min",
+      "showtimes": [
+        {
+          "time": "17:15",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/21C01000023IXUNOEM"
+        },
+        {
+          "time": "22:15",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/D8C01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
+      "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6627-20261125",
+      "kind": "kino",
+      "title": "Male stvari",
+      "category": "Kino",
+      "start": "2026-11-25T18:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Drama",
+      "duration": "1h 20min",
+      "showtimes": [
+        {
+          "time": "18:30",
+          "hall": "Sala 3",
+          "format": null,
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/male-stvari/53C01000023IXUNOEM"
+        }
+      ],
+      "note": "Domaći film",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Male%20stvari/male_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/male-stvari/6627",
+      "description": "Jednog zimskog vikenda, sestre Anica i Irena, koja dovodi i svoje dvoje male djece, dolaze posjetiti oca koji živi na otoku s njihovim bratom Ivanom, šutljivim osobenjakom. Motiv za posjetu je očeva odluka da proda obiteljsku zemlju. Dvije sestre, dvoje djece i dva muškarca koja…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6603-20261125",
+      "kind": "kino",
+      "title": "Ja sam Rocky",
+      "category": "Kino",
+      "start": "2026-11-25T19:45:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Biografski",
+      "duration": "2h 8min",
+      "showtimes": [
+        {
+          "time": "19:45",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/81C01000023IXUNOEM"
+        },
+        {
+          "time": "22:30",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/14C01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
+      "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
+      "source": "Cinestar Delta Planet"
+    },
     {
       "id": "bd-40326",
       "title": "Koncert Nenad Vasilić Trio",
@@ -32,11 +257,56 @@ window.KUDA_DATA = {
       "category": "Pozorište",
       "start": "2026-11-25T20:00:00+01:00",
       "all_day": false,
-      "venue": "SC Borik",
-      "hall": "Pozorišna sala",
+      "venue": "Gradsko pozorište Jazavac",
       "organizer": "Queen Estrada",
       "url": "https://scborik.com/?page_id=6913",
       "source": "SC Borik"
+    },
+    {
+      "id": "cs-6643-20261125",
+      "kind": "kino",
+      "title": "Dozvola za nove Fockere - CineLady",
+      "category": "Kino",
+      "start": "2026-11-25T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 46min",
+      "showtimes": [
+        {
+          "time": "20:00",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere-cinelady/1FB01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere-cinelady/6643",
+      "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6556-20261125",
+      "kind": "kino",
+      "title": "Divlji konj broj devet",
+      "category": "Kino",
+      "start": "2026-11-25T20:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 58min",
+      "showtimes": [
+        {
+          "time": "20:10",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/B3C01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
+      "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25644",
@@ -55,6 +325,232 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "cs-6611-20261125",
+      "kind": "kino",
+      "title": "Druga mama",
+      "category": "Kino",
+      "start": "2026-11-25T21:50:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Horor",
+      "duration": "1h 33min",
+      "showtimes": [
+        {
+          "time": "21:50",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/druga-mama/D5C01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Other%20Mommy/OtherMommyBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/druga-mama/6611",
+      "description": "Mogu li da uđem u tvoje srce? Od producenta Jamesa Wana, jednog od najuticajnijih tvoraca moderne horor kinematografije, i studija Blumhouse Atomic Monster , koji stoji iza filmova Backrooms: Bez izlaza i Opsesija, stiže zastrašujuće ostvarenje perspektivnog žanrovskog reditelja…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6601-20261125",
+      "kind": "kino",
+      "title": "Talent za ubojstvo",
+      "category": "Kino",
+      "start": "2026-11-25T22:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Triler",
+      "duration": "1h 46min",
+      "showtimes": [
+        {
+          "time": "22:15",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/talent-za-ubojstvo/E1C01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/A%20Talent%20for%20Murder/talent_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/talent-za-ubojstvo/6601",
+      "description": "Dobitnica nagrade Oscar® Helen Mirren utjelovljuje legendarnu spisateljicu Patriciju Highsmith u napetom psihološkom trileru u kojem se granica između književne fikcije i stvarnosti počinje opasno brisati. Tajanstveni mladi zaposlenik njujorške izdavačke kuće (Alden Ehrenreich)…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6558-20261126",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-11-26T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/26B01000023IXUNOEM"
+        },
+        {
+          "time": "16:45",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/81D01000023IXUNOEM"
+        },
+        {
+          "time": "17:25",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/A6B01000023IXUNOEM"
+        },
+        {
+          "time": "18:05",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/CCC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6516-20261126",
+      "kind": "kino",
+      "title": "Igre gladi: Svitanje nad žetvom",
+      "category": "Kino",
+      "start": "2026-11-26T17:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 38min",
+      "showtimes": [
+        {
+          "time": "17:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/DEC01000023IXUNOEM"
+        },
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/91D01000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/F2D01000023IXUNOEM"
+        },
+        {
+          "time": "22:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/A1D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
+      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6557-20261126",
+      "kind": "kino",
+      "title": "Ebenezer - Božićna priča",
+      "category": "Kino",
+      "start": "2026-11-26T17:05:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Fantazija",
+      "duration": "1h 57min",
+      "showtimes": [
+        {
+          "time": "17:05",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ebenezer-bozicna-prica/30D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Ebenezer%20A%20Christmas%20Carol/Ebenezer%20poster%20300x400px%20CineStar%20BiH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ebenezer-bozicna-prica/6557",
+      "description": "Ovog novembra, Johnny Depp je Ebenezer Scrooge. Ime koje znate, priča koju ne znate. Film EBENEZER - BOŽIĆNA PRIČA\" režirao je Ti West, a u glavnim ulogama gledaćemo i Ruperta Grinta, Andreu Riseborough, Sama Claflina, Daisy Ridley, Arthur Conti, Ellie Bamber, Henry…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261126",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-11-26T17:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "17:30",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/5AC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6605-20261126",
+      "kind": "kino",
+      "title": "Tigar od papira",
+      "category": "Kino",
+      "start": "2026-11-26T19:25:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Krimi",
+      "duration": "1h 55min",
+      "showtimes": [
+        {
+          "time": "19:25",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/40D01000023IXUNOEM"
+        },
+        {
+          "time": "21:45",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/50D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
+      "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6603-20261126",
+      "kind": "kino",
+      "title": "Ja sam Rocky",
+      "category": "Kino",
+      "start": "2026-11-26T19:40:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Biografski",
+      "duration": "2h 8min",
+      "showtimes": [
+        {
+          "time": "19:40",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/BDC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
+      "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "bd-40329",
       "title": "Koncert David Jarh Quintet",
       "title_original": "Концерт DAVID JARH QUINTET",
@@ -71,17 +567,306 @@ window.KUDA_DATA = {
       "source": "Banski dvor"
     },
     {
-      "id": "borik-cd205a2b5f",
+      "id": "gpj-9441",
       "title": "Bračno Savjetovanje",
-      "title_original": "ПРЕДСТАВА: БРАЧНО САВЈЕТОВАЊЕ",
       "category": "Pozorište",
       "start": "2026-11-26T20:00:00+01:00",
+      "end": "2026-11-26T00:00:00+01:00",
       "all_day": false,
-      "venue": "SC Borik",
-      "hall": "Pozorišna sala",
+      "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
-      "url": "https://scborik.com/?page_id=6913",
-      "source": "SC Borik"
+      "note": "Preostale ulaznice u direktnoj prodaji",
+      "image": "https://gpj.ba/wp-content/uploads/2024/09/BRACNO-SAVJETOVANJE-PLAKAT-WEB-731x1024.png",
+      "url": "https://gpj.ba/repertoar/bracno-savjetovanje-prva-repriza-2/",
+      "description": "komedija D. Glatauera",
+      "source": "Gradsko pozorište Jazavac",
+      "also_listed_at": [
+        "SC Borik"
+      ]
+    },
+    {
+      "id": "cs-6622-20261126",
+      "kind": "kino",
+      "title": "Muž od pruća",
+      "category": "Kino",
+      "start": "2026-11-26T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 45min",
+      "showtimes": [
+        {
+          "time": "20:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/EEC01000023IXUNOEM"
+        },
+        {
+          "time": "22:10",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/FEC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
+      "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6559-20261126",
+      "kind": "kino",
+      "title": "Dozvola za nove Fockere",
+      "category": "Kino",
+      "start": "2026-11-26T20:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 46min",
+      "showtimes": [
+        {
+          "time": "20:15",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/DCC01000023IXUNOEM"
+        },
+        {
+          "time": "22:25",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/ECC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
+      "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6556-20261126",
+      "kind": "kino",
+      "title": "Divlji konj broj devet",
+      "category": "Kino",
+      "start": "2026-11-26T22:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 58min",
+      "showtimes": [
+        {
+          "time": "22:10",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/CDC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
+      "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6618-20261126",
+      "kind": "kino",
+      "title": "Kako opljačkati banku",
+      "category": "Kino",
+      "start": "2026-11-26T22:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 2min",
+      "showtimes": [
+        {
+          "time": "22:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/03D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
+      "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6558-20261127",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-11-27T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/36B01000023IXUNOEM"
+        },
+        {
+          "time": "16:45",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/B1D01000023IXUNOEM"
+        },
+        {
+          "time": "17:25",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/D6B01000023IXUNOEM"
+        },
+        {
+          "time": "18:05",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/FCC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6516-20261127",
+      "kind": "kino",
+      "title": "Igre gladi: Svitanje nad žetvom",
+      "category": "Kino",
+      "start": "2026-11-27T17:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 38min",
+      "showtimes": [
+        {
+          "time": "17:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/0FC01000023IXUNOEM"
+        },
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/12D01000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/43D01000023IXUNOEM"
+        },
+        {
+          "time": "22:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/72D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
+      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6557-20261127",
+      "kind": "kino",
+      "title": "Ebenezer - Božićna priča",
+      "category": "Kino",
+      "start": "2026-11-27T17:05:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Fantazija",
+      "duration": "1h 57min",
+      "showtimes": [
+        {
+          "time": "17:05",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ebenezer-bozicna-prica/60D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Ebenezer%20A%20Christmas%20Carol/Ebenezer%20poster%20300x400px%20CineStar%20BiH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ebenezer-bozicna-prica/6557",
+      "description": "Ovog novembra, Johnny Depp je Ebenezer Scrooge. Ime koje znate, priča koju ne znate. Film EBENEZER - BOŽIĆNA PRIČA\" režirao je Ti West, a u glavnim ulogama gledaćemo i Ruperta Grinta, Andreu Riseborough, Sama Claflina, Daisy Ridley, Arthur Conti, Ellie Bamber, Henry…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261127",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-11-27T17:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "17:30",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/6AC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6605-20261127",
+      "kind": "kino",
+      "title": "Tigar od papira",
+      "category": "Kino",
+      "start": "2026-11-27T19:25:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Krimi",
+      "duration": "1h 55min",
+      "showtimes": [
+        {
+          "time": "19:25",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/C0D01000023IXUNOEM"
+        },
+        {
+          "time": "21:45",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/21D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
+      "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6603-20261127",
+      "kind": "kino",
+      "title": "Ja sam Rocky",
+      "category": "Kino",
+      "start": "2026-11-27T19:40:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Biografski",
+      "duration": "2h 8min",
+      "showtimes": [
+        {
+          "time": "19:40",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/DDC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
+      "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "borik-16a5b45b7d",
@@ -90,11 +875,68 @@ window.KUDA_DATA = {
       "category": "Pozorište",
       "start": "2026-11-27T20:00:00+01:00",
       "all_day": false,
-      "venue": "SC Borik",
-      "hall": "Pozorišna sala",
+      "venue": "Gradsko pozorište Jazavac",
       "organizer": "Od a Media",
       "url": "https://scborik.com/?page_id=6913",
       "source": "SC Borik"
+    },
+    {
+      "id": "cs-6622-20261127",
+      "kind": "kino",
+      "title": "Muž od pruća",
+      "category": "Kino",
+      "start": "2026-11-27T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 45min",
+      "showtimes": [
+        {
+          "time": "20:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/6FC01000023IXUNOEM"
+        },
+        {
+          "time": "22:10",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/CFC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
+      "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6559-20261127",
+      "kind": "kino",
+      "title": "Dozvola za nove Fockere",
+      "category": "Kino",
+      "start": "2026-11-27T20:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 46min",
+      "showtimes": [
+        {
+          "time": "20:15",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/2DC01000023IXUNOEM"
+        },
+        {
+          "time": "22:25",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/5DC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
+      "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25782",
@@ -111,6 +953,407 @@ window.KUDA_DATA = {
       "url": "https://www.np.rs.ba/predstava/sin/",
       "description": "Autor: Florijan Zeler Prevod: Ivana Dimić Rediteljka: Belinda Stijak Dramaturg: Aleksandar Vasiljević Scenograf: Sara Stjepanović Kostimograf: Vladimirka Velaga Kompozitor: Bojan Stijak Lektor: Nataša Kecman Saradnik iz oblasti psihologije: prof. dr Milica Drobac Pravićević…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "cs-6556-20261127",
+      "kind": "kino",
+      "title": "Divlji konj broj devet",
+      "category": "Kino",
+      "start": "2026-11-27T22:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 58min",
+      "showtimes": [
+        {
+          "time": "22:10",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/3EC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
+      "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6618-20261127",
+      "kind": "kino",
+      "title": "Kako opljačkati banku",
+      "category": "Kino",
+      "start": "2026-11-27T22:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 2min",
+      "showtimes": [
+        {
+          "time": "22:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/A3D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
+      "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6558-20261128",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-11-28T11:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "11:00",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/E6B01000023IXUNOEM"
+        },
+        {
+          "time": "11:45",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/66B01000023IXUNOEM"
+        },
+        {
+          "time": "13:55",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/76B01000023IXUNOEM"
+        },
+        {
+          "time": "14:30",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/D2D01000023IXUNOEM"
+        },
+        {
+          "time": "15:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/3AC01000023IXUNOEM"
+        },
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/46B01000023IXUNOEM"
+        },
+        {
+          "time": "16:45",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/C1D01000023IXUNOEM"
+        },
+        {
+          "time": "17:25",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/B6B01000023IXUNOEM"
+        },
+        {
+          "time": "18:05",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/0DC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6544-20261128",
+      "kind": "kino",
+      "title": "Ostrvo sjećanja",
+      "category": "Kino",
+      "start": "2026-11-28T11:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 49min",
+      "showtimes": [
+        {
+          "time": "11:00",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ostrvo-sjecanja/2BC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Forgotten%20Island/island_300x400_bih.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ostrvo-sjecanja/6544",
+      "description": "\"Vrijedi se boriti za vaše najbolje prijateljstvo.\" Studio DreamWorks Animation, poznat po nezaboravnim vezama između dječaka i zmaja u Kako da dresirate svog zmaja, između ogra i magarca u Shreku, kao i između robota i guščeta u filmu Neukrotivi robot, donosi novu, blistavu i…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6599-20261128",
+      "kind": "kino",
+      "title": "Životinjska farma",
+      "category": "Kino",
+      "start": "2026-11-28T11:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 35min",
+      "showtimes": [
+        {
+          "time": "11:15",
+          "hall": "Sala 4",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/6BC01000023IXUNOEM"
+        },
+        {
+          "time": "15:15",
+          "hall": "Sala 4",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/9BC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Animal%20Farm/animal%20farm_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/zivotinjska-farma/6599",
+      "description": "Iz maštovitog svijeta Andyja Serkisa stiže nova, zabavna i pustolovna ekranizacija Orwellova bezvremenskoga klasika. Kada životinje preuzmu upravljanje farmom, vjeruju da ih očekuje pravedniji i bolji život. No njihove se velike zamisli ubrzo počinju mijenjati, a zajedništvo…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6539-20261128",
+      "kind": "kino",
+      "title": "Janko Strižić film: Bundevasti kaos",
+      "category": "Kino",
+      "start": "2026-11-28T11:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 21min",
+      "showtimes": [
+        {
+          "time": "11:15",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/89C01000023IXUNOEM"
+        },
+        {
+          "time": "13:15",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/9EC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Shaun%20the%20Sheep%20The%20Beast%20of%20Mossy%20Bottom/shaun_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/6539",
+      "description": "Od studija Aardman Animations, višestrukih dobitnika Oscara i autora nezaboravnih hitova Wallace i Gromit te Bijeg iz kokošinjca, stiže treći nastavak urnebesne animirane avanture za cijelu obitelj! Stanovnici farme Mossy Bottom s veseljem iščekuju Noć vještica, no njihove…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261128",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-11-28T11:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "11:30",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/CAC01000023IXUNOEM"
+        },
+        {
+          "time": "13:05",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/EAC01000023IXUNOEM"
+        },
+        {
+          "time": "15:20",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/BEC01000023IXUNOEM"
+        },
+        {
+          "time": "17:30",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/7AC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6533-20261128",
+      "kind": "kino",
+      "title": "Kristalni planet",
+      "category": "Kino",
+      "start": "2026-11-28T13:05:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 37min",
+      "showtimes": [
+        {
+          "time": "13:05",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kristalni-planet/4BC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Kristalni%20planet/planet_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kristalni-planet/6533",
+      "description": "U režiji Arsena Antona Ostojića i prema originalnom scenariju legendarnog Dušana Vukotića, prvog hrvatskog dobitnika Oscara, u kina dolazi jedan od najvećih i najambicioznijih projekata suvremene hrvatske animacije – nezaboravna avantura za sve generacije. Na nedavno naseljenom…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6518-20261128",
+      "kind": "kino",
+      "title": "Malci i monstrumi",
+      "category": "Kino",
+      "start": "2026-11-28T13:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 30min",
+      "showtimes": [
+        {
+          "time": "13:15",
+          "hall": "Sala 4",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/malci-i-monstrumi/0BC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Minions%20and%20Monsters/minions_300x400_bih.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/malci-i-monstrumi/6518",
+      "description": "Ubrzo nakon ogromnog svjetskog uspeha blockbustera GROZAN JA 4, najduhovitije letnje komedije u 2024. godini, Ilummination proširuje svoj veseli animirani univerzum novim urnebesnim poglavljem, uz potpuno nove likove, u najvećoj globalnoj animiranoj franšizi u istoriji: MALCI I…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6516-20261128",
+      "kind": "kino",
+      "title": "Igre gladi: Svitanje nad žetvom",
+      "category": "Kino",
+      "start": "2026-11-28T17:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 38min",
+      "showtimes": [
+        {
+          "time": "17:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/1FC01000023IXUNOEM"
+        },
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/22D01000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/53D01000023IXUNOEM"
+        },
+        {
+          "time": "22:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/82D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
+      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6557-20261128",
+      "kind": "kino",
+      "title": "Ebenezer - Božićna priča",
+      "category": "Kino",
+      "start": "2026-11-28T17:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Fantazija",
+      "duration": "1h 57min",
+      "showtimes": [
+        {
+          "time": "17:10",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ebenezer-bozicna-prica/70D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Ebenezer%20A%20Christmas%20Carol/Ebenezer%20poster%20300x400px%20CineStar%20BiH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ebenezer-bozicna-prica/6557",
+      "description": "Ovog novembra, Johnny Depp je Ebenezer Scrooge. Ime koje znate, priča koju ne znate. Film EBENEZER - BOŽIĆNA PRIČA\" režirao je Ti West, a u glavnim ulogama gledaćemo i Ruperta Grinta, Andreu Riseborough, Sama Claflina, Daisy Ridley, Arthur Conti, Ellie Bamber, Henry…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6605-20261128",
+      "kind": "kino",
+      "title": "Tigar od papira",
+      "category": "Kino",
+      "start": "2026-11-28T19:25:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Krimi",
+      "duration": "1h 55min",
+      "showtimes": [
+        {
+          "time": "19:25",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/D0D01000023IXUNOEM"
+        },
+        {
+          "time": "21:45",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/31D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
+      "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6603-20261128",
+      "kind": "kino",
+      "title": "Ja sam Rocky",
+      "category": "Kino",
+      "start": "2026-11-28T19:40:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Biografski",
+      "duration": "2h 8min",
+      "showtimes": [
+        {
+          "time": "19:40",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/EDC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
+      "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25648",
@@ -135,11 +1378,417 @@ window.KUDA_DATA = {
       "category": "Pozorište",
       "start": "2026-11-28T20:00:00+01:00",
       "all_day": false,
-      "venue": "SC Borik",
-      "hall": "Pozorišna sala",
+      "venue": "Gradsko pozorište Jazavac",
       "organizer": "Mondoko",
       "url": "https://scborik.com/?page_id=6913",
       "source": "SC Borik"
+    },
+    {
+      "id": "cs-6622-20261128",
+      "kind": "kino",
+      "title": "Muž od pruća",
+      "category": "Kino",
+      "start": "2026-11-28T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 45min",
+      "showtimes": [
+        {
+          "time": "20:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/7FC01000023IXUNOEM"
+        },
+        {
+          "time": "22:10",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/DFC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
+      "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6559-20261128",
+      "kind": "kino",
+      "title": "Dozvola za nove Fockere",
+      "category": "Kino",
+      "start": "2026-11-28T20:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 46min",
+      "showtimes": [
+        {
+          "time": "20:15",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/3DC01000023IXUNOEM"
+        },
+        {
+          "time": "22:25",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/6DC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
+      "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6556-20261128",
+      "kind": "kino",
+      "title": "Divlji konj broj devet",
+      "category": "Kino",
+      "start": "2026-11-28T22:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 58min",
+      "showtimes": [
+        {
+          "time": "22:10",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/4EC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
+      "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6618-20261128",
+      "kind": "kino",
+      "title": "Kako opljačkati banku",
+      "category": "Kino",
+      "start": "2026-11-28T22:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 2min",
+      "showtimes": [
+        {
+          "time": "22:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/B3D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
+      "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6558-20261129",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-11-29T11:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "11:00",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/F6B01000023IXUNOEM"
+        },
+        {
+          "time": "11:45",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/86B01000023IXUNOEM"
+        },
+        {
+          "time": "13:55",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/96B01000023IXUNOEM"
+        },
+        {
+          "time": "14:30",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/E2D01000023IXUNOEM"
+        },
+        {
+          "time": "15:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/4AC01000023IXUNOEM"
+        },
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/56B01000023IXUNOEM"
+        },
+        {
+          "time": "16:45",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/D1D01000023IXUNOEM"
+        },
+        {
+          "time": "17:25",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/C6B01000023IXUNOEM"
+        },
+        {
+          "time": "18:05",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/1DC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6544-20261129",
+      "kind": "kino",
+      "title": "Ostrvo sjećanja",
+      "category": "Kino",
+      "start": "2026-11-29T11:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 49min",
+      "showtimes": [
+        {
+          "time": "11:00",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ostrvo-sjecanja/3BC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Forgotten%20Island/island_300x400_bih.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ostrvo-sjecanja/6544",
+      "description": "\"Vrijedi se boriti za vaše najbolje prijateljstvo.\" Studio DreamWorks Animation, poznat po nezaboravnim vezama između dječaka i zmaja u Kako da dresirate svog zmaja, između ogra i magarca u Shreku, kao i između robota i guščeta u filmu Neukrotivi robot, donosi novu, blistavu i…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6599-20261129",
+      "kind": "kino",
+      "title": "Životinjska farma",
+      "category": "Kino",
+      "start": "2026-11-29T11:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 35min",
+      "showtimes": [
+        {
+          "time": "11:15",
+          "hall": "Sala 4",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/7BC01000023IXUNOEM"
+        },
+        {
+          "time": "15:15",
+          "hall": "Sala 4",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/8BC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Animal%20Farm/animal%20farm_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/zivotinjska-farma/6599",
+      "description": "Iz maštovitog svijeta Andyja Serkisa stiže nova, zabavna i pustolovna ekranizacija Orwellova bezvremenskoga klasika. Kada životinje preuzmu upravljanje farmom, vjeruju da ih očekuje pravedniji i bolji život. No njihove se velike zamisli ubrzo počinju mijenjati, a zajedništvo…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6539-20261129",
+      "kind": "kino",
+      "title": "Janko Strižić film: Bundevasti kaos",
+      "category": "Kino",
+      "start": "2026-11-29T11:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 21min",
+      "showtimes": [
+        {
+          "time": "11:15",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/99C01000023IXUNOEM"
+        },
+        {
+          "time": "13:15",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/AEC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Shaun%20the%20Sheep%20The%20Beast%20of%20Mossy%20Bottom/shaun_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/6539",
+      "description": "Od studija Aardman Animations, višestrukih dobitnika Oscara i autora nezaboravnih hitova Wallace i Gromit te Bijeg iz kokošinjca, stiže treći nastavak urnebesne animirane avanture za cijelu obitelj! Stanovnici farme Mossy Bottom s veseljem iščekuju Noć vještica, no njihove…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261129",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-11-29T11:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "11:30",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/DAC01000023IXUNOEM"
+        },
+        {
+          "time": "13:05",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/FAC01000023IXUNOEM"
+        },
+        {
+          "time": "15:20",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/CEC01000023IXUNOEM"
+        },
+        {
+          "time": "17:30",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/8AC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6533-20261129",
+      "kind": "kino",
+      "title": "Kristalni planet",
+      "category": "Kino",
+      "start": "2026-11-29T13:05:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 37min",
+      "showtimes": [
+        {
+          "time": "13:05",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kristalni-planet/5BC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Kristalni%20planet/planet_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kristalni-planet/6533",
+      "description": "U režiji Arsena Antona Ostojića i prema originalnom scenariju legendarnog Dušana Vukotića, prvog hrvatskog dobitnika Oscara, u kina dolazi jedan od najvećih i najambicioznijih projekata suvremene hrvatske animacije – nezaboravna avantura za sve generacije. Na nedavno naseljenom…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6518-20261129",
+      "kind": "kino",
+      "title": "Malci i monstrumi",
+      "category": "Kino",
+      "start": "2026-11-29T13:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 30min",
+      "showtimes": [
+        {
+          "time": "13:15",
+          "hall": "Sala 4",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/malci-i-monstrumi/1BC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Minions%20and%20Monsters/minions_300x400_bih.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/malci-i-monstrumi/6518",
+      "description": "Ubrzo nakon ogromnog svjetskog uspeha blockbustera GROZAN JA 4, najduhovitije letnje komedije u 2024. godini, Ilummination proširuje svoj veseli animirani univerzum novim urnebesnim poglavljem, uz potpuno nove likove, u najvećoj globalnoj animiranoj franšizi u istoriji: MALCI I…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6516-20261129",
+      "kind": "kino",
+      "title": "Igre gladi: Svitanje nad žetvom",
+      "category": "Kino",
+      "start": "2026-11-29T17:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 38min",
+      "showtimes": [
+        {
+          "time": "17:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/2FC01000023IXUNOEM"
+        },
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/32D01000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/63D01000023IXUNOEM"
+        },
+        {
+          "time": "22:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/92D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
+      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6557-20261129",
+      "kind": "kino",
+      "title": "Ebenezer - Božićna priča",
+      "category": "Kino",
+      "start": "2026-11-29T17:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Fantazija",
+      "duration": "1h 57min",
+      "showtimes": [
+        {
+          "time": "17:10",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ebenezer-bozicna-prica/80D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Ebenezer%20A%20Christmas%20Carol/Ebenezer%20poster%20300x400px%20CineStar%20BiH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ebenezer-bozicna-prica/6557",
+      "description": "Ovog novembra, Johnny Depp je Ebenezer Scrooge. Ime koje znate, priča koju ne znate. Film EBENEZER - BOŽIĆNA PRIČA\" režirao je Ti West, a u glavnim ulogama gledaćemo i Ruperta Grinta, Andreu Riseborough, Sama Claflina, Daisy Ridley, Arthur Conti, Ellie Bamber, Henry…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "bd-40335",
@@ -158,17 +1807,351 @@ window.KUDA_DATA = {
       "source": "Banski dvor"
     },
     {
-      "id": "borik-1cf31e33a8",
+      "id": "cs-6605-20261129",
+      "kind": "kino",
+      "title": "Tigar od papira",
+      "category": "Kino",
+      "start": "2026-11-29T19:25:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Krimi",
+      "duration": "1h 55min",
+      "showtimes": [
+        {
+          "time": "19:25",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/E0D01000023IXUNOEM"
+        },
+        {
+          "time": "21:45",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/41D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
+      "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6603-20261129",
+      "kind": "kino",
+      "title": "Ja sam Rocky",
+      "category": "Kino",
+      "start": "2026-11-29T19:40:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Biografski",
+      "duration": "2h 8min",
+      "showtimes": [
+        {
+          "time": "19:40",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/FDC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
+      "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "gpj-9433",
       "title": "Pidžama za Šestoro",
-      "title_original": "ПРЕДСТАВА: ПИЏАМА ЗА ШЕСТОРО",
       "category": "Pozorište",
       "start": "2026-11-29T20:00:00+01:00",
+      "end": "2026-11-29T00:00:00+01:00",
       "all_day": false,
-      "venue": "SC Borik",
-      "hall": "Pozorišna sala",
+      "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
-      "url": "https://scborik.com/?page_id=6913",
-      "source": "SC Borik"
+      "image": "https://gpj.ba/wp-content/uploads/2022/05/Jazavac-Pidzama-Plakat-2020-web-1.jpg",
+      "url": "https://gpj.ba/repertoar/pidzama-za-sestoro-2-3/",
+      "description": "komedija M. Kamoletija",
+      "source": "Gradsko pozorište Jazavac",
+      "also_listed_at": [
+        "SC Borik"
+      ]
+    },
+    {
+      "id": "cs-6622-20261129",
+      "kind": "kino",
+      "title": "Muž od pruća",
+      "category": "Kino",
+      "start": "2026-11-29T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 45min",
+      "showtimes": [
+        {
+          "time": "20:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/8FC01000023IXUNOEM"
+        },
+        {
+          "time": "22:10",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/EFC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
+      "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6559-20261129",
+      "kind": "kino",
+      "title": "Dozvola za nove Fockere",
+      "category": "Kino",
+      "start": "2026-11-29T20:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 46min",
+      "showtimes": [
+        {
+          "time": "20:15",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/4DC01000023IXUNOEM"
+        },
+        {
+          "time": "22:25",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/7DC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
+      "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6556-20261129",
+      "kind": "kino",
+      "title": "Divlji konj broj devet",
+      "category": "Kino",
+      "start": "2026-11-29T22:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 58min",
+      "showtimes": [
+        {
+          "time": "22:10",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/5EC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
+      "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6618-20261129",
+      "kind": "kino",
+      "title": "Kako opljačkati banku",
+      "category": "Kino",
+      "start": "2026-11-29T22:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 2min",
+      "showtimes": [
+        {
+          "time": "22:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/C3D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
+      "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6558-20261130",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-11-30T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/FBC01000023IXUNOEM"
+        },
+        {
+          "time": "16:45",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/E1D01000023IXUNOEM"
+        },
+        {
+          "time": "17:25",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/13D01000023IXUNOEM"
+        },
+        {
+          "time": "18:05",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/0CC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6599-20261130",
+      "kind": "kino",
+      "title": "Životinjska farma",
+      "category": "Kino",
+      "start": "2026-11-30T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 35min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 4",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/CBC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Animal%20Farm/animal%20farm_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/zivotinjska-farma/6599",
+      "description": "Iz maštovitog svijeta Andyja Serkisa stiže nova, zabavna i pustolovna ekranizacija Orwellova bezvremenskoga klasika. Kada životinje preuzmu upravljanje farmom, vjeruju da ih očekuje pravedniji i bolji život. No njihove se velike zamisli ubrzo počinju mijenjati, a zajedništvo…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6516-20261130",
+      "kind": "kino",
+      "title": "Igre gladi: Svitanje nad žetvom",
+      "category": "Kino",
+      "start": "2026-11-30T17:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 38min",
+      "showtimes": [
+        {
+          "time": "17:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/3FC01000023IXUNOEM"
+        },
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/42D01000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/73D01000023IXUNOEM"
+        },
+        {
+          "time": "22:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/A2D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
+      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261130",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-11-30T17:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "17:30",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/9AC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6557-20261130",
+      "kind": "kino",
+      "title": "Ebenezer - Božićna priča",
+      "category": "Kino",
+      "start": "2026-11-30T17:55:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Fantazija",
+      "duration": "1h 57min",
+      "showtimes": [
+        {
+          "time": "17:55",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ebenezer-bozicna-prica/90D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Ebenezer%20A%20Christmas%20Carol/Ebenezer%20poster%20300x400px%20CineStar%20BiH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ebenezer-bozicna-prica/6557",
+      "description": "Ovog novembra, Johnny Depp je Ebenezer Scrooge. Ime koje znate, priča koju ne znate. Film EBENEZER - BOŽIĆNA PRIČA\" režirao je Ti West, a u glavnim ulogama gledaćemo i Ruperta Grinta, Andreu Riseborough, Sama Claflina, Daisy Ridley, Arthur Conti, Ellie Bamber, Henry…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6603-20261130",
+      "kind": "kino",
+      "title": "Ja sam Rocky",
+      "category": "Kino",
+      "start": "2026-11-30T19:40:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Biografski",
+      "duration": "2h 8min",
+      "showtimes": [
+        {
+          "time": "19:40",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/0EC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
+      "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25650",
@@ -202,17 +2185,311 @@ window.KUDA_DATA = {
       "source": "Banski dvor"
     },
     {
-      "id": "borik-b2f4d819ce",
+      "id": "gpj-7409",
       "title": "Kroz Život sa Veljom",
-      "title_original": "ПРЕДСТАВА: КРОЗ ЖИВОТ СА ВЕЉОМ",
       "category": "Pozorište",
       "start": "2026-11-30T20:00:00+01:00",
+      "end": "2026-11-30T00:00:00+01:00",
       "all_day": false,
-      "venue": "SC Borik",
-      "hall": "Pozorišna sala",
+      "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
-      "url": "https://scborik.com/?page_id=6913",
-      "source": "SC Borik"
+      "image": "https://gpj.ba/wp-content/uploads/2023/10/GPJ_kroz_zivot_v2_B2-300ppi-1-web-plakat.jpg",
+      "url": "https://gpj.ba/repertoar/kroz-zivot-sa-veljom-kabare/",
+      "description": "komedija",
+      "source": "Gradsko pozorište Jazavac",
+      "also_listed_at": [
+        "SC Borik"
+      ]
+    },
+    {
+      "id": "cs-6622-20261130",
+      "kind": "kino",
+      "title": "Muž od pruća",
+      "category": "Kino",
+      "start": "2026-11-30T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 45min",
+      "showtimes": [
+        {
+          "time": "20:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/9FC01000023IXUNOEM"
+        },
+        {
+          "time": "22:10",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/FFC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
+      "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6605-20261130",
+      "kind": "kino",
+      "title": "Tigar od papira",
+      "category": "Kino",
+      "start": "2026-11-30T20:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Krimi",
+      "duration": "1h 55min",
+      "showtimes": [
+        {
+          "time": "20:10",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/F0D01000023IXUNOEM"
+        },
+        {
+          "time": "22:25",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/51D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
+      "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6559-20261130",
+      "kind": "kino",
+      "title": "Dozvola za nove Fockere",
+      "category": "Kino",
+      "start": "2026-11-30T20:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 46min",
+      "showtimes": [
+        {
+          "time": "20:15",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/1CC01000023IXUNOEM"
+        },
+        {
+          "time": "22:25",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/2CC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
+      "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6556-20261130",
+      "kind": "kino",
+      "title": "Divlji konj broj devet",
+      "category": "Kino",
+      "start": "2026-11-30T22:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 58min",
+      "showtimes": [
+        {
+          "time": "22:10",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/6EC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
+      "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6618-20261130",
+      "kind": "kino",
+      "title": "Kako opljačkati banku",
+      "category": "Kino",
+      "start": "2026-11-30T22:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 2min",
+      "showtimes": [
+        {
+          "time": "22:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/D3D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
+      "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6558-20261201",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-01T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/3CC01000023IXUNOEM"
+        },
+        {
+          "time": "16:45",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/F1D01000023IXUNOEM"
+        },
+        {
+          "time": "17:25",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/23D01000023IXUNOEM"
+        },
+        {
+          "time": "18:05",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/5CC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6516-20261201",
+      "kind": "kino",
+      "title": "Igre gladi: Svitanje nad žetvom",
+      "category": "Kino",
+      "start": "2026-12-01T17:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 38min",
+      "showtimes": [
+        {
+          "time": "17:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/4FC01000023IXUNOEM"
+        },
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/52D01000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/83D01000023IXUNOEM"
+        },
+        {
+          "time": "22:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/B2D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
+      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6557-20261201",
+      "kind": "kino",
+      "title": "Ebenezer - Božićna priča",
+      "category": "Kino",
+      "start": "2026-12-01T17:05:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Fantazija",
+      "duration": "1h 57min",
+      "showtimes": [
+        {
+          "time": "17:05",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ebenezer-bozicna-prica/A0D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Ebenezer%20A%20Christmas%20Carol/Ebenezer%20poster%20300x400px%20CineStar%20BiH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ebenezer-bozicna-prica/6557",
+      "description": "Ovog novembra, Johnny Depp je Ebenezer Scrooge. Ime koje znate, priča koju ne znate. Film EBENEZER - BOŽIĆNA PRIČA\" režirao je Ti West, a u glavnim ulogama gledaćemo i Ruperta Grinta, Andreu Riseborough, Sama Claflina, Daisy Ridley, Arthur Conti, Ellie Bamber, Henry…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261201",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-12-01T17:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "17:30",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/AAC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6605-20261201",
+      "kind": "kino",
+      "title": "Tigar od papira",
+      "category": "Kino",
+      "start": "2026-12-01T19:25:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Krimi",
+      "duration": "1h 55min",
+      "showtimes": [
+        {
+          "time": "19:25",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/01D01000023IXUNOEM"
+        },
+        {
+          "time": "21:45",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/61D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
+      "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25487",
@@ -230,6 +2507,301 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "cs-6622-20261201",
+      "kind": "kino",
+      "title": "Muž od pruća",
+      "category": "Kino",
+      "start": "2026-12-01T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 45min",
+      "showtimes": [
+        {
+          "time": "20:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/AFC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
+      "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6559-20261201",
+      "kind": "kino",
+      "title": "Dozvola za nove Fockere",
+      "category": "Kino",
+      "start": "2026-12-01T20:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 46min",
+      "showtimes": [
+        {
+          "time": "20:15",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/7CC01000023IXUNOEM"
+        },
+        {
+          "time": "22:25",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/9CC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
+      "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6567-20261201-2015",
+      "title": "Orašar",
+      "category": "Pozorište",
+      "start": "2026-12-01T20:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "hall": "Sala 2",
+      "genre": "Balet",
+      "duration": "2h 20min",
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/RBO%202026%202027/B1_RBO_NUTCRACKER_BIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/orasar/6567",
+      "ticket_url": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/orasar/AE301000023IXUNOEM",
+      "description": "Snimka nastupa uživo od 10.12.2025. godine. Na ugodnoj prazničnoj zabavi mlada Clara upoznaje tajanstvenog mađioničara Drosselmeyera, koji joj poklanja lutku orašara. Kada gosti odu, a kuća utihne i zaspi, Clara se krišom spušta niz stepenice u potrazi za lutkom. Umjesto nje…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6603-20261201",
+      "kind": "kino",
+      "title": "Ja sam Rocky",
+      "category": "Kino",
+      "start": "2026-12-01T22:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Biografski",
+      "duration": "2h 8min",
+      "showtimes": [
+        {
+          "time": "22:10",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/00D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
+      "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6618-20261201",
+      "kind": "kino",
+      "title": "Kako opljačkati banku",
+      "category": "Kino",
+      "start": "2026-12-01T22:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 2min",
+      "showtimes": [
+        {
+          "time": "22:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/E3D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
+      "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6558-20261202",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-02T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/4CC01000023IXUNOEM"
+        },
+        {
+          "time": "16:45",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/02D01000023IXUNOEM"
+        },
+        {
+          "time": "17:25",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/33D01000023IXUNOEM"
+        },
+        {
+          "time": "18:05",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6CC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Hexed/300x400_HEXED_BUCKET_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6516-20261202",
+      "kind": "kino",
+      "title": "Igre gladi: Svitanje nad žetvom",
+      "category": "Kino",
+      "start": "2026-12-02T17:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 38min",
+      "showtimes": [
+        {
+          "time": "17:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/5FC01000023IXUNOEM"
+        },
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/62D01000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/93D01000023IXUNOEM"
+        },
+        {
+          "time": "22:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/C2D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Hunger%20Games%20Sunrise%20on%20the%20Reaping/hungergames_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
+      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6557-20261202",
+      "kind": "kino",
+      "title": "Ebenezer - Božićna priča",
+      "category": "Kino",
+      "start": "2026-12-02T17:05:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Fantazija",
+      "duration": "1h 57min",
+      "showtimes": [
+        {
+          "time": "17:05",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ebenezer-bozicna-prica/B0D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Ebenezer%20A%20Christmas%20Carol/Ebenezer%20poster%20300x400px%20CineStar%20BiH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ebenezer-bozicna-prica/6557",
+      "description": "Ovog novembra, Johnny Depp je Ebenezer Scrooge. Ime koje znate, priča koju ne znate. Film EBENEZER - BOŽIĆNA PRIČA\" režirao je Ti West, a u glavnim ulogama gledaćemo i Ruperta Grinta, Andreu Riseborough, Sama Claflina, Daisy Ridley, Arthur Conti, Ellie Bamber, Henry…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261202",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-12-02T17:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "17:30",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/BAC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6605-20261202",
+      "kind": "kino",
+      "title": "Tigar od papira",
+      "category": "Kino",
+      "start": "2026-12-02T19:25:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Krimi",
+      "duration": "1h 55min",
+      "showtimes": [
+        {
+          "time": "19:25",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/11D01000023IXUNOEM"
+        },
+        {
+          "time": "21:45",
+          "hall": "Sala 4",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/71D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Paper%20Tiger/300x400_PAPER-TIGER_bh.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
+      "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6603-20261202",
+      "kind": "kino",
+      "title": "Ja sam Rocky",
+      "category": "Kino",
+      "start": "2026-12-02T19:40:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Biografski",
+      "duration": "2h 8min",
+      "showtimes": [
+        {
+          "time": "19:40",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/2EC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/I%20Play%20Rocky/rocky_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
+      "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "bd-40351",
       "title": "Koncert Tamare Dojčinović (viola) dobitnice plakete Banskog",
       "title_original": "Концерт Тамаре Дојчиновић (виола) добитнице плакете Банског",
@@ -239,9 +2811,80 @@ window.KUDA_DATA = {
       "all_day": false,
       "venue": "Banski dvor Kulturni centar",
       "hall": "Koncertna dvorana",
+      "image": "https://banskidvor.org/wp-content/uploads/2026/11/tamara-post-scaled.jpg",
       "url": "https://banskidvor.org/event/koncert-tamare-dojcinovic-viola-dobitnice-plakete-banskog/",
       "description": "U Koncertnoj dvorani Banskog dvora 2. decembra (srijeda) 2026. godine u 20.00 časova odžaće se koncert Tamare Dojčinović (viola), dobitnice plakete Banskog dvora za najuspješnijeg studenta Studijskog programa muzičke umjetnosti Akademije umjetnosti Univerziteta u Banjoj Luci, uz…",
       "source": "Banski dvor"
+    },
+    {
+      "id": "gpj-13852",
+      "title": "Šta Će Nići Kad Posadiš Srce",
+      "category": "Pozorište",
+      "start": "2026-12-02T20:00:00+01:00",
+      "end": "2026-12-02T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "image": "https://gpj.ba/wp-content/uploads/2026/10/Sta-ce-nici-plakat-cirilica-724x1024.jpg",
+      "url": "https://gpj.ba/repertoar/sta-ce-nici-kad-posadis-srce-premijera-gradsko-pozoriste-jazavac-zatvaranje-festivala-zaplet-18/",
+      "source": "Gradsko pozorište Jazavac"
+    },
+    {
+      "id": "cs-6622-20261202",
+      "kind": "kino",
+      "title": "Muž od pruća",
+      "category": "Kino",
+      "start": "2026-12-02T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 45min",
+      "showtimes": [
+        {
+          "time": "20:00",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/BFC01000023IXUNOEM"
+        },
+        {
+          "time": "22:10",
+          "hall": "Sala 3",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/10D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wicker/WickerBIH300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
+      "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6559-20261202",
+      "kind": "kino",
+      "title": "Dozvola za nove Fockere",
+      "category": "Kino",
+      "start": "2026-12-02T20:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 46min",
+      "showtimes": [
+        {
+          "time": "20:15",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/8CC01000023IXUNOEM"
+        },
+        {
+          "time": "22:25",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/ACC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Focker%20In%20Law/fockerBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
+      "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25646",
@@ -260,6 +2903,76 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "cs-6556-20261202",
+      "kind": "kino",
+      "title": "Divlji konj broj devet",
+      "category": "Kino",
+      "start": "2026-12-02T22:10:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Komedija",
+      "duration": "1h 58min",
+      "showtimes": [
+        {
+          "time": "22:10",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/8EC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Wild%20Horse%20Nine/HR_wild_300x400.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
+      "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6618-20261202",
+      "kind": "kino",
+      "title": "Kako opljačkati banku",
+      "category": "Kino",
+      "start": "2026-12-02T22:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 2min",
+      "showtimes": [
+        {
+          "time": "22:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/F3D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/How%20to%20Rob%20a%20Bank/BankHR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
+      "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6641-20261203",
+      "kind": "kino",
+      "title": "Dina Re-release",
+      "category": "Kino",
+      "start": "2026-12-03T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 46min",
+      "showtimes": [
+        {
+          "time": "19:00",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-re-release/8AA01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune/dune_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-re-release/6641",
+      "description": "Prije epske završnice, vratite se početku. DINA ponovno na velikom platnu. Uoči završnog poglavlja trilogije, spektakl Denisa Villeneuvea vraća se u kina — prilika da ponovno doživite početak velike sage ili prvi put zakoračite u njezin svijet na velikom platnu. DINA donosi…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "np-25786",
       "title": "Srećno nam, Adi",
       "title_original": "Срећно нам, Ади",
@@ -274,6 +2987,54 @@ window.KUDA_DATA = {
       "url": "https://www.np.rs.ba/predstava/srecno-nam-adi-13/",
       "description": "Dajana Josipović SREĆNO NAM, ADI Po motivima filma Srećno, Leo Grande Adaptacija i režija: Dajana Josipović Dramaturg: Ivana Lovrić Scenograf: Dunja Kostić Kostimograf: Ivana Ristić Kompozitori i dizajneri zvuka: Miloš Aćimović i Luka Lukić Scenski pokret: Una Đelošević Lektor…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "cs-6642-20261203",
+      "kind": "kino",
+      "title": "Dina: Drugi dio Re-release",
+      "category": "Kino",
+      "start": "2026-12-03T22:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 57min",
+      "showtimes": [
+        {
+          "time": "22:15",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-drugi-dio-re-release/CAA01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%202/dina2_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-drugi-dio-re-release/6642",
+      "description": "Prije nego što saga dosegne svoj vrhunac, vratite se na Arrakis — ondje gdje spektakl pripada: na velikom platnu. Adaptacija znanstveno-fantastičnog klasika Franka Herberta i nastavak velikog kino spektakla \"Dina\" vraća se u kina uoči završnog poglavlja trilogije Denisa…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6641-20261204",
+      "kind": "kino",
+      "title": "Dina Re-release",
+      "category": "Kino",
+      "start": "2026-12-04T17:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 46min",
+      "showtimes": [
+        {
+          "time": "17:00",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-re-release/AAA01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune/dune_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-re-release/6641",
+      "description": "Prije epske završnice, vratite se početku. DINA ponovno na velikom platnu. Uoči završnog poglavlja trilogije, spektakl Denisa Villeneuvea vraća se u kina — prilika da ponovno doživite početak velike sage ili prvi put zakoračite u njezin svijet na velikom platnu. DINA donosi…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25788",
@@ -292,6 +3053,54 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "cs-6642-20261204",
+      "kind": "kino",
+      "title": "Dina: Drugi dio Re-release",
+      "category": "Kino",
+      "start": "2026-12-04T20:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 57min",
+      "showtimes": [
+        {
+          "time": "20:15",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-drugi-dio-re-release/EAA01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%202/dina2_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-drugi-dio-re-release/6642",
+      "description": "Prije nego što saga dosegne svoj vrhunac, vratite se na Arrakis — ondje gdje spektakl pripada: na velikom platnu. Adaptacija znanstveno-fantastičnog klasika Franka Herberta i nastavak velikog kino spektakla \"Dina\" vraća se u kina uoči završnog poglavlja trilogije Denisa…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6641-20261205",
+      "kind": "kino",
+      "title": "Dina Re-release",
+      "category": "Kino",
+      "start": "2026-12-05T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 46min",
+      "showtimes": [
+        {
+          "time": "19:00",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-re-release/9AA01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune/dune_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-re-release/6641",
+      "description": "Prije epske završnice, vratite se početku. DINA ponovno na velikom platnu. Uoči završnog poglavlja trilogije, spektakl Denisa Villeneuvea vraća se u kina — prilika da ponovno doživite početak velike sage ili prvi put zakoračite u njezin svijet na velikom platnu. DINA donosi…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "np-25790",
       "title": "Ožalošćena porodica",
       "title_original": "Ожалошћена породица",
@@ -308,6 +3117,117 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "gig-zoster-banja-luka-05-decembar-2026",
+      "title": "Zoster",
+      "category": "Muzika",
+      "start": "2026-12-05T21:00:00+01:00",
+      "all_day": false,
+      "venue": "KSB – Klub studenata Banjaluka",
+      "image": "https://gigstix.ba/wp-content/uploads/2026/10/zoster_0512_800-800x579.jpg",
+      "url": "https://gigstix.ba/event/zoster-banja-luka-05-decembar-2026/",
+      "ticket_url": "https://bilet.gigstix.ba/ba/store/gigstix/sectionGroup/index/232",
+      "description": "Bend ZOSTER održaće koncert u Klubu studenata Banjaluka 05. decembra 2026. godine, sa početkom u 21:00. Zoster, prepoznatljiv po svom jedinstvenom spoju reggae zvuka, rocka i društveno angažovanih tekstova, već gotovo dvije decenije slovi za jedan od najvažnijih bendova…",
+      "source": "Gigstix"
+    },
+    {
+      "id": "cs-6642-20261205",
+      "kind": "kino",
+      "title": "Dina: Drugi dio Re-release",
+      "category": "Kino",
+      "start": "2026-12-05T22:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 57min",
+      "showtimes": [
+        {
+          "time": "22:15",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-drugi-dio-re-release/DAA01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%202/dina2_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-drugi-dio-re-release/6642",
+      "description": "Prije nego što saga dosegne svoj vrhunac, vratite se na Arrakis — ondje gdje spektakl pripada: na velikom platnu. Adaptacija znanstveno-fantastičnog klasika Franka Herberta i nastavak velikog kino spektakla \"Dina\" vraća se u kina uoči završnog poglavlja trilogije Denisa…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6641-20261206",
+      "kind": "kino",
+      "title": "Dina Re-release",
+      "category": "Kino",
+      "start": "2026-12-06T17:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 46min",
+      "showtimes": [
+        {
+          "time": "17:00",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-re-release/BAA01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune/dune_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-re-release/6641",
+      "description": "Prije epske završnice, vratite se početku. DINA ponovno na velikom platnu. Uoči završnog poglavlja trilogije, spektakl Denisa Villeneuvea vraća se u kina — prilika da ponovno doživite početak velike sage ili prvi put zakoračite u njezin svijet na velikom platnu. DINA donosi…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "gpj-9444",
+      "title": "Šećer je Sitan, Osim Kad je Kocka",
+      "category": "Pozorište",
+      "start": "2026-12-06T20:00:00+01:00",
+      "end": "2026-12-06T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "image": "https://gpj.ba/wp-content/uploads/2022/05/272301967_5148825585163751_2205831378047625147_n-732x1024.jpg",
+      "url": "https://gpj.ba/repertoar/secer-je-sitan-osim-kad-je-kocka-komedija-nikole-pejakovica-2/",
+      "description": "komedija Nikole Kolje Pejakovića",
+      "source": "Gradsko pozorište Jazavac"
+    },
+    {
+      "id": "cs-6642-20261206",
+      "kind": "kino",
+      "title": "Dina: Drugi dio Re-release",
+      "category": "Kino",
+      "start": "2026-12-06T20:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 57min",
+      "showtimes": [
+        {
+          "time": "20:15",
+          "hall": "Sala 2",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-drugi-dio-re-release/FAA01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%202/dina2_300x400_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-drugi-dio-re-release/6642",
+      "description": "Prije nego što saga dosegne svoj vrhunac, vratite se na Arrakis — ondje gdje spektakl pripada: na velikom platnu. Adaptacija znanstveno-fantastičnog klasika Franka Herberta i nastavak velikog kino spektakla \"Dina\" vraća se u kina uoči završnog poglavlja trilogije Denisa…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "gpj-12523",
+      "title": "Bračno Savjetovanje",
+      "category": "Pozorište",
+      "start": "2026-12-07T20:00:00+01:00",
+      "end": "2026-12-07T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "image": "https://gpj.ba/wp-content/uploads/2026/02/BRACNO-SAVJETOVANJE-PLAKAT-manji-731x1024.png",
+      "url": "https://gpj.ba/repertoar/bracno-savjetovanje-premijera-gradskog-pozorista-jazavac-otvaranje-festivala-zaplet-xvi-2-2-2-2/",
+      "description": "komedija D. Glatauera",
+      "source": "Gradsko pozorište Jazavac"
+    },
+    {
       "id": "np-25792",
       "title": "Ciklus koncerata SO NPRS: (Ne)klasični žur",
       "title_original": "Циклус концерата СО НПРС: (Не)класични жур",
@@ -321,6 +3241,52 @@ window.KUDA_DATA = {
       "url": "https://www.np.rs.ba/predstava/ciklus-koncerata-so-nprs-neklasicni-zur/",
       "description": "Gudački orkestar Narodnog pozorišta Republike Srpske solisti: Marija Pilipović , flauta (Banja Luka) Vladimir Stanišić , klarinet (Beograd) Luka Lopičić , harmonika (Beograd) dirigent: Natalija Mićić (Beograd) na programu: Bartok, Holst, Babić i Di Marino RIJEČ DIRIGENTA: Šta…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "cs-6518-20261209",
+      "kind": "kino",
+      "title": "Malci i monstrumi",
+      "category": "Kino",
+      "start": "2026-12-09T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 30min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 4",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/malci-i-monstrumi/DBC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Minions%20and%20Monsters/minions_300x400_bih.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/malci-i-monstrumi/6518",
+      "description": "Ubrzo nakon ogromnog svjetskog uspeha blockbustera GROZAN JA 4, najduhovitije letnje komedije u 2024. godini, Ilummination proširuje svoj veseli animirani univerzum novim urnebesnim poglavljem, uz potpuno nove likove, u najvećoj globalnoj animiranoj franšizi u istoriji: MALCI I…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261209",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-12-09T16:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "16:15",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/EBC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/The%20Cat%20in%20the%20Hat/cat_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25794",
@@ -339,6 +3305,30 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "cs-6607-20261210",
+      "kind": "kino",
+      "title": "Asterix: Kraljevstvo Nubije",
+      "category": "Kino",
+      "start": "2026-12-10T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 26min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/asterix-kraljevstvo-nubije/29C01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Asterix%20The%20Kingdom%20of%20Nubia/AsterixBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/asterix-kraljevstvo-nubije/6607",
+      "description": "Najhrabriji galski junaci ponovno kreću u nezaboravnu pustolovinu – samo što su ovog puta neustrašivi ratnici pretvoreni u nestašnu djecu! Kada rijedak eliksir mladosti slučajno završi u čarobnom napitku, nepokorivi Gali pretvore se u bezopasne mališane. Kako bi pronašli…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "np-25796",
       "title": "Pokondirena tikva",
       "title_original": "Покондирена тиква",
@@ -353,6 +3343,30 @@ window.KUDA_DATA = {
       "url": "https://www.np.rs.ba/predstava/pokondirena-tikva-5/",
       "description": "Autor: Jovan Sterija Popović Reditelj: Željko Đukić Dramaturg: Adam Ranđelović Kostimografkinja: Nataša Vučurović Đukić Kompozitor: Petar Bilbija Jezička adaptacija i scenski govor: dr Dejan Sredojević Scenski pokret: Ana Tešić Dizajner svjetla: Aleksandar Čavlek Producent…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "cs-6607-20261211",
+      "kind": "kino",
+      "title": "Asterix: Kraljevstvo Nubije",
+      "category": "Kino",
+      "start": "2026-12-11T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 26min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/asterix-kraljevstvo-nubije/39C01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Asterix%20The%20Kingdom%20of%20Nubia/AsterixBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/asterix-kraljevstvo-nubije/6607",
+      "description": "Najhrabriji galski junaci ponovno kreću u nezaboravnu pustolovinu – samo što su ovog puta neustrašivi ratnici pretvoreni u nestašnu djecu! Kada rijedak eliksir mladosti slučajno završi u čarobnom napitku, nepokorivi Gali pretvore se u bezopasne mališane. Kako bi pronašli…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25798",
@@ -371,6 +3385,42 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "cs-6607-20261212",
+      "kind": "kino",
+      "title": "Asterix: Kraljevstvo Nubije",
+      "category": "Kino",
+      "start": "2026-12-12T11:45:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 26min",
+      "showtimes": [
+        {
+          "time": "11:45",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/asterix-kraljevstvo-nubije/49C01000023IXUNOEM"
+        },
+        {
+          "time": "14:00",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/asterix-kraljevstvo-nubije/79C01000023IXUNOEM"
+        },
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/asterix-kraljevstvo-nubije/ABC01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Asterix%20The%20Kingdom%20of%20Nubia/AsterixBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/asterix-kraljevstvo-nubije/6607",
+      "description": "Najhrabriji galski junaci ponovno kreću u nezaboravnu pustolovinu – samo što su ovog puta neustrašivi ratnici pretvoreni u nestašnu djecu! Kada rijedak eliksir mladosti slučajno završi u čarobnom napitku, nepokorivi Gali pretvore se u bezopasne mališane. Kako bi pronašli…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "np-25800",
       "title": "Kuća",
       "title_original": "Кућа",
@@ -385,6 +3435,85 @@ window.KUDA_DATA = {
       "url": "https://www.np.rs.ba/predstava/kuca-18/",
       "description": "Autor: Nebojša Ilić Adaptacija i režija: Nikola Pejaković Dramaturg: Ivana Lovrić Lektor: Nataša Kecman Scenograf: Dragana Purković Macan Kostimograf: Vladimirka Velaga Inspicijent i sufler: Vesna Maksimović Organizator: Katarina Lazić Dizajn plakata: Andrea Aleksić Asistent…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "cs-6607-20261213",
+      "kind": "kino",
+      "title": "Asterix: Kraljevstvo Nubije",
+      "category": "Kino",
+      "start": "2026-12-13T11:45:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 26min",
+      "showtimes": [
+        {
+          "time": "11:45",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/asterix-kraljevstvo-nubije/59C01000023IXUNOEM"
+        },
+        {
+          "time": "14:00",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/asterix-kraljevstvo-nubije/69C01000023IXUNOEM"
+        },
+        {
+          "time": "16:00",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/asterix-kraljevstvo-nubije/BBC01000023IXUNOEM"
+        }
+      ],
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Asterix%20The%20Kingdom%20of%20Nubia/AsterixBIH.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/asterix-kraljevstvo-nubije/6607",
+      "description": "Najhrabriji galski junaci ponovno kreću u nezaboravnu pustolovinu – samo što su ovog puta neustrašivi ratnici pretvoreni u nestašnu djecu! Kada rijedak eliksir mladosti slučajno završi u čarobnom napitku, nepokorivi Gali pretvore se u bezopasne mališane. Kako bi pronašli…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "gpj-14303",
+      "title": "Čiča, Miča i Njihova Priča",
+      "category": "Pozorište",
+      "start": "2026-12-14T18:00:00+01:00",
+      "end": "2026-12-14T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "image": "https://gpj.ba/wp-content/uploads/2026/11/Minimalist-Theater-Premiere-Poster-683x1024.png",
+      "url": "https://gpj.ba/repertoar/cica-mica-i-njihova-prica-djecija-juhu-scena-premijera/",
+      "description": "Dječija JUHU scena, PREMIJERA",
+      "source": "Gradsko pozorište Jazavac"
+    },
+    {
+      "id": "cs-6359-20261215",
+      "kind": "kino",
+      "title": "Dina: Treći dio",
+      "category": "Kino",
+      "start": "2026-12-15T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 30min",
+      "showtimes": [
+        {
+          "time": "19:00",
+          "hall": "Sala 1",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/7F501000023IXUNOEM"
+        },
+        {
+          "time": "20:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/12901000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
+      "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25802",
@@ -403,6 +3532,78 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "cs-6612-20261216",
+      "kind": "kino",
+      "title": "Osvetnici: Uspon Doktora Dooma - Infinity Vision",
+      "category": "Kino",
+      "start": "2026-12-16T00:05:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 45min",
+      "showtimes": [
+        {
+          "time": "00:05",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/F3701000023IXUNOEM"
+        },
+        {
+          "time": "00:05",
+          "hall": "Sala 1",
+          "format": "3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/E3701000023IXUNOEM"
+        },
+        {
+          "time": "19:00",
+          "hall": "Sala 1",
+          "format": "3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/52901000023IXUNOEM"
+        },
+        {
+          "time": "20:00",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/42901000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Avengers%20Doomsday/avemgers_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/6612",
+      "description": "Svemiri se sudaraju, a saga o Multiverzumu ulazi u svoje završno poglavlje u filmu Avengers: Uspon Doktora Dooma. Voljeni junaci iz tri različita svemira bit će nepovratno dovedeni u smrtonosni sukob te će se naposljetku suočiti s egzistencijalnom prijetnjom kakvu dosad nikada…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6359-20261216",
+      "kind": "kino",
+      "title": "Dina: Treći dio",
+      "category": "Kino",
+      "start": "2026-12-16T17:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 30min",
+      "showtimes": [
+        {
+          "time": "17:00",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/32901000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/22901000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
+      "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "np-25804",
       "title": "Šine",
       "title_original": "Шине",
@@ -419,6 +3620,66 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "cs-6612-20261217",
+      "kind": "kino",
+      "title": "Osvetnici: Uspon Doktora Dooma - Infinity Vision",
+      "category": "Kino",
+      "start": "2026-12-17T16:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 45min",
+      "showtimes": [
+        {
+          "time": "16:15",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/88A01000023IXUNOEM"
+        },
+        {
+          "time": "19:15",
+          "hall": "Sala 1",
+          "format": "3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/48A01000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Avengers%20Doomsday/avemgers_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/6612",
+      "description": "Svemiri se sudaraju, a saga o Multiverzumu ulazi u svoje završno poglavlje u filmu Avengers: Uspon Doktora Dooma. Voljeni junaci iz tri različita svemira bit će nepovratno dovedeni u smrtonosni sukob te će se naposljetku suočiti s egzistencijalnom prijetnjom kakvu dosad nikada…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6359-20261217",
+      "kind": "kino",
+      "title": "Dina: Treći dio",
+      "category": "Kino",
+      "start": "2026-12-17T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 30min",
+      "showtimes": [
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/CC901000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/0D901000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
+      "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "np-25806",
       "title": "Gospođa Olga",
       "title_original": "Госпођа Олга",
@@ -433,6 +3694,186 @@ window.KUDA_DATA = {
       "url": "https://www.np.rs.ba/predstava/gospodja-olga-7/",
       "description": "Koprodukcija Narodnog pozorišta Republike Srpske i Narodnog pozorišta u Beogradu Autor: Milutin Bojić Reditelj: Jug Đorđević Dramaturg: Đorđe Kosić Scenografkinja: Dragana Purković Macan Kostimografkinja: Velimirka Damjanović Kompozitorka: Nevena Glušica Scenski pokret: Milica…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "cs-6612-20261218",
+      "kind": "kino",
+      "title": "Osvetnici: Uspon Doktora Dooma - Infinity Vision",
+      "category": "Kino",
+      "start": "2026-12-18T16:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 45min",
+      "showtimes": [
+        {
+          "time": "16:15",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/98A01000023IXUNOEM"
+        },
+        {
+          "time": "19:15",
+          "hall": "Sala 1",
+          "format": "3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/58A01000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Avengers%20Doomsday/avemgers_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/6612",
+      "description": "Svemiri se sudaraju, a saga o Multiverzumu ulazi u svoje završno poglavlje u filmu Avengers: Uspon Doktora Dooma. Voljeni junaci iz tri različita svemira bit će nepovratno dovedeni u smrtonosni sukob te će se naposljetku suočiti s egzistencijalnom prijetnjom kakvu dosad nikada…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6359-20261218",
+      "kind": "kino",
+      "title": "Dina: Treći dio",
+      "category": "Kino",
+      "start": "2026-12-18T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 30min",
+      "showtimes": [
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/DC901000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/1D901000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
+      "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6612-20261219",
+      "kind": "kino",
+      "title": "Osvetnici: Uspon Doktora Dooma - Infinity Vision",
+      "category": "Kino",
+      "start": "2026-12-19T16:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 45min",
+      "showtimes": [
+        {
+          "time": "16:15",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/A8A01000023IXUNOEM"
+        },
+        {
+          "time": "19:15",
+          "hall": "Sala 1",
+          "format": "3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/68A01000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Avengers%20Doomsday/avemgers_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/6612",
+      "description": "Svemiri se sudaraju, a saga o Multiverzumu ulazi u svoje završno poglavlje u filmu Avengers: Uspon Doktora Dooma. Voljeni junaci iz tri različita svemira bit će nepovratno dovedeni u smrtonosni sukob te će se naposljetku suočiti s egzistencijalnom prijetnjom kakvu dosad nikada…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6359-20261219",
+      "kind": "kino",
+      "title": "Dina: Treći dio",
+      "category": "Kino",
+      "start": "2026-12-19T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 30min",
+      "showtimes": [
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/EC901000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/2D901000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
+      "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6612-20261220",
+      "kind": "kino",
+      "title": "Osvetnici: Uspon Doktora Dooma - Infinity Vision",
+      "category": "Kino",
+      "start": "2026-12-20T16:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 45min",
+      "showtimes": [
+        {
+          "time": "16:15",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/B8A01000023IXUNOEM"
+        },
+        {
+          "time": "19:15",
+          "hall": "Sala 1",
+          "format": "3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/78A01000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Avengers%20Doomsday/avemgers_300x400_hr.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/6612",
+      "description": "Svemiri se sudaraju, a saga o Multiverzumu ulazi u svoje završno poglavlje u filmu Avengers: Uspon Doktora Dooma. Voljeni junaci iz tri različita svemira bit će nepovratno dovedeni u smrtonosni sukob te će se naposljetku suočiti s egzistencijalnom prijetnjom kakvu dosad nikada…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6359-20261220",
+      "kind": "kino",
+      "title": "Dina: Treći dio",
+      "category": "Kino",
+      "start": "2026-12-20T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "SF",
+      "duration": "2h 30min",
+      "showtimes": [
+        {
+          "time": "19:00",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/FC901000023IXUNOEM"
+        },
+        {
+          "time": "19:30",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dina-treci-dio/3D901000023IXUNOEM"
+        }
+      ],
+      "note": "Pretpremijera",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%20Three/300x400_DUNE3_MAIN_HR.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-treci-dio/6359",
+      "description": "Finale trilogije donosi snažniji, brži i vizualno impresivniji spektakl. Radnja se odvija 17 godina nakon prethodnog poglavlja i baca nas ravno u sudbonosni uspon Paula Atreidesa – čovjeka koji više nije samo nasljednik, već arhitekt vlastite, gotovo božanske sudbine. Drevni…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25636",
@@ -529,6 +3970,19 @@ window.KUDA_DATA = {
       "source": "Narodno pozorište RS"
     },
     {
+      "id": "gpj-14305",
+      "title": "Čiča, Miča i Njihova Priča",
+      "category": "Pozorište",
+      "start": "2026-12-29T19:00:00+01:00",
+      "end": "2026-12-29T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "image": "https://gpj.ba/wp-content/uploads/2026/11/Minimalist-Green-Theater-Poster-683x1024.png",
+      "url": "https://gpj.ba/repertoar/cica-mica-i-njihova-prica-dodjela-paketica-sa-deda-mrazom/",
+      "description": "dodjela paketića sa Deda Mrazom",
+      "source": "Gradsko pozorište Jazavac"
+    },
+    {
       "id": "np-25823",
       "title": "Karmen – jedna tragedija (Opera u jednom činu)",
       "title_original": "Кармен – једна трагедија (Опера у једном чину)",
@@ -542,6 +3996,40 @@ window.KUDA_DATA = {
       "url": "https://www.np.rs.ba/predstava/karmen-%d1%98edna-tragedi%d1%98a-opera-u-%d1%98ednom-cinu/",
       "description": "Autor: Žorž Bize Dirigent: Stefan Zekić Reditelj: Milan Nešković Scenografkinja: Andreja Rondović Kostimografkinja: Jelena Vidović Scenski pokret: Emir Fejzić Koncertmajstor: Dušica Blaženović Zamjenik koncertmajstora: Teodor Ikanović Korepetitor: Vlado Danić Stručni saradnik za…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "cs-6568-20270203-1745",
+      "title": "Sumrak bogova - Uživo",
+      "category": "Muzika",
+      "start": "2027-02-03T17:45:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "hall": "Sala 2",
+      "genre": "Opera",
+      "duration": "5h 50min",
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/RBO%202026%202027/gotterdamerung_300x400_eng.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/sumrak-bogova-uzivo/6568",
+      "ticket_url": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/sumrak-bogova-uzivo/BE301000023IXUNOEM",
+      "description": "Zemlja u ruševinama. Sumrak bogova. Obmana vodi ka izdaji, a zatim i ka uništenju, kada Siegfried biva prevaren i naveden da izda Brünnhildu. Nakon što sazna istinu o nevinosti svog voljenog, Brünnhilde napokon vraća prsten rajnskim kćerima, prije nego što naredi da Valhallu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6569-20270223-1945",
+      "title": "Cosi fan tutte - Uživo",
+      "category": "Muzika",
+      "start": "2027-02-23T19:45:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "hall": "Sala 2",
+      "genre": "Opera",
+      "duration": "3h 30min",
+      "note": "Ulaznice u pretprodaji",
+      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/RBO%202026%202027/cosi_300x400_eng.jpg?preset=film",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/cosi-fan-tutte-uzivo/6569",
+      "ticket_url": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/cosi-fan-tutte-uzivo/CE301000023IXUNOEM",
+      "description": "Podstaknuta opkladom, dvojica mladića smišljaju plan kako bi iskušali vjernost svojih djevojaka. Slijedi opasna igra zavođenja i moći, u kojoj četvero zaljubljenih uranja u vrtoglavi svijet promjenjive stvarnosti, gdje istina postaje sve nesigurnija. Opera Cosi fan tutte nije…",
+      "source": "Cinestar Delta Planet"
     }
   ]
 };
