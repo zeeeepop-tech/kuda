@@ -4,7 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>kuda. — kultura u Banjaluci</title>
-<meta name="description" content="Pozorište, koncerti, izložbe i razgovori u Banjaluci, na jednom mjestu.">
+<meta name="description" content="Pozorište, koncerti, film, izložbe i razgovori u Banjaluci, svaki dan na jednom mjestu.">
+<link rel="canonical" href="https://kudaugrad.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="kuda.">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:title" content="kuda. — kultura u Banjaluci">
+<meta property="og:description" content="Pozorište, koncerti, film, izložbe i razgovori u Banjaluci, svaki dan na jednom mjestu.">
+<meta property="og:url" content="https://kudaugrad.com/">
+<meta property="og:image" content="https://kudaugrad.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap">
@@ -22,117 +36,189 @@ body:has(dialog[open]) { overflow: hidden; }
 a { color: inherit; }
 button, input { font: inherit; color: inherit; }
 button { cursor: pointer; }
+[hidden] { display: none !important; }
 :focus-visible { outline: 2px solid #2B4BFF; outline-offset: 2px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .skip { position: absolute; left: -9999px; top: 12px; z-index: 50; padding: 10px 14px; border-radius: 10px; background: var(--paper); font-weight: 600; }
 .skip:focus { left: 12px; }
-.wrap { max-width: 1280px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.wrap { max-width: 1128px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
 svg { flex: none; }
+.scroller { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin-left: -16px; margin-right: -16px; padding-left: 16px; padding-right: 16px; }
+.scroller::-webkit-scrollbar { display: none; }
+
+/* ---------- phone first ---------- */
 
 /* header */
 .top { border-bottom: 1px solid var(--line); }
-.top .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding-top: 12px; padding-bottom: 12px; }
-.logo { font: 800 30px/1 var(--display); letter-spacing: -0.04em; text-decoration: none; }
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; min-height: 60px; padding-top: 8px; padding-bottom: 8px; }
+.logo { font: 800 28px/1 var(--display); letter-spacing: -0.04em; text-decoration: none; }
 .logo span { color: var(--accent); }
-.city { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 999px; font-size: 14px; font-weight: 600; }
-.search { position: relative; margin-left: auto; flex: 0 1 300px; min-width: 200px; }
+.city { display: inline-flex; align-items: center; min-height: 32px; padding: 0 10px; border: 1px solid var(--line-strong); border-radius: 999px; font-size: 13px; font-weight: 600; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--paper); }
+#search-toggle { margin-left: auto; }
+.search { position: relative; display: none; flex-basis: 100%; }
+.search.open { display: block; }
 .search svg { position: absolute; left: 14px; top: 13px; color: var(--muted); }
-.search input { width: 100%; min-height: 44px; padding: 0 14px 0 40px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--soft); font-size: 15px; }
+.search input { width: 100%; min-height: 44px; padding: 0 14px 0 40px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--soft); font-size: 16px; }
 
-/* hero */
-.hero { display: flex; flex-wrap: wrap; gap: 32px 40px; padding-top: 40px; padding-bottom: 40px; }
-.hero-left { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
-.hero-right { flex: 999 1 560px; min-width: 0; }
-.eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-h1 { margin: 0; font: 800 clamp(40px, 4.4vw, 60px)/0.95 var(--display); letter-spacing: -0.035em; }
-.status { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: var(--muted); }
+/* top area: days, the day's pick, filters */
+.lead { display: grid; gap: 12px; padding-top: 12px; }
+.lead > * { min-width: 0; } /* rows that scroll sideways stay inside the screen */
+.status { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .dot.stale { background: #8E8E86; }
-.days { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
-.days::-webkit-scrollbar { display: none; }
-.day { flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 52px; min-height: 70px; padding: 0; border: 1px solid var(--line-strong); border-radius: 14px; background: var(--paper); }
-.day small { font-size: 11px; font-weight: 600; color: var(--muted); }
-.day b { font: 700 22px/1.1 var(--display); }
-.day i { font-style: normal; font-size: 11px; color: var(--muted); }
+.dayhead { display: flex; flex-direction: column; gap: 4px; }
+.eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.daytitle { margin: 0; font: 800 clamp(30px, 9vw, 44px)/1.02 var(--display); letter-spacing: -0.03em; }
+.daytitle .pt { color: var(--accent); }
+.day { flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; width: 62px; min-height: 74px; padding: 0; border: 1px solid var(--line-strong); border-radius: 16px; background: var(--paper); }
+.day small { font-size: 13px; font-weight: 600; color: var(--muted); }
+.day b { font: 800 26px/1 var(--display); letter-spacing: -0.02em; }
+.day svg { width: 26px; height: 26px; }
 .day[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
 .day[aria-pressed="true"] small, .day[aria-pressed="true"] i { color: #C9C9C1; }
 .day.empty-day { opacity: 0.5; }
+.chip { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 15px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--paper); font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.chip .n { font-weight: 500; color: var(--muted); }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.chip[aria-pressed="true"] .n { color: #C9C9C1; }
+.chip-sep { flex: none; width: 1px; margin: 8px 2px; background: var(--line-strong); }
+[data-save][aria-pressed="true"] svg, [data-toggle="saved"][aria-pressed="true"] svg { fill: currentColor; }
 
-/* featured */
-.feature { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); height: 100%; border-radius: 22px; overflow: hidden; background: var(--ink); color: #fff; }
-.feature .media { position: relative; min-height: 380px; }
-.feature .info { display: flex; flex-direction: column; gap: 12px; padding: 28px; }
-.badge { align-self: flex-start; padding: 5px 11px; border-radius: 999px; background: var(--accent); color: var(--ink); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
-.feature h2 { margin: 0; font: 800 clamp(30px, 3.4vw, 46px)/1 var(--display); letter-spacing: -0.03em; }
-.feature .meta { margin: 0; font-size: 15px; color: #B5B5AD; }
-.feature .desc { margin: 0; color: #E4E4DD; }
-.feature .actions { margin-top: auto; }
+/* featured: "Preporuka dana", the photo fills the card and a dark fade carries the text; the heart sits top right */
+.feature { position: relative; height: 320px; height: clamp(290px, 40svh, 350px); border-radius: 22px; overflow: hidden; background: var(--ink); color: #fff; isolation: isolate; }
+.feature .media { position: absolute; inset: 0; }
+.feature .media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15, 15, 15, 0.32) 0%, rgba(15, 15, 15, 0) 22%), linear-gradient(180deg, rgba(15, 15, 15, 0) 34%, rgba(15, 15, 15, 0.72) 62%, rgba(15, 15, 15, 0.94) 100%); }
+.feature .tile span { display: none; }
+.feature .cover { position: absolute; inset: 0; z-index: 1; }
+.feature .info { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; display: flex; flex-direction: column; gap: 8px; padding: 20px; pointer-events: none; }
+.feature .info a { pointer-events: auto; }
+.badge { align-self: flex-start; padding: 4px 9px; border-radius: 999px; background: var(--accent); color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.feature .badge { padding: 6px 12px; font-size: 12px; line-height: 1.3; box-shadow: 0 6px 18px rgba(255, 77, 0, 0.35); }
+.feature h2 { margin: 2px 0 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font: 800 30px/1.04 var(--display); letter-spacing: -0.02em; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35); }
+.feature h2 a { text-decoration: none; }
+.feature .meta { margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 15px; color: #E4E4DD; }
+.feature .meta b { color: #fff; font-weight: 700; }
+.feature .fav { position: absolute; top: 14px; right: 14px; z-index: 3; display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; padding: 0; border: 1px solid rgba(255, 255, 255, 0.28); border-radius: 50%; background: rgba(15, 15, 15, 0.38); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: #fff; transition: transform 0.15s ease, background-color 0.2s ease, border-color 0.2s ease; }
+.feature .fav:hover { background: rgba(15, 15, 15, 0.56); }
+.feature .fav:active { transform: scale(0.9); }
+.feature .fav[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: var(--ink); }
+.feature .fav svg { width: 22px; height: 22px; }
+@media (hover: hover) {
+  .feature .media img { transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .feature:hover .media img { transform: scale(1.04); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .feature .info { animation: rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+}
 
-/* buttons, chips */
+/* buttons */
 .actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .btn { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 18px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--paper); color: var(--ink); font-size: 15px; font-weight: 600; text-decoration: none; }
 .btn.primary { background: var(--accent); border-color: var(--accent); font-weight: 700; }
 .btn.ghost { background: transparent; border-color: #7A7A73; color: #fff; }
-[data-save][aria-pressed="true"] svg { fill: currentColor; }
-.chip { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--paper); font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
-.chip .n { font-weight: 500; color: var(--muted); }
-.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
-.chip[aria-pressed="true"] .n { color: #C9C9C1; }
-
-/* filters */
-.filters { background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.filters .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding-top: 12px; padding-bottom: 12px; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.toggles { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
 
 /* list */
-.list { padding-top: 40px; padding-bottom: 64px; }
-.group + .group { margin-top: 48px; }
-.group h2 { margin: 0 0 20px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; font: 800 34px/1.05 var(--display); letter-spacing: -0.025em; }
-.group h2 span { font: 600 15px/1.4 var(--text); letter-spacing: 0; color: var(--muted); }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 36px 24px; }
-.card { position: relative; display: flex; flex-direction: column; min-width: 0; }
-.thumb { position: relative; aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; background: var(--soft-2); }
+.list { padding-top: 20px; padding-bottom: 56px; }
+.group + .group { margin-top: 28px; }
+.group h2 { margin: 0 0 2px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; font: 800 24px/1.1 var(--display); letter-spacing: -0.02em; }
+.group h2 span { font: 600 14px/1.4 var(--text); letter-spacing: 0; color: var(--muted); }
+.grid { display: grid; grid-template-columns: 1fr; }
+.card { position: relative; display: flex; align-items: center; gap: 14px; min-width: 0; padding: 12px 0; border-top: 1px solid var(--line); }
+.grid > .card:first-child { border-top: 0; }
+.thumb { position: relative; flex: none; width: 84px; aspect-ratio: 1; border-radius: 12px; overflow: hidden; background: var(--soft-2); }
 .thumb img, .media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.card:hover .thumb img { transform: scale(1.03); }
 .thumb img { transition: transform 0.4s ease; }
-.card-body { display: flex; align-items: flex-start; gap: 8px; margin-top: 12px; }
+.card:hover .thumb img { transform: scale(1.03); }
+.card-body { display: flex; flex: 1; align-items: center; gap: 8px; min-width: 0; }
 .card-text { flex: 1; min-width: 0; }
-.when { margin: 0; font-size: 13px; font-weight: 600; color: var(--muted); }
-.card h3 { margin: 4px 0 0; font: 700 20px/1.2 var(--display); letter-spacing: -0.01em; }
+.when { margin: 0; font-size: 12px; font-weight: 600; color: var(--muted); }
+.card h3 { margin: 2px 0 0; font: 700 17px/1.2 var(--display); letter-spacing: -0.01em; }
 .card h3 a { text-decoration: none; }
 .card h3 a::after { content: ""; position: absolute; inset: 0; }
 .card h3 a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-.where { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
-.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.where { margin: 2px 0 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 13px; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 .tag { padding: 2px 9px; border-radius: 999px; background: var(--soft-2); font-size: 12px; font-weight: 600; }
 .tag.free { background: #E3F4E8; color: #14532D; }
 .save { position: relative; z-index: 1; flex: none; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--paper); }
 
-/* generated poster for events without a picture */
+/* generated poster when an event has no picture */
 .tile { position: absolute; inset: 0; overflow: hidden; }
 .tile::after { content: ""; position: absolute; background: currentColor; }
-.tile span { position: absolute; left: 14px; right: 14px; top: 8px; padding-top: 0.14em; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; font: 800 24px/0.95 var(--display); letter-spacing: -0.03em; text-transform: uppercase; }
-.tile.big span { left: 24px; right: 24px; top: 22px; font-size: clamp(34px, 4vw, 54px); }
+.tile span { position: absolute; left: 7px; right: 7px; top: 5px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; padding-top: 0.14em; font: 800 12px/0.95 var(--display); letter-spacing: -0.02em; text-transform: uppercase; }
+.tile.big span { left: 24px; right: 24px; top: 18px; font-size: clamp(34px, 4vw, 54px); }
 .m-circle::after { width: 48%; aspect-ratio: 1; right: -6%; bottom: -16%; border-radius: 50%; }
 .m-arch::after { left: 20%; right: 20%; bottom: 0; height: 44%; border-radius: 999px 999px 0 0; }
 .m-stripes::after { left: 0; right: 0; bottom: 0; height: 42%; background: repeating-linear-gradient(180deg, currentColor 0 6px, transparent 6px 18px); }
 .m-dots::after { left: 0; right: 0; bottom: 0; height: 44%; background: radial-gradient(circle, currentColor 2.5px, transparent 3px) 0 0 / 16px 16px; }
 
-.empty { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 56px 24px; border: 1px dashed #C9C9C1; border-radius: 20px; text-align: center; }
-.empty .big { margin: 0; font: 700 26px/1.2 var(--display); }
+/* cinema: one horizontal row of posters per day, so films don't crowd out the events */
+.kino { margin-top: 16px; }
+.grid + .kino { padding-top: 14px; border-top: 1px solid var(--line); }
+.kino h3 { margin: 0 0 10px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font: 700 18px/1.2 var(--display); }
+.kino h3 span { font: 500 13px/1.4 var(--text); color: var(--muted); }
+.kino-row { display: flex; gap: 12px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px 4px; }
+.kino-row::-webkit-scrollbar { display: none; }
+.kcard { position: relative; flex: none; width: 116px; }
+.kthumb { position: relative; aspect-ratio: 2 / 3; border-radius: 12px; overflow: hidden; background: var(--soft-2); }
+.kthumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.kcard h4 { margin: 8px 0 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font: 700 14px/1.2 var(--display); }
+.kcard h4 a { text-decoration: none; }
+.kcard h4 a::after { content: ""; position: absolute; inset: 0; }
+.ktimes { margin: 2px 0 0; font-size: 12px; color: var(--muted); }
+.group > .kino-row, .group > .kino-grid, .group > .next-row { margin-top: 10px; }
+.kino-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 16px 12px; }
+.kino-grid .kcard { width: auto; }
+
+
+/* "Ne propusti": big events after this week, one row to swipe */
+.next-row { display: flex; gap: 12px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px 4px; }
+.next-row::-webkit-scrollbar { display: none; }
+.ncard { position: relative; flex: none; width: 224px; }
+.nthumb { position: relative; aspect-ratio: 4 / 3; border-radius: 14px; overflow: hidden; background: var(--soft-2); }
+.nthumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.nthumb .tile span { left: 14px; right: 14px; top: 12px; font-size: 22px; }
+.ncard .when { margin-top: 10px; }
+.ncard h3 { margin: 2px 0 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font: 700 17px/1.2 var(--display); letter-spacing: -0.01em; }
+.ncard h3 a { text-decoration: none; }
+.ncard h3 a::after { content: ""; position: absolute; inset: 0; }
+
+/* "Kasnije": everything after this week as a short list without pictures */
+.month { margin: 16px 0 2px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.group h2 + .month { margin-top: 8px; }
+.rows { margin: 0; padding: 0; list-style: none; }
+.rows li { border-bottom: 1px solid var(--line); }
+.rows a { display: flex; align-items: center; gap: 14px; min-height: 56px; padding: 8px 0; text-decoration: none; }
+.rows a:hover strong { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.rdate { flex: none; display: flex; flex-direction: column; align-items: center; width: 40px; }
+.rdate b { font: 700 20px/1 var(--display); }
+.rdate small { margin-top: 2px; font-size: 11px; font-weight: 600; color: var(--muted); }
+.rtext { flex: 1; min-width: 0; }
+.rtext strong, .rtext span { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.rtext strong { font: 700 16px/1.25 var(--display); }
+.rtext span { font-size: 13px; color: var(--muted); }
+.more { margin-top: 14px; }
+.note-empty { margin: 0 0 8px; color: var(--muted); }
+
+.empty { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 48px 20px; border: 1px dashed #C9C9C1; border-radius: 20px; text-align: center; }
+.empty .big { margin: 0; font: 700 24px/1.2 var(--display); }
 .empty p { margin: 0; color: var(--muted); }
 code { padding: 2px 6px; border-radius: 6px; background: var(--soft-2); font-size: 0.92em; }
 
-/* detail */
-dialog.detail { width: min(980px, calc(100% - 32px)); max-width: none; max-height: calc(100% - 32px); padding: 0; border: 0; border-radius: 22px; overflow: auto; overscroll-behavior: contain; }
+/* event detail: full screen on phones */
+dialog.detail { width: 100vw; max-width: none; height: 100dvh; max-height: 100dvh; margin: 0; padding: 0; border: 0; border-radius: 0; overflow: auto; overscroll-behavior: contain; }
 dialog.detail::backdrop { background: rgba(15, 15, 15, 0.55); }
 .dlg-bar { position: sticky; top: 0; z-index: 3; height: 0; display: flex; justify-content: flex-end; }
 .close { margin: 12px 12px 0 0; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: var(--paper); box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25); }
-.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-.detail .media { position: relative; min-height: 420px; background: var(--soft-2); }
-.detail .body { display: flex; flex-direction: column; gap: 18px; padding: 32px; }
-.detail h2 { margin: 0; font: 800 clamp(32px, 4vw, 48px)/1 var(--display); letter-spacing: -0.03em; }
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.detail .media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--soft-2); }
+.media .bg { filter: blur(22px) brightness(0.6); transform: scale(1.15); }
+.media .fg.tall { object-fit: contain; } /* posters: the whole poster on a blurred copy of itself */
+.detail .body { display: flex; flex-direction: column; gap: 18px; padding: 22px 18px 32px; }
+.detail h2 { margin: 0; font: 800 clamp(30px, 4vw, 48px)/1 var(--display); letter-spacing: -0.03em; }
+.eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .orig { margin: 6px 0 0; color: var(--muted); }
 .facts { margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: 16px; }
 .facts li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
@@ -143,35 +229,70 @@ dialog.detail::backdrop { background: rgba(15, 15, 15, 0.55); }
 .mini { margin: 0 0 8px; font-size: 14px; font-weight: 700; }
 .others { display: flex; flex-wrap: wrap; gap: 8px; }
 .desc-full { margin: 0; font-size: 16px; line-height: 1.6; white-space: pre-line; }
+.desc-full.clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.desc-more { align-self: flex-start; margin: -10px 0 0; padding: 0; border: 0; background: none; font-size: 15px; font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .source { margin: 0; padding: 12px 14px; border-radius: 14px; background: var(--soft); font-size: 14px; color: var(--muted); }
 .source b { color: var(--ink); font-weight: 600; }
 
 footer { background: var(--ink); color: #fff; }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; padding-top: 40px; padding-bottom: 40px; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; padding-top: 36px; padding-bottom: 36px; }
 footer p { margin: 0; max-width: 560px; font-size: 14px; color: #B5B5AD; }
+footer .status, footer #sources { font-size: 12px; color: #8E8E86; } /* tertiary: update time and sources */
 footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
 
 .toast { position: fixed; left: 50%; bottom: 24px; z-index: 60; transform: translate(-50%, 20px); padding: 10px 16px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 14px; font-weight: 600; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
-@media (max-width: 640px) {
-  .wrap { padding-left: 16px; padding-right: 16px; }
-  .search { flex-basis: 100%; margin-left: 0; }
-  .hero { padding-top: 24px; padding-bottom: 28px; }
-  .feature .media { min-height: 0; aspect-ratio: 16 / 10; }
-  .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
-  .toggles { margin-left: 0; }
-  .list { padding-top: 28px; }
-  .group h2 { font-size: 28px; }
-  .grid { grid-template-columns: 1fr; gap: 0; }
-  .card { flex-direction: row; align-items: center; gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); }
-  .thumb { width: 84px; aspect-ratio: 1; border-radius: 12px; }
-  .thumb .tile span { left: 8px; right: 8px; top: 7px; font-size: 13px; }
-  .card-body { flex: 1; min-width: 0; margin-top: 0; }
-  .card h3 { font-size: 17px; }
-  dialog.detail { width: 100vw; height: 100dvh; max-height: 100dvh; margin: 0; border-radius: 0; }
-  .detail .media { min-height: 0; aspect-ratio: 16 / 10; }
-  .detail .body { padding: 22px 18px 32px; }
+/* ---------- tablet ---------- */
+@media (min-width: 720px) {
+  .wrap { padding-left: 24px; padding-right: 24px; }
+  .scroller { flex-wrap: wrap; overflow: visible; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+  .lead { gap: 16px; padding-top: 24px; }
+  .day { width: 66px; min-height: 78px; }
+  .daytitle { font-size: clamp(40px, 5vw, 56px); }
+  .day b { font-size: 22px; }
+  .feature { height: 360px; }
+  .feature .media::after { background: linear-gradient(90deg, rgba(15, 15, 15, 0.9) 0%, rgba(15, 15, 15, 0.55) 42%, rgba(15, 15, 15, 0) 72%), linear-gradient(180deg, rgba(15, 15, 15, 0) 45%, rgba(15, 15, 15, 0.6) 100%); }
+  .feature .info { right: auto; max-width: 620px; gap: 12px; padding: 36px 40px; }
+  .badge { padding: 5px 11px; font-size: 12px; }
+  .feature .badge { padding: 7px 13px; font-size: 13px; }
+  .feature h2 { -webkit-line-clamp: 3; font-size: clamp(34px, 3.6vw, 50px); line-height: 1.02; }
+  .feature .meta { font-size: 17px; }
+  .feature .fav { top: 20px; right: 20px; width: 50px; height: 50px; }
+  .list { padding-top: 36px; }
+  .group + .group { margin-top: 44px; }
+  .group h2 { margin-bottom: 18px; font-size: 32px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+  .kino { margin-top: 28px; }
+  .kino-row { margin: 0; padding: 0 0 8px; scrollbar-width: thin; }
+  .kcard { width: 140px; }
+  .next-row { margin: 0; padding: 0 0 8px; scrollbar-width: thin; }
+  .ncard { width: 260px; }
+  .kino-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 24px 16px; }
+  .card { flex-direction: column; align-items: stretch; gap: 0; padding: 0; border-top: 0; }
+  .thumb { width: auto; aspect-ratio: 4 / 3; border-radius: 16px; }
+  .thumb .tile span { left: 14px; right: 14px; top: 8px; font-size: 22px; }
+  .card-body { align-items: flex-start; margin-top: 12px; }
+  .when { font-size: 13px; }
+  .card h3 { margin-top: 4px; font-size: 20px; }
+  .where { white-space: normal; font-size: 14px; }
+  dialog.detail { width: min(980px, calc(100% - 32px)); height: auto; max-height: calc(100% - 32px); margin: auto; border-radius: 22px; }
+  .detail .media { aspect-ratio: auto; min-height: 420px; }
+  .detail .body { padding: 32px; }
+}
+
+/* ---------- desktop: three columns; header, days, featured and filters share the grid's width ---------- */
+@media (min-width: 960px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .rows { columns: 2; column-gap: 40px; }
+  .rows li { break-inside: avoid; }
+}
+@media (min-width: 1100px) {
+  .bar { flex-wrap: nowrap; min-height: 72px; }
+  #search-toggle { display: none; }
+  .search { display: block; flex: 0 1 340px; margin-left: auto; }
+  .lead { padding-top: 28px; }
+  .feature { height: 400px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -180,10 +301,13 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
 <a class="skip" href="#list">Preskoči na događaje</a>
 
 <header class="top">
-  <div class="wrap">
+  <div class="wrap bar">
     <a class="logo" href="./" aria-label="kuda. — početna">kuda<span>.</span></a>
     <span class="city">Banjaluka</span>
-    <div class="search">
+    <button class="icon-btn" id="search-toggle" type="button" aria-label="Pretraga" aria-expanded="false" aria-controls="search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+    </button>
+    <div class="search" id="search">
       <label class="sr-only" for="q">Pretraga događaja</label>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
       <input id="q" type="search" placeholder="Predstava, izvođač, mjesto…" autocomplete="off">
@@ -192,24 +316,12 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
 </header>
 
 <main>
-  <section class="wrap hero" aria-labelledby="today-title">
-    <div class="hero-left">
-      <p class="eyebrow">Danas u Banjaluci</p>
-      <h1 id="today-title"></h1>
-      <p class="status" id="status"></p>
-      <div class="days" id="days" role="group" aria-label="Izaberi dan"></div>
-    </div>
-    <div class="hero-right" id="featured"></div>
-  </section>
-
-  <section class="filters" id="filters" aria-label="Filteri">
-    <div class="wrap">
-      <div class="chips" id="cats" role="group" aria-label="Kategorija"></div>
-      <div class="toggles">
-        <button class="chip" type="button" id="free" aria-pressed="false">Samo besplatno</button>
-        <button class="chip" type="button" id="saved-only" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Sačuvano<span class="n" id="saved-count"></span></button>
-      </div>
-    </div>
+  <h1 class="sr-only">Kultura u Banjaluci: pozorište, koncerti, film, izložbe i razgovori</h1>
+  <section class="wrap lead" id="lead" aria-label="Izbor dana i kategorije">
+    <div class="dayhead"><p class="eyebrow">Kulturna mapa grada</p><h2 class="daytitle">Više od izlaska<span class="pt">.</span></h2></div>
+    <div class="scroller" id="days" role="group" aria-label="Izaberi dan"></div>
+    <div id="featured"></div>
+    <div class="scroller" id="filters" role="group" aria-label="Filteri"></div>
   </section>
 
   <div class="wrap list" id="list"></div>
@@ -222,7 +334,10 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
       <span class="logo">kuda<span>.</span></span>
       <p>Nezavisni vodič kroz kulturu Banjaluke. Podaci se preuzimaju sa zvaničnih stranica ustanova, a svaki događaj vodi na izvor.</p>
     </div>
-    <p id="sources"></p>
+    <div>
+      <p class="status" id="status"></p>
+      <p id="sources" style="margin-top: 6px"></p>
+    </div>
   </div>
 </footer>
 
@@ -240,12 +355,13 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   const DAYS_SHORT = ["Ned", "Pon", "Uto", "Sri", "Čet", "Pet", "Sub"];
   const MONTHS = ["januar", "februar", "mart", "april", "maj", "jun", "jul", "avgust", "septembar", "oktobar", "novembar", "decembar"];
   const MON = ["jan.", "feb.", "mar.", "apr.", "maj", "jun", "jul", "avg.", "sep.", "okt.", "nov.", "dec."];
-  const CATS = ["Pozorište", "Muzika", "Izložbe", "Film", "Za djecu", "Razgovori", "Ostalo"];
+  const CATS = ["Pozorište", "Muzika", "Film", "Izložbe", "Za djecu", "Razgovori", "Kino", "Ostalo"];
   const STYLE = {
     "Pozorište": { bg: "#FF4D00", fg: "#0F0F0F", m: "arch" },
     "Muzika": { bg: "#2B4BFF", fg: "#FFFFFF", m: "circle" },
     "Izložbe": { bg: "#F5D90A", fg: "#0F0F0F", m: "stripes" },
     "Film": { bg: "#0F5132", fg: "#E9F3EC", m: "circle" },
+    "Kino": { bg: "#0F5132", fg: "#E9F3EC", m: "circle" },
     "Za djecu": { bg: "#FF9EC4", fg: "#0F0F0F", m: "dots" },
     "Razgovori": { bg: "#B9B3FF", fg: "#0F0F0F", m: "dots" },
     "Ostalo": { bg: "#0F0F0F", fg: "#FFFFFF", m: "circle" },
@@ -254,6 +370,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   const svg = (d, size) => `<svg width="${size || 20}" height="${size || 20}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
   const ICON = {
     heart: svg('<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>'),
+    heartSmall: svg('<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>', 16),
     cal: svg('<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>'),
     pin: svg('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>'),
     ticket: svg('<path d="M2 9a3 3 0 0 0 0 6v4h20v-4a3 3 0 0 0 0-6V5H2z"/><path d="M14 5v2M14 11v2M14 17v2"/>'),
@@ -261,6 +378,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     out: svg('<path d="M7 17L17 7M8 7h9v9"/>', 16),
     share: svg('<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/>', 18),
     close: svg('<path d="M18 6L6 18M6 6l12 12"/>'),
+    film: svg('<rect x="2" y="2" width="20" height="20" rx="2.18"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/>'),
   };
 
   const $ = (sel) => document.querySelector(sel);
@@ -275,7 +393,8 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   const longDate = (d) => `${cap(DAYS[d.getDay()])}, ${d.getDate()}. ${MONTHS[d.getMonth()]}`;
   const shortDate = (d) => `${DAYS_SHORT[d.getDay()]} ${d.getDate()}. ${MON[d.getMonth()]}`;
   const plural = (n) => (n % 10 === 1 && n % 100 !== 11 ? "događaj" : "događaja");
-  const clip = (s, n) => (s.length > n ? s.slice(0, n).replace(/\s+\S*$/, "") + "…" : s);
+  const pluralFilm = (n) => (n % 10 === 1 && n % 100 !== 11 ? "film" : [2, 3, 4].includes(n % 10) && ![12, 13, 14].includes(n % 100) ? "filma" : "filmova");
+  const isKino = (e) => e.kind === "kino";
   const utc = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z");
   // Theatre credits arrive as one long line ("Autor: … Režija: … Uloge: …"); put each role on its own line.
   const ROLES = "Autor|Autorka|Pisac|Režija|Reditelj|Rediteljka|Dramaturg|Dramaturškinja|Dramatizacija|Adaptacija|Prevod|Prevodilac|Scenograf|Scenografkinja|Scenografija|Kostimograf|Kostimografkinja|Kostimografija|Kompozitor|Kompozitorka|Koreograf|Koreografkinja|Koreografija|Dizajn svjetla|Lektor|Lektorka|Producent|Producentkinja|Sufler i inspicijent|Inspicijent|Asistent režije|Dirigent|Uloge|Igraju";
@@ -289,6 +408,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const todayKey = keyOf(today);
   const tomorrowKey = keyOf(addDays(today, 1));
+  const weekEnd = keyOf(addDays(today, 7)); // first day after this week; keys (YYYY-MM-DD) compare as text
 
   const all = ((DATA && DATA.events) || []).map((e) => {
     const start = new Date(e.start);
@@ -307,12 +427,18 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   const repeats = {};
   all.forEach((e) => { const k = fold(e.title) + "|" + e.venue; repeats[k] = (repeats[k] || 0) + 1; });
 
-  const state = { day: "all", cat: "Sve", free: false, savedOnly: false, q: "" };
+  const state = { day: todayKey, cat: "Sve", free: false, savedOnly: false, q: "" };
   const saved = new Set(store.get("kuda.saved", []));
   const dlg = $("#detail");
 
+  // Which dates the tabs show: one day (today first), or everything after this week (the arrow tab).
+  function inView(e) {
+    if (state.day === "later") return e.key >= weekEnd;
+    return e.key === state.day;
+  }
+
   function matches(e, ignore) {
-    if (ignore !== "day" && !state.q && state.day !== "all" && e.key !== state.day) return false;
+    if (ignore !== "day" && !state.q && !state.savedOnly && !inView(e)) return false;
     if (ignore !== "cat" && state.cat !== "Sve" && e.category !== state.cat) return false;
     if (state.free && e.price !== "Ulaz slobodan") return false;
     if (state.savedOnly && !saved.has(e.id)) return false;
@@ -334,12 +460,18 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     return e.all_day ? "cijeli dan" : hhmm(e.start);
   }
 
-  function media(e, big) {
+  // On the published site the daily build adds resized copies (thumb, large); opened from disk, the originals are used.
+  const pic = (e, big) => (big ? e.large : e.thumb) || safeUrl(e.image);
+
+  // fit: the event detail, where a tall poster is shown whole over a blurred copy of itself instead of being cropped
+  function media(e, big, fit) {
     const s = STYLE[e.category] || STYLE.Ostalo;
-    const img = safeUrl(e.image);
+    const img = pic(e, big);
     return `<div class="tile m-${s.m}${big ? " big" : ""}" style="background:${s.bg};color:${s.fg}" aria-hidden="true"><span>${esc(e.title)}</span></div>`
-      + (img ? `<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : "");
+      + (img && fit ? `<img class="bg" src="${esc(img)}" alt="" aria-hidden="true" decoding="async" referrerpolicy="no-referrer">` : "")
+      + (img ? `<img${fit ? ' class="fg"' : ""} src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : "");
   }
+  const markTall = (im) => { if (im.complete && im.naturalWidth) im.classList.toggle("tall", im.naturalHeight > im.naturalWidth * 1.05); };
 
   function tags(e) {
     const t = [];
@@ -373,8 +505,16 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     </article>`;
   }
 
-  function renderHeader() {
-    $("#today-title").textContent = longDate(today);
+  function kinoCard(e) {
+    const times = (e.showtimes || []).map((s) => s.time).join(" · ");
+    return `<article class="kcard">
+      <div class="kthumb">${media(e)}</div>
+      <h4><a href="#e=${encodeURIComponent(e.id)}">${esc(e.title)}</a></h4>
+      <p class="ktimes">${esc(times)}</p>
+    </article>`;
+  }
+
+  function renderStatus() {
     const gen = DATA && DATA.generated_at ? new Date(DATA.generated_at) : null;
     const sources = [...new Set(all.map((e) => e.source))];
     let text = "Još nema podataka", stale = true;
@@ -388,51 +528,79 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     $("#sources").textContent = sources.length ? "Izvori: " + sources.join(" · ") : "";
   }
 
-  function pickFeatured() {
-    for (let i = 0; i < 7; i++) {
-      const key = keyOf(addDays(today, i));
-      const day = all.filter((e) => e.key === key && safeUrl(e.image));
-      if (!day.length) continue;
-      const oneOff = day.filter((e) => repeats[fold(e.title) + "|" + e.venue] === 1);
-      return (oneOff.length ? oneOff : day)[0];
-    }
-    return all.find((e) => safeUrl(e.image)) || all[0] || null;
+  // One pick per day: an event pinned in rules.json first, then one with a photo, preferring one-off events over repeated shows.
+  function featuredFor(key) {
+    const pool = all.filter((e) => e.key === key && !isKino(e) && matches(e, "day"));
+    const score = (e) => (e.highlight ? 4 : 0) + (safeUrl(e.image) ? 2 : 0) + (repeats[fold(e.title) + "|" + e.venue] === 1 ? 1 : 0);
+    return pool.sort((a, b) => score(b) - score(a) || a.start - b.start)[0] || null;
   }
 
-  function renderFeatured(e) {
-    if (!e) { $("#featured").innerHTML = ""; return; }
-    const d = dayLabel(e.key);
+  function currentFeatured() {
+    if (state.q || state.savedOnly || state.day === "later") return null;
+    const keys = [state.day];
+    for (const key of keys) {
+      const e = featuredFor(key);
+      if (e) return { e, key };
+    }
+    return null;
+  }
+
+  function renderFeatured() {
+    if (state.day === "later" && !state.q && !state.savedOnly) {  // Kasnije: "Ne propusti" here, above the filters
+      const next = nextSection(all.filter((e) => e.key >= weekEnd && !isKino(e)));
+      $("#featured").hidden = !next;
+      $("#featured").innerHTML = next;
+      return;
+    }
+    const pick = currentFeatured();
+    $("#featured").hidden = !pick;
+    if (!pick) { $("#featured").innerHTML = ""; return; }
+    const { e, key } = pick, d = dayLabel(key);
+    const href = "#e=" + encodeURIComponent(e.id);
+    // "Večeras u 20:30", "Sutra u 19:30", "Petak u 20:00"; all-day events just name the day
+    const day = key === todayKey ? (!e.all_day && e.start.getHours() >= 17 ? "Večeras" : "Danas") : d.rel;
+    const when = e.all_day ? day : `${day} u ${hhmm(e.start)}`;
+    const rest = [e.place, e.price].filter(Boolean).join(" · ");
+    const on = saved.has(e.id);
     $("#featured").innerHTML = `<article class="feature" aria-labelledby="f-title">
       <div class="media">${media(e, true)}</div>
+      <a class="cover" href="${href}" tabindex="-1" aria-hidden="true"></a>
+      <button class="fav" type="button" data-save="${esc(e.id)}" aria-pressed="${on}" aria-label="${on ? "Ukloni iz sačuvanih" : "Sačuvaj"}: ${esc(e.title)}">${ICON.heart}</button>
       <div class="info">
-        <span class="badge">Izdvojeno</span>
-        <p class="meta">${esc(e.category)} · ${esc(d.rel)}${e.all_day ? "" : ", " + hhmm(e.start)}</p>
-        <h2 id="f-title">${esc(e.title)}</h2>
-        <p class="meta">${esc([e.place, e.hall, e.price].filter(Boolean).join(" · "))}</p>
-        ${e.description ? `<p class="desc">${esc(clip(e.description, 200))}</p>` : ""}
-        <div class="actions"><a class="btn primary" href="#e=${encodeURIComponent(e.id)}">Detalji</a>${saveText(e, "ghost")}</div>
+        <span class="badge">Preporuka dana</span>
+        <h2 id="f-title"><a href="${href}">${esc(e.title)}</a></h2>
+        <p class="meta"><b>${esc(when)}</b>${rest ? " · " + esc(rest) : ""}</p>
       </div>
     </article>`;
   }
 
+  // Tabs: the day on top and its date below; days without events are dimmed. The arrow tab opens "Kasnije".
   function renderDays() {
-    const count = (key) => all.filter((e) => (key === "all" || e.key === key) && matches(e, "day")).length;
-    let html = `<button class="day" type="button" data-day="all" aria-pressed="${state.day === "all"}" aria-label="Svi dani, ${count("all")} ${plural(count("all"))}"><small>Sve</small><b>${count("all")}</b><i>ukupno</i></button>`;
+    const counted = (e) => (state.cat === "Kino" ? isKino(e) : !isKino(e));
+    const has = (test) => all.some((e) => test(e) && counted(e) && matches(e, "day"));
+    let html = "";
     for (let i = 0; i < 7; i++) {
       const d = addDays(today, i);
       const key = keyOf(d);
-      const n = count(key);
-      const top = i === 0 ? "Danas" : i === 1 ? "Sutra" : DAYS_SHORT[d.getDay()];
-      html += `<button class="day${n ? "" : " empty-day"}" type="button" data-day="${key}" aria-pressed="${state.day === key}" aria-label="${esc(longDate(d))}, ${n} ${plural(n)}"><small>${top}</small><b>${d.getDate()}</b><i>${n || "–"}</i></button>`;
+      html += `<button class="day${has((e) => e.key === key) ? "" : " empty-day"}" type="button" data-day="${key}" aria-pressed="${state.day === key}" aria-label="${esc(longDate(d))}"><small>${i === 0 ? "Danas" : DAYS_SHORT[d.getDay()]}</small><b>${d.getDate()}</b></button>`;
+    }
+    if (all.some((e) => e.key >= weekEnd)) {
+      html += `<button class="day" type="button" data-day="later" aria-pressed="${state.day === "later"}" aria-label="Kasnije" title="Kasnije"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>`;
     }
     $("#days").innerHTML = html;
   }
 
-  function renderCats() {
+  function renderFilters() {
     const present = CATS.filter((c) => all.some((e) => e.category === c));
-    const count = (c) => all.filter((e) => (c === "Sve" || e.category === c) && matches(e, "cat")).length;
-    $("#cats").innerHTML = ["Sve"].concat(present).map((c) =>
-      `<button class="chip" type="button" data-cat="${esc(c)}" aria-pressed="${state.cat === c}">${esc(c)}<span class="n">${count(c)}</span></button>`).join("");
+    const count = (c) => {
+      const items = all.filter((e) => (c === "Sve" || e.category === c) && matches(e, "cat"));
+      return c === "Kino" ? new Set(items.map((e) => fold(e.title))).size : items.filter((e) => !isKino(e)).length;
+    };
+    $("#filters").innerHTML = ["Sve"].concat(present).map((c) =>
+      `<button class="chip" type="button" data-cat="${esc(c)}" aria-pressed="${state.cat === c}">${esc(c)}<span class="n">${count(c)}</span></button>`).join("")
+      + `<span class="chip-sep" aria-hidden="true"></span>`
+      + `<button class="chip" type="button" data-toggle="free" aria-pressed="${state.free}">Samo besplatno</button>`
+      + `<button class="chip" type="button" data-toggle="saved" aria-pressed="${state.savedOnly}">${ICON.heartSmall}Sačuvano${saved.size ? `<span class="n">${saved.size}</span>` : ""}</button>`;
   }
 
   function renderList() {
@@ -443,27 +611,127 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     }
     const list = all.filter((e) => matches(e));
     $("#summary").textContent = `Prikazano: ${list.length} ${plural(list.length)}`;
-    if (!list.length) {
-      $("#list").innerHTML = `<div class="empty"><p class="big">Nema događaja za ovaj izbor.</p><p>Probaj drugi dan ili kategoriju.</p><button class="btn" type="button" data-reset>Poništi filtere</button></div>`;
+    if (state.q || state.savedOnly || state.day !== "later") {
+      // one day: no day heading (the title above says it); search and saved: grouped by day
+      $("#list").innerHTML = list.length ? dayGroups(list, true, !state.q && !state.savedOnly) : emptyBox();
       return;
     }
-    const groups = new Map();
-    list.forEach((e) => { if (!groups.has(e.key)) groups.set(e.key, []); groups.get(e.key).push(e); });
-    $("#list").innerHTML = [...groups].map(([key, items]) => {
+    // Kasnije: the later dates as a short list, then the films after this week ("Ne propusti" sits above the filters)
+    const later = list.filter((e) => !isKino(e));
+    const films = list.filter(isKino);
+    const html = (state.cat === "Kino" ? "" : laterSection(later, 0)) + (films.length ? filmSection(films) : "");
+    $("#list").innerHTML = html || emptyBox();
+  }
+
+  function emptyBox() {
+    return `<div class="empty"><p class="big">Nema događaja za ovaj izbor.</p><p>Probaj drugi dan ili kategoriju.</p><button class="btn" type="button" data-reset>Poništi filtere</button></div>`;
+  }
+
+  // Events grouped by day. One day's view and search results also give each day its own cinema row.
+  function dayGroups(list, withFilms, bare) {
+    const keys = [...new Set(list.map((e) => e.key))].sort();
+    return keys.map((key) => {
       const d = dayLabel(key);
-      return `<section class="group" aria-labelledby="g-${key}">
-        <h2 id="g-${key}">${d.rel}<span>${d.date} · ${items.length} ${plural(items.length)}</span></h2>
-        <div class="grid">${items.map(card).join("")}</div>
+      const items = list.filter((e) => e.key === key && !isKino(e));
+      const films = withFilms ? list.filter((e) => e.key === key && isKino(e)) : [];
+      if (!items.length && !films.length) return "";
+      const counts = [items.length ? `${items.length} ${plural(items.length)}` : "", films.length ? `${films.length} ${pluralFilm(films.length)}` : ""].filter(Boolean).join(" · ");
+      const cinemas = [...new Set(films.map((e) => e.place))].join(", ");
+      return `<section class="group"${bare ? ` aria-label="${esc(d.rel)}"` : ` aria-labelledby="g-${key}"`}>
+        ${bare ? "" : `<h2 id="g-${key}">${d.rel}<span>${d.date} · ${counts}</span></h2>`}
+        ${items.length ? `<div class="grid">${items.map(card).join("")}</div>` : ""}
+        ${films.length ? `<div class="kino"><h3>U kinu<span>${esc(cinemas)} · ${films.length} ${pluralFilm(films.length)}</span></h3><div class="kino-row">${films.map(kinoCard).join("")}</div></div>` : ""}
       </section>`;
     }).join("");
   }
 
+  // Which days a film plays: "Svaki dan", "Danas–Ned" or "Sri, Pet, Sub".
+  function daysText(keys) {
+    const ks = [...new Set(keys)].sort();
+    const label = (k) => {
+      if (k === todayKey) return "Danas";
+      if (k === tomorrowKey) return "Sutra";
+      const [y, m, d] = k.split("-").map(Number);
+      return k < weekEnd ? DAYS_SHORT[new Date(y, m - 1, d).getDay()] : `${d}. ${MON[m - 1]}`;
+    };
+    const run = ks.length >= 3 && ks.every((k, i) => i === 0 || (new Date(k) - new Date(ks[i - 1])) / 864e5 === 1);
+    return run ? `${label(ks[0])}–${label(ks[ks.length - 1])}` : ks.map(label).join(", ");
+  }
+
+  function filmCard(group) {
+    const e = group[0];
+    return `<article class="kcard">
+      <div class="kthumb">${media(e)}</div>
+      <h4><a href="#e=${encodeURIComponent(e.id)}">${esc(e.title)}</a></h4>
+      <p class="ktimes">${esc(daysText(group.map((x) => x.key)))}</p>
+    </article>`;
+  }
+
+  // One cinema row for the whole week (a grid when Kino is the chosen category), each film with its days.
+  function filmSection(films) {
+    const byTitle = new Map();
+    films.forEach((e) => { const k = fold(e.title); if (!byTitle.has(k)) byTitle.set(k, []); byTitle.get(k).push(e); });
+    const n = byTitle.size;
+    const cinemas = [...new Set(films.map((e) => e.place))].join(", ");
+    return `<section class="group" aria-labelledby="g-films">
+      <h2 id="g-films">${state.day === "later" ? "U kinu kasnije" : "U kinu ove sedmice"}<span>${esc(cinemas)} · ${n} ${pluralFilm(n)}</span></h2>
+      <div class="${state.cat === "Kino" ? "kino-grid" : "kino-row"}">${[...byTitle.values()].map(filmCard).join("")}</div>
+    </section>`;
+  }
+
+  // "Ne propusti": up to six big events after this week. Events pinned in rules.json ("highlight") come first,
+  // then premieres and festivals, then concerts and ticketed shows (Gigstix).
+  function nextSection(later) {
+    const seen = new Set();
+    const firsts = later.filter((e) => { const k = fold(e.title); if (seen.has(k)) return false; seen.add(k); return true; });
+    const signal = (e) => {
+      const text = fold([e.title, e.description, e.note].join(" ")), title = fold(e.title);
+      return (e.highlight ? 10 : 0) + (/premijer|festival/.test(text) ? 3 : 0)
+        + (/koncert/.test(title) || /gigstix/.test(fold(e.source)) ? 2 : /koncert/.test(text) ? 1 : 0);
+    };
+    const picks = firsts.map((e) => ({ e, s: signal(e) })).filter((x) => x.s > 0)
+      .sort((a, b) => (b.s + (pic(b.e) ? 1 : 0)) - (a.s + (pic(a.e) ? 1 : 0)) || a.e.start - b.e.start)
+      .slice(0, 6).map((x) => x.e).sort((a, b) => a.start - b.start);
+    if (!picks.length) return "";
+    return `<section class="group" aria-labelledby="g-next">
+      <h2 id="g-next">Ne propusti<span>Veliki događaji narednih sedmica</span></h2>
+      <div class="next-row">${picks.map(nextCard).join("")}</div>
+    </section>`;
+  }
+
+  function nextCard(e) {
+    const date = `${DAYS_SHORT[e.start.getDay()]} ${e.start.getDate()}. ${MON[e.start.getMonth()]}${e.all_day ? "" : " · " + hhmm(e.start)}`;
+    return `<article class="ncard">
+      <div class="nthumb">${media(e)}</div>
+      <p class="when">${esc(date)}</p>
+      <h3><a href="#e=${encodeURIComponent(e.id)}">${esc(e.title)}</a></h3>
+      <p class="where">${esc(e.place)}</p>
+    </article>`;
+  }
+
+  // "Kasnije": everything after this week as a short list without pictures, by month. The week view shows the first 8.
+  function laterSection(later, limit) {
+    if (!later.length) return "";
+    const shown = limit ? later.slice(0, limit) : later;
+    const last = later[later.length - 1].start;
+    let rows = "", month = "";
+    shown.forEach((e) => {
+      const m = cap(MONTHS[e.start.getMonth()]) + (e.start.getFullYear() !== today.getFullYear() ? ` ${e.start.getFullYear()}.` : "");
+      if (m !== month) { rows += `${month ? "</ul>" : ""}<h3 class="month">${m}</h3><ul class="rows">`; month = m; }
+      const meta = [e.all_day ? "" : hhmm(e.start), e.place].filter(Boolean).join(" · ");
+      rows += `<li><a href="#e=${encodeURIComponent(e.id)}"><span class="rdate"><b>${e.start.getDate()}</b><small>${DAYS_SHORT[e.start.getDay()]}</small></span><span class="rtext"><strong>${esc(e.title)}</strong><span>${esc(meta)}</span></span></a></li>`;
+    });
+    const more = shown.length < later.length ? `<button class="btn more" type="button" data-day="later">Svi kasniji događaji (${later.length})</button>` : "";
+    return `<section class="group" aria-labelledby="g-later">
+      <h2 id="g-later">Kasnije<span>${later.length} ${plural(later.length)} · do ${last.getDate()}.${last.getMonth() + 1}.</span></h2>
+      ${rows}</ul>${more}
+    </section>`;
+  }
+
   function render() {
     renderDays();
-    renderCats();
-    $("#free").setAttribute("aria-pressed", String(state.free));
-    $("#saved-only").setAttribute("aria-pressed", String(state.savedOnly));
-    $("#saved-count").textContent = saved.size ? String(saved.size) : "";
+    renderFilters();
+    renderFeatured();
     renderList();
   }
 
@@ -499,7 +767,8 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   }
 
   async function share(e) {
-    const url = location.href.split("#")[0] + "#e=" + encodeURIComponent(e.id);
+    // Each event has its own page on the published site, so shared links show the event in previews.
+    const url = e.page ? new URL(e.page, location.href).href : location.href.split("#")[0] + "#e=" + encodeURIComponent(e.id);
     const text = `${e.title} — ${longDate(e.start)}${e.all_day ? "" : " u " + hhmm(e.start)}, ${e.place}`;
     try {
       if (navigator.share) { await navigator.share({ title: e.title, text, url }); return; }
@@ -520,20 +789,23 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   function detailHTML(e) {
     const url = safeUrl(e.url), ticket = safeUrl(e.ticket_url);
     const others = all.filter((x) => x.id !== e.id && fold(x.title) === fold(e.title) && x.venue === e.venue);
-    const time = e.all_day ? "Cijeli dan" : hhmm(e.start) + (e.end && keyOf(e.end) === keyOf(e.start) ? "–" + hhmm(e.end) : "");
+    const shows = Array.isArray(e.showtimes) ? e.showtimes : [];
+    const time = shows.length ? "Projekcije: " + shows.map((s) => s.time).join(", ")
+      : e.all_day ? "Početak na sajtu izvora" : hhmm(e.start) + (e.end && keyOf(e.end) === keyOf(e.start) ? "–" + hhmm(e.end) : "");
     return `<div class="dlg-bar"><button class="close" type="button" data-close aria-label="Zatvori">${ICON.close}</button></div>
     <div class="detail-grid">
-      <div class="media">${media(e, true)}</div>
+      <div class="media">${media(e, true, true)}</div>
       <div class="body">
         <p class="eyebrow">${esc(e.category)}</p>
         <div>
           <h2 id="d-title">${esc(e.title)}</h2>
-          ${e.title_original ? `<p class="orig">${esc(e.title_original)}</p>` : ""}
         </div>
+        ${e.description ? `<p class="desc-full clamp" id="d-desc">${esc(credits(e.description))}</p><button class="desc-more" type="button" data-more aria-expanded="false" aria-controls="d-desc" hidden>Prikaži više</button>` : ""}
         <ul class="facts">
           <li>${ICON.cal}<div><b>${esc(longDate(e.start))}</b><span>${esc(time)}</span></div></li>
           <li>${ICON.pin}<div><b>${esc(e.place)}</b>${e.hall ? `<span>${esc(e.hall)}</span>` : ""}</div></li>
-          <li>${ICON.ticket}<div><b>${esc(e.price || "Cijena na sajtu izvora")}</b>${e.age ? `<span>Uzrast ${esc(e.age)}</span>` : ""}</div></li>
+          ${e.genre || e.duration ? `<li>${ICON.film}<div><b>${esc(e.genre || "Film")}</b>${e.duration ? `<span>${esc(e.duration)}</span>` : ""}</div></li>` : ""}
+          <li>${ICON.ticket}<div><b>${esc(e.price || "Cijena na sajtu izvora")}</b>${e.age ? `<span>Uzrast ${esc(e.age)}</span>` : ""}${e.note ? `<span>${esc(e.note)}</span>` : ""}</div></li>
           ${e.organizer ? `<li>${ICON.user}<div><b>${esc(e.organizer)}</b><span>Organizator</span></div></li>` : ""}
         </ul>
         <div class="actions">
@@ -544,10 +816,11 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
           <button class="btn" type="button" data-share="${esc(e.id)}">${ICON.share}Podijeli</button>
           ${saveText(e)}
         </div>
-        ${others.length ? `<div><h3 class="mini">Druga izvođenja</h3><div class="others">${others.map((o) =>
+        ${shows.length ? `<div><h3 class="mini">Karte za projekciju</h3><div class="others">${shows.map((s) =>
+          `<a class="chip" href="${esc(safeUrl(s.ticket) || "#")}" target="_blank" rel="noopener">${esc([s.time, s.hall, s.format].filter(Boolean).join(" · "))}</a>`).join("")}</div></div>` : ""}
+        ${others.length ? `<div><h3 class="mini">${shows.length ? "Drugi dani" : "Druga izvođenja"}</h3><div class="others">${others.map((o) =>
           `<a class="chip" href="#e=${encodeURIComponent(o.id)}">${esc(shortDate(o.start))}${o.all_day ? "" : " · " + hhmm(o.start)}</a>`).join("")}</div></div>` : ""}
-        ${e.description ? `<p class="desc-full">${esc(credits(e.description))}</p>` : ""}
-        <p class="source">Izvor: <b>${esc(e.source)}</b>${url ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">originalna objava</a>` : ""}. Podaci se preuzimaju automatski, pa konačne informacije provjeri kod izvora.</p>
+        <p class="source">Izvor: <b>${esc(e.source)}</b>${url ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">originalna objava</a>` : ""}${pic(e, true) ? " · foto: " + esc(e.source) : ""}${e.page ? ` · <a href="${esc(e.page)}">stranica događaja</a>` : ""}. Podaci se preuzimaju automatski, pa konačne informacije provjeri kod izvora.</p>
       </div>
     </div>`;
   }
@@ -559,6 +832,9 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
       dlg.innerHTML = detailHTML(e);
       if (!dlg.open) dlg.showModal();
       dlg.scrollTop = 0;
+      const desc = dlg.querySelector(".desc-full"), more = dlg.querySelector("[data-more]");
+      if (desc && more) more.hidden = desc.scrollHeight <= desc.clientHeight + 2;  // "Prikaži više" only when it's cut
+      dlg.querySelectorAll("img.fg").forEach(markTall);
       return;
     }
     if (dlg.open) dlg.close();
@@ -573,26 +849,45 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
       if (lbl) lbl.textContent = on ? "Sačuvano" : "Sačuvaj";
       else b.setAttribute("aria-label", `${on ? "Ukloni iz sačuvanih" : "Sačuvaj"}: ${e ? e.title : ""}`);
     });
-    $("#saved-count").textContent = saved.size ? String(saved.size) : "";
   }
 
   document.addEventListener("click", (ev) => {
-    const t = ev.target.closest("[data-day],[data-cat],[data-save],[data-close],[data-ics],[data-share],[data-reset],#free,#saved-only");
+    const t = ev.target.closest("[data-day],[data-cat],[data-toggle],[data-save],[data-close],[data-ics],[data-share],[data-reset],[data-more],#search-toggle");
     if (!t) return;
     const d = t.dataset;
-    if (d.day) { state.day = d.day; render(); }
+    if (t.id === "search-toggle") {
+      const box = $("#search");
+      const open = !box.classList.contains("open");
+      box.classList.toggle("open", open);
+      t.setAttribute("aria-expanded", String(open));
+      if (open) $("#q").focus();
+    }
+    else if (d.day) {
+      state.day = d.day;
+      render();
+      if (!t.closest("#days")) {  // "Svi kasniji događaji" at the bottom: back up to the day buttons
+        window.scrollTo({ top: 0 });
+        const on = $('#days [aria-pressed="true"]');
+        if (on) on.scrollIntoView({ block: "nearest", inline: "nearest" });
+      }
+    }
     else if (d.cat) { state.cat = d.cat; render(); }
+    else if (d.toggle === "free") { state.free = !state.free; render(); }
+    else if (d.toggle === "saved") { state.savedOnly = !state.savedOnly; render(); }
     else if (d.save) {
       if (saved.has(d.save)) saved.delete(d.save); else saved.add(d.save);
       store.set("kuda.saved", [...saved]);
-      if (state.savedOnly) render(); else { updateSaveButtons(d.save); renderDays(); renderCats(); }
+      if (state.savedOnly) render(); else { updateSaveButtons(d.save); renderFilters(); }
     }
     else if ("close" in d) dlg.close();
+    else if ("more" in d) {
+      const open = !dlg.querySelector(".desc-full").classList.toggle("clamp");
+      t.textContent = open ? "Prikaži manje" : "Prikaži više";
+      t.setAttribute("aria-expanded", String(open));
+    }
     else if (d.ics) { const e = byId(d.ics); if (e) downloadIcs(e); }
     else if (d.share) { const e = byId(d.share); if (e) share(e); }
-    else if ("reset" in d) { Object.assign(state, { day: "all", cat: "Sve", free: false, savedOnly: false, q: "" }); $("#q").value = ""; render(); }
-    else if (t.id === "free") { state.free = !state.free; render(); }
-    else if (t.id === "saved-only") { state.savedOnly = !state.savedOnly; render(); }
+    else if ("reset" in d) { Object.assign(state, { day: todayKey, cat: "Sve", free: false, savedOnly: false, q: "" }); $("#q").value = ""; render(); }
   });
 
   let qTimer;
@@ -609,9 +904,9 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   });
   window.addEventListener("hashchange", route);
   document.addEventListener("error", (ev) => { if (ev.target && ev.target.tagName === "IMG") ev.target.remove(); }, true);
+  document.addEventListener("load", (ev) => { if (ev.target.classList && ev.target.classList.contains("fg")) markTall(ev.target); }, true);
 
-  renderHeader();
-  renderFeatured(pickFeatured());
+  renderStatus();
   render();
   route();
 })();

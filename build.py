@@ -23,6 +23,7 @@ import hashlib
 import html
 import io
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -114,7 +115,8 @@ def fetch(src: str) -> bytes | None:
     if path.exists():
         return path.read_bytes()
     try:
-        req = urllib.request.Request(src, headers={"User-Agent": UA})
+        url = urllib.parse.quote(src, safe=":/?#[]@!$&'()*+,;=%~")  # spaces, č, ć … in file names
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "image/avif,image/webp,image/*;q=0.9,*/*;q=0.5"})
         with urllib.request.urlopen(req, timeout=30) as r:
             data = r.read(30_000_000)
     except Exception as ex:
@@ -261,7 +263,8 @@ a{color:inherit}:focus-visible{outline:2px solid #2B4BFF;outline-offset:2px}butt
 .city{display:inline-flex;align-items:center;min-height:32px;padding:0 10px;border:1px solid var(--line-strong);border-radius:999px;font-size:13px;font-weight:600}
 .back{margin-left:auto;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:14px;font-weight:600;text-decoration:none}
 .event{display:grid;gap:22px;padding-top:16px;padding-bottom:56px}
-.hero{position:relative;margin:0;border-radius:20px;overflow:hidden;background:var(--soft-2);aspect-ratio:16/10}
+.hero{position:relative;margin:0;border-radius:20px;overflow:hidden;background:var(--soft-2);aspect-ratio:4/3}
+.hero .bg{filter:blur(22px) brightness(.6);transform:scale(1.15)}.hero .fg{object-fit:contain}
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero figcaption{position:absolute;right:10px;bottom:10px;padding:3px 9px;border-radius:999px;background:rgba(255,255,255,.92);font-size:11px;font-weight:600}
 .tile{position:absolute;inset:0;padding:22px;font:800 clamp(30px,6vw,56px)/.95 var(--display);letter-spacing:-.03em;text-transform:uppercase;overflow:hidden}
@@ -278,6 +281,8 @@ h1{margin:6px 0 0;font:800 clamp(34px,6vw,56px)/1 var(--display);letter-spacing:
 .mini{margin:0 0 8px;font-size:14px;font-weight:700}.chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{display:inline-flex;align-items:center;min-height:44px;padding:0 15px;border:1px solid var(--line-strong);border-radius:999px;font-size:14px;font-weight:600;text-decoration:none}
 .desc{margin:0;font-size:17px;line-height:1.65;white-space:pre-line}
+.desc.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.more{align-self:flex-start;margin:-10px 0 0;padding:0;border:0;background:none;font-size:15px;font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
 .source{margin:0;padding:12px 14px;border-radius:14px;background:var(--soft);font-size:14px;color:var(--muted)}.source b{color:var(--ink);font-weight:600}
 footer{background:var(--ink);color:#fff}footer .wrap{padding-top:32px;padding-bottom:32px}footer p{margin:6px 0 0;max-width:560px;font-size:14px;color:#B5B5AD}
 @media(min-width:720px){.wrap{padding:0 24px}.bar{min-height:72px}.event{padding-top:28px}}
@@ -410,7 +415,8 @@ def event_page(e: dict, others: list, sources: list) -> str:
     url, ticket = safe(e.get("url")), safe(e.get("ticket_url"))
     bg, fg = TILE.get(e.get("category"), ("#0F0F0F", "#FFFFFF"))
     picture = (f'<img src="../../{esc(e["large"])}" alt="" width="1400" height="800">' if e.get("large") else
-               f'<img src="{esc(e["image"])}" alt="" referrerpolicy="no-referrer">' if safe(e.get("image")) else "")
+               f'<img class="bg" src="{esc(e["image"])}" alt="" aria-hidden="true" referrerpolicy="no-referrer">'
+               f'<img class="fg" src="{esc(e["image"])}" alt="" referrerpolicy="no-referrer">' if safe(e.get("image")) else "")
     hall = f"<span>{esc(e.get('hall'))}</span>" if e.get("hall") else ""
     facts = [f'<li>{icon("cal")}<div><b>{esc(long_date(start))}</b><span>{esc(when)}</span></div></li>',
              f'<li>{icon("pin")}<div><b>{esc(place(e))}</b>{hall}</div></li>']
@@ -440,8 +446,6 @@ def event_page(e: dict, others: list, sources: list) -> str:
             f'<a class="chip" href="../../{esc(o["page"])}">{esc(short_date(dt.datetime.fromisoformat(o["start"])))}'
             f'{"" if o.get("all_day") or o.get("showtimes") else " · " + dt.datetime.fromisoformat(o["start"]).strftime("%H:%M")}</a>'
             for o in others) + "</div></div>")
-    if e.get("description"):
-        blocks.append(f'<p class="desc">{esc(credits(e["description"]))}</p>')
     source_link = f' · <a href="{esc(url)}" target="_blank" rel="noopener">originalna objava</a>' if url else ""
     blocks.append(f'<p class="source">Izvor: <b>{esc(e.get("source"))}</b>{source_link}. Podaci se preuzimaju automatski, '
                   f'pa konačne informacije provjeri kod izvora.</p>')
@@ -454,7 +458,8 @@ def event_page(e: dict, others: list, sources: list) -> str:
 <figure class="hero"><div class="tile" style="background:{bg};color:{fg}" aria-hidden="true">{esc(e['title'])}</div>{picture}
 {f'<figcaption>Foto: {esc(e.get("source"))}</figcaption>' if picture else ''}</figure>
 <div class="body">
-<div><p class="eyebrow">{esc(e.get('category'))}</p><h1>{esc(e['title'])}</h1>{f'<p class="orig">{esc(e["title_original"])}</p>' if e.get('title_original') else ''}</div>
+<div><p class="eyebrow">{esc(e.get('category'))}</p><h1>{esc(e['title'])}</h1></div>
+{f'<p class="desc clamp" id="desc">{esc(credits(e["description"]))}</p><button class="more" type="button" data-more aria-expanded="false" aria-controls="desc" hidden>Prikaži više</button>' if e.get("description") else ""}
 <ul class="facts">{''.join(facts)}</ul>
 <div class="actions">{''.join(actions)}</div>
 {''.join(blocks)}
@@ -470,6 +475,15 @@ document.querySelector("[data-share]").addEventListener("click", async (ev) => {
     label.textContent = "Link je kopiran";
   }} catch (_) {{ /* cancelled */ }}
 }});
+const desc = document.getElementById("desc"), more = document.querySelector("[data-more]");
+if (desc && more) {{
+  more.hidden = desc.scrollHeight <= desc.clientHeight + 2;
+  more.addEventListener("click", () => {{
+    const open = !desc.classList.toggle("clamp");
+    more.textContent = open ? "Prikaži manje" : "Prikaži više";
+    more.setAttribute("aria-expanded", String(open));
+  }});
+}}
 document.addEventListener("error", (ev) => {{ if (ev.target.tagName === "IMG") ev.target.remove(); }}, true);
 </script>
 </body>
@@ -549,6 +563,10 @@ def main() -> int:
             f.unlink()
 
     brand_images()  # no daily numbers on it: Facebook and Viber keep old copies of share images for weeks
+    for folder, dirs, files in os.walk(OUT):  # GitHub Pages refuses files that aren't readable by everyone
+        os.chmod(folder, 0o755)
+        for name in files:
+            os.chmod(os.path.join(folder, name), 0o644)
     print(f"built {len(events)} event pages, sitemap with {len(urls)} addresses"
           + ("" if (OUT / "og.png").exists() else "; share image and icons skipped (Chrome not found)"))
     return 0
