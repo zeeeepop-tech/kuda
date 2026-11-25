@@ -212,19 +212,39 @@ _KEEP_UPPER = {"RS", "NP", "NPRS", "SO", "BIH", "KUD", "SC", "GP", "DJ", "MC", "
                "KK", "RK", "FK", "II", "III", "IV", "VI", "VII", "VIII", "IX", "XI", "XII"}
 
 
-def smart_case(text: str) -> str:
-    """Tame CAPS: an all-caps title becomes Title Case; caps names inside normal text are capitalised."""
+def _name_words(text: str) -> set:
+    """Lower-case words a text writes with a capital letter in the middle of a sentence: names, places, bands."""
+    names, plain = set(), set()
+    for sentence in re.split(r"(?<=[.!?])\s+|\n+", text or ""):
+        for w in re.findall(r"[^\W\d_]+", sentence)[1:]:
+            if w[:1].isupper() and not w.isupper():
+                names.add(w.lower())
+            elif w.islower():
+                plain.add(w)
+    return names - plain
+
+
+def smart_case(text: str, sentence: bool = False, context: str = "") -> str:
+    """Tame CAPS. With sentence=True (titles) an all-caps title becomes sentence case, as Serbian writes titles
+    ("Šta će nići kad posadiš srce"); words the description (context) writes with a capital keep it. Otherwise
+    (organizers) all caps become Title Case. Caps names inside normal text are capitalised."""
     letters = [c for c in text if c.isalpha()]
     if not letters:
         return text
     all_caps = not any(c.islower() for c in letters)
-    out, first = [], True
+    names = _name_words(context) if all_caps and sentence else set()
+    out, first, start = [], True, True
     for tok in re.split(r"(\W+)", text):
         if not tok or not any(c.isalpha() for c in tok):
             out.append(tok)
+            if re.search(r"[.!?:]|[„“\"«]$", tok or ""):  # a subtitle, a new sentence or a quoted title starts here
+                start = True
             continue
         if tok.isupper() and tok in _KEEP_UPPER:
             out.append(tok)
+        elif all_caps and sentence:
+            low = tok.lower()
+            out.append(low[:1].upper() + low[1:] if start or low in names else low)
         elif all_caps:
             low = tok.lower()
             out.append(low if low in _SMALL_WORDS and not first else low[:1].upper() + low[1:])
@@ -232,8 +252,13 @@ def smart_case(text: str) -> str:
             out.append(tok[:1] + tok[1:].lower())
         else:
             out.append(tok)
-        first = False
+        first = start = False
     return "".join(out)
+
+
+def title_key(text: str) -> str:
+    """A title reduced to plain words, for matching ("Čiča, Miča…" = "CICA MICA…")."""
+    return re.sub(r"[^a-z0-9]+", " ", fold(text)).strip()
 
 
 def clean_hall(hall: str | None, aliases: list) -> str | None:
@@ -770,15 +795,19 @@ def collect_cinestar(src: dict, today: dt.date, horizon: dt.date, log: list) -> 
 
 
 def load_rules(path: Path) -> tuple:
-    """rules.json: {"keep": [...], "drop": [...]} words in titles that override the automatic culture filter."""
+    """rules.json: words in titles. "keep" and "drop" override the automatic culture filter; "highlight" pins an
+    event to "Ne propusti" on the page (and makes it Preporuka dana on its day). "titles" lists titles written the way
+    they should look, for names that sentence case gets wrong ("Kroz život sa Veljom")."""
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except FileNotFoundError:
-        return [], []
+        return [], [], [], {}
     except ValueError as ex:
         print(f"rules.json is not valid JSON, ignoring it ({ex})")
-        return [], []
-    return ([fold(x) for x in data.get("keep", []) if x], [fold(x) for x in data.get("drop", []) if x])
+        return [], [], [], {}
+    words = lambda name: [fold(x) for x in data.get(name, []) if x]
+    titles = {title_key(t): t.strip() for t in data.get("titles", []) if isinstance(t, str) and t.strip()}
+    return words("keep"), words("drop"), words("highlight"), titles
 
 # ------------------------------------------------------------------ plain HTML tables (SC Borik)
 
@@ -1002,7 +1031,7 @@ def categorize(e: dict, default: str) -> str:
 
 FIELDS = ["id", "kind", "title", "title_original", "category", "start", "end", "all_day", "venue", "hall", "price", "age",
           "organizer", "genre", "duration", "showtimes", "note", "image", "url", "ticket_url", "description", "source",
-          "also_listed_at", "reason"]
+          "also_listed_at", "highlight", "reason"]
 
 
 def make_id(key: str, e: dict) -> str:
@@ -1074,7 +1103,7 @@ def main() -> int:
     log: list = []
     kept, review, excluded = [], [], []
     fetched = 0
-    keep_rules, drop_rules = load_rules(Path(__file__).resolve().parent / "rules.json")
+    keep_rules, drop_rules, highlight_rules, title_fixes = load_rules(Path(__file__).resolve().parent / "rules.json")
 
     for src in SOURCES:
         if args.only and src["key"] != args.only:
@@ -1106,7 +1135,9 @@ def main() -> int:
                 e["venue"] = src["venue"]
             e["id"] = make_id(src["key"], e)
             e["category"] = e.get("category") or categorize(e, src["default_category"])
-            e["title"] = smart_case(re.sub(r"(?i)^\s*predstav[ae]\s*:\s*", "", e["title"]).strip()) or e["title"]
+            title = re.sub(r"(?i)^\s*predstav[ae]\s*:\s*", "", e["title"]).strip()
+            e["title"] = smart_case(title, sentence=True, context=e.get("description") or "") or e["title"]
+            e["title"] = title_fixes.get(title_key(e["title"]), e["title"])  # rules.json "titles"
             e["hall"] = clean_hall(e.get("hall"), src.get("aliases", []))
             venue_by_hall = src.get("hall_venues", {})
             if e.get("hall") and fold(e["hall"]) in venue_by_hall:
@@ -1120,6 +1151,8 @@ def main() -> int:
                     verdict, reason = "excluded", "removed in rules.json"
                 elif any(k in words for k in keep_rules):
                     verdict, reason = "kept", ""
+                if any(k in words for k in highlight_rules):
+                    e["highlight"] = True
             e["reason"] = reason or None
             {"kept": kept, "review": review, "excluded": excluded}[verdict].append(e)
 

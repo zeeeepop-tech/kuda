@@ -1,5 +1,12 @@
 {
-  "_help": "Words in an event title that override the automatic culture filter. 'keep' always shows an event, 'drop' always hides it. Not case-sensitive, accents optional.",
-  "keep": ["Zoster"],
-  "drop": []
+  "_help": "Words from event titles, not case-sensitive, accents optional. 'keep' always shows an event, 'drop' always hides it, 'highlight' pins it to Ne propusti (and makes it Preporuka dana on its day). 'titles': whole titles written the way they should look, for names that automatic sentence case writes in lower case.",
+  "keep": [
+    "Zoster"
+  ],
+  "drop": [],
+  "highlight": [],
+  "titles": [
+    "Kroz život sa Veljom",
+    "Čiča, Miča i njihova priča"
+  ]
 }
