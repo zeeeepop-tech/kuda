@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T17:02:10+01:00",
+  "generated_at": "2026-11-25T17:07:34+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -8,7 +8,6 @@
     "Banski dvor: REST API, 5 events",
     "Gradsko pozorište Jazavac: repertoire page, 8 shows (8 with a start time)",
     "SC Borik: table on /?page_id=6913, 103 rows with a date",
-    "Gigstix: event page https://gigstix.ba/event/zoster-banja-luka-05-decembar-2026/ failed (HTTP 522)",
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 31 films, 118 film-days",
     "Sheet: 0 events added by hand, 1 picture swaps",
@@ -3205,17 +3204,6 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "gig-zoster-banja-luka-05-decembar-2026",
-      "title": "Zoster",
-      "category": "Muzika",
-      "start": "2026-12-05T00:00:00+01:00",
-      "all_day": true,
-      "venue": "KSB – Klub studenata Banjaluka",
-      "image": "https://drive.google.com/thumbnail?id=1GkjUhR0mPU0a-3uK4s_Fx5aPLr_4z3wK&sz=w2000",
-      "url": "https://gigstix.ba/event/zoster-banja-luka-05-decembar-2026/",
-      "source": "Gigstix"
-    },
-    {
       "id": "cs-6641-20261205",
       "kind": "kino",
       "title": "Dina Re-release",
@@ -3256,6 +3244,19 @@
       "url": "https://www.np.rs.ba/predstava/ozaloscena-porodica-4/",
       "description": "Autori: Branislav Nušić i Nikola Pejaković Adaptacija i režija: Nikola Pejaković Dramaturg predstave: Branko Brđanin Scenografija: Dragana Purković Macan Kostimografija: Jelena Vidović Muzika i zvuk: Nikola Pejaković Lektori: Milorad Telebak i Nataša Kecman Inspicijent: Nada…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "gig-zoster-banja-luka-05-decembar-2026",
+      "title": "Zoster",
+      "category": "Muzika",
+      "start": "2026-12-05T21:00:00+01:00",
+      "all_day": false,
+      "venue": "KSB – Klub studenata Banjaluka",
+      "image": "https://drive.google.com/thumbnail?id=1GkjUhR0mPU0a-3uK4s_Fx5aPLr_4z3wK&sz=w2000",
+      "url": "https://gigstix.ba/event/zoster-banja-luka-05-decembar-2026/",
+      "ticket_url": "https://bilet.gigstix.ba/ba/store/gigstix/sectionGroup/index/232",
+      "description": "Bend ZOSTER održaće koncert u Klubu studenata Banjaluka 05. decembra 2026. godine, sa početkom u 21:00. Zoster, prepoznatljiv po svom jedinstvenom spoju reggae zvuka, rocka i društveno angažovanih tekstova, već gotovo dvije decenije slovi za jedan od najvažnijih bendova…",
+      "source": "Gigstix"
     },
     {
       "id": "cs-6642-20261205",
