@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T16:39:54+01:00",
+  "generated_at": "2026-11-25T16:56:04+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -9,106 +9,13 @@
     "Gradsko pozorište Jazavac: repertoire page, 8 shows (8 with a start time)",
     "SC Borik: table on /?page_id=6913, 103 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
-    "Cinestar Delta Planet: programme, 31 films, 120 film-days",
+    "Cinestar Delta Planet: programme, 31 films, 118 film-days",
     "Sheet: 0 events added by hand, 1 picture swaps",
     "Banski dvor: pictures from event pages for 2 of 2 events",
     "TMDB: sharper pictures for 21 of 24 films (0 looked up now)"
   ],
-  "count": 161,
+  "count": 159,
   "events": [
-    {
-      "id": "cs-6533-20261125",
-      "kind": "kino",
-      "title": "Kristalni planet",
-      "category": "Kino",
-      "start": "2026-11-25T16:25:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Animirani",
-      "duration": "1h 37min",
-      "showtimes": [
-        {
-          "time": "16:25",
-          "hall": "Sala 5",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kristalni-planet/C6C01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/vFAvVXRyqzpf3GXp1mPp5TuLEFR.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/8DP7O3xpTbNsk6v9CnRKNQrApvQ.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kristalni-planet/6533",
-      "description": "U režiji Arsena Antona Ostojića i prema originalnom scenariju legendarnog Dušana Vukotića, prvog hrvatskog dobitnika Oscara, u kina dolazi jedan od najvećih i najambicioznijih projekata suvremene hrvatske animacije – nezaboravna avantura za sve generacije. Na nedavno naseljenom…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6516-20261125",
-      "kind": "kino",
-      "title": "Igre gladi: Svitanje nad žetvom",
-      "category": "Kino",
-      "start": "2026-11-25T16:30:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Akcijski",
-      "duration": "2h 38min",
-      "showtimes": [
-        {
-          "time": "16:30",
-          "hall": "Sala 4",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/15C01000023IXUNOEM"
-        },
-        {
-          "time": "18:30",
-          "hall": "Sala 5",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/27C01000023IXUNOEM"
-        },
-        {
-          "time": "19:15",
-          "hall": "Sala 6",
-          "format": "4DX - TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/78C01000023IXUNOEM"
-        },
-        {
-          "time": "21:30",
-          "hall": "Sala 5",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/87C01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
-      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6539-20261125",
-      "kind": "kino",
-      "title": "Janko Strižić film: Bundevasti kaos",
-      "category": "Kino",
-      "start": "2026-11-25T16:30:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Animirani",
-      "duration": "1h 21min",
-      "showtimes": [
-        {
-          "time": "16:30",
-          "hall": "Sala 3",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/F2C01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/luhCgKwlISVg583ZB68QeIceOEH.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/mG8tVv1RPAKnARWxKTND5dRgMpw.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/6539",
-      "description": "Od studija Aardman Animations, višestrukih dobitnika Oscara i autora nezaboravnih hitova Wallace i Gromit te Bijeg iz kokošinjca, stiže treći nastavak urnebesne animirane avanture za cijelu obitelj! Stanovnici farme Mossy Bottom s veseljem iščekuju Noć vještica, no njihove…",
-      "source": "Cinestar Delta Planet"
-    },
     {
       "id": "cs-6557-20261125",
       "kind": "kino",
@@ -192,6 +99,43 @@
       "image_credit": "TMDB",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6516-20261125",
+      "kind": "kino",
+      "title": "Igre gladi: Svitanje nad žetvom",
+      "category": "Kino",
+      "start": "2026-11-25T18:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Akcijski",
+      "duration": "2h 38min",
+      "showtimes": [
+        {
+          "time": "18:30",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/27C01000023IXUNOEM"
+        },
+        {
+          "time": "19:15",
+          "hall": "Sala 6",
+          "format": "4DX - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/78C01000023IXUNOEM"
+        },
+        {
+          "time": "21:30",
+          "hall": "Sala 5",
+          "format": "TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/87C01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
+      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
       "source": "Cinestar Delta Planet"
     },
     {
@@ -3308,7 +3252,7 @@
       "start": "2026-12-05T21:00:00+01:00",
       "all_day": false,
       "venue": "KSB – Klub studenata Banjaluka",
-      "image": "https://www.beerka.ba/speaker/zoster/",
+      "image": "https://drive.google.com/thumbnail?id=1GkjUhR0mPU0a-3uK4s_Fx5aPLr_4z3wK&sz=w2000",
       "url": "https://gigstix.ba/event/zoster-banja-luka-05-decembar-2026/",
       "ticket_url": "https://bilet.gigstix.ba/ba/store/gigstix/sectionGroup/index/232",
       "description": "Bend ZOSTER održaće koncert u Klubu studenata Banjaluka 05. decembra 2026. godine, sa početkom u 21:00. Zoster, prepoznatljiv po svom jedinstvenom spoju reggae zvuka, rocka i društveno angažovanih tekstova, već gotovo dvije decenije slovi za jedan od najvažnijih bendova…",
