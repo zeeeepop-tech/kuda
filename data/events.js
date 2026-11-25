@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-25T12:09:36+01:00",
+  "generated_at": "2026-11-25T14:04:17+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -1042,6 +1042,12 @@ window.KUDA_DATA = {
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/3AC01000023IXUNOEM"
         },
         {
+          "time": "15:15",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/04D01000023IXUNOEM"
+        },
+        {
           "time": "16:00",
           "hall": "Sala 1",
           "format": "3D - SINK",
@@ -1527,6 +1533,12 @@ window.KUDA_DATA = {
           "hall": "Sala 3",
           "format": "TITL",
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/4AC01000023IXUNOEM"
+        },
+        {
+          "time": "15:15",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/14D01000023IXUNOEM"
         },
         {
           "time": "16:00",
