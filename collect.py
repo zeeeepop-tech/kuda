@@ -23,9 +23,11 @@ Writes:
 from __future__ import annotations
 
 import argparse
+import csv
 import datetime as dt
 import hashlib
 import html
+import io
 import json
 import os
 import re
@@ -671,6 +673,95 @@ def film_pictures(events: list, log: list, offline: bool = False) -> None:
     log.append(f"TMDB: sharper pictures for {found} of {len(films)} films ({asked} looked up now)"
                + ("" if os.environ.get("TMDB_API_KEY") or offline else " · add TMDB_API_KEY to look up new films"))
 
+# ------------------------------------------------------------------ your Google Sheet: events and pictures by hand
+
+SHEET_CATEGORIES = ["Pozorište", "Muzika", "Film", "Izložbe", "Za djecu", "Razgovori", "Ostalo"]
+
+
+def _sheet_rows(url: str) -> list:
+    """One tab as a list of rows, each a dict keyed by its folded heading ("naslov", "datum", …)."""
+    raw = _download(url, "text/csv").decode("utf-8-sig", "replace")
+    if raw.lstrip()[:200].lower().startswith(("<!doctype", "<html")):
+        raise ValueError("the sheet is not shared as 'Anyone with the link can view'")
+    rows = list(csv.reader(io.StringIO(raw)))
+    head = [fold(h).strip() for h in rows[0]] if rows else []
+    return [dict(zip(head, (c.strip() for c in r))) for r in rows[1:] if any(c.strip() for c in r)]
+
+
+def _cell(row: dict, name: str) -> str:
+    return next((v for k, v in row.items() if k.startswith(name)), "")
+
+
+def _sheet_picture(value: str):
+    """A picture from the sheet: an image link, a Google Drive link (shared with anyone), or a file in the repository."""
+    value = value.strip()
+    drive = re.search(r"drive\.google\.com/(?:file/d/|open\?id=|uc\?(?:[^#]*&)?id=)([\w-]{20,})", value)
+    if drive:
+        return f"https://drive.google.com/thumbnail?id={drive.group(1)}&sz=w2000"
+    return (value if re.match(r"https?://", value) else value.lstrip("/")) or None
+
+
+def from_sheet(today: dt.date, horizon: dt.date, log: list) -> tuple:
+    """Events and picture swaps from the Google Sheet in SHEET_URL (shared as 'Anyone with the link can view').
+    Tab "Događaji": events added by hand. Tab "Slike": a word from a title and a better picture for it.
+    Rows starting with "Primjer" (the template's examples) are skipped."""
+    sheet = re.search(r"/spreadsheets/d/([\w-]{20,})", os.environ.get("SHEET_URL", ""))
+    if not sheet:
+        return [], []
+    base = f"https://docs.google.com/spreadsheets/d/{sheet.group(1)}"
+    events, swaps = [], []
+    tab = lambda name: f"{base}/gviz/tq?tqx=out:csv&headers=1&sheet={urllib.parse.quote(name)}"
+    try:
+        rows = _sheet_rows(tab("Događaji"))
+    except Exception as ex:
+        log.append(f"Sheet: events not read ({err(ex)})")
+        rows = []
+    categories = {fold(c): c for c in SHEET_CATEGORIES} | {"kino": "Film"}
+    for n, row in enumerate(rows, start=2):
+        title, when = one_line(_cell(row, "naslov")), _cell(row, "datum")
+        iso = re.fullmatch(r"(\d{4})-(\d{1,2})-(\d{1,2})", when)
+        day = dt.date(*map(int, iso.groups())) if iso else date_from_text(when, today) if when else None
+        if fold(title).startswith("primjer"):
+            continue  # the template's example row
+        if not title or not day:
+            log.append(f"Sheet, row {n}: skipped ({'no title' if not title else 'date not recognised, write it as 25.11.2026'})")
+            continue
+        if day < today or day > horizon:
+            continue
+        hm = time_from_text(_cell(row, "vrijeme")) if _cell(row, "vrijeme") else None
+        e = {"title": title, "start": _day_start(day, hm), "end": None, "all_day": hm is None, "kind": None,
+             "venue": one_line(_cell(row, "mjesto")) or None, "hall": one_line(_cell(row, "sala")) or None,
+             "price": one_line(_cell(row, "cijena")) or None, "description": _cell(row, "opis") or None,
+             "image": _sheet_picture(_cell(row, "slika")), "url": _cell(row, "link") or None,
+             "ticket_url": _cell(row, "karte") or None, "source": "kuda.",
+             "source_id": f"{day:%Y%m%d}-" + re.sub(r"[^a-z0-9]+", "-", fold(title)).strip("-")[:40]}
+        e["category"] = categories.get(fold(_cell(row, "kategorija"))) or categorize(e, "Ostalo")
+        if fold(_cell(row, "istakni")) in ("da", "x", "true", "1", "yes"):
+            e["highlight"] = True
+        e["id"] = make_id("rucno", e)
+        events.append(e)
+    try:
+        for row in _sheet_rows(tab("Slike")):
+            word, picture = fold(_cell(row, "naslov")).strip(), _sheet_picture(_cell(row, "slika"))
+            if word and picture and not word.startswith("primjer"):
+                swaps.append((word, picture))
+    except Exception as ex:
+        log.append(f"Sheet: pictures not read ({err(ex)})")
+    log.append(f"Sheet: {len(events)} events added by hand, {len(swaps)} picture swaps")
+    return events, swaps
+
+
+def swap_pictures(events: list, swaps: list) -> None:
+    """The sheet's "Slike" tab: an event whose title contains the word gets that picture (also over TMDB's)."""
+    for e in events:
+        title = fold(e["title"])
+        for word, picture in swaps:
+            if word in title:
+                e["image"] = picture
+                e.pop("backdrop", None)
+                e.pop("image_credit", None)
+                break
+
 # ------------------------------------------------------------------ probing sources that are still being added
 
 PROBE: list = []  # (source, page, regex of links on it to save too). Add a new site here before writing its reader.
@@ -1263,10 +1354,13 @@ def main() -> int:
             e["reason"] = reason or None
             {"kept": kept, "review": review, "excluded": excluded}[verdict].append(e)
 
+    sheet_events, swaps = ([], []) if args.only or args.offline else from_sheet(today, horizon, log)
+    kept[:0] = sheet_events  # first, so a correction in the sheet wins over the same event from the venue
     for src in SOURCES:
         if src.get("enrich_images") and not (args.only and src["key"] != args.only):
             enrich_images(src, kept + review, log)
     film_pictures(kept, log, args.offline)
+    swap_pictures(kept, swaps)
     if args.probe and not args.offline:
         probe(log)
 
