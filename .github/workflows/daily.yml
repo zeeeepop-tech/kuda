@@ -39,6 +39,8 @@ jobs:
 
       - name: Collect events
         run: python collect.py
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}   # sharper film pictures; saved in Settings → Secrets and variables → Actions
 
       - name: Save the events in the repository
         continue-on-error: true   # if saving fails, the site is still built and published
