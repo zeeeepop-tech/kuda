@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T11:38:01+01:00",
+  "generated_at": "2026-11-26T12:11:25+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -7,19 +7,16 @@
     "Narodno pozorište RS: REST API, 23 events",
     "Banski dvor: REST API, 4 events",
     "Gradsko pozorište Jazavac: repertoire page, 8 shows (8 with a start time)",
-    "Dječije pozorište RS: no dates on https://djecijepozoristers.ba/predstava/%d1%81%d1%9a%d0%b5%d0%b6%d0%bd%d0%b0-%d0%ba%d1%80%d0%b0%d1%99%d0%b8%d1%86%d0%b0/",
-    "Dječije pozorište RS: no dates on https://djecijepozoristers.ba/predstava/mala-sirena-2/",
-    "Dječije pozorište RS: no dates on https://djecijepozoristers.ba/predstava/%d0%b1%d0%b8%d0%be-%d1%98%d0%b5%d0%b4%d0%bd%d0%be%d0%bc-%d1%98%d0%b5%d0%b4%d0%b0%d0%bd-%d0%bb%d0%b0%d0%b2/",
-    "Dječije pozorište RS: no dates on https://djecijepozoristers.ba/predstava/dozivljaji-macka-tose/",
-    "Dječije pozorište RS: repertoire, 2 shows, 2 performances",
+    "Dječije pozorište RS: repertoire, 1 shows playing, 3 performances coming up",
     "SC Borik: table on /?page_id=6913, 111 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 27 films, 120 film-days",
-    "Sheet: 6 events added by hand, 3 picture swaps",
+    "Sheet, row 9: skipped (date not recognised, write it as 25.11.2026)",
+    "Sheet: 6 events added by hand, 5 picture swaps",
     "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 17 of 20 films (0 looked up now)"
   ],
-  "count": 162,
+  "count": 165,
   "events": [
     {
       "id": "rucno-20260924-izlozba-viktor-majdandzic-umjetnost-kroz",
@@ -182,6 +179,21 @@
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "dp-c52680da-202611261800",
+      "title": "Doživljaji mačka Toše",
+      "title_original": "Доживљаји мачка Тоше",
+      "category": "Za djecu",
+      "start": "2026-11-26T18:00:00+01:00",
+      "all_day": false,
+      "venue": "Dječije pozorište Republike Srpske",
+      "age": "6+",
+      "duration": "60 min",
+      "note": "Premijera · Rasprodato",
+      "image": "https://drive.google.com/thumbnail?id=12Dp4wcVNmZjR99wzRlpIzjCfPYPyNqtz&sz=w2000",
+      "url": "https://djecijepozoristers.ba/predstava/dozivljaji-macka-tose/",
+      "source": "Dječije pozorište RS"
     },
     {
       "id": "cs-6605-20261126",
@@ -1059,6 +1071,20 @@
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "dp-c52680da-202611281800",
+      "title": "Doživljaji mačka Toše",
+      "title_original": "Доживљаји мачка Тоше",
+      "category": "Za djecu",
+      "start": "2026-11-28T18:00:00+01:00",
+      "all_day": false,
+      "venue": "Dječije pozorište Republike Srpske",
+      "age": "6+",
+      "duration": "60 min",
+      "image": "https://drive.google.com/thumbnail?id=12Dp4wcVNmZjR99wzRlpIzjCfPYPyNqtz&sz=w2000",
+      "url": "https://djecijepozoristers.ba/predstava/dozivljaji-macka-tose/",
+      "source": "Dječije pozorište RS"
+    },
+    {
       "id": "cs-6605-20261128",
       "kind": "kino",
       "title": "Tigar od papira",
@@ -1259,6 +1285,20 @@
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
       "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "dp-c52680da-202611291100",
+      "title": "Doživljaji mačka Toše",
+      "title_original": "Доживљаји мачка Тоше",
+      "category": "Za djecu",
+      "start": "2026-11-29T11:00:00+01:00",
+      "all_day": false,
+      "venue": "Dječije pozorište Republike Srpske",
+      "age": "6+",
+      "duration": "60 min",
+      "image": "https://drive.google.com/thumbnail?id=12Dp4wcVNmZjR99wzRlpIzjCfPYPyNqtz&sz=w2000",
+      "url": "https://djecijepozoristers.ba/predstava/dozivljaji-macka-tose/",
+      "source": "Dječije pozorište RS"
     },
     {
       "id": "cs-6558-20261129",
