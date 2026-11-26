@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-26T12:31:13+01:00",
+  "generated_at": "2026-11-26T15:07:35+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -12,11 +12,11 @@ window.KUDA_DATA = {
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 27 films, 120 film-days",
     "Sheet, row 9: skipped (date not recognised, write it as 25.11.2026)",
-    "Sheet: 6 events added by hand, 7 picture swaps",
+    "Sheet: 7 events added by hand, 8 picture swaps",
     "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 17 of 20 films (0 looked up now)"
   ],
-  "count": 165,
+  "count": 166,
   "events": [
     {
       "id": "rucno-20260924-izlozba-viktor-majdandzic-umjetnost-kroz",
@@ -746,6 +746,19 @@ window.KUDA_DATA = {
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
       "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
       "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "rucno-20261128-kulvikend",
+      "title": "KULvikend",
+      "category": "Ostalo",
+      "start": "2026-11-28T11:00:00+01:00",
+      "all_day": false,
+      "venue": "Dom omladine",
+      "price": "Besplatno",
+      "image": "https://drive.google.com/thumbnail?id=1mKivHpjx5K4Ts2XvwGJ4wxrkSrldKUeC&sz=w2000",
+      "url": "https://www.banjaluka.rs.ba/kulvikend-u-domu-omladine/",
+      "description": "Program će otvoriti Dječiji hor „Vrapčići“, jedan od prepoznatljivih banjalučkih brendova, dok će mladi glumci DIS teatra publici predstaviti pozorišnu predstavu „Mali ljudi“. Posjetioce očekuje raznovrstan sadržaj, među kojima su izložbe slika i fotografija, kreativni radovi, rukotvorine i drugi zanimljivi sadržaji posvećeni umjetnosti i kreativnom izražavanju.",
+      "source": "kuda."
     },
     {
       "id": "cs-6558-20261128",
@@ -3776,12 +3789,12 @@ window.KUDA_DATA = {
     {
       "id": "gpj-14303",
       "title": "Čiča, Miča i njihova priča",
-      "category": "Pozorište",
+      "category": "Za djecu",
       "start": "2026-12-14T18:00:00+01:00",
       "end": "2026-12-14T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
-      "image": "https://gpj.ba/wp-content/uploads/2026/11/Minimalist-Theater-Premiere-Poster-683x1024.png",
+      "image": "https://drive.google.com/thumbnail?id=1fjBypv7FEgTnlJj-nGVoTFxKfaaIHsl0&sz=w2000",
       "url": "https://gpj.ba/repertoar/cica-mica-i-njihova-prica-djecija-juhu-scena-premijera/",
       "description": "Dječija JUHU scena, PREMIJERA",
       "source": "Gradsko pozorište Jazavac"
@@ -4295,12 +4308,12 @@ window.KUDA_DATA = {
     {
       "id": "gpj-14305",
       "title": "Čiča, Miča i njihova priča",
-      "category": "Pozorište",
+      "category": "Za djecu",
       "start": "2026-12-29T19:00:00+01:00",
       "end": "2026-12-29T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
-      "image": "https://gpj.ba/wp-content/uploads/2026/11/Minimalist-Green-Theater-Poster-683x1024.png",
+      "image": "https://drive.google.com/thumbnail?id=1fjBypv7FEgTnlJj-nGVoTFxKfaaIHsl0&sz=w2000",
       "url": "https://gpj.ba/repertoar/cica-mica-i-njihova-prica-dodjela-paketica-sa-deda-mrazom/",
       "description": "dodjela paketića sa Deda Mrazom",
       "source": "Gradsko pozorište Jazavac"
