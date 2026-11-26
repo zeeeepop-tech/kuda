@@ -282,6 +282,251 @@ def brand_images() -> None:
     if render_png(icon, 180, 180, OUT / "apple-touch-icon.png") and Image is not None:
         Image.open(OUT / "apple-touch-icon.png").convert("RGB").resize((32, 32), Image.LANCZOS).save(OUT / "favicon-32.png")
 
+# ------------------------------------------------------------------ pictures for Instagram: today's stories, a weekend carousel
+
+TILE = {"Pozorište": ("#FF4D00", "#0F0F0F"), "Muzika": ("#2B4BFF", "#FFFFFF"), "Izložbe": ("#F5D90A", "#0F0F0F"),
+        "Film": ("#0F5132", "#E9F3EC"), "Kino": ("#0F5132", "#E9F3EC"), "Za djecu": ("#FF9EC4", "#0F0F0F"),
+        "Razgovori": ("#B9B3FF", "#0F0F0F"), "Ostalo": ("#0F0F0F", "#FFFFFF")}
+MON_SHORT = ["jan.", "feb.", "mar.", "apr.", "maj", "jun", "jul", "avg.", "sep.", "okt.", "nov.", "dec."]
+SOCIAL_CSS = """*{box-sizing:border-box;margin:0;padding:0}html,body{height:100%}
+body{font-family:Inter,system-ui,sans-serif;color:#0F0F0F;background:#fff;overflow:hidden;-webkit-font-smoothing:antialiased}
+.d,.logo,.tile{font-family:"Bricolage Grotesque",Inter,sans-serif;font-weight:800;line-height:1}
+.d{letter-spacing:-.03em}.logo{letter-spacing:-.045em}.logo span{color:#FF4D00}
+.c2,.c3{display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}.c2{-webkit-line-clamp:2}.c3{-webkit-line-clamp:3}
+.one{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pic{position:relative;overflow:hidden;background:#F3F3EF}.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile{position:absolute;inset:0;padding:.45em .55em;text-transform:uppercase;line-height:.95;letter-spacing:-.02em;overflow:hidden}
+.eyebrow{font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.badge{display:inline-block;padding:12px 24px;border-radius:999px;background:#FF4D00;color:#0F0F0F;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.dots{position:absolute;right:-60px;bottom:-60px;width:520px;height:520px}.dots i{position:absolute;border-radius:50%}
+.dots .a{width:360px;height:360px;right:180px;bottom:180px;background:#FF4D00}.dots .b{width:280px;height:280px;right:30px;bottom:70px;background:#2B4BFF}
+.dots .y{width:180px;height:180px;right:300px;bottom:30px;background:#F5D90A}"""
+
+
+def _local_today() -> dt.date:
+    try:
+        from zoneinfo import ZoneInfo
+        return dt.datetime.now(ZoneInfo("Europe/Sarajevo")).date()
+    except Exception:
+        return dt.date.today()
+
+
+def _times(e: dict) -> tuple:
+    start = dt.datetime.fromisoformat(e["start"])
+    return start, dt.datetime.fromisoformat(e["end"]) if e.get("end") else None
+
+
+def _runs(e: dict) -> bool:  # an exhibition or anything else over several days
+    start, end = _times(e)
+    return bool(end) and end - start > dt.timedelta(days=1)
+
+
+def _pic(e: dict, kind: str, size: int) -> str:
+    """The event's resized picture, or its category colour with the title, like the site's tiles."""
+    f = OUT / e[kind] if e.get(kind) else None
+    if f and f.exists():
+        return f'<img src="{f.as_uri()}" alt="">'
+    bg, fg = TILE.get(e.get("category"), TILE["Ostalo"])
+    return f'<div class="tile" style="background:{bg};color:{fg};font-size:{size}px">{esc(e["title"])}</div>'
+
+
+def _label(e: dict, day: dt.date) -> str:
+    start, end = _times(e)
+    if _runs(e) and start.date() != day:
+        return f"do {end.day}. {MON_SHORT[end.month - 1]}"
+    return "cijeli dan" if e.get("all_day") else f"{start:%H:%M}"
+
+
+def _page(body: str, w: int, h: int, extra_css: str = "") -> str:
+    return (f'<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="{FONTS}">'
+            f'<style>{SOCIAL_CSS}body{{width:{w}px;height:{h}px;position:relative}}{extra_css}</style></head>'
+            f'<body>{body}</body></html>')
+
+
+def _plural(n: int, one: str, few: str, many: str) -> str:
+    return one if n % 10 == 1 and n % 100 != 11 else few if n % 10 in (2, 3, 4) and n % 100 not in (12, 13, 14) else many
+
+
+def story_list(day: dt.date, items: list, more: int, films: int, running: int) -> str:
+    rows = "".join(f"""<div class="row"><div class="pic th">{_pic(e, "thumb", 30)}</div><div class="tx">
+<p class="meta"><b>{esc(_label(e, day))}</b> · {esc(e.get("category") or "")}</p><p class="d t c2">{esc(e["title"])}</p>
+<p class="pl one">{esc(place(e))}</p></div></div>""" for e in items)
+    rest = [f"još {more} {_plural(more, 'događaj', 'događaja', 'događaja')}" if more else "",
+            f"{films} {_plural(films, 'film', 'filma', 'filmova')} u kinu" if films else "",
+            f"{running} {_plural(running, 'izložba', 'izložbe', 'izložbi')} u toku" if running else ""]
+    rest = [r for r in rest if r]
+    note = (", ".join(rest[:-1]) + " i " + rest[-1] if len(rest) > 1 else rest[0]) if rest else ""
+    css = """.wrap{position:absolute;left:80px;right:80px;top:250px}.top{display:flex;align-items:center;gap:18px}.logo{font-size:64px}
+.city{padding:10px 22px;border:2px solid #D6D6CF;border-radius:999px;font-size:28px;font-weight:600}
+.eyebrow{margin-top:48px;font-size:30px;color:#5E5E58}h1{margin-top:16px;font-size:96px;line-height:.95}
+.list{margin-top:48px;display:grid;gap:22px}.row{display:flex;gap:28px;align-items:center;padding-bottom:22px;border-bottom:2px solid #E2E2DC}
+.th{flex:none;width:150px;height:150px;border-radius:24px}.tx{min-width:0;flex:1}.meta{font-size:28px;color:#5E5E58}.meta b{color:#0F0F0F}
+.t{margin-top:8px;font-size:46px;line-height:1.02}.pl{margin-top:8px;font-size:28px;color:#5E5E58}
+.note{margin-top:26px;font-size:30px;color:#5E5E58}.cta{position:absolute;left:80px;top:1530px;padding:16px 30px;border-radius:999px;background:#0F0F0F;color:#fff;font-size:32px;font-weight:700}
+.cta span{color:#FF4D00}"""
+    body = f"""<div class="wrap"><div class="top"><div class="logo">kuda<span>.</span></div><div class="city">Banjaluka</div></div>
+<p class="eyebrow">Danas u Banjaluci</p><h1 class="d">{DAYS[day.weekday()].capitalize()},<br>{day.day}. {MONTHS[day.month - 1]}</h1>
+<div class="list">{rows}</div>{f'<p class="note">I {esc(note)}.</p>' if note else ""}</div>
+<div class="cta">Sve na kudaugrad.com <span>→</span></div>"""
+    return _page(body, 1080, 1920, css)
+
+
+def story_pick(e: dict, day: dt.date) -> str:
+    start, _ = _times(e)
+    when = f"Danas u {start:%H:%M}" if not e.get("all_day") else "Danas"
+    tags = "".join(f'<span class="tag">{esc(t)}</span>' for t in (e.get("price"), e.get("age") and f"Uzrast {e['age']}") if t)
+    css = """body{background:#0F0F0F;color:#fff}.logo{position:absolute;left:80px;top:250px;font-size:64px}
+.pic{position:absolute;left:80px;right:80px;top:360px;height:690px;border-radius:36px}.badge{position:absolute;left:80px;top:1100px;font-size:28px}
+h1{position:absolute;left:80px;right:80px;top:1176px;font-size:84px;line-height:.98}
+.meta{position:absolute;left:80px;right:80px;top:1460px;font-size:38px;color:#E4E4DD}.tags{position:absolute;left:80px;top:1530px;display:flex;gap:14px}
+.tag{padding:10px 20px;border:2px solid #5E5E58;border-radius:999px;font-size:28px;font-weight:600}"""
+    body = f"""<div class="logo">kuda<span>.</span></div><div class="pic">{_pic(e, "large", 72)}</div><div class="badge">Preporuka dana</div>
+<h1 class="d c3">{esc(e["title"])}</h1><p class="meta one">{esc(when)} · {esc(place(e))}</p>{f'<div class="tags">{tags}</div>' if tags else ""}"""
+    return _page(body, 1080, 1920, css)
+
+
+def slide_cover(first: dt.date, last: dt.date, picked: int, total: int) -> str:
+    days = f"{first.day}–{last.day}. {MONTHS[last.month - 1]}" if first.month == last.month else \
+        f"{first.day}. {MONTHS[first.month - 1]} – {last.day}. {MONTHS[last.month - 1]}"
+    css = """body{background:#0F0F0F;color:#fff}.logo{position:absolute;left:80px;top:80px;font-size:56px}
+.eyebrow{position:absolute;left:80px;top:300px;font-size:30px;color:#B5B5AD}h1{position:absolute;left:80px;right:80px;top:360px;font-size:150px;line-height:.92}
+.days{position:absolute;left:80px;top:690px;font-size:64px;color:#FF4D00}.count{position:absolute;left:80px;top:790px;font-size:34px;color:#E4E4DD}
+.url{position:absolute;left:80px;bottom:72px;font-size:30px;font-weight:600;color:#B5B5AD}"""
+    body = f"""<div class="logo">kuda<span>.</span></div><p class="eyebrow">Kulturna mapa grada</p><h1 class="d">Vikend u<br>Banjaluci</h1>
+<p class="d days">{days}</p><p class="count">{f"{total} {_plural(total, 'događaj', 'događaja', 'događaja')} za vikend" if picked == total else f"Izdvojili smo {picked} od {total} događaja"}</p>
+<div class="dots"><i class="a"></i><i class="b"></i><i class="y"></i></div><p class="url">kudaugrad.com</p>"""
+    return _page(body, 1080, 1350, css)
+
+
+def slide_event(e: dict, n: int, of: int) -> str:
+    start, _ = _times(e)
+    when = DAYS[start.weekday()] + ("" if e.get("all_day") else f" {start:%H:%M}")
+    css = """.pic{position:absolute;left:0;top:0;width:1080px;height:810px}.eyebrow{position:absolute;left:72px;top:866px;font-size:30px;font-weight:700;color:#FF4D00}
+h1{position:absolute;left:72px;right:72px;top:918px;font-size:68px;line-height:1}.pl{position:absolute;left:72px;right:72px;top:1080px;font-size:34px;color:#5E5E58}
+.logo{position:absolute;left:72px;bottom:56px;font-size:40px}.n{position:absolute;right:72px;bottom:60px;font-size:28px;font-weight:600;color:#5E5E58}"""
+    body = f"""<div class="pic">{_pic(e, "large", 84)}</div><p class="eyebrow">{esc(when)} · {esc(e.get("category") or "")}</p>
+<h1 class="d c2">{esc(e["title"])}</h1><p class="pl one">{esc(place(e))}{" · " + esc(e["price"]) if e.get("price") else ""}</p>
+<div class="logo">kuda<span>.</span></div><p class="n">{n}/{of}</p>"""
+    return _page(body, 1080, 1350, css)
+
+
+def slide_end(n: int, of: int) -> str:
+    css = """body{background:#FF4D00}.lead{position:absolute;left:80px;top:330px;font-size:44px;font-weight:700}
+h1{position:absolute;left:80px;right:60px;top:400px;font-size:112px}.sub{position:absolute;left:80px;right:80px;top:560px;font-size:36px;line-height:1.3}
+.logo{position:absolute;left:80px;bottom:64px;font-size:48px}.logo span{color:#fff}.n{position:absolute;right:72px;bottom:68px;font-size:28px;font-weight:600}"""
+    body = f"""<p class="lead">Sve ostalo za vikend:</p><h1 class="d">kudaugrad.com</h1>
+<p class="sub">Predstave, koncerti, filmovi i izložbe za svaki dan.<br><b>Link je u opisu profila.</b></p><div class="logo">kuda<span>.</span></div><p class="n">{n}/{of}</p>"""
+    return _page(body, 1080, 1350, css)
+
+
+def _caption(title: str, groups: list, tail: str, tags: str) -> str:
+    lines = [title, ""]
+    for head_line, items in groups:
+        if head_line:
+            lines.append(head_line)
+        lines += [f"{t} {e['title']} · {place(e)}" for t, e in items]
+        lines.append("")
+    return "\n".join(lines + [tail, "", tags]).strip() + "\n"
+
+
+def social(events: list) -> str:
+    """Instagram pictures made from the same events as the site, in _site/social/ with a page to save them from:
+    two stories for today (the list, then Preporuka dana) and, for the coming weekend, a carousel."""
+    if not chrome():
+        return "Instagram pictures skipped (Chrome not found)"
+    folder = OUT / "social"
+    folder.mkdir(parents=True, exist_ok=True)
+    day = _local_today()
+    culture = [e for e in events if e.get("kind") != "kino"]
+    made = []
+
+    def draw(markup: str, w: int, h: int, name: str) -> None:
+        png = folder / f"{name}.png"
+        if not render_png(markup, w, h, png):
+            return
+        if Image is not None:
+            Image.open(png).convert("RGB").save(folder / f"{name}.jpg", quality=90)
+            png.unlink()
+            made.append(f"{name}.jpg")
+        else:
+            made.append(png.name)
+
+    # today: what's on, then the day's pick (same choice as "Preporuka dana" on the site)
+    on = [e for e in culture if _times(e)[0].date() == day]
+    running = [e for e in culture if _runs(e) and _times(e)[0].date() < day <= _times(e)[1].date()]
+    films = len({fold(e["title"]) for e in events if e.get("kind") == "kino" and _times(e)[0].date() == day})
+    on.sort(key=lambda e: (e.get("all_day", False), _times(e)[0]))
+    shown = (on or running)[:4]
+    if shown:
+        draw(story_list(day, shown, max(0, len(on) - len(shown)), films, len(running) if on else 0), 1080, 1920, "danas-1")
+    repeats: dict = {}
+    for e in events:
+        repeats[(fold(e["title"]), e.get("venue"))] = repeats.get((fold(e["title"]), e.get("venue")), 0) + 1
+    score = lambda e: (4 if e.get("highlight") else 0) + (2 if e.get("large") else 0) + (repeats[(fold(e["title"]), e.get("venue"))] == 1)
+    pick = max(on, key=lambda e: (score(e), -_times(e)[0].timestamp()), default=None)
+    if pick:
+        draw(story_pick(pick, day), 1080, 1920, "danas-2")
+    today_text = _caption(f"Danas u Banjaluci · {DAYS[day.weekday()]}, {day.day}. {MONTHS[day.month - 1]}",
+                          [("", [(_label(e, day), e) for e in on + running])],
+                          "Sve na kudaugrad.com" + (f" (i {films} {_plural(films, 'film', 'filma', 'filmova')} u kinu)" if films else ""),
+                          "#banjaluka #kultura #kudaugrad")
+
+    # the weekend: Friday to Sunday (from today once it has started)
+    friday = day + dt.timedelta(days=(4 - day.weekday()) % 7) if day.weekday() < 4 else day
+    sunday = day + dt.timedelta(days=6 - day.weekday())
+    weekend = [e for e in culture if friday <= _times(e)[0].date() <= sunday]
+    weekend.sort(key=lambda e: _times(e)[0])
+    signal = lambda e: (10 if e.get("highlight") else 0) + (3 if re.search(r"premijer|festival", fold(f"{e['title']} {e.get('note') or ''}")) else 0) \
+        + (2 if "koncert" in fold(e["title"]) else 0) + (2 if e.get("large") else 0)
+    seen, firsts = set(), []
+    for e in weekend:
+        if fold(e["title"]) not in seen:
+            seen.add(fold(e["title"]))
+            firsts.append(e)
+    picks = sorted(sorted(firsts, key=lambda e: -signal(e))[:5], key=lambda e: _times(e)[0])
+    weekend_text = ""
+    if picks:
+        of = len(picks) + 2
+        draw(slide_cover(friday, sunday, len(picks), len(weekend)), 1080, 1350, "vikend-1")
+        for i, e in enumerate(picks, start=2):
+            draw(slide_event(e, i, of), 1080, 1350, f"vikend-{i}")
+        draw(slide_end(of, of), 1080, 1350, f"vikend-{of}")
+        groups = []
+        for d in sorted({_times(e)[0].date() for e in weekend}):
+            groups.append((DAYS[d.weekday()].capitalize(), [(_label(e, d), e) for e in weekend if _times(e)[0].date() == d]))
+        weekend_text = _caption(f"Vikend u Banjaluci · {friday.day}–{sunday.day}. {MONTHS[sunday.month - 1]}", groups,
+                                "Sve događaje, filmove i izložbe nađi na kudaugrad.com (link je u opisu profila).",
+                                "#banjaluka #kultura #vikend #kudaugrad")
+    (folder / "danas.txt").write_text(today_text, encoding="utf-8")
+    if weekend_text:
+        (folder / "vikend.txt").write_text(weekend_text, encoding="utf-8")
+    (folder / "index.html").write_text(social_page(day, made, today_text, weekend_text), encoding="utf-8")
+    return f"Instagram pictures: {len(made)} (stories for today, weekend carousel)"
+
+
+def social_page(day: dt.date, made: list, today_text: str, weekend_text: str) -> str:
+    v = day.strftime("%Y%m%d")
+    fig = lambda name, label: (f'<figure><a href="{name}?v={v}" download><img src="{name}?v={v}" alt="{esc(label)}" loading="lazy"></a>'
+                               f'<figcaption>{esc(label)} · <a href="{name}?v={v}" download>Preuzmi</a></figcaption></figure>')
+    stories = [n for n in made if n.startswith("danas")]
+    slides = sorted((n for n in made if n.startswith("vikend")), key=lambda n: int(re.sub(r"\D", "", n)))
+    block = lambda key, label: (f'<h3>Tekst objave</h3><textarea id="{key}" readonly>{esc(label)}</textarea>'
+                                f'<button class="btn" type="button" data-copy="{key}">Kopiraj tekst</button>')
+    return f"""<!DOCTYPE html><html lang="sr-Latn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>kuda. — za Instagram</title><link rel="stylesheet" href="{FONTS.replace('&', '&amp;')}">
+<link rel="stylesheet" href="../assets/event.css"><style>main{{padding:20px 16px 64px}}h1{{font:800 34px/1.05 var(--display);margin:6px 0 10px}}
+h2{{font:800 24px/1.1 var(--display);margin:34px 0 12px}}h3{{font-size:15px;margin:18px 0 8px}}.how{{color:var(--muted);font-size:15px}}
+.row{{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}}figure{{flex:none;width:190px;margin:0}}figure img{{display:block;width:100%;border-radius:12px;border:1px solid var(--line)}}
+figcaption{{margin-top:6px;font-size:13px;color:var(--muted)}}textarea{{display:block;width:100%;min-height:200px;margin-bottom:10px;padding:12px;border:1px solid var(--line-strong);border-radius:12px;font:14px/1.5 var(--text)}}
+</style></head><body><main class="wrap"><p class="eyebrow" style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Za Instagram · {day.day}. {MONTHS[day.month - 1]}</p>
+<h1>Slike za objavu</h1><p class="how">Na telefonu drži prst na slici i izaberi <b>Sačuvaj</b>. U storyju dodaj link sticker: kudaugrad.com. Slike se prave svako jutro.</p>
+<h2>Story za danas</h2>{f'<div class="row">{"".join(fig(n, f"Story {i}") for i, n in enumerate(stories, 1))}</div>' if stories else '<p class="how">Danas nema događaja za story.</p>'}
+{block("cap-danas", today_text) if today_text.strip() else ""}
+<h2>Vikend · carousel</h2>{f'<div class="row">{"".join(fig(n, f"{i}/{len(slides)}") for i, n in enumerate(slides, 1))}</div>' + block("cap-vikend", weekend_text) if slides else '<p class="how">Za ovaj vikend još nema događaja.</p>'}
+</main><script>document.querySelectorAll("[data-copy]").forEach((b) => b.addEventListener("click", async () => {{
+const t = document.getElementById(b.dataset.copy); try {{ await navigator.clipboard.writeText(t.value); b.textContent = "Kopirano"; }} catch (_) {{ t.select(); }} }}));</script>
+</body></html>"""
+
 # ------------------------------------------------------------------ event pages
 
 CSS = """
@@ -607,6 +852,7 @@ def main() -> int:
             f.unlink()
 
     brand_images()  # no daily numbers on it: Facebook and Viber keep old copies of share images for weeks
+    print(social(events))
     for folder, dirs, files in os.walk(OUT):  # GitHub Pages refuses files that aren't readable by everyone
         os.chmod(folder, 0o755)
         for name in files:
