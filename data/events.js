@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-26T15:42:52+01:00",
+  "generated_at": "2026-11-26T16:09:40+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
