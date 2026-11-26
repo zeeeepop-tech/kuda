@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-26T11:36:21+01:00",
+  "generated_at": "2026-11-26T11:38:01+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -15,7 +15,7 @@ window.KUDA_DATA = {
     "SC Borik: table on /?page_id=6913, 111 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 27 films, 120 film-days",
-    "Sheet: 6 events added by hand, 2 picture swaps",
+    "Sheet: 6 events added by hand, 3 picture swaps",
     "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 17 of 20 films (0 looked up now)"
   ],
