@@ -1301,8 +1301,14 @@ def classify(e: dict, trust: str) -> tuple:
     return "excluded", "not culture"
 
 
+KIDS_STAGES = [r"\bjuhu\b", r"djecij\w* scen", r"decij\w* scen", r"lutkarsk\w* scen"]  # e.g. Jazavac's Dječija JUHU scena
+
+
 def categorize(e: dict, default: str) -> str:
-    """Title first, then the site's own categories; the description only when the venue has no default."""
+    """A children's stage first, then the title, then the site's own categories; the description only when the venue
+    has no default."""
+    if _any(KIDS_STAGES, fold(" ".join([e.get("hall") or "", e.get("description") or "", e.get("url") or ""]))):
+        return "Za djecu"
     passes = [fold(f"{e.get('title_original') or ''} {e.get('title') or ''}"),
               fold(" ".join(e.get("source_categories") or []))]
     if default == "Ostalo":
@@ -1444,6 +1450,11 @@ def main() -> int:
             e["reason"] = reason or None
             {"kept": kept, "review": review, "excluded": excluded}[verdict].append(e)
 
+    # one show, one category: when one date of a show is for children (at the Juhu scena), so are its other dates
+    kids = {(e["source"], fold(e["title"])) for e in kept if e.get("category") == "Za djecu"}
+    for e in kept:
+        if (e["source"], fold(e["title"])) in kids:
+            e["category"] = "Za djecu"
     sheet_events, swaps = ([], []) if args.only or args.offline else from_sheet(today, horizon, log)
     kept[:0] = sheet_events  # first, so a correction in the sheet wins over the same event from the venue
     for src in SOURCES:
