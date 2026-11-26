@@ -609,21 +609,30 @@ def collect_djecije(src: dict, today: dt.date, horizon: dt.date, log: list) -> l
         title = re.split(r"\s+[-–|]\s+", _meta(show, "og:title") or "")[0].strip() or (
             one_line(strip_html(heading.group(1))) if heading else "")
         text = to_latin(strip_html(show))
-        terms = re.search(r"(?is)Termini\s*:?(.{0,900}?)(?:Uzrast|Trajanje|Rezervacij|$)", text)
+        # The dates follow "Termini:", one per line or several on a line; "PREMIJERA (RASPRODATO)" may sit on its
+        # own line. The first line that is neither ends the list (the description, the booking form …).
+        dated, terms = r"\d{1,2}\.\s*[a-z]+\s+u\s+\d{1,2}[.:]\d{2}", []
+        start = re.search(r"(?i)Termini\s*:?\s*", text)
+        for line in text[start.end():].split("\n")[:15] if start else []:
+            if re.search(dated, fold(line)):
+                terms.append(line)
+            elif terms and len(line) < 40 and re.search(r"premijer|rasprodat", fold(line)):
+                terms[-1] += " " + line
+            else:
+                break
         if not title or not terms:
             log.append(f"{src['name']}: no dates on {link}")
             continue
-        shows += 1
         age = re.search(r"(?i)Uzrast\s*:?\s*(\d{1,2}\s*\+)", text)
         length = re.search(r"(?i)Trajanje\s*:?\s*(\d{1,3})\s*min", text)
         image, description = _meta(show, "og:image"), _meta(show, "og:description") or _meta(show, "description")
         found = set()
-        for m in re.finditer(r"(\d{1,2})\.\s*([a-z]+)\s+u\s+(\d{1,2})[.:](\d{2})(?=(.{0,45}))", fold(terms.group(1))):
+        for m in re.finditer(r"(\d{1,2})\.\s*([a-z]+)\s+u\s+(\d{1,2})[.:](\d{2})(?=([^0-9]{0,45}))", fold(" ".join(terms))):
             month = next((n for name, n in _MONTHS if m.group(2).startswith(name)), None)
             hour, minute = int(m.group(3)), int(m.group(4))
             day = _safe_date(_guess_year(month, int(m.group(1)), today), month, int(m.group(1))) if month else None
-            if not day or (day, hour, minute) in found or hour > 23:
-                continue
+            if not day or (day, hour, minute) in found or hour > 23 or not today <= day <= horizon:
+                continue  # past performances are still listed on the site
             found.add((day, hour, minute))
             notes = [label for word, label in (("premijer", "Premijera"), ("rasprodat", "Rasprodato")) if word in m.group(5)]
             events.append({
@@ -636,7 +645,8 @@ def collect_djecije(src: dict, today: dt.date, horizon: dt.date, log: list) -> l
                 "description": to_latin(description) if description else None,
                 "source_id": hashlib.sha1(link.encode()).hexdigest()[:8] + f"-{day:%Y%m%d}{hour:02d}{minute:02d}",
             })
-    log.append(f"{src['name']}: repertoire, {shows} shows, {len(events)} performances")
+        shows += bool(found)
+    log.append(f"{src['name']}: repertoire, {shows} shows playing, {len(events)} performances coming up")
     return events
 
 # ------------------------------------------------------------------ sharper film pictures from TMDB
