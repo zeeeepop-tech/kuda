@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T06:23:19+01:00",
+  "generated_at": "2026-11-26T11:32:58+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -7,14 +7,14 @@
     "Narodno pozorište RS: REST API, 23 events",
     "Banski dvor: REST API, 4 events",
     "Gradsko pozorište Jazavac: repertoire page, 8 shows (8 with a start time)",
-    "SC Borik: table on /?page_id=6913, 103 rows with a date",
+    "SC Borik: table on /?page_id=6913, 111 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
-    "Cinestar Delta Planet: programme, 27 films, 108 film-days",
-    "Sheet: 0 events added by hand, 1 picture swaps",
+    "Cinestar Delta Planet: programme, 27 films, 120 film-days",
+    "Sheet: 4 events added by hand, 2 picture swaps",
     "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 17 of 20 films (0 looked up now)"
   ],
-  "count": 146,
+  "count": 160,
   "events": [
     {
       "id": "cs-6558-20261126",
@@ -217,7 +217,7 @@
       "venue": "Banski dvor Kulturni centar",
       "hall": "Koncertna dvorana",
       "price": "10 KM",
-      "image": "https://banskidvor.org/wp-content/uploads/2026/11/Давид-Јахр-промо-scaled.jpg",
+      "image": "https://drive.google.com/thumbnail?id=1BM4_NXthJld0rYgdAae1CzOJqVajiXDc&sz=w2000",
       "url": "https://banskidvor.org/event/koncert-david-jarh-quintet/",
       "description": "Festival će u četvrtak, 26. novembra, u 20.00 časova zatvoriti DAVID JARH QUINTET, ansambl koji okuplja istaknute muzičare različitih generacija i umjetničkih iskustava. Na čelu ansambla je slovenački trubač, kompozitor i pedagog David Jarh, čiji se rad oslanja na bogatu džez…",
       "source": "Banski dvor"
@@ -487,6 +487,20 @@
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "rucno-20261127-otvaranje-20-medjunarodnog-salona-fotogr",
+      "title": "Otvaranje 20. Međunarodnog salona fotografije Banja luka 2026",
+      "category": "Izložbe",
+      "start": "2026-11-27T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Banski dvor Kulturni centar",
+      "price": "Besplatno",
+      "image": "https://drive.google.com/thumbnail?id=1foqCaKBMux7Tv92GrnHoopKOO44YZGkr&sz=w2000",
+      "url": "https://fotobih.ba/?p=7730",
+      "description": "Ljubitelji fotografije u petak će imati priliku da pogledaju radove autora iz zemlje i svijeta, u okviru jubilarnog 20. Međunarodnog salona fotografije „BANJA LUKA 2026“ i izložbe FOTOBiH Banja Luka 2026.",
+      "source": "kuda.",
+      "highlight": true
+    },
+    {
       "id": "cs-6605-20261127",
       "kind": "kino",
       "title": "Tigar od papira",
@@ -543,16 +557,22 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "borik-16a5b45b7d",
+      "id": "rucno-20261127-nezavisan",
       "title": "Nezavisan",
       "title_original": "ПРЕДСТАВА: НЕЗАВИСАН",
       "category": "Pozorište",
       "start": "2026-11-27T20:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
+      "price": "Cijena na sajtu izvora",
       "organizer": "Od a Media",
-      "url": "https://scborik.com/?page_id=6913",
-      "source": "SC Borik"
+      "image": "https://drive.google.com/thumbnail?id=1FbPRLic8fiC86k3c2_Sq11nO_R4xEiyR&sz=w2000",
+      "url": "https://www.entrio.ba/en/event/banja-luka-nezavisan-stand-up-andrija-dabanovic-35214",
+      "description": "Jedan od najpopularnijih stand-up komičara na Balkanu, Andrija Dabanović, stiže u Banja Luku! Stand-up show \"Nezavisan\" govori o Andrijinom odlasku iz male sredine i preseljenju u veću. Osim toga, sada kada je samostalan i \"nezavisan\" želi da dokaže da je zapravo tek sada postao zavisan od mnogih drugih faktora. Takođe, Andrija ispituje i granice bolesti zavisnosti. On pokušava da shvati da li je čovjek koji apstinira i suzdržava se od nečega zapravo zavisan ili nezavisan.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "SC Borik"
+      ]
     },
     {
       "id": "cs-6622-20261127",
@@ -1062,6 +1082,24 @@
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "rucno-20261128-zenomrzac",
+      "title": "Ženomrzac",
+      "title_original": "ПРЕДСТАВА: ЖЕНОМРЗАЦ",
+      "category": "Pozorište",
+      "start": "2026-11-28T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "price": "Cijena na sajtu izvora",
+      "organizer": "Mondoko",
+      "image": "https://drive.google.com/thumbnail?id=1LL0CT9lHvc4BM_q4gI-gt8m-QB3d37KN&sz=w2000",
+      "url": "https://www.entrio.ba/en/event/banja-luka-predstava-zenomrzac-33233",
+      "description": "To je večer u kojoj će se i muškarci i žene osjećati prozvano – ali na najbolji mogući način. Jer kad skinemo ego, ostane nam samo istina. A istina je uvijek najsmiješnija. Je li on stvarno ženomrzac? Pozornica je sudnica, a vi ćete biti interaktivna porota koja odlučuje.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "SC Borik"
+      ]
+    },
+    {
       "id": "np-25648",
       "title": "Gospođica",
       "title_original": "Госпођица",
@@ -1076,18 +1114,6 @@
       "url": "https://www.np.rs.ba/predstava/gospodjica-27/",
       "description": "Pisac: Ivo Andrić Dramatizacija: Vanja Ejdus Režija i adaptacija: Đurđa Tešić Scenograf: Dragana Purković Macan Kostimograf: Ivana Ristić Kompozitor: Vladimir Pejković Scenski pokret: Emir Fejzić Dizajn svjetla: Radomir Stamenković Dramaturg predstave: Aleksandar Vasiljević *…",
       "source": "Narodno pozorište RS"
-    },
-    {
-      "id": "borik-6dc437dd11",
-      "title": "Ženomrzac",
-      "title_original": "ПРЕДСТАВА: ЖЕНОМРЗАЦ",
-      "category": "Pozorište",
-      "start": "2026-11-28T20:00:00+01:00",
-      "all_day": false,
-      "venue": "Gradsko pozorište Jazavac",
-      "organizer": "Mondoko",
-      "url": "https://scborik.com/?page_id=6913",
-      "source": "SC Borik"
     },
     {
       "id": "cs-6622-20261128",
@@ -2749,6 +2775,56 @@
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "cs-6558-20261203",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-03T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/A4D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261203",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-12-03T16:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "16:15",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/55D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "cs-6641-20261203",
       "kind": "kino",
       "title": "Dina Re-release",
@@ -2815,6 +2891,31 @@
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "cs-6558-20261204",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-04T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/B4D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "cs-6641-20261204",
       "kind": "kino",
       "title": "Dina Re-release",
@@ -2878,6 +2979,98 @@
       "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Dune%20Part%202/dina2_300x400_HR.jpg?preset=film",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-drugi-dio-re-release/6642",
       "description": "Prije nego što saga dosegne svoj vrhunac, vratite se na Arrakis — ondje gdje spektakl pripada: na velikom platnu. Adaptacija znanstveno-fantastičnog klasika Franka Herberta i nastavak velikog kino spektakla \"Dina\" vraća se u kina uoči završnog poglavlja trilogije Denisa…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6558-20261205",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-05T11:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "11:00",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/24D01000023IXUNOEM"
+        },
+        {
+          "time": "11:45",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/84D01000023IXUNOEM"
+        },
+        {
+          "time": "13:00",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/64D01000023IXUNOEM"
+        },
+        {
+          "time": "15:00",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/44D01000023IXUNOEM"
+        },
+        {
+          "time": "16:00",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/C4D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261205",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-12-05T11:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "11:30",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/15D01000023IXUNOEM"
+        },
+        {
+          "time": "13:45",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/A5D01000023IXUNOEM"
+        },
+        {
+          "time": "14:00",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/35D01000023IXUNOEM"
+        },
+        {
+          "time": "16:15",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/65D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
     },
     {
@@ -2960,6 +3153,98 @@
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "cs-6558-20261206",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-06T11:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "11:00",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/34D01000023IXUNOEM"
+        },
+        {
+          "time": "11:45",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/94D01000023IXUNOEM"
+        },
+        {
+          "time": "13:00",
+          "hall": "Sala 1",
+          "format": "3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/74D01000023IXUNOEM"
+        },
+        {
+          "time": "15:00",
+          "hall": "Sala 1",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/54D01000023IXUNOEM"
+        },
+        {
+          "time": "16:00",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/D4D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261206",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-12-06T11:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "11:30",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/25D01000023IXUNOEM"
+        },
+        {
+          "time": "13:45",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/B5D01000023IXUNOEM"
+        },
+        {
+          "time": "14:00",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/45D01000023IXUNOEM"
+        },
+        {
+          "time": "16:15",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/75D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "cs-6641-20261206",
       "kind": "kino",
       "title": "Dina Re-release",
@@ -3023,6 +3308,56 @@
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "cs-6558-20261207",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-07T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/E4D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261207",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-12-07T16:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "16:15",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/85D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "gpj-12523",
       "title": "Bračno savjetovanje",
       "category": "Pozorište",
@@ -3034,6 +3369,56 @@
       "url": "https://gpj.ba/repertoar/bracno-savjetovanje-premijera-gradskog-pozorista-jazavac-otvaranje-festivala-zaplet-xvi-2-2-2-2/",
       "description": "komedija D. Glatauera",
       "source": "Gradsko pozorište Jazavac"
+    },
+    {
+      "id": "cs-6558-20261208",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-08T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/F4D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6512-20261208",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-12-08T16:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "16:15",
+          "hall": "Sala 3",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/95D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "np-25792",
@@ -3049,6 +3434,31 @@
       "url": "https://www.np.rs.ba/predstava/ciklus-koncerata-so-nprs-neklasicni-zur/",
       "description": "Gudački orkestar Narodnog pozorišta Republike Srpske solisti: Marija Pilipović , flauta (Banja Luka) Vladimir Stanišić , klarinet (Beograd) Luka Lopičić , harmonika (Beograd) dirigent: Natalija Mićić (Beograd) na programu: Bartok, Holst, Babić i Di Marino RIJEČ DIRIGENTA: Šta…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "cs-6558-20261209",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-09T16:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 43min",
+      "showtimes": [
+        {
+          "time": "16:00",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/05D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
     },
     {
       "id": "cs-6518-20261209",
@@ -3364,15 +3774,15 @@
       "showtimes": [
         {
           "time": "00:05",
-          "hall": "Sala 6",
-          "format": "4DX - 3D - TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/F3701000023IXUNOEM"
-        },
-        {
-          "time": "00:05",
           "hall": "Sala 1",
           "format": "3D - TITL",
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/E3701000023IXUNOEM"
+        },
+        {
+          "time": "00:05",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/F3701000023IXUNOEM"
         },
         {
           "time": "19:00",
@@ -3836,6 +4246,19 @@
       "url": "https://www.np.rs.ba/predstava/karmen-%d1%98edna-tragedi%d1%98a-opera-u-%d1%98ednom-cinu/",
       "description": "Autor: Žorž Bize Dirigent: Stefan Zekić Reditelj: Milan Nešković Scenografkinja: Andreja Rondović Kostimografkinja: Jelena Vidović Scenski pokret: Emir Fejzić Koncertmajstor: Dušica Blaženović Zamjenik koncertmajstora: Teodor Ikanović Korepetitor: Vlado Danić Stručni saradnik za…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "rucno-20270130-kerim-cutuna-nebitno",
+      "title": "Kerim Čutuna \"Nebitno\"",
+      "category": "Pozorište",
+      "start": "2027-01-30T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "price": "Cijena na sajtu izvora",
+      "image": "https://drive.google.com/thumbnail?id=1Aq1x7iGnNCx9-qv2xfOPSdshFEDn1NC1&sz=w2000",
+      "url": "https://www.entrio.ba/en/event/banja-luka-kerim-cutuna-nebitno-35295",
+      "description": "“Nebitno” je satirična monodrama koja govori o položaju jednog glumca u društvu u kojem danas živimo. Priča o arhetipskim likovima koje susrećemo svakodnevno, borbama i dilemama koje stoje ispred svakog individualca koji ne želi biti dio sistema koji već odavno ne funkcioniše. Kerim Čutuna se kroz satiru suočava sa svojim razvojnim putem i ljudima koje je sretao na istom. Od suradnje sa najvećim bh. redateljima, do rada u donerhani pa sve do algoritamskih visina. Kroz introspektivan autorski tekst, secira okolinu i kolektivne stavove prema pojedincu. Postavlja pitanje da li je bolje “ šutiti i guliti” ili se dignuti na more jada i borbom ih okončati, al’ nebitno.",
+      "source": "kuda."
     },
     {
       "id": "cs-6568-20270203-1745",
