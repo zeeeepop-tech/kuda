@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T12:11:25+01:00",
+  "generated_at": "2026-11-26T12:31:13+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -12,7 +12,7 @@
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 27 films, 120 film-days",
     "Sheet, row 9: skipped (date not recognised, write it as 25.11.2026)",
-    "Sheet: 6 events added by hand, 5 picture swaps",
+    "Sheet: 6 events added by hand, 7 picture swaps",
     "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 17 of 20 films (0 looked up now)"
   ],
@@ -2034,7 +2034,7 @@
       "all_day": false,
       "venue": "Banski dvor Kulturni centar",
       "hall": "Koncertna dvorana",
-      "image": "https://banskidvor.org/wp-content/uploads/2026/11/liberkvatro-post-scaled.jpg",
+      "image": "https://drive.google.com/thumbnail?id=1csOgRQgzzozwb6GKzJIl9domddb1v8Jd&sz=w2000",
       "url": "https://banskidvor.org/event/koncert-tango-ansambla-libercuatro-piazzolla-105-beograd/",
       "description": "U Koncertnoj dvorani Banskog dvora 30. novembra (ponedjeljak) 2026. godine, sa početkom u 20.00 časova, biće održan koncert posvećen obilježavanju 105 godina od rođenja Astora Pjacole, jednog od najznačajnijih kompozitora XX vijeka i tvorca revolucionarnog muzičkog pravca tango…",
       "source": "Banski dvor"
@@ -2702,7 +2702,7 @@
       "all_day": false,
       "venue": "Banski dvor Kulturni centar",
       "hall": "Koncertna dvorana",
-      "image": "https://banskidvor.org/wp-content/uploads/2026/11/tamara-post-scaled.jpg",
+      "image": "https://drive.google.com/thumbnail?id=1s0ekBRZLfCYSVkDFRV7voIhRQJ--5nCO&sz=w2000",
       "url": "https://banskidvor.org/event/koncert-tamare-dojcinovic-viola-dobitnice-plakete-banskog/",
       "description": "U Koncertnoj dvorani Banskog dvora 2. decembra (srijeda) 2026. godine u 20.00 časova odžaće se koncert Tamare Dojčinović (viola), dobitnice plakete Banskog dvora za najuspješnijeg studenta Studijskog programa muzičke umjetnosti Akademije umjetnosti Univerziteta u Banjoj Luci, uz…",
       "source": "Banski dvor"
