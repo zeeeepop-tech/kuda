@@ -364,6 +364,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
 
 <noscript><p class="wrap">Za prikaz događaja uključi JavaScript.</p></noscript>
 <script src="data/events.js"></script>
+<script data-goatcounter="https://kudaugrad.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>  <!-- visitor stats, no cookies -->
 <script>
 (function () {
   "use strict";
@@ -858,8 +859,8 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
           ${e.organizer ? `<li>${ICON.user}<div><b>${esc(e.organizer)}</b><span>Organizator</span></div></li>` : ""}
         </ul>
         <div class="actions">
-          ${ticket ? `<a class="btn primary" href="${esc(ticket)}" target="_blank" rel="noopener">Karte ${ICON.out}</a>` : ""}
-          ${url ? `<a class="btn${ticket ? "" : " primary"}" href="${esc(url)}" target="_blank" rel="noopener">Više na sajtu izvora ${ICON.out}</a>` : ""}
+          ${ticket ? `<a class="btn primary" href="${esc(ticket)}" target="_blank" rel="noopener" data-count="karte/${esc(e.id)}" data-title="${esc(e.title)}">Karte ${ICON.out}</a>` : ""}
+          ${url ? `<a class="btn${ticket ? "" : " primary"}" href="${esc(url)}" target="_blank" rel="noopener" data-count="izvor/${esc(e.id)}" data-title="${esc(e.title)}">Više na sajtu izvora ${ICON.out}</a>` : ""}
           <button class="btn" type="button" data-ics="${esc(e.id)}">${ICON.cal}Dodaj u kalendar</button>
           <a class="btn" href="${esc(gcal(e))}" target="_blank" rel="noopener">Google Kalendar ${ICON.out}</a>
           <button class="btn" type="button" data-share="${esc(e.id)}">${ICON.share}Podijeli</button>
@@ -874,10 +875,22 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     </div>`;
   }
 
+  // Visitor stats (GoatCounter): which events are opened, and clicks on "Karte" and the source link
+  function stat(path, title, event) {
+    const send = () => { try { window.goatcounter.count({ path, title, event }); } catch (_) { /* blocked: no stats */ } };
+    if (window.goatcounter && window.goatcounter.count) send();
+    else window.addEventListener("load", () => setTimeout(send, 300), { once: true });
+  }
+  document.addEventListener("click", (ev) => {
+    const a = ev.target.closest && ev.target.closest("a[data-count]");
+    if (a) stat(a.dataset.count, a.dataset.title || "", true);
+  });
+
   function route() {
     const m = location.hash.match(/^#e=(.+)$/);
     const e = m ? byId(decodeURIComponent(m[1])) : null;
     if (e) {
+      stat(e.page ? "/" + e.page.replace(/^\//, "") : "/#e=" + e.id, e.title);
       dlg.innerHTML = detailHTML(e);
       if (!dlg.open) dlg.showModal();
       dlg.scrollTop = 0;

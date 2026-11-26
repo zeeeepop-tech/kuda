@@ -398,6 +398,9 @@ def schema(e: dict, start: dt.datetime, end: dt.datetime | None, page_url: str, 
     return data
 
 
+GOATCOUNTER = '<script data-goatcounter="https://kudaugrad.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'  # visitor stats, no cookies
+
+
 def head(title: str, description: str, url: str, image: str, prefix: str, extra: str = "") -> str:
     return f"""<!DOCTYPE html>
 <html lang="sr-Latn">
@@ -424,6 +427,7 @@ def head(title: str, description: str, url: str, image: str, prefix: str, extra:
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS.replace('&', '&amp;')}">
 <link rel="stylesheet" href="{prefix}assets/event.css">
+{GOATCOUNTER}
 {extra}</head>"""
 
 
@@ -465,9 +469,11 @@ def event_page(e: dict, others: list, sources: list) -> str:
         facts.append(f'<li>{icon("user")}<div><b>{esc(e["organizer"])}</b><span>Organizator</span></div></li>')
     actions = []
     if ticket:
-        actions.append(f'<a class="btn primary" href="{esc(ticket)}" target="_blank" rel="noopener">Karte {icon("out", 16)}</a>')
+        actions.append(f'<a class="btn primary" href="{esc(ticket)}" target="_blank" rel="noopener" '
+                       f'data-goatcounter-click="karte/{esc(e["id"])}" data-goatcounter-title="{esc(e["title"])}">Karte {icon("out", 16)}</a>')
     if url:
-        actions.append(f'<a class="btn{"" if ticket else " primary"}" href="{esc(url)}" target="_blank" rel="noopener">Više na sajtu izvora {icon("out", 16)}</a>')
+        actions.append(f'<a class="btn{"" if ticket else " primary"}" href="{esc(url)}" target="_blank" rel="noopener" '
+                       f'data-goatcounter-click="izvor/{esc(e["id"])}" data-goatcounter-title="{esc(e["title"])}">Više na sajtu izvora {icon("out", 16)}</a>')
     actions.append(f'<a class="btn" href="kalendar.ics" download>{icon("cal")}Dodaj u kalendar</a>')
     actions.append(f'<a class="btn" href="{esc(gcal(e, start, end_or_guess))}" target="_blank" rel="noopener">Google Kalendar {icon("out", 16)}</a>')
     actions.append(f'<button class="btn" type="button" data-share>{icon("share", 18)}<span>Podijeli</span></button>')
