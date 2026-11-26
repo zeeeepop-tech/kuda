@@ -806,7 +806,12 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     const url = safeUrl(e.url), ticket = safeUrl(e.ticket_url);
     const others = all.filter((x) => x.id !== e.id && fold(x.title) === fold(e.title) && x.venue === e.venue);
     const shows = Array.isArray(e.showtimes) ? e.showtimes : [];
+    const span = e.end && e.end - e.start > 864e5;  // runs over several days, e.g. an exhibition
+    const days = span && (e.start.getMonth() === e.end.getMonth() && e.start.getFullYear() === e.end.getFullYear()
+      ? `${e.start.getDate()}–${e.end.getDate()}. ${MONTHS[e.end.getMonth()]}`
+      : `${e.start.getDate()}. ${MONTHS[e.start.getMonth()]} – ${e.end.getDate()}. ${MONTHS[e.end.getMonth()]}`);
     const time = shows.length ? "Projekcije: " + shows.map((s) => s.time).join(", ")
+      : span ? (e.all_day || e.start < now ? "" : (e.category === "Izložbe" ? "Otvaranje u " : "Početak u ") + hhmm(e.start))
       : e.all_day ? "Početak na sajtu izvora" : hhmm(e.start) + (e.end && keyOf(e.end) === keyOf(e.start) ? "–" + hhmm(e.end) : "");
     return `<div class="dlg-bar"><button class="close" type="button" data-close aria-label="Zatvori">${ICON.close}</button></div>
     <div class="detail-grid">
@@ -818,7 +823,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
         </div>
         ${e.description ? `<p class="desc-full clamp" id="d-desc">${esc(credits(e.description))}</p><button class="desc-more" type="button" data-more aria-expanded="false" aria-controls="d-desc" hidden>Prikaži više</button>` : ""}
         <ul class="facts">
-          <li>${ICON.cal}<div><b>${esc(longDate(e.start))}</b><span>${esc(time)}</span></div></li>
+          <li>${ICON.cal}<div><b>${esc(span ? days : longDate(e.start))}</b>${time ? `<span>${esc(time)}</span>` : ""}</div></li>
           <li>${ICON.pin}<div><b>${esc(e.place)}</b>${e.hall ? `<span>${esc(e.hall)}</span>` : ""}</div></li>
           ${e.genre || e.duration ? `<li>${ICON.film}<div><b>${esc(e.genre || "Film")}</b>${e.duration ? `<span>${esc(e.duration)}</span>` : ""}</div></li>` : ""}
           <li>${ICON.ticket}<div><b>${esc(e.price || "Cijena na sajtu izvora")}</b>${e.age ? `<span>Uzrast ${esc(e.age)}</span>` : ""}${e.note ? `<span>${esc(e.note)}</span>` : ""}</div></li>

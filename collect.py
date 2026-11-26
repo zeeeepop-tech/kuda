@@ -73,6 +73,11 @@ SOURCES = [
         "default_category": "Pozorište", "html": ["/repertoar/"],
     },
     {
+        "key": "dp", "name": "Dječije pozorište RS", "venue": "Dječije pozorište Republike Srpske",
+        "aliases": ["Dječije pozorište Republike Srpske"], "base": "https://djecijepozoristers.ba", "kind": "djecije",
+        "trust": "culture", "default_category": "Za djecu", "html": ["/repertoar/"],
+    },
+    {
         "key": "borik", "name": "SC Borik", "venue": "SC Borik", "aliases": ["SC Borik", "Sportski centar Borik"],
         "hall_venues": {"pozorisna sala": "Gradsko pozorište Jazavac"},  # Borik's theatre hall is Jazavac's stage
         "base": "https://scborik.com", "kind": "table", "trust": "mixed", "default_category": "Muzika",
@@ -570,6 +575,70 @@ def enrich_images(src: dict, events: list, log: list) -> None:
     if todo:
         log.append(f"{src['name']}: pictures from event pages for {added} of {len(todo)} events")
 
+# ------------------------------------------------------------------ Dječije pozorište Republike Srpske
+
+def _meta(page: str, prop: str):
+    for pattern in (rf'(?is)<meta[^>]+(?:property|name)=["\']{re.escape(prop)}["\'][^>]*content=["\']([^"\']*)',
+                    rf'(?is)<meta[^>]+content=["\']([^"\']*)["\'][^>]*(?:property|name)=["\']{re.escape(prop)}["\']'):
+        m = re.search(pattern, page)
+        if m and m.group(1).strip():
+            return html.unescape(m.group(1)).strip()
+    return None
+
+
+def collect_djecije(src: dict, today: dt.date, horizon: dt.date, log: list) -> list:
+    """Dječije pozorište RS: the repertoire page links every current show (/predstava/…). Each show's own page lists
+    its dates under "Термини" ("Недјеља 8. новембар у 11.00 часова", maybe "ПРЕМИЈЕРА (РАСПРОДАТО)"), the age
+    ("Узраст: 4+"), the length ("Трајање: 60 минута") and a poster (og:image)."""
+    url = src["base"] + src["html"][0]
+    try:
+        page = get(url, "text/html").decode("utf-8", "replace")
+    except Exception as ex:
+        log.append(f"{src['name']}: repertoire failed ({err(ex)})")
+        return []
+    links = list(dict.fromkeys(urllib.parse.urljoin(url, html.unescape(h))
+                               for h in re.findall(r'(?i)href=["\']([^"\'#?]*/predstava/[^"\'#?]+)', page)))
+    events, shows = [], 0
+    for link in links:
+        try:
+            show = get(link, "text/html").decode("utf-8", "replace")
+        except Exception as ex:
+            log.append(f"{src['name']}: {link} failed ({err(ex)})")
+            continue
+        heading = re.search(r"(?is)<h1[^>]*>(.*?)</h1>", show)
+        title = re.split(r"\s+[-–|]\s+", _meta(show, "og:title") or "")[0].strip() or (
+            one_line(strip_html(heading.group(1))) if heading else "")
+        text = to_latin(strip_html(show))
+        terms = re.search(r"(?is)Termini\s*:?(.{0,900}?)(?:Uzrast|Trajanje|Rezervacij|$)", text)
+        if not title or not terms:
+            log.append(f"{src['name']}: no dates on {link}")
+            continue
+        shows += 1
+        age = re.search(r"(?i)Uzrast\s*:?\s*(\d{1,2}\s*\+)", text)
+        length = re.search(r"(?i)Trajanje\s*:?\s*(\d{1,3})\s*min", text)
+        image, description = _meta(show, "og:image"), _meta(show, "og:description") or _meta(show, "description")
+        found = set()
+        for m in re.finditer(r"(\d{1,2})\.\s*([a-z]+)\s+u\s+(\d{1,2})[.:](\d{2})(?=(.{0,45}))", fold(terms.group(1))):
+            month = next((n for name, n in _MONTHS if m.group(2).startswith(name)), None)
+            hour, minute = int(m.group(3)), int(m.group(4))
+            day = _safe_date(_guess_year(month, int(m.group(1)), today), month, int(m.group(1))) if month else None
+            if not day or (day, hour, minute) in found or hour > 23:
+                continue
+            found.add((day, hour, minute))
+            notes = [label for word, label in (("premijer", "Premijera"), ("rasprodat", "Rasprodato")) if word in m.group(5)]
+            events.append({
+                "title": to_latin(title), "title_original": title, "start": _day_start(day, (hour, minute)),
+                "end": None, "all_day": False, "venue": src["venue"], "category": "Za djecu",
+                "age": re.sub(r"\s+", "", age.group(1)) if age else None,
+                "duration": f"{length.group(1)} min" if length else None,
+                "note": " · ".join(notes) or None,
+                "image": urllib.parse.urljoin(link, image) if image else None, "url": link,
+                "description": to_latin(description) if description else None,
+                "source_id": hashlib.sha1(link.encode()).hexdigest()[:8] + f"-{day:%Y%m%d}{hour:02d}{minute:02d}",
+            })
+    log.append(f"{src['name']}: repertoire, {shows} shows, {len(events)} performances")
+    return events
+
 # ------------------------------------------------------------------ sharper film pictures from TMDB
 
 TMDB = "https://api.themoviedb.org/3"
@@ -701,6 +770,11 @@ def _sheet_picture(value: str):
     return (value if re.match(r"https?://", value) else value.lstrip("/")) or None
 
 
+def _sheet_date(text: str, today: dt.date):
+    iso = re.fullmatch(r"(\d{4})-(\d{1,2})-(\d{1,2})", text)
+    return _safe_date(*map(int, iso.groups())) if iso else date_from_text(text, today) if text else None
+
+
 def from_sheet(today: dt.date, horizon: dt.date, log: list) -> tuple:
     """Events and picture swaps from the Google Sheet in SHEET_URL (shared as 'Anyone with the link can view').
     Tab "Događaji": events added by hand. Tab "Slike": a word from a title and a better picture for it.
@@ -718,24 +792,28 @@ def from_sheet(today: dt.date, horizon: dt.date, log: list) -> tuple:
         rows = []
     categories = {fold(c): c for c in SHEET_CATEGORIES} | {"kino": "Film"}
     for n, row in enumerate(rows, start=2):
-        title, when = one_line(_cell(row, "naslov")), _cell(row, "datum")
-        iso = re.fullmatch(r"(\d{4})-(\d{1,2})-(\d{1,2})", when)
-        day = dt.date(*map(int, iso.groups())) if iso else date_from_text(when, today) if when else None
+        title, day = one_line(_cell(row, "naslov")), _sheet_date(_cell(row, "datum"), today)
         if fold(title).startswith("primjer"):
             continue  # the template's example row
         if not title or not day:
             log.append(f"Sheet, row {n}: skipped ({'no title' if not title else 'date not recognised, write it as 25.11.2026'})")
             continue
-        if day < today or day > horizon:
+        # Izložbe and anything else that runs over several days: "Datum" is the first day, "Do datuma" the last
+        last = _sheet_date(_cell(row, "do datuma"), today)
+        if _cell(row, "do datuma") and (not last or last < day):
+            log.append(f"Sheet, row {n}: 'Do datuma' not used (write it as 20.12.2026, not before Datum)")
+            last = None
+        if (last or day) < today or day > horizon:
             continue
         hm = time_from_text(_cell(row, "vrijeme")) if _cell(row, "vrijeme") else None
-        e = {"title": title, "start": _day_start(day, hm), "end": None, "all_day": hm is None, "kind": None,
+        end = _day_start(last, (23, 59)) if last and last > day else None
+        e = {"title": title, "start": _day_start(day, hm), "end": end, "all_day": hm is None, "kind": None,
              "venue": one_line(_cell(row, "mjesto")) or None, "hall": one_line(_cell(row, "sala")) or None,
              "price": one_line(_cell(row, "cijena")) or None, "description": _cell(row, "opis") or None,
              "image": _sheet_picture(_cell(row, "slika")), "url": _cell(row, "link") or None,
              "ticket_url": _cell(row, "karte") or None, "source": "kuda.",
              "source_id": f"{day:%Y%m%d}-" + re.sub(r"[^a-z0-9]+", "-", fold(title)).strip("-")[:40]}
-        e["category"] = categories.get(fold(_cell(row, "kategorija"))) or categorize(e, "Ostalo")
+        e["category"] = categories.get(fold(_cell(row, "kategorija"))) or categorize(e, "Izložbe" if end else "Ostalo")
         if fold(_cell(row, "istakni")) in ("da", "x", "true", "1", "yes"):
             e["highlight"] = True
         e["id"] = make_id("rucno", e)
@@ -1317,6 +1395,8 @@ def main() -> int:
             raw = collect_gigstix(src, today, horizon, log)
         elif kind == "cinestar":
             raw = collect_cinestar(src, today, horizon, log)
+        elif kind == "djecije":
+            raw = collect_djecije(src, today, horizon, log)
         else:
             raw = []
         fetched += len(raw)

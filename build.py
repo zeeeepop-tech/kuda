@@ -81,6 +81,13 @@ def short_date(d: dt.datetime) -> str:
     return f"{DAYS[d.weekday()][:3].capitalize()} {d.day}. {MONTHS[d.month - 1][:3]}."
 
 
+def date_range(start: dt.datetime, end: dt.datetime) -> str:
+    """The days of an event that runs over several days: "1–20. decembar" or "28. novembar – 5. januar"."""
+    if (start.year, start.month) == (end.year, end.month):
+        return f"{start.day}–{end.day}. {MONTHS[end.month - 1]}"
+    return f"{start.day}. {MONTHS[start.month - 1]} – {end.day}. {MONTHS[end.month - 1]}"
+
+
 def place(e: dict) -> str:
     return SHORT_VENUE.get(e.get("venue"), e.get("venue") or e.get("source") or "")
 
@@ -432,7 +439,10 @@ def event_page(e: dict, others: list, sources: list) -> str:
     page_url = f"{SITE_URL}/{e['page']}"
     og = f"{SITE_URL}/{e['og']}" if e.get("og") else f"{SITE_URL}/og.png"
     shows = e.get("showtimes") or []
+    span = bool(end) and end - start > dt.timedelta(days=1)  # runs over several days, e.g. an exhibition
     when = ("Projekcije: " + ", ".join(s["time"] for s in shows) if shows else
+            ("" if e.get("all_day") or start < dt.datetime.now(start.tzinfo) else
+             ("Otvaranje u " if e.get("category") == "Izložbe" else "Početak u ") + f"{start:%H:%M}") if span else
             "Početak na sajtu izvora" if e.get("all_day") else
             f"{start:%H:%M}" + (f"–{end:%H:%M}" if end and end.date() == start.date() else ""))
     where = ", ".join(x for x in (place(e), e.get("hall")) if x)
@@ -444,7 +454,7 @@ def event_page(e: dict, others: list, sources: list) -> str:
                f'<img class="bg" src="{esc(e["image"])}" alt="" aria-hidden="true" referrerpolicy="no-referrer">'
                f'<img class="fg" src="{esc(e["image"])}" alt="" referrerpolicy="no-referrer">' if safe(e.get("image")) else "")
     hall = f"<span>{esc(e.get('hall'))}</span>" if e.get("hall") else ""
-    facts = [f'<li>{icon("cal")}<div><b>{esc(long_date(start))}</b><span>{esc(when)}</span></div></li>',
+    facts = [f'<li>{icon("cal")}<div><b>{esc(date_range(start, end) if span else long_date(start))}</b>{f"<span>{esc(when)}</span>" if when else ""}</div></li>',
              f'<li>{icon("pin")}<div><b>{esc(place(e))}</b>{hall}</div></li>']
     if e.get("genre") or e.get("duration"):
         duration = f"<span>{esc(e.get('duration'))}</span>" if e.get("duration") else ""
