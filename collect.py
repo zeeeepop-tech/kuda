@@ -1389,17 +1389,38 @@ def score_events(events: list, points: dict) -> None:
         e["score"] = int(score) if score == int(score) else round(score, 1)
 
 
+def _stems(title: str) -> set:
+    """A title's words cut to five letters, so that "salon" and "salona" count as one word."""
+    return {w[:5] for w in re.findall(r"[a-z0-9]+", fold(title)) if len(w) > 2}
+
+
+def _same_event(a: dict, b: dict) -> bool:
+    """One event from two sources under slightly different titles, e.g. the sheet's and the venue's own:
+    the same day, time and place, and the shorter title's words (nearly) all in the longer one."""
+    if a["source"] == b["source"] or a["start"].date() != b["start"].date():
+        return False
+    if not (a.get("all_day") or b.get("all_day") or a["start"].time() == b["start"].time()):
+        return False
+    va, vb = fold(a.get("venue") or ""), fold(b.get("venue") or "")
+    if not va or not vb or (va not in vb and vb not in va):
+        return False
+    sa, sb = _stems(a["title"]), _stems(b["title"])
+    small = min(len(sa), len(sb))
+    return small >= 2 and len(sa & sb) >= 0.8 * small
+
+
 def dedupe(events: list) -> list:
     seen, out = {}, []
     for e in events:
         key = (re.sub(r"[^a-z0-9]+", " ", fold(e["title"])).strip(), e["start"].date().isoformat())
-        first = seen.get(key)
+        first = seen.get(key) or next((f for f in out if _same_event(f, e)), None)
         if first is None:
             seen[key] = e
             out.append(e)
             continue
+        seen.setdefault(key, first)
         if first.get("all_day") and not e.get("all_day"):  # e.g. Jazavac lists the date, Borik the time
-            first["start"], first["end"], first["all_day"] = e["start"], e.get("end"), False
+            first["start"], first["end"], first["all_day"] = e["start"], first.get("end") or e.get("end"), False
         for k, v in e.items():  # fill gaps in the first copy
             if first.get(k) in (None, "", []) and v not in (None, "", []):
                 first[k] = v
