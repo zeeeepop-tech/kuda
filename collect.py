@@ -1426,6 +1426,24 @@ def when(e: dict) -> str:
     return e["start"].strftime("%d.%m.") if e.get("all_day") else e["start"].strftime("%d.%m. %H:%M")
 
 
+def _last_run(path: Path, today: dt.date) -> dict:
+    """The events published by the last run, by source, so a source whose site can't be read today keeps them."""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, ValueError):
+        return {"when": "", "events": {}}
+    by_source: dict = {}
+    for e in data.get("events", []):
+        try:
+            e["start"] = dt.datetime.fromisoformat(e["start"])
+            e["end"] = dt.datetime.fromisoformat(e["end"]) if e.get("end") else None
+        except (KeyError, TypeError, ValueError):
+            continue
+        if (e["end"] or e["start"]).date() >= today:
+            by_source.setdefault(e.get("source"), []).append(e)
+    return {"when": (data.get("generated_at") or "")[:10], "events": by_source}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Collect culture events in Banja Luka.")
     ap.add_argument("--days", type=int, default=90, help="how many days ahead (default 90)")
@@ -1452,6 +1470,7 @@ def main() -> int:
     kept, review, excluded = [], [], []
     fetched = 0
     keep_rules, drop_rules, highlight_rules, title_fixes, points = load_rules(Path(__file__).resolve().parent / "rules.json")
+    previous = {"when": "", "events": {}} if args.offline else _last_run(out / "events.json", today)
 
     for src in SOURCES:
         if args.only and src["key"] != args.only:
@@ -1472,7 +1491,11 @@ def main() -> int:
         else:
             raw = []
         fetched += len(raw)
-        if not raw:
+        carried = [] if raw else previous["events"].get(src["name"], [])
+        if carried:  # the site couldn't be read today: keep what the last run found, rather than show nothing
+            kept.extend(carried)
+            log.append(f"WARNING: {src['name']} gave 0 events; kept {len(carried)} from the run of {previous['when']}.")
+        elif not raw:
             log.append(f"WARNING: {src['name']} gave 0 events. The site may have changed.")
         for e in raw:
             if not e.get("start") or not e.get("title"):
@@ -1531,8 +1554,10 @@ def main() -> int:
     if not args.offline:
         index_file.parent.mkdir(parents=True, exist_ok=True)
         index_file.write_text(json.dumps({"today": today.isoformat(), "days": args.days}), encoding="utf-8")
+    problems = [line for line in log if line.startswith("WARNING")
+                or (line.startswith("Sheet") and re.search(r"skipped|failed|not used|could not", line))]
     meta = {"generated_at": now.isoformat(timespec="seconds"), "timezone": "Europe/Sarajevo",
-            "days_ahead": args.days, "offline_rerun": args.offline, "log": log}
+            "days_ahead": args.days, "offline_rerun": args.offline, "log": log, "problems": problems}
     for name, items in (("events", kept), ("review", review), ("excluded", excluded)):
         payload = dict(meta, count=len(items), events=[serialize(e) for e in items])
         text = json.dumps(payload, ensure_ascii=False, indent=2)

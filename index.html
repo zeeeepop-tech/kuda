@@ -731,7 +731,13 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   function nextSection(later) {
     const seen = new Set();
     const firsts = later.filter((e) => { const k = fold(e.title); if (seen.has(k)) return false; seen.add(k); return true; });
-    const picks = firsts.filter((e) => points(e) >= 6).sort(byPoints).slice(0, 6).sort((a, b) => a.start - b.start);
+    // the best event of each place (by points), so every house gets a turn; Istakni always shows
+    const taken = new Set(), best = [];
+    for (const e of firsts.filter((x) => !isKino(x)).sort(byPoints)) {
+      const place = fold(e.place || e.venue || e.source || "");
+      if (points(e) >= 100 || !taken.has(place)) { best.push(e); taken.add(place); }
+    }
+    const picks = best.slice(0, 8).sort((a, b) => a.start - b.start);
     if (!picks.length) return "";
     return `<section class="group" aria-labelledby="g-next">
       <h2 id="g-next">Ne propusti<span>Veliki događaji narednih sedmica</span></h2>
