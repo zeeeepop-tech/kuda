@@ -379,6 +379,9 @@ def date_from_text(text: str, today: dt.date) -> dt.date | None:
 
 def time_from_text(text: str) -> tuple | None:
     f = fold(text).strip()
+    ampm = re.fullmatch(r"(\d{1,2}):([0-5]\d)(?::[0-5]\d)?\s*([ap])\.?\s*m\.?", f)  # the form's "7:30:00 PM"
+    if ampm and 1 <= int(ampm.group(1)) <= 12:
+        return int(ampm.group(1)) % 12 + (12 if ampm.group(3) == "p" else 0), int(ampm.group(2))
     m = re.search(r"(?<!\d)([01]?\d|2[0-3]):([0-5]\d)(?!\d)", f)
     if not m and len(f) <= 6:
         m = re.fullmatch(r"([01]?\d|2[0-3])\s*[.,h]\s*([0-5]\d)\s*h?", f)
@@ -770,6 +773,7 @@ def film_pictures(events: list, log: list, offline: bool = False) -> None:
 # ------------------------------------------------------------------ your Google Sheet: events and pictures by hand
 
 SHEET_CATEGORIES = ["Pozorište", "Muzika", "Film", "Izložbe", "Za djecu", "Razgovori", "Ostalo"]
+YES = ("da", "x", "true", "1", "yes")  # "Istakni" and "Objavi"
 
 
 def _sheet_rows(url: str) -> list:
@@ -795,38 +799,49 @@ def _sheet_picture(value: str):
     return (value if re.match(r"https?://", value) else value.lstrip("/")) or None
 
 
-def _sheet_date(text: str, today: dt.date):
+def _sheet_date(text: str, today: dt.date, form: bool = False):
+    """25.11.2026 as typed in the sheet; the form's answers come in Google's American order, 11/25/2026."""
     iso = re.fullmatch(r"(\d{4})-(\d{1,2})-(\d{1,2})", text)
+    us = form and re.fullmatch(r"(\d{1,2})/(\d{1,2})/(\d{4})", text)
+    if us:
+        return _safe_date(int(us.group(3)), int(us.group(1)), int(us.group(2)))
     return _safe_date(*map(int, iso.groups())) if iso else date_from_text(text, today) if text else None
 
 
 def from_sheet(today: dt.date, horizon: dt.date, log: list) -> tuple:
     """Events and picture swaps from the Google Sheet in SHEET_URL (shared as 'Anyone with the link can view').
     Tab "Događaji": events added by hand. Tab "Slike": a word from a title and a better picture for it.
+    Tab "Prijave": answers to the form „Dodaj događaj“; a row goes on the site once its "Objavi" says da.
+    Tab "Upute": holds the form's link, for kudaugrad.com/dodaj.
     Rows starting with "Primjer" (the template's examples) are skipped."""
     sheet = re.search(r"/spreadsheets/d/([\w-]{20,})", os.environ.get("SHEET_URL", ""))
     if not sheet:
-        return [], []
+        return [], [], None
     base = f"https://docs.google.com/spreadsheets/d/{sheet.group(1)}"
-    events, swaps = [], []
+    events, swaps, rows, form_url = [], [], [], None
     tab = lambda name: f"{base}/gviz/tq?tqx=out:csv&headers=1&sheet={urllib.parse.quote(name)}"
     try:
-        rows = _sheet_rows(tab("Događaji"))
+        rows = [("Sheet", n, row, False) for n, row in enumerate(_sheet_rows(tab("Događaji")), start=2)]
     except Exception as ex:
         log.append(f"Sheet: events not read ({err(ex)})")
-        rows = []
+    try:
+        rows += [("Sheet Prijave", n, row, True) for n, row in enumerate(_sheet_rows(tab("Prijave")), start=2)
+                 if fold(_cell(row, "objavi")).strip() in YES]
+    except Exception as ex:
+        log.append(f"Sheet Prijave: answers not read ({err(ex)})")
     categories = {fold(c): c for c in SHEET_CATEGORIES} | {"kino": "Film"}
-    for n, row in enumerate(rows, start=2):
-        title, day = one_line(_cell(row, "naslov")), _sheet_date(_cell(row, "datum"), today)
+    sent = 0
+    for where, n, row, form in rows:
+        title, day = one_line(_cell(row, "naslov")), _sheet_date(_cell(row, "datum"), today, form)
         if fold(title).startswith("primjer"):
             continue  # the template's example row
         if not title or not day:
-            log.append(f"Sheet, row {n}: skipped ({'no title' if not title else 'date not recognised, write it as 25.11.2026'})")
+            log.append(f"{where}, row {n}: skipped ({'no title' if not title else 'date not recognised, write it as 25.11.2026'})")
             continue
         # Izložbe and anything else that runs over several days: "Datum" is the first day, "Do datuma" the last
-        last = _sheet_date(_cell(row, "do datuma"), today)
+        last = _sheet_date(_cell(row, "do datuma"), today, form)
         if _cell(row, "do datuma") and (not last or last < day):
-            log.append(f"Sheet, row {n}: 'Do datuma' not used (write it as 20.12.2026, not before Datum)")
+            log.append(f"{where}, row {n}: 'Do datuma' not used (write it as 20.12.2026, not before Datum)")
             last = None
         if (last or day) < today or day > horizon:
             continue
@@ -839,10 +854,11 @@ def from_sheet(today: dt.date, horizon: dt.date, log: list) -> tuple:
              "ticket_url": _cell(row, "karte") or None, "source": "kuda.",
              "source_id": f"{day:%Y%m%d}-" + re.sub(r"[^a-z0-9]+", "-", fold(title)).strip("-")[:40]}
         e["category"] = categories.get(fold(_cell(row, "kategorija"))) or categorize(e, "Izložbe" if end else "Ostalo")
-        if fold(_cell(row, "istakni")) in ("da", "x", "true", "1", "yes"):
+        if fold(_cell(row, "istakni")) in YES:
             e["highlight"] = True
         e["id"] = make_id("rucno", e)
         events.append(e)
+        sent += form
     try:
         for row in _sheet_rows(tab("Slike")):
             word, picture = fold(_cell(row, "naslov")).strip(), _sheet_picture(_cell(row, "slika"))
@@ -850,8 +866,15 @@ def from_sheet(today: dt.date, horizon: dt.date, log: list) -> tuple:
                 swaps.append((word, picture))
     except Exception as ex:
         log.append(f"Sheet: pictures not read ({err(ex)})")
-    log.append(f"Sheet: {len(events)} events added by hand, {len(swaps)} picture swaps")
-    return events, swaps
+    try:
+        text = _download(tab("Upute"), "text/csv").decode("utf-8-sig", "replace")
+        found = re.search(r"https://(?:docs\.google\.com/forms/d/(?:e/)?[\w-]+/viewform|forms\.gle/\w+)", text)
+        form_url = found.group(0) if found else None
+    except Exception as ex:
+        log.append(f"Sheet: the form's link not read ({err(ex)})")
+    log.append(f"Sheet: {len(events)} events added by hand ({sent} from the form), {len(swaps)} picture swaps"
+               + ("" if form_url else " · no form link in the tab Upute"))
+    return events, swaps, form_url
 
 
 def swap_pictures(events: list, swaps: list) -> None:
@@ -1462,7 +1485,7 @@ def _last_run(path: Path, today: dt.date) -> dict:
             continue
         if (e["end"] or e["start"]).date() >= today:
             by_source.setdefault(e.get("source"), []).append(e)
-    return {"when": (data.get("generated_at") or "")[:10], "events": by_source}
+    return {"when": (data.get("generated_at") or "")[:10], "events": by_source, "form": data.get("form")}
 
 
 def main() -> int:
@@ -1557,7 +1580,7 @@ def main() -> int:
     for e in kept:
         if (e["source"], fold(e["title"])) in kids:
             e["category"] = "Za djecu"
-    sheet_events, swaps = ([], []) if args.only or args.offline else from_sheet(today, horizon, log)
+    sheet_events, swaps, form_url = ([], [], None) if args.only or args.offline else from_sheet(today, horizon, log)
     kept[:0] = sheet_events  # first, so a correction in the sheet wins over the same event from the venue
     for src in SOURCES:
         if src.get("enrich_images") and not (args.only and src["key"] != args.only):
@@ -1578,7 +1601,8 @@ def main() -> int:
     problems = [line for line in log if line.startswith("WARNING")
                 or (line.startswith("Sheet") and re.search(r"skipped|failed|not used|could not", line))]
     meta = {"generated_at": now.isoformat(timespec="seconds"), "timezone": "Europe/Sarajevo",
-            "days_ahead": args.days, "offline_rerun": args.offline, "log": log, "problems": problems}
+            "days_ahead": args.days, "offline_rerun": args.offline, "log": log, "problems": problems,
+            "form": form_url or _last_run(out / "events.json", today).get("form")}  # kudaugrad.com/dodaj
     for name, items in (("events", kept), ("review", review), ("excluded", excluded)):
         payload = dict(meta, count=len(items), events=[serialize(e) for e in items])
         text = json.dumps(payload, ensure_ascii=False, indent=2)

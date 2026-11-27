@@ -34,6 +34,7 @@ import urllib.request
 from pathlib import Path
 
 SITE_URL = "https://kudaugrad.com"
+CONTACT = "kudaugrad@gmail.com"  # corrections, questions, posters
 TAGLINE = "Pozorište, koncerti, film, izložbe i razgovori u Banjaluci, svaki dan na jednom mjestu."
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "_site"
@@ -557,7 +558,7 @@ h1{margin:6px 0 0;font:800 clamp(34px,6vw,56px)/1 var(--display);letter-spacing:
 .desc.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .more{align-self:flex-start;margin:-10px 0 0;padding:0;border:0;background:none;font-size:15px;font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
 .source{margin:0;padding:12px 14px;border-radius:14px;background:var(--soft);font-size:14px;color:var(--muted)}.source b{color:var(--ink);font-weight:600}
-footer{background:var(--ink);color:#fff}footer .wrap{padding-top:32px;padding-bottom:32px}footer p{margin:6px 0 0;max-width:560px;font-size:14px;color:#B5B5AD}
+footer{background:var(--ink);color:#fff}footer .wrap{padding-top:32px;padding-bottom:32px}footer p{margin:6px 0 0;max-width:560px;font-size:14px;color:#B5B5AD}footer a{color:#fff;text-underline-offset:3px}footer .links{margin-top:12px}
 @media(min-width:720px){.wrap{padding:0 24px}.bar{min-height:72px}.event{padding-top:28px}}
 @media(min-width:960px){.event{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:start}.hero{aspect-ratio:4/3;position:sticky;top:24px}}
 """
@@ -671,9 +672,14 @@ def head(title: str, description: str, url: str, image: str, prefix: str, extra:
 {extra}</head>"""
 
 
+def mailto(subject: str, body: str = "") -> str:
+    return f"mailto:{CONTACT}?subject={urllib.parse.quote(subject)}" + (f"&body={urllib.parse.quote(body)}" if body else "")
+
+
 def footer(sources: list) -> str:
     return f"""<footer><div class="wrap"><span class="logo">kuda<span>.</span></span>
 <p>Nezavisni vodič kroz kulturu Banjaluke. Podaci se preuzimaju sa zvaničnih stranica ustanova, a svaki događaj vodi na izvor.</p>
+<p class="links"><a href="/dodaj/">Dodaj događaj</a> · Kontakt: <a href="mailto:{CONTACT}">{CONTACT}</a></p>
 <p>Izvori: {esc(" · ".join(sources))}</p></div></footer>"""
 
 
@@ -731,8 +737,9 @@ def event_page(e: dict, others: list, sources: list) -> str:
     source_link = f' · <a href="{esc(url)}" target="_blank" rel="noopener">originalna objava</a>' if url else ""
     tmdb = (" Poster i fotografija filma: TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB."
             if e.get("image_credit") == "TMDB" else "")
+    fix = mailto(f"Ispravka: {e['title']} ({short_date(start)})", f"Događaj: {page_url}\n\nŠta treba ispraviti:\n")
     blocks.append(f'<p class="source">Izvor: <b>{esc(e.get("source"))}</b>{source_link}. Podaci se preuzimaju automatski, '
-                  f'pa konačne informacije provjeri kod izvora.{tmdb}</p>')
+                  f'pa konačne informacije provjeri kod izvora.{tmdb} Nešto nije tačno? <a href="{esc(fix)}">Javi nam</a>.</p>')
     jsonld = json.dumps(schema(e, start, end, page_url, og), ensure_ascii=False).replace("</", "<\\/")
     return head(title, description, page_url, og, "../../", f'<script type="application/ld+json">{jsonld}</script>\n') + f"""
 <body>
@@ -789,6 +796,25 @@ def not_found_page(sources: list) -> str:
 </html>
 """
 
+def add_page(form: str | None, sources: list) -> str:
+    """kudaugrad.com/dodaj, a short address for organizers: it leads to the form, or to the mail until there is one."""
+    action = (f'<a class="btn primary" href="{esc(form)}">Otvori formu {icon("out", 16)}</a>' if form else
+              f'<a class="btn primary" href="{esc(mailto("Novi događaj"))}">Pošalji na {CONTACT}</a>')
+    return head("Dodaj događaj — kuda.", "Pošalji kulturni događaj u Banjaluci, objavljujemo ga na kudaugrad.com.",
+                SITE_URL + "/dodaj/", SITE_URL + "/og.png", "/") + f"""
+<body>
+<header class="top"><div class="wrap bar"><a class="logo" href="/">kuda<span>.</span></a><span class="city">Banjaluka</span><a class="back" href="/">{icon("back", 18)}Svi događaji</a></div></header>
+<main class="wrap event" style="display:block;padding-top:48px">
+<p class="eyebrow">Za organizatore</p><h1>Dodaj događaj</h1>
+<p class="orig" style="margin-top:14px">Pošalji kulturni događaj u Banjaluci: predstavu, koncert, izložbu, projekciju ili promociju. Objavljujemo ga kad ga pregledamo, obično za dan-dva.</p>
+<p style="margin-top:24px">{action}</p>
+<p class="orig" style="margin-top:18px">Plakat, ispravke i pitanja: <a href="mailto:{CONTACT}">{CONTACT}</a></p>
+</main>
+{footer(sources)}
+</body>
+</html>
+"""
+
 # ------------------------------------------------------------------ build
 
 
@@ -827,9 +853,11 @@ def main() -> int:
     (OUT / "data" / "events.js").write_text(f"window.KUDA_DATA = {text};\n", encoding="utf-8")
     shutil.copyfile(ROOT / "index.html", OUT / "index.html")
     (OUT / "404.html").write_text(not_found_page(sources), encoding="utf-8")
+    (OUT / "dodaj").mkdir()
+    (OUT / "dodaj" / "index.html").write_text(add_page(data.get("form"), sources), encoding="utf-8")
 
     today = dt.date.today().isoformat()
-    urls = [f"{SITE_URL}/"] + [f"{SITE_URL}/{e['page']}" for e in events]
+    urls = [f"{SITE_URL}/", f"{SITE_URL}/dodaj/"] + [f"{SITE_URL}/{e['page']}" for e in events]
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{esc(u)}</loc><lastmod>{today}</lastmod></url>\n" for u in urls) + "</urlset>\n",

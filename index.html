@@ -252,6 +252,8 @@ footer p { margin: 0; max-width: 560px; font-size: 14px; color: #B5B5AD; }
 footer .status, footer #sources, footer .tmdb { font-size: 12px; color: #8E8E86; } /* tertiary: update time, sources, credits */
 footer .tmdb { margin-top: 6px; }
 footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
+footer a { color: #fff; text-underline-offset: 3px; }
+footer .links { margin-top: 12px; }
 
 .toast { position: fixed; left: 50%; bottom: 24px; z-index: 60; transform: translate(-50%, 20px); padding: 10px 16px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 14px; font-weight: 600; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
@@ -350,6 +352,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     <div>
       <span class="logo">kuda<span>.</span></span>
       <p>Nezavisni vodič kroz kulturu Banjaluke. Podaci se preuzimaju sa zvaničnih stranica ustanova, a svaki događaj vodi na izvor.</p>
+      <p class="links"><a href="/dodaj/">Dodaj događaj</a> · Kontakt: <a href="mailto:kudaugrad@gmail.com">kudaugrad@gmail.com</a></p>
     </div>
     <div>
       <p class="status" id="status"></p>
@@ -834,6 +837,10 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
     toastTimer = setTimeout(() => t.classList.remove("show"), 2200);
   }
 
+  // a correction mail that already names the event
+  const fixMail = (e) => "mailto:kudaugrad@gmail.com?subject=" + encodeURIComponent(`Ispravka: ${e.title} (${shortDate(e.start)})`)
+    + "&body=" + encodeURIComponent(`Događaj: ${new URL(e.page || "#e=" + encodeURIComponent(e.id), location.href).href}\n\nŠta treba ispraviti:\n`);
+
   function detailHTML(e) {
     const url = safeUrl(e.url), ticket = safeUrl(e.ticket_url);
     const others = all.filter((x) => x.id !== e.id && fold(x.title) === fold(e.title) && x.venue === e.venue);
@@ -873,7 +880,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
           `<a class="chip" href="${esc(safeUrl(s.ticket) || "#")}" target="_blank" rel="noopener">${esc([s.time, s.hall, s.format].filter(Boolean).join(" · "))}</a>`).join("")}</div></div>` : ""}
         ${others.length ? `<div><h3 class="mini">${shows.length ? "Drugi dani" : "Druga izvođenja"}</h3><div class="others">${others.map((o) =>
           `<a class="chip" href="#e=${encodeURIComponent(o.id)}">${esc(shortDate(o.start))}${o.all_day ? "" : " · " + hhmm(o.start)}</a>`).join("")}</div></div>` : ""}
-        <p class="source">Izvor: <b>${esc(e.source)}</b>${url ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">originalna objava</a>` : ""}${pic(e, true) ? " · foto: " + esc(e.image_credit || e.source) : ""}${e.page ? ` · <a href="${esc(e.page)}">stranica događaja</a>` : ""}. Podaci se preuzimaju automatski, pa konačne informacije provjeri kod izvora.${e.image_credit === "TMDB" ? " Poster i fotografija filma: TMDB." : ""}</p>
+        <p class="source">Izvor: <b>${esc(e.source)}</b>${url ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">originalna objava</a>` : ""}${pic(e, true) ? " · foto: " + esc(e.image_credit || e.source) : ""}${e.page ? ` · <a href="${esc(e.page)}">stranica događaja</a>` : ""}. Podaci se preuzimaju automatski, pa konačne informacije provjeri kod izvora.${e.image_credit === "TMDB" ? " Poster i fotografija filma: TMDB." : ""} Nešto nije tačno? <a href="${esc(fixMail(e))}">Javi nam</a>.</p>
       </div>
     </div>`;
   }
