@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-27T10:02:53+01:00",
+  "generated_at": "2026-11-27T10:14:09+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -10,7 +10,7 @@ window.KUDA_DATA = {
     "Banski dvor: iCal /events/list/?ical=1 failed (ValueError: no events in the feed)",
     "Banski dvor: page /events/ failed (ValueError: no event data on the page)",
     "WARNING: Banski dvor gave 0 events. The site may have changed.",
-    "Gradsko pozorište Jazavac: no shows on the page (12079 characters, title: One moment, please...)",
+    "Gradsko pozorište Jazavac: no shows on the page (12114 characters, title: One moment, please...)",
     "Gradsko pozorište Jazavac: repertoire page, 0 shows (0 with a start time)",
     "WARNING: Gradsko pozorište Jazavac gave 0 events. The site may have changed.",
     "Dječije pozorište RS: repertoire, 1 shows playing, 2 performances coming up",
@@ -34,7 +34,8 @@ window.KUDA_DATA = {
       "image": "https://drive.google.com/thumbnail?id=1BYzbE2OzT4Tb8Tbu7J441eNSJJipBOPV&sz=w2000",
       "url": "https://msurs.net/index.php/sr/izlozbe/aktuelnoizlozbe/949-24-2026-24-2028",
       "description": "Izložba predstavlja djela iz Zbirke Viktora Majdandžića u Muzeju savremene umjetnosti Republike Srpske. Najveći dio zbirke čini 70 djela koja je umjetnik poklonio Muzeju 2012. godine, dok je jedno djelo ranije otkupljeno za muzejski fundus. Zahvaljujući ovako formiranoj cjelini, moguće je pratiti razvojni put autora – od najranijih slikarskih istraživanja u domenu figuracije tokom druge polovine pedesetih godina do formiranja osobenog likovnog jezika u polju geometrijske apstrakcije tokom šezdesetih i sedamdesetih godina, zasnovanog na matematičkim postulatima. Ovaj pristup ostao je dominantan i prepoznatljiv u njegovom daljem umjetničkom djelovanju.",
-      "source": "kuda."
+      "source": "kuda.",
+      "score": 7
     },
     {
       "id": "rucno-20261118-dear-alexa-you-don-t-wear-makeup-3",
@@ -48,7 +49,8 @@ window.KUDA_DATA = {
       "image": "https://drive.google.com/thumbnail?id=1a6I4bu2vHvz8QqyGJHWIaFwk2NnUtvbT&sz=w2000",
       "url": "https://www.instagram.com/vagongallery/p/DfzGzFRILUz/",
       "description": "U saradnji sa kustoskinjom Anom Kršljanin predstavljamo izložbu \"Dear Alexa, you don’t wear makeup <3 \" umjetnice Ane Simić. Anin umetnički diskurs se razvio ka sajberfeminističkim praksama jer se problematika ženskog tela i identiteta (koji početno istražuje u starijim ciklusima) premešta u sferu virtuelne realnosti i interneta. „Kiberfeminizam na samom početku prepoznala je savremena umetnička praksa koja je imala potrebu za sopstvenim redefinisanjem i razvojem kroz interdisciplinarni, multimedijski i hibridni koncept. Umetnički radovi realizovani kroz upotrebu novih tehnologija kao što su: digitalna umetnost, net i veb art, umetnost virtuelne realnosti, veštačke inteligencije, hibridnih instalacija i sl. doneli su nove probleme identiteta, ženskog tela, seksualnosti i rodnih odnosa moći u virtuelnom svetu interneta, video igara i društvenih mreža.",
-      "source": "kuda."
+      "source": "kuda.",
+      "score": 6
     },
     {
       "id": "rucno-20261127-6-banjalucki-pjesmoboj",
@@ -61,7 +63,8 @@ window.KUDA_DATA = {
       "image": "https://drive.google.com/thumbnail?id=1etZJzTsX_yPEm-2hrQNH3PC7U7cweQ1q&sz=w2000",
       "url": "https://www.banjaluka.rs.ba/sesti-banjalucki-pjesmoboj-okuplja/",
       "description": "Šesti međunarodni festival poezije za srednjoškolce. 24 mlada pjesnika iz BiH, Srbije, Crne Gore, Hrvatske, Sjeverne Makedonije, Slovenije i Mađarske nadmeću se u pjesničkim dvobojima, u parovima kroz tri eliminaciona kruga. Pobjednik osvaja „Zlatni divit“ i objavljivanje prve zbirke pjesama.",
-      "source": "kuda."
+      "source": "kuda.",
+      "score": 12
     },
     {
       "id": "cs-6558-20261127",
@@ -211,7 +214,8 @@ window.KUDA_DATA = {
       "url": "https://fotobih.ba/?p=7730",
       "description": "Ljubitelji fotografije u petak će imati priliku da pogledaju radove autora iz zemlje i svijeta, u okviru jubilarnog 20. Međunarodnog salona fotografije „BANJA LUKA 2026“ i izložbe FOTOBiH Banja Luka 2026.",
       "source": "kuda.",
-      "highlight": true
+      "highlight": true,
+      "score": 113
     },
     {
       "id": "cs-6605-20261127",
@@ -285,7 +289,8 @@ window.KUDA_DATA = {
       "source": "kuda.",
       "also_listed_at": [
         "SC Borik"
-      ]
+      ],
+      "score": 6
     },
     {
       "id": "cs-6622-20261127",
@@ -363,7 +368,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/11/sin-predstava-13.jpg",
       "url": "https://www.np.rs.ba/predstava/sin/",
       "description": "Autor: Florijan Zeler Prevod: Ivana Dimić Rediteljka: Belinda Stijak Dramaturg: Aleksandar Vasiljević Scenograf: Sara Stjepanović Kostimograf: Vladimirka Velaga Kompozitor: Bojan Stijak Lektor: Nataša Kecman Saradnik iz oblasti psihologije: prof. dr Milica Drobac Pravićević…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "cs-6556-20261127",
@@ -426,7 +432,8 @@ window.KUDA_DATA = {
       "image": "https://drive.google.com/thumbnail?id=1mKivHpjx5K4Ts2XvwGJ4wxrkSrldKUeC&sz=w2000",
       "url": "https://www.banjaluka.rs.ba/kulvikend-u-domu-omladine/",
       "description": "Program će otvoriti Dječiji hor „Vrapčići“, jedan od prepoznatljivih banjalučkih brendova, dok će mladi glumci DIS teatra publici predstaviti pozorišnu predstavu „Mali ljudi“. Posjetioce očekuje raznovrstan sadržaj, među kojima su izložbe slika i fotografija, kreativni radovi, rukotvorine i drugi zanimljivi sadržaji posvećeni umjetnosti i kreativnom izražavanju.",
-      "source": "kuda."
+      "source": "kuda.",
+      "score": 6
     },
     {
       "id": "cs-6558-20261128",
@@ -763,7 +770,8 @@ window.KUDA_DATA = {
       "duration": "60 min",
       "image": "https://drive.google.com/thumbnail?id=12Dp4wcVNmZjR99wzRlpIzjCfPYPyNqtz&sz=w2000",
       "url": "https://djecijepozoristers.ba/predstava/dozivljaji-macka-tose/",
-      "source": "Dječije pozorište RS"
+      "source": "Dječije pozorište RS",
+      "score": 4
     },
     {
       "id": "cs-6605-20261128",
@@ -837,7 +845,8 @@ window.KUDA_DATA = {
       "source": "kuda.",
       "also_listed_at": [
         "SC Borik"
-      ]
+      ],
+      "score": 6
     },
     {
       "id": "np-25648",
@@ -853,7 +862,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2022/10/gospodjica-predstava-02.jpg",
       "url": "https://www.np.rs.ba/predstava/gospodjica-27/",
       "description": "Pisac: Ivo Andrić Dramatizacija: Vanja Ejdus Režija i adaptacija: Đurđa Tešić Scenograf: Dragana Purković Macan Kostimograf: Ivana Ristić Kompozitor: Vladimir Pejković Scenski pokret: Emir Fejzić Dizajn svjetla: Radomir Stamenković Dramaturg predstave: Aleksandar Vasiljević *…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "cs-6622-20261128",
@@ -979,7 +989,8 @@ window.KUDA_DATA = {
       "duration": "60 min",
       "image": "https://drive.google.com/thumbnail?id=12Dp4wcVNmZjR99wzRlpIzjCfPYPyNqtz&sz=w2000",
       "url": "https://djecijepozoristers.ba/predstava/dozivljaji-macka-tose/",
-      "source": "Dječije pozorište RS"
+      "source": "Dječije pozorište RS",
+      "score": 5
     },
     {
       "id": "cs-6558-20261129",
@@ -1370,7 +1381,8 @@ window.KUDA_DATA = {
       "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
       "url": "https://scborik.com/?page_id=6913",
-      "source": "SC Borik"
+      "source": "SC Borik",
+      "score": 4
     },
     {
       "id": "cs-6622-20261129",
@@ -1682,7 +1694,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/04/martin-udio-predstava-21.jpg",
       "url": "https://www.np.rs.ba/predstava/martin-udio-7/",
       "description": "Autorka romana i dramatizacije: Sanja Savić Milosavljević Reditelj: Nikola Bundalo Dramaturg: Goran Starčević Scenografkinja: Dragana Purković Macan Kostimografkinja: Ivana Ristić Kompozitor: Petar Topalović Scenski govor: Biljana Đurović Scenski pokret: Marija Milenković Dizajn…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 5
     },
     {
       "id": "borik-b2f4d819ce",
@@ -1694,7 +1707,8 @@ window.KUDA_DATA = {
       "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
       "url": "https://scborik.com/?page_id=6913",
-      "source": "SC Borik"
+      "source": "SC Borik",
+      "score": 4
     },
     {
       "id": "cs-6622-20261130",
@@ -2017,7 +2031,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/10/marko-milosevic-sajt.jpg",
       "url": "https://www.np.rs.ba/predstava/poezi%d1%98a-i-p%d1%98esma-zivota-marko-milosevic-i-bend/",
       "description": "POEZIJA I PJESMA ŽIVOTA Marko Milošević i bend DETALJI Datum: 22/10/2026 Vrijeme: 20:00 – 21:00 Kategorija događaja: Repertoar ORGANIZATOR Narodno pozorište RS Telefon: 051-317-996",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "cs-6622-20261201",
@@ -2090,7 +2105,8 @@ window.KUDA_DATA = {
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/orasar/6567",
       "ticket_url": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/orasar/AE301000023IXUNOEM",
       "description": "Snimka nastupa uživo od 10.12.2025. godine. Na ugodnoj prazničnoj zabavi mlada Clara upoznaje tajanstvenog mađioničara Drosselmeyera, koji joj poklanja lutku orašara. Kada gosti odu, a kuća utihne i zaspi, Clara se krišom spušta niz stepenice u potrazi za lutkom. Umjesto nje…",
-      "source": "Cinestar Delta Planet"
+      "source": "Cinestar Delta Planet",
+      "score": 6
     },
     {
       "id": "cs-6603-20261201",
@@ -2408,7 +2424,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/11/sin-predstava-10.jpg",
       "url": "https://www.np.rs.ba/predstava/sin-druga-repriza/",
       "description": "Autor: Florijan Zeler Prevod: Ivana Dimić Rediteljka: Belinda Stijak Dramaturg: Aleksandar Vasiljević Scenograf: Sara Stjepanović Kostimograf: Vladimirka Velaga Kompozitor: Bojan Stijak Lektor: Nataša Kecman Saradnik iz oblasti psihologije: prof. dr Milica Drobac Pravićević…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 6
     },
     {
       "id": "cs-6556-20261202",
@@ -2521,7 +2538,8 @@ window.KUDA_DATA = {
       "price": "Besplatno",
       "image": "https://drive.google.com/thumbnail?id=1iWWCEaApxxVQAYQan7lKNBuuOP0Fd6kS&sz=w2000",
       "description": "Prvo veče 4. Revije dokumentarnih filmova o ljudskim pravima. U 17:30 panel o ekološkim braniteljima i braniteljicama ljudskih prava u BiH, a u 19:00 film „Planina“ Biljane Tutorov i Petra Glomazića (1 h 43 min), dobitnik Velike nagrade žirija na Sandensu i Srca Sarajeva. Majka i kćerka na Sinjajevini brane svoju planinu od vojnog poligona. Organizuje Kuća ljudskih prava Banjaluka.",
-      "source": "kuda."
+      "source": "kuda.",
+      "score": 6
     },
     {
       "id": "cs-6641-20261203",
@@ -2563,7 +2581,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2025/12/srecno.nam_.adi_.8.jpg",
       "url": "https://www.np.rs.ba/predstava/srecno-nam-adi-13/",
       "description": "Dajana Josipović SREĆNO NAM, ADI Po motivima filma Srećno, Leo Grande Adaptacija i režija: Dajana Josipović Dramaturg: Ivana Lovrić Scenograf: Dunja Kostić Kostimograf: Ivana Ristić Kompozitori i dizajneri zvuka: Miloš Aćimović i Luka Lukić Scenski pokret: Una Đelošević Lektor…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "cs-6642-20261203",
@@ -2651,7 +2670,8 @@ window.KUDA_DATA = {
       "price": "Besplatno",
       "image": "https://drive.google.com/thumbnail?id=1Px1lLJRB8Us-1lwdrCvLcgEO7KwoHBKv&sz=w2000",
       "description": "Drugo veče Revije: u 17:30 blok kratkih dokumentaraca iz regiona, od studentskih protesta do suočavanja s prošlošću. U 19:00 banjalučka premijera filma „Magarac pred sudom“ Jelene Medić, o košarkašici u kolicima koja dovodi domaće životinje na parking-mjesta za osobe s invaliditetom. Poslije filma panel o ulozi filma u zaštiti ljudskih prava.",
-      "source": "kuda."
+      "source": "kuda.",
+      "score": 6
     },
     {
       "id": "np-25788",
@@ -2667,7 +2687,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/04/martin-udio-predstava-3.jpg",
       "url": "https://www.np.rs.ba/predstava/martin-udio-8/",
       "description": "Autorka romana i dramatizacije: Sanja Savić Milosavljević Reditelj: Nikola Bundalo Dramaturg: Goran Starčević Scenografkinja: Dragana Purković Macan Kostimografkinja: Ivana Ristić Kompozitor: Petar Topalović Scenski govor: Biljana Đurović Scenski pokret: Marija Milenković Dizajn…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 5
     },
     {
       "id": "cs-6642-20261204",
@@ -2825,7 +2846,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2013/12/ozaloscena-porodica-predstava-nprs-16.jpg",
       "url": "https://www.np.rs.ba/predstava/ozaloscena-porodica-4/",
       "description": "Autori: Branislav Nušić i Nikola Pejaković Adaptacija i režija: Nikola Pejaković Dramaturg predstave: Branko Brđanin Scenografija: Dragana Purković Macan Kostimografija: Jelena Vidović Muzika i zvuk: Nikola Pejaković Lektori: Milorad Telebak i Nataša Kecman Inspicijent: Nada…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "gig-zoster-banja-luka-05-decembar-2026",
@@ -2838,7 +2860,8 @@ window.KUDA_DATA = {
       "url": "https://gigstix.ba/event/zoster-banja-luka-05-decembar-2026/",
       "ticket_url": "https://bilet.gigstix.ba/ba/store/gigstix/sectionGroup/index/232",
       "description": "Bend ZOSTER održaće koncert u Klubu studenata Banjaluka 05. decembra 2026. godine, sa početkom u 21:00. Zoster, prepoznatljiv po svom jedinstvenom spoju reggae zvuka, rocka i društveno angažovanih tekstova, već gotovo dvije decenije slovi za jedan od najvažnijih bendova…",
-      "source": "Gigstix"
+      "source": "Gigstix",
+      "score": 6
     },
     {
       "id": "cs-6642-20261205",
@@ -3119,7 +3142,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/11/neklasicni-zur-repertoar.png",
       "url": "https://www.np.rs.ba/predstava/ciklus-koncerata-so-nprs-neklasicni-zur/",
       "description": "Gudački orkestar Narodnog pozorišta Republike Srpske solisti: Marija Pilipović , flauta (Banja Luka) Vladimir Stanišić , klarinet (Beograd) Luka Lopičić , harmonika (Beograd) dirigent: Natalija Mićić (Beograd) na programu: Bartok, Holst, Babić i Di Marino RIJEČ DIRIGENTA: Šta…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "cs-6558-20261209",
@@ -3208,7 +3232,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/11/sin-predstava-11.jpg",
       "url": "https://www.np.rs.ba/predstava/sin-2/",
       "description": "Autor: Florijan Zeler Prevod: Ivana Dimić Rediteljka: Belinda Stijak Dramaturg: Aleksandar Vasiljević Scenograf: Sara Stjepanović Kostimograf: Vladimirka Velaga Kompozitor: Bojan Stijak Lektor: Nataša Kecman Saradnik iz oblasti psihologije: prof. dr Milica Drobac Pravićević…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 6
     },
     {
       "id": "cs-6607-20261210",
@@ -3250,7 +3275,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/10/pokondirena-tikva-8.jpg",
       "url": "https://www.np.rs.ba/predstava/pokondirena-tikva-5/",
       "description": "Autor: Jovan Sterija Popović Reditelj: Željko Đukić Dramaturg: Adam Ranđelović Kostimografkinja: Nataša Vučurović Đukić Kompozitor: Petar Bilbija Jezička adaptacija i scenski govor: dr Dejan Sredojević Scenski pokret: Ana Tešić Dizajner svjetla: Aleksandar Čavlek Producent…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 6
     },
     {
       "id": "cs-6607-20261211",
@@ -3292,7 +3318,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/10/pokondirena-tikva-4.jpg",
       "url": "https://www.np.rs.ba/predstava/pokondirena-tikva-6/",
       "description": "Autor: Jovan Sterija Popović Reditelj: Željko Đukić Dramaturg: Adam Ranđelović Kostimografkinja: Nataša Vučurović Đukić Kompozitor: Petar Bilbija Jezička adaptacija i scenski govor: dr Dejan Sredojević Scenski pokret: Ana Tešić Dizajner svjetla: Aleksandar Čavlek Producent…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 6
     },
     {
       "id": "rucno-20261211-alterego-x-blend",
@@ -3305,7 +3332,8 @@ window.KUDA_DATA = {
       "image": "https://drive.google.com/thumbnail?id=1IOROkFPEpEq7IhLZ_XFlNaTM-OZyyuDi&sz=w2000",
       "url": "https://ra.co/events/2590772",
       "description": "Techno noć do 4 ujutro: Asarri, Deeda, Panopticon i Sodoma. Organizuje Blend, banjalučko udruženje koje od 2020. pravi techno večeri, izložbe i radionice za alternativnu scenu. Samo za punoljetne (18+).",
-      "source": "kuda."
+      "source": "kuda.",
+      "score": 6
     },
     {
       "id": "cs-6607-20261212",
@@ -3359,7 +3387,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2025/04/predstava-kuca-10.jpg",
       "url": "https://www.np.rs.ba/predstava/kuca-18/",
       "description": "Autor: Nebojša Ilić Adaptacija i režija: Nikola Pejaković Dramaturg: Ivana Lovrić Lektor: Nataša Kecman Scenograf: Dragana Purković Macan Kostimograf: Vladimirka Velaga Inspicijent i sufler: Vesna Maksimović Organizator: Katarina Lazić Dizajn plakata: Andrea Aleksić Asistent…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "cs-6607-20261213",
@@ -3445,7 +3474,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2025/03/arapska-noc-predstava-9.jpg.jpg",
       "url": "https://www.np.rs.ba/predstava/arapska-noc-14/",
       "description": "Autor: Roland Šimelpfenig Prevodilac: Ljubiša Matić Reditelj: Milan Bogdanović Asistent reditelja: Marko Ristić* Dramaturg: Aleksandar Vasiljević Scenograf: Dunja Kostić Kostimograf: Ivana Ristić Kompozitor: Luka Lukić Lektor: Nataša Kecman Producent: Nikola Đaković Sufler i…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "cs-6612-20261216",
@@ -3537,7 +3567,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2025/10/sine-1.jpg",
       "url": "https://www.np.rs.ba/predstava/sine-13/",
       "description": "Autorka: Milena Marković Reditelj: Milan Nešković Dramaturg: Aleksandar Vasiljević Scenografkinja: Dragana Purković Macan Kostimografkinja: Marija Tavčar Muzički koncept, izbor muzike i aranžmani: Boris Šavija* Muzički saradnik: Dušan Pokrajčić Scenski pokret: Emir Fejzić…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "cs-6612-20261217",
@@ -3617,7 +3648,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2025/12/gospodja-olga-10.jpg",
       "url": "https://www.np.rs.ba/predstava/gospodja-olga-7/",
       "description": "Koprodukcija Narodnog pozorišta Republike Srpske i Narodnog pozorišta u Beogradu Autor: Milutin Bojić Reditelj: Jug Đorđević Dramaturg: Đorđe Kosić Scenografkinja: Dragana Purković Macan Kostimografkinja: Velimirka Damjanović Kompozitorka: Nevena Glušica Scenski pokret: Milica…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "cs-6612-20261218",
@@ -3824,7 +3856,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/11/sumnjivo-lice-np-u-bg2.jpg",
       "url": "https://www.np.rs.ba/predstava/dan-za-goste-sumnjivo-lice-np-u-beogradu/",
       "description": "Režija: Nikola Bundalo Dramaturg: Goran Starčević Scenograf: Dragana Purković Macan Kostimograf: Marija Marković Milojev Kompozitor: Petar Topalović Scenski pokret: Marija Milenković Scenski govor: Ljiljana Mrkić Popović Asistent kostimografa: Nevena Micić Producenti: Jasmina…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 6
     },
     {
       "id": "np-25813",
@@ -3839,7 +3872,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/11/sumnjivo-lice-npbgd.jpg",
       "url": "https://www.np.rs.ba/predstava/dan-za-goste-sumnjivo-lice-np-u-beogradu-2/",
       "description": "Režija: Nikola Bundalo Dramaturg: Goran Starčević Scenograf: Dragana Purković Macan Kostimograf: Marija Marković Milojev Kompozitor: Petar Topalović Scenski pokret: Marija Milenković Scenski govor: Ljiljana Mrkić Popović Asistent kostimografa: Nevena Micić Producenti: Jasmina…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 6
     },
     {
       "id": "np-25815",
@@ -3855,7 +3889,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/03/sedam-dana-predstava-10.jpg",
       "url": "https://www.np.rs.ba/predstava/sedam-dana-8/",
       "description": "Autor: Tena Štivičić Režija: Anđela Krunić Dramaturg: Aleksandar Vasiljević Scenograf: Sara Stjepanović Kostimograf: Vladimirka Velaga Kompozitor: Igor Božanić Lektor: Nataša Kecman Producent: Katarina Lazić Sufler i inspicijent: Vesna Maksimović Uloge: Nataša: Sandra Pravuljac…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "np-25817",
@@ -3871,7 +3906,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2023/12/celicne-magnolije-predstava-20.jpg",
       "url": "https://www.np.rs.ba/predstava/celicne-magnoli%d1%98e-15/",
       "description": "Pisac: Robert Harling Prevod: Ivan Matković Režija: Ana Grigorović Scenografija: Marko Bilbija Kostimografija: Ivana Ristić Scenski pokret: Emir Fejzić Muzika: Petar Bilbija Lektor: Nataša Kecman Inspicijent / Sufler: Vesna Maksimović Dramaturg na praksi: Nikola Stanišić *…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "np-25819",
@@ -3887,7 +3923,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2025/05/majstori-foto-18.jpg",
       "url": "https://www.np.rs.ba/predstava/ma%d1%98stori-ma%d1%98stori-11/",
       "description": "Autor: Goran Marković Režija: Marko Misirača Dramaturg: Aleksandar Vasiljević Scenograf: Dragana Purković Macan Kostimograf: Jelena Vidović Kompozitor i video dizajner: Petar Bilbija Dizajnerka svjetla: Anđela Kusić Scenski pokret i koreografija: Anđelko Beroš Lektor: Nataša…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "np-25821",
@@ -3903,7 +3940,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2026/04/martin-udio-predstava-2.jpg",
       "url": "https://www.np.rs.ba/predstava/martin-udio-9/",
       "description": "Autorka romana i dramatizacije: Sanja Savić Milosavljević Reditelj: Nikola Bundalo Dramaturg: Goran Starčević Scenografkinja: Dragana Purković Macan Kostimografkinja: Ivana Ristić Kompozitor: Petar Topalović Scenski govor: Biljana Đurović Scenski pokret: Marija Milenković Dizajn…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 5
     },
     {
       "id": "np-25823",
@@ -3918,7 +3956,8 @@ window.KUDA_DATA = {
       "image": "https://www.np.rs.ba/wp-content/uploads/2023/12/opera-karmen-11.jpg",
       "url": "https://www.np.rs.ba/predstava/karmen-%d1%98edna-tragedi%d1%98a-opera-u-%d1%98ednom-cinu/",
       "description": "Autor: Žorž Bize Dirigent: Stefan Zekić Reditelj: Milan Nešković Scenografkinja: Andreja Rondović Kostimografkinja: Jelena Vidović Scenski pokret: Emir Fejzić Koncertmajstor: Dušica Blaženović Zamjenik koncertmajstora: Teodor Ikanović Korepetitor: Vlado Danić Stručni saradnik za…",
-      "source": "Narodno pozorište RS"
+      "source": "Narodno pozorište RS",
+      "score": 8
     },
     {
       "id": "rucno-20270130-kerim-cutuna-nebitno",
@@ -3931,7 +3970,8 @@ window.KUDA_DATA = {
       "image": "https://drive.google.com/thumbnail?id=1Aq1x7iGnNCx9-qv2xfOPSdshFEDn1NC1&sz=w2000",
       "url": "https://www.entrio.ba/en/event/banja-luka-kerim-cutuna-nebitno-35295",
       "description": "“Nebitno” je satirična monodrama koja govori o položaju jednog glumca u društvu u kojem danas živimo. Priča o arhetipskim likovima koje susrećemo svakodnevno, borbama i dilemama koje stoje ispred svakog individualca koji ne želi biti dio sistema koji već odavno ne funkcioniše. Kerim Čutuna se kroz satiru suočava sa svojim razvojnim putem i ljudima koje je sretao na istom. Od suradnje sa najvećim bh. redateljima, do rada u donerhani pa sve do algoritamskih visina. Kroz introspektivan autorski tekst, secira okolinu i kolektivne stavove prema pojedincu. Postavlja pitanje da li je bolje “ šutiti i guliti” ili se dignuti na more jada i borbom ih okončati, al’ nebitno.",
-      "source": "kuda."
+      "source": "kuda.",
+      "score": 7
     },
     {
       "id": "cs-6568-20270203-1745",
@@ -3948,7 +3988,8 @@ window.KUDA_DATA = {
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/sumrak-bogova-uzivo/6568",
       "ticket_url": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/sumrak-bogova-uzivo/BE301000023IXUNOEM",
       "description": "Zemlja u ruševinama. Sumrak bogova. Obmana vodi ka izdaji, a zatim i ka uništenju, kada Siegfried biva prevaren i naveden da izda Brünnhildu. Nakon što sazna istinu o nevinosti svog voljenog, Brünnhilde napokon vraća prsten rajnskim kćerima, prije nego što naredi da Valhallu…",
-      "source": "Cinestar Delta Planet"
+      "source": "Cinestar Delta Planet",
+      "score": 6
     },
     {
       "id": "cs-6569-20270223-1945",
@@ -3965,7 +4006,8 @@ window.KUDA_DATA = {
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/cosi-fan-tutte-uzivo/6569",
       "ticket_url": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/cosi-fan-tutte-uzivo/CE301000023IXUNOEM",
       "description": "Podstaknuta opkladom, dvojica mladića smišljaju plan kako bi iskušali vjernost svojih djevojaka. Slijedi opasna igra zavođenja i moći, u kojoj četvero zaljubljenih uranja u vrtoglavi svijet promjenjive stvarnosti, gdje istina postaje sve nesigurnija. Opera Cosi fan tutte nije…",
-      "source": "Cinestar Delta Planet"
+      "source": "Cinestar Delta Planet",
+      "score": 6
     }
   ]
 };
