@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-27T06:22:08+01:00",
+  "generated_at": "2026-11-27T09:27:14+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -16,10 +16,10 @@ window.KUDA_DATA = {
     "SC Borik: table on /?page_id=6913, 111 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 27 films, 110 film-days",
-    "Sheet: 7 events added by hand, 8 picture swaps",
+    "Sheet: 11 events added by hand, 10 picture swaps",
     "TMDB: sharper pictures for 17 of 20 films (0 looked up now)"
   ],
-  "count": 145,
+  "count": 149,
   "events": [
     {
       "id": "rucno-20260924-izlozba-viktor-majdandzic-umjetnost-kroz",
@@ -47,6 +47,19 @@ window.KUDA_DATA = {
       "image": "https://drive.google.com/thumbnail?id=1a6I4bu2vHvz8QqyGJHWIaFwk2NnUtvbT&sz=w2000",
       "url": "https://www.instagram.com/vagongallery/p/DfzGzFRILUz/",
       "description": "U saradnji sa kustoskinjom Anom Kršljanin predstavljamo izložbu \"Dear Alexa, you don’t wear makeup <3 \" umjetnice Ane Simić. Anin umetnički diskurs se razvio ka sajberfeminističkim praksama jer se problematika ženskog tela i identiteta (koji početno istražuje u starijim ciklusima) premešta u sferu virtuelne realnosti i interneta. „Kiberfeminizam na samom početku prepoznala je savremena umetnička praksa koja je imala potrebu za sopstvenim redefinisanjem i razvojem kroz interdisciplinarni, multimedijski i hibridni koncept. Umetnički radovi realizovani kroz upotrebu novih tehnologija kao što su: digitalna umetnost, net i veb art, umetnost virtuelne realnosti, veštačke inteligencije, hibridnih instalacija i sl. doneli su nove probleme identiteta, ženskog tela, seksualnosti i rodnih odnosa moći u virtuelnom svetu interneta, video igara i društvenih mreža.",
+      "source": "kuda."
+    },
+    {
+      "id": "rucno-20261127-6-banjalucki-pjesmoboj",
+      "title": "6. Banjalučki pjesmoboj",
+      "category": "Razgovori",
+      "start": "2026-11-27T12:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "price": "Besplatno",
+      "image": "https://drive.google.com/thumbnail?id=1etZJzTsX_yPEm-2hrQNH3PC7U7cweQ1q&sz=w2000",
+      "url": "https://www.banjaluka.rs.ba/sesti-banjalucki-pjesmoboj-okuplja/",
+      "description": "Šesti međunarodni festival poezije za srednjoškolce. 24 mlada pjesnika iz BiH, Srbije, Crne Gore, Hrvatske, Sjeverne Makedonije, Slovenije i Mađarske nadmeću se u pjesničkim dvobojima, u parovima kroz tri eliminaciona kruga. Pobjednik osvaja „Zlatni divit“ i objavljivanje prve zbirke pjesama.",
       "source": "kuda."
     },
     {
@@ -188,6 +201,7 @@ window.KUDA_DATA = {
       "title": "Otvaranje 20. Međunarodnog salona fotografije Banja luka 2026",
       "category": "Izložbe",
       "start": "2026-11-27T19:00:00+01:00",
+      "end": "2026-12-06T23:59:00+01:00",
       "all_day": false,
       "venue": "Banski dvor Kulturni centar",
       "price": "Besplatno",
@@ -2495,6 +2509,19 @@ window.KUDA_DATA = {
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "rucno-20261203-planina-revija-filmova-o-ljudskim-pravim",
+      "title": "Planina · Revija filmova o ljudskim pravima",
+      "category": "Film",
+      "start": "2026-12-03T17:30:00+01:00",
+      "all_day": false,
+      "venue": "Studentski kulturni centar Banjaluka",
+      "hall": "Univerzitetski grad",
+      "price": "Besplatno",
+      "image": "https://drive.google.com/thumbnail?id=1iWWCEaApxxVQAYQan7lKNBuuOP0Fd6kS&sz=w2000",
+      "description": "Prvo veče 4. Revije dokumentarnih filmova o ljudskim pravima. U 17:30 panel o ekološkim braniteljima i braniteljicama ljudskih prava u BiH, a u 19:00 film „Planina“ Biljane Tutorov i Petra Glomazića (1 h 43 min), dobitnik Velike nagrade žirija na Sandensu i Srca Sarajeva. Majka i kćerka na Sinjajevini brane svoju planinu od vojnog poligona. Organizuje Kuća ljudskih prava Banjaluka.",
+      "source": "kuda."
+    },
+    {
       "id": "cs-6641-20261203",
       "kind": "kino",
       "title": "Dina Re-release",
@@ -2610,6 +2637,19 @@ window.KUDA_DATA = {
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dina-re-release/6641",
       "description": "Prije epske završnice, vratite se početku. DINA ponovno na velikom platnu. Uoči završnog poglavlja trilogije, spektakl Denisa Villeneuvea vraća se u kina — prilika da ponovno doživite početak velike sage ili prvi put zakoračite u njezin svijet na velikom platnu. DINA donosi…",
       "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "rucno-20261204-magarac-pred-sudom-revija-filmova-o-ljud",
+      "title": "Magarac pred sudom · Revija filmova o ljudskim pravima",
+      "category": "Film",
+      "start": "2026-12-04T17:30:00+01:00",
+      "all_day": false,
+      "venue": "Studentski kulturni centar Banjaluka",
+      "hall": "Univerzitetski grad",
+      "price": "Besplatno",
+      "image": "https://drive.google.com/thumbnail?id=1Px1lLJRB8Us-1lwdrCvLcgEO7KwoHBKv&sz=w2000",
+      "description": "Drugo veče Revije: u 17:30 blok kratkih dokumentaraca iz regiona, od studentskih protesta do suočavanja s prošlošću. U 19:00 banjalučka premijera filma „Magarac pred sudom“ Jelene Medić, o košarkašici u kolicima koja dovodi domaće životinje na parking-mjesta za osobe s invaliditetom. Poslije filma panel o ulozi filma u zaštiti ljudskih prava.",
+      "source": "kuda."
     },
     {
       "id": "np-25788",
@@ -3251,6 +3291,19 @@ window.KUDA_DATA = {
       "url": "https://www.np.rs.ba/predstava/pokondirena-tikva-6/",
       "description": "Autor: Jovan Sterija Popović Reditelj: Željko Đukić Dramaturg: Adam Ranđelović Kostimografkinja: Nataša Vučurović Đukić Kompozitor: Petar Bilbija Jezička adaptacija i scenski govor: dr Dejan Sredojević Scenski pokret: Ana Tešić Dizajner svjetla: Aleksandar Čavlek Producent…",
       "source": "Narodno pozorište RS"
+    },
+    {
+      "id": "rucno-20261211-alterego-x-blend",
+      "title": "Alterego x Blend",
+      "category": "Muzika",
+      "start": "2026-12-11T22:00:00+01:00",
+      "all_day": false,
+      "venue": "DKC Incel",
+      "price": "Cijena na sajtu izvora",
+      "image": "https://drive.google.com/thumbnail?id=1IOROkFPEpEq7IhLZ_XFlNaTM-OZyyuDi&sz=w2000",
+      "url": "https://ra.co/events/2590772",
+      "description": "Techno noć do 4 ujutro: Asarri, Deeda, Panopticon i Sodoma. Organizuje Blend, banjalučko udruženje koje od 2020. pravi techno večeri, izložbe i radionice za alternativnu scenu. Samo za punoljetne (18+).",
+      "source": "kuda."
     },
     {
       "id": "cs-6607-20261212",
