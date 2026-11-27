@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import csv
 import datetime as dt
+import gzip
 import hashlib
 import html
 import io
@@ -40,6 +41,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import urllib.robotparser
+import zlib
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -79,7 +81,8 @@ SOURCES = [
     },
     {
         "key": "borik", "name": "SC Borik", "venue": "SC Borik", "aliases": ["SC Borik", "Sportski centar Borik"],
-        "hall_venues": {"pozorisna sala": "Gradsko pozorište Jazavac"},  # Borik's theatre hall is Jazavac's stage
+        "hall_venues": {"pozorisna sala": "Pozorišna sala Obilićevo"},  # Borik's theatre hall, also Jazavac's stage
+        "hall_owners": {"pozorisna sala": {"jazavac": "Gradsko pozorište Jazavac"}},  # organiser word → venue
         "base": "https://scborik.com", "kind": "table", "trust": "mixed", "default_category": "Muzika",
         "html": ["/?page_id=6913"],
     },
@@ -107,11 +110,23 @@ def _raw_path(url: str) -> Path:
     return RAW["dir"] / (hashlib.sha1(url.encode()).hexdigest()[:16] + ".bin")
 
 
+def _unpacked(body: bytes, encoding: str) -> bytes:
+    """Unpack a compressed page (some servers compress even when not asked); anything else is returned as it came."""
+    if "gzip" in encoding.lower() or body[:2] == b"\x1f\x8b":
+        return gzip.decompress(body)
+    if "deflate" in encoding.lower():
+        try:
+            return zlib.decompress(body)
+        except zlib.error:
+            return zlib.decompress(body, -zlib.MAX_WBITS)
+    return body
+
+
 def _download(url: str, accept: str) -> bytes:
-    headers = {"User-Agent": UA, "Accept": accept, "Accept-Language": "sr,bs,hr;q=0.9,en;q=0.5"}
+    headers = {"User-Agent": UA, "Accept": accept, "Accept-Language": "sr,bs,hr;q=0.9,en;q=0.5", "Accept-Encoding": "gzip"}
     try:
         with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=30) as r:
-            return r.read()
+            return _unpacked(r.read(), r.headers.get("Content-Encoding") or "")
     except urllib.error.HTTPError:
         raise
     except urllib.error.URLError as ex:
@@ -943,7 +958,11 @@ def collect_mec(src: dict, today: dt.date, horizon: dt.date, log: list) -> list:
         log.append(f"{src['name']}: {src['html'][0]} failed ({err(ex)})")
         return []
     events, timed = [], 0
-    for art in re.findall(r"(?is)<article[^>]*mec-event-article.*?</article>", page):
+    articles = re.findall(r"(?is)<article[^>]*mec-event-article.*?</article>", page)
+    if not articles:
+        name = re.search(r"(?is)<title[^>]*>(.*?)</title>", page)
+        log.append(f"{src['name']}: no shows on the page ({len(page)} characters, title: {one_line(name.group(1)) if name else 'none'})")
+    for art in articles:
         label = re.search(r"mec-start-date-label[^>]*>([^<]+)<", art)
         link = re.search(r"(?is)<h4[^>]*mec-event-title[^>]*>\s*<a[^>]*data-event-id=\"(\d+)\"[^>]*href=\"([^\"]+)\"[^>]*>(.*?)</a>", art)
         day = date_from_text(label.group(1), today) if label else None
@@ -1433,9 +1452,11 @@ def main() -> int:
             e["title"] = smart_case(title, sentence=True, context=e.get("description") or "") or e["title"]
             e["title"] = title_fixes.get(title_key(e["title"]), e["title"])  # rules.json "titles"
             e["hall"] = clean_hall(e.get("hall"), src.get("aliases", []))
-            venue_by_hall = src.get("hall_venues", {})
-            if e.get("hall") and fold(e["hall"]) in venue_by_hall:
-                e["venue"], e["hall"] = venue_by_hall[fold(e["hall"])], None
+            venue_by_hall, hall = src.get("hall_venues", {}), fold(e.get("hall") or "")
+            if hall in venue_by_hall:
+                owners, organizer = src.get("hall_owners", {}).get(hall, {}), fold(e.get("organizer") or "")
+                e["venue"] = next((v for word, v in owners.items() if word in organizer), venue_by_hall[hall])
+                e["hall"] = None
             if e.get("kind") == "kino":
                 verdict, reason = "kept", ""
             else:

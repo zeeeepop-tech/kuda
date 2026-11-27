@@ -477,7 +477,8 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   }
 
   function when(e) {
-    if (e.span) return (e.all_day || e.start < today ? "" : hhmm(e.start) + " · ") + `do ${e.end.getDate()}. ${MON[e.end.getMonth()]}`;
+    // several days: the first day is the opening ("Otvaranje 19:00 · do 6. dec."), later days only say until when
+    if (e.span) return (e.all_day || e.start < today ? "" : `Otvaranje ${hhmm(e.start)} · `) + `do ${e.end.getDate()}. ${MON[e.end.getMonth()]}`;
     return e.all_day ? "cijeli dan" : hhmm(e.start);
   }
 
