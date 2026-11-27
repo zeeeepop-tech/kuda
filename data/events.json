@@ -1,21 +1,25 @@
 {
-  "generated_at": "2026-11-26T16:09:40+01:00",
+  "generated_at": "2026-11-27T06:22:08+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
   "log": [
     "Narodno pozorište RS: REST API, 23 events",
-    "Banski dvor: REST API, 4 events",
-    "Gradsko pozorište Jazavac: repertoire page, 8 shows (8 with a start time)",
-    "Dječije pozorište RS: repertoire, 1 shows playing, 3 performances coming up",
+    "Banski dvor: REST API not available (HTTP 403), trying iCal",
+    "Banski dvor: iCal /events/?ical=1 failed (ValueError: no events in the feed)",
+    "Banski dvor: iCal /events/list/?ical=1 failed (ValueError: no events in the feed)",
+    "Banski dvor: page /events/ failed (ValueError: no event data on the page)",
+    "WARNING: Banski dvor gave 0 events. The site may have changed.",
+    "Gradsko pozorište Jazavac: repertoire page, 0 shows (0 with a start time)",
+    "WARNING: Gradsko pozorište Jazavac gave 0 events. The site may have changed.",
+    "Dječije pozorište RS: repertoire, 1 shows playing, 2 performances coming up",
     "SC Borik: table on /?page_id=6913, 111 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
-    "Cinestar Delta Planet: programme, 27 films, 120 film-days",
+    "Cinestar Delta Planet: programme, 27 films, 110 film-days",
     "Sheet: 7 events added by hand, 8 picture swaps",
-    "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 17 of 20 films (0 looked up now)"
   ],
-  "count": 166,
+  "count": 145,
   "events": [
     {
       "id": "rucno-20260924-izlozba-viktor-majdandzic-umjetnost-kroz",
@@ -46,357 +50,6 @@
       "source": "kuda."
     },
     {
-      "id": "cs-6558-20261126",
-      "kind": "kino",
-      "title": "Hexe: Kraljevstvo čarolije",
-      "category": "Kino",
-      "start": "2026-11-26T16:00:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Animirani",
-      "duration": "1h 43min",
-      "showtimes": [
-        {
-          "time": "16:00",
-          "hall": "Sala 1",
-          "format": "3D - SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/26B01000023IXUNOEM"
-        },
-        {
-          "time": "16:45",
-          "hall": "Sala 5",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/81D01000023IXUNOEM"
-        },
-        {
-          "time": "17:25",
-          "hall": "Sala 6",
-          "format": "4DX - 3D - SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/A6B01000023IXUNOEM"
-        },
-        {
-          "time": "18:05",
-          "hall": "Sala 1",
-          "format": "3D - SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/CCC01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
-      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6516-20261126",
-      "kind": "kino",
-      "title": "Igre gladi: Svitanje nad žetvom",
-      "category": "Kino",
-      "start": "2026-11-26T17:00:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Akcijski",
-      "duration": "2h 38min",
-      "showtimes": [
-        {
-          "time": "17:00",
-          "hall": "Sala 3",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/DEC01000023IXUNOEM"
-        },
-        {
-          "time": "19:00",
-          "hall": "Sala 5",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/91D01000023IXUNOEM"
-        },
-        {
-          "time": "19:30",
-          "hall": "Sala 6",
-          "format": "4DX - TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/F2D01000023IXUNOEM"
-        },
-        {
-          "time": "22:00",
-          "hall": "Sala 5",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/A1D01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/aKmmshfnCfDlFHHx2pA4SMQyC7C.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/igre-gladi-svitanje-nad-zetvom/6516",
-      "description": "Franšiza Igre gladi do danas je zaradila više od 3,3 milijarde dolara na svjetskim kinoblagajnama, a „Svitanje nad žetvom” predstavlja novo poglavlje jedne od najuspješnijih filmskih saga modernog doba. Redatelj franšize Francis Lawrence donosi adaptaciju bestselera Suzanne…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6557-20261126",
-      "kind": "kino",
-      "title": "Ebenezer - Božićna priča",
-      "category": "Kino",
-      "start": "2026-11-26T17:05:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Fantazija",
-      "duration": "1h 57min",
-      "showtimes": [
-        {
-          "time": "17:05",
-          "hall": "Sala 4",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ebenezer-bozicna-prica/30D01000023IXUNOEM"
-        }
-      ],
-      "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Ebenezer%20A%20Christmas%20Carol/Ebenezer%20poster%20300x400px%20CineStar%20BiH.jpg?preset=film",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ebenezer-bozicna-prica/6557",
-      "description": "Ovog novembra, Johnny Depp je Ebenezer Scrooge. Ime koje znate, priča koju ne znate. Film EBENEZER - BOŽIĆNA PRIČA\" režirao je Ti West, a u glavnim ulogama gledaćemo i Ruperta Grinta, Andreu Riseborough, Sama Claflina, Daisy Ridley, Arthur Conti, Ellie Bamber, Henry…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6512-20261126",
-      "kind": "kino",
-      "title": "Mačak u šeširu",
-      "category": "Kino",
-      "start": "2026-11-26T17:30:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Animirani",
-      "duration": "1h 47min",
-      "showtimes": [
-        {
-          "time": "17:30",
-          "hall": "Sala 2",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/5AC01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
-      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "dp-c52680da-202611261800",
-      "title": "Doživljaji mačka Toše",
-      "title_original": "Доживљаји мачка Тоше",
-      "category": "Za djecu",
-      "start": "2026-11-26T18:00:00+01:00",
-      "all_day": false,
-      "venue": "Dječije pozorište Republike Srpske",
-      "age": "6+",
-      "duration": "60 min",
-      "note": "Premijera · Rasprodato",
-      "image": "https://drive.google.com/thumbnail?id=12Dp4wcVNmZjR99wzRlpIzjCfPYPyNqtz&sz=w2000",
-      "url": "https://djecijepozoristers.ba/predstava/dozivljaji-macka-tose/",
-      "source": "Dječije pozorište RS"
-    },
-    {
-      "id": "cs-6605-20261126",
-      "kind": "kino",
-      "title": "Tigar od papira",
-      "category": "Kino",
-      "start": "2026-11-26T19:25:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Krimi",
-      "duration": "1h 55min",
-      "showtimes": [
-        {
-          "time": "19:25",
-          "hall": "Sala 4",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/40D01000023IXUNOEM"
-        },
-        {
-          "time": "21:45",
-          "hall": "Sala 4",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/tigar-od-papira/50D01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/p6oLmq5KmuWY6uRXBQBL2q30jia.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/7QshsnWS3NIZp60qMgcYm1C6dxm.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/tigar-od-papira/6605",
-      "description": "Adam Driver, Miles Teller i Scarlett Johansson predvode snažnu kriminalističku dramu redatelja Jamesa Graya o dvojici braće čija se potraga za američkim snom pretvara u borbu za opstanak. Queens, 1986. Bivši policajac Gary, sklon riziku i brzoj zaradi, uvuče svojeg povučenog…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6603-20261126",
-      "kind": "kino",
-      "title": "Ja sam Rocky",
-      "category": "Kino",
-      "start": "2026-11-26T19:40:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Biografski",
-      "duration": "2h 8min",
-      "showtimes": [
-        {
-          "time": "19:40",
-          "hall": "Sala 2",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ja-sam-rocky/BDC01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/sPID7NqwpNdSAEMhazCvidxxeNo.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/1lnnjBCRLZzKRhQipK5zm61YkPe.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
-      "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "bd-40329",
-      "title": "Koncert David Jarh Quintet",
-      "title_original": "Концерт DAVID JARH QUINTET",
-      "category": "Muzika",
-      "start": "2026-11-26T20:00:00+01:00",
-      "end": "2026-11-26T21:30:00+01:00",
-      "all_day": false,
-      "venue": "Banski dvor Kulturni centar",
-      "hall": "Koncertna dvorana",
-      "price": "10 KM",
-      "image": "https://drive.google.com/thumbnail?id=1BM4_NXthJld0rYgdAae1CzOJqVajiXDc&sz=w2000",
-      "url": "https://banskidvor.org/event/koncert-david-jarh-quintet/",
-      "description": "Festival će u četvrtak, 26. novembra, u 20.00 časova zatvoriti DAVID JARH QUINTET, ansambl koji okuplja istaknute muzičare različitih generacija i umjetničkih iskustava. Na čelu ansambla je slovenački trubač, kompozitor i pedagog David Jarh, čiji se rad oslanja na bogatu džez…",
-      "source": "Banski dvor"
-    },
-    {
-      "id": "gpj-9441",
-      "title": "Bračno savjetovanje",
-      "category": "Pozorište",
-      "start": "2026-11-26T20:00:00+01:00",
-      "end": "2026-11-26T00:00:00+01:00",
-      "all_day": false,
-      "venue": "Gradsko pozorište Jazavac",
-      "organizer": "GP Jazavac",
-      "note": "Preostale ulaznice u direktnoj prodaji",
-      "image": "https://gpj.ba/wp-content/uploads/2024/09/BRACNO-SAVJETOVANJE-PLAKAT-WEB-731x1024.png",
-      "url": "https://gpj.ba/repertoar/bracno-savjetovanje-prva-repriza-2/",
-      "description": "komedija D. Glatauera",
-      "source": "Gradsko pozorište Jazavac",
-      "also_listed_at": [
-        "SC Borik"
-      ]
-    },
-    {
-      "id": "cs-6622-20261126",
-      "kind": "kino",
-      "title": "Muž od pruća",
-      "category": "Kino",
-      "start": "2026-11-26T20:00:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Komedija",
-      "duration": "1h 45min",
-      "showtimes": [
-        {
-          "time": "20:00",
-          "hall": "Sala 3",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/EEC01000023IXUNOEM"
-        },
-        {
-          "time": "22:10",
-          "hall": "Sala 3",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/muz-od-pruca/FEC01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/wtTiQYmdRsFLLOUeZMxX3e6fcB.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/r4DTGm1f1r23cyjRJ5kFMh7qYlj.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/muz-od-pruca/6622",
-      "description": "U središtu ove apsurdno-komične bajke je posve neobična ljubavna priča o izopćenoj ribarici (Colman) koja naručuje izradu supruga od lokalnog pletača košara (Dinklage). Kada Muž od pruća (Skarsgard) nadmaši sva njezina očekivanja, njegov osebujni duh i iznimne sposobnosti…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6559-20261126",
-      "kind": "kino",
-      "title": "Dozvola za nove Fockere",
-      "category": "Kino",
-      "start": "2026-11-26T20:15:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Komedija",
-      "duration": "1h 46min",
-      "showtimes": [
-        {
-          "time": "20:15",
-          "hall": "Sala 1",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/DCC01000023IXUNOEM"
-        },
-        {
-          "time": "22:25",
-          "hall": "Sala 1",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/dozvola-za-nove-fockere/ECC01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/sWoP8TUgmdfJ9BllzL7OkBVPCwf.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/nubnNXuMArUhiDW1nUevGsG65x9.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/dozvola-za-nove-fockere/6559",
-      "description": "Ovog novembra, ikona komedije i dobitnik nagrade Emmy Ben Stiller i dvostruki dobitnik Oscara Robert De Niro, ponovo udružuju snage u filmu DOZVOLA ZA NOVE FOCKERE, novom poglavlju hit-serijala \"Upoznajte roditelje\". Ovom legendarnom dvojcu, koji publiku širom svijeta zasmijava…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6556-20261126",
-      "kind": "kino",
-      "title": "Divlji konj broj devet",
-      "category": "Kino",
-      "start": "2026-11-26T22:10:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Komedija",
-      "duration": "1h 58min",
-      "showtimes": [
-        {
-          "time": "22:10",
-          "hall": "Sala 2",
-          "format": "TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/divlji-konj-broj-devet/CDC01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/3uLA0ujne91bkzFStZICCYeqhnt.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/divlji-konj-broj-devet/6556",
-      "description": "Slojevita crnohumorna priča četverostrukog dobitnika Oscara Martina McDonagha, autora hvaljenih filmova Duhovi otoka i Tri plakata izvan grada, donosi zvjezdanu glumačku postavu predvođenu Johnom Malkovichem, Samom Rockwellom i Steveom Buscemijem. Neposredno prije vojnoga udara…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6618-20261126",
-      "kind": "kino",
-      "title": "Kako opljačkati banku",
-      "category": "Kino",
-      "start": "2026-11-26T22:30:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Akcijski",
-      "duration": "2h 2min",
-      "showtimes": [
-        {
-          "time": "22:30",
-          "hall": "Sala 6",
-          "format": "4DX - TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/kako-opljackati-banku/03D01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/u38hNQbxvIicUdfrHpqa9puBnA9.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/kako-opljackati-banku/6618",
-      "description": "U filmu KAKO OPLJAČKATI BANKU, ekipa pljačkaša banaka vještih u korištenju društvenih mreža prenosi svoje odvažne pljačke, nesvjesna da ih je sve veća viralna slava dovela na metu iskusnog agenta FBI-a i briljantnog softverskog inženjera. Unatoč tome što im se nevjerojatni…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
       "id": "cs-6558-20261127",
       "kind": "kino",
       "title": "Hexe: Kraljevstvo čarolije",
@@ -405,7 +58,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "16:00",
@@ -768,7 +421,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "11:00",
@@ -1321,7 +974,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "11:00",
@@ -1636,22 +1289,6 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "bd-40335",
-      "title": "Premijera predstave „Mali princ“ u izvođenju mlađe grupe Dramskog studija Atrijum",
-      "title_original": "Премијера представе „Мали принц“ у извођењу млађе групе Драмског студија АТРИЈУМ",
-      "category": "Pozorište",
-      "start": "2026-11-29T19:00:00+01:00",
-      "end": "2026-11-29T19:45:00+01:00",
-      "all_day": false,
-      "venue": "Banski dvor Kulturni centar",
-      "hall": "Vijećnica Banskog dvora",
-      "price": "Ulaz slobodan",
-      "image": "https://banskidvor.org/wp-content/uploads/2026/11/MaliPrinc-1.jpg",
-      "url": "https://banskidvor.org/event/premijera-predstave-mali-princ-u-izvodjenju-mladje-grupe-dramskog-studija-atrijum/",
-      "description": "U nedjelju, 29. novembra 2026. godine, u 19.00 časova, u Vijećnici Banskog dvora održaće se premijera predstave „Mali princ“ , nastale prema istoimenoj noveli Antoana de Sent Egziperija, u izvođenju mlađe grupe Dramskog studija ATRIJUM. Predstavu je sa polaznicima mlađe grupe…",
-      "source": "Banski dvor"
-    },
-    {
       "id": "cs-6605-20261129",
       "kind": "kino",
       "title": "Tigar od papira",
@@ -1708,21 +1345,16 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "gpj-9433",
+      "id": "borik-1cf31e33a8",
       "title": "Pidžama za šestoro",
+      "title_original": "ПРЕДСТАВА: ПИЏАМА ЗА ШЕСТОРО",
       "category": "Pozorište",
       "start": "2026-11-29T20:00:00+01:00",
-      "end": "2026-11-29T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
-      "image": "https://gpj.ba/wp-content/uploads/2022/05/Jazavac-Pidzama-Plakat-2020-web-1.jpg",
-      "url": "https://gpj.ba/repertoar/pidzama-za-sestoro-2-3/",
-      "description": "komedija M. Kamoletija",
-      "source": "Gradsko pozorište Jazavac",
-      "also_listed_at": [
-        "SC Borik"
-      ]
+      "url": "https://scborik.com/?page_id=6913",
+      "source": "SC Borik"
     },
     {
       "id": "cs-6622-20261129",
@@ -1845,7 +1477,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "16:00",
@@ -2037,36 +1669,16 @@
       "source": "Narodno pozorište RS"
     },
     {
-      "id": "bd-40345",
-      "title": "Koncert „Piazzolla 105“ tango ansambla Libercuatro (Beograd)",
-      "title_original": "Kонцерт „Piazzolla 105“ танго ансамбла LIBERCUATRO (Београд)",
-      "category": "Muzika",
-      "start": "2026-11-30T20:00:00+01:00",
-      "end": "2026-11-30T21:00:00+01:00",
-      "all_day": false,
-      "venue": "Banski dvor Kulturni centar",
-      "hall": "Koncertna dvorana",
-      "image": "https://drive.google.com/thumbnail?id=1csOgRQgzzozwb6GKzJIl9domddb1v8Jd&sz=w2000",
-      "url": "https://banskidvor.org/event/koncert-tango-ansambla-libercuatro-piazzolla-105-beograd/",
-      "description": "U Koncertnoj dvorani Banskog dvora 30. novembra (ponedjeljak) 2026. godine, sa početkom u 20.00 časova, biće održan koncert posvećen obilježavanju 105 godina od rođenja Astora Pjacole, jednog od najznačajnijih kompozitora XX vijeka i tvorca revolucionarnog muzičkog pravca tango…",
-      "source": "Banski dvor"
-    },
-    {
-      "id": "gpj-7409",
+      "id": "borik-b2f4d819ce",
       "title": "Kroz život sa Veljom",
+      "title_original": "ПРЕДСТАВА: КРОЗ ЖИВОТ СА ВЕЉОМ",
       "category": "Pozorište",
       "start": "2026-11-30T20:00:00+01:00",
-      "end": "2026-11-30T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
-      "image": "https://gpj.ba/wp-content/uploads/2023/10/GPJ_kroz_zivot_v2_B2-300ppi-1-web-plakat.jpg",
-      "url": "https://gpj.ba/repertoar/kroz-zivot-sa-veljom-kabare/",
-      "description": "komedija",
-      "source": "Gradsko pozorište Jazavac",
-      "also_listed_at": [
-        "SC Borik"
-      ]
+      "url": "https://scborik.com/?page_id=6913",
+      "source": "SC Borik"
     },
     {
       "id": "cs-6622-20261130",
@@ -2220,7 +1832,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "16:00",
@@ -2523,7 +2135,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "16:00",
@@ -2705,33 +2317,6 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "bd-40351",
-      "title": "Koncert Tamare Dojčinović (viola) dobitnice plakete Banskog",
-      "title_original": "Концерт Тамаре Дојчиновић (виола) добитнице плакете Банског",
-      "category": "Muzika",
-      "start": "2026-12-02T20:00:00+01:00",
-      "end": "2026-12-02T21:30:00+01:00",
-      "all_day": false,
-      "venue": "Banski dvor Kulturni centar",
-      "hall": "Koncertna dvorana",
-      "image": "https://drive.google.com/thumbnail?id=1s0ekBRZLfCYSVkDFRV7voIhRQJ--5nCO&sz=w2000",
-      "url": "https://banskidvor.org/event/koncert-tamare-dojcinovic-viola-dobitnice-plakete-banskog/",
-      "description": "U Koncertnoj dvorani Banskog dvora 2. decembra (srijeda) 2026. godine u 20.00 časova odžaće se koncert Tamare Dojčinović (viola), dobitnice plakete Banskog dvora za najuspješnijeg studenta Studijskog programa muzičke umjetnosti Akademije umjetnosti Univerziteta u Banjoj Luci, uz…",
-      "source": "Banski dvor"
-    },
-    {
-      "id": "gpj-13852",
-      "title": "Šta će nići kad posadiš srce",
-      "category": "Pozorište",
-      "start": "2026-12-02T20:00:00+01:00",
-      "end": "2026-12-02T00:00:00+01:00",
-      "all_day": false,
-      "venue": "Gradsko pozorište Jazavac",
-      "image": "https://gpj.ba/wp-content/uploads/2026/10/Sta-ce-nici-plakat-cirilica-724x1024.jpg",
-      "url": "https://gpj.ba/repertoar/sta-ce-nici-kad-posadis-srce-premijera-gradsko-pozoriste-jazavac-zatvaranje-festivala-zaplet-18/",
-      "source": "Gradsko pozorište Jazavac"
-    },
-    {
       "id": "cs-6622-20261202",
       "kind": "kino",
       "title": "Muž od pruća",
@@ -2868,7 +2453,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "16:00",
@@ -2984,7 +2569,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "16:00",
@@ -3075,7 +2660,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "11:00",
@@ -3246,7 +2831,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "11:00",
@@ -3356,19 +2941,6 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "gpj-9444",
-      "title": "Šećer je sitan, osim kad je kocka",
-      "category": "Pozorište",
-      "start": "2026-12-06T20:00:00+01:00",
-      "end": "2026-12-06T00:00:00+01:00",
-      "all_day": false,
-      "venue": "Gradsko pozorište Jazavac",
-      "image": "https://gpj.ba/wp-content/uploads/2022/05/272301967_5148825585163751_2205831378047625147_n-732x1024.jpg",
-      "url": "https://gpj.ba/repertoar/secer-je-sitan-osim-kad-je-kocka-komedija-nikole-pejakovica-2/",
-      "description": "komedija Nikole Kolje Pejakovića",
-      "source": "Gradsko pozorište Jazavac"
-    },
-    {
       "id": "cs-6642-20261206",
       "kind": "kino",
       "title": "Dina: Drugi dio Re-release",
@@ -3401,7 +2973,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "16:00",
@@ -3443,19 +3015,6 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "gpj-12523",
-      "title": "Bračno savjetovanje",
-      "category": "Pozorište",
-      "start": "2026-12-07T20:00:00+01:00",
-      "end": "2026-12-07T00:00:00+01:00",
-      "all_day": false,
-      "venue": "Gradsko pozorište Jazavac",
-      "image": "https://gpj.ba/wp-content/uploads/2026/02/BRACNO-SAVJETOVANJE-PLAKAT-manji-731x1024.png",
-      "url": "https://gpj.ba/repertoar/bracno-savjetovanje-premijera-gradskog-pozorista-jazavac-otvaranje-festivala-zaplet-xvi-2-2-2-2/",
-      "description": "komedija D. Glatauera",
-      "source": "Gradsko pozorište Jazavac"
-    },
-    {
       "id": "cs-6558-20261208",
       "kind": "kino",
       "title": "Hexe: Kraljevstvo čarolije",
@@ -3464,7 +3023,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "16:00",
@@ -3529,7 +3088,7 @@
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
-      "duration": "1h 43min",
+      "duration": "1h 50min",
       "showtimes": [
         {
           "time": "16:00",
@@ -3786,19 +3345,6 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "gpj-14303",
-      "title": "Čiča, Miča i njihova priča",
-      "category": "Za djecu",
-      "start": "2026-12-14T18:00:00+01:00",
-      "end": "2026-12-14T00:00:00+01:00",
-      "all_day": false,
-      "venue": "Gradsko pozorište Jazavac",
-      "image": "https://drive.google.com/thumbnail?id=1fjBypv7FEgTnlJj-nGVoTFxKfaaIHsl0&sz=w2000",
-      "url": "https://gpj.ba/repertoar/cica-mica-i-njihova-prica-djecija-juhu-scena-premijera/",
-      "description": "Dječija JUHU scena, PREMIJERA",
-      "source": "Gradsko pozorište Jazavac"
-    },
-    {
       "id": "cs-6359-20261215",
       "kind": "kino",
       "title": "Dina: Treći dio",
@@ -3859,15 +3405,15 @@
       "showtimes": [
         {
           "time": "00:05",
-          "hall": "Sala 1",
-          "format": "3D - TITL",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/E3701000023IXUNOEM"
-        },
-        {
-          "time": "00:05",
           "hall": "Sala 6",
           "format": "4DX - 3D - TITL",
           "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/F3701000023IXUNOEM"
+        },
+        {
+          "time": "00:05",
+          "hall": "Sala 1",
+          "format": "3D - TITL",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/osvetnici-uspon-doktora-dooma-infinity-vision/E3701000023IXUNOEM"
         },
         {
           "time": "19:00",
@@ -4303,19 +3849,6 @@
       "url": "https://www.np.rs.ba/predstava/martin-udio-9/",
       "description": "Autorka romana i dramatizacije: Sanja Savić Milosavljević Reditelj: Nikola Bundalo Dramaturg: Goran Starčević Scenografkinja: Dragana Purković Macan Kostimografkinja: Ivana Ristić Kompozitor: Petar Topalović Scenski govor: Biljana Đurović Scenski pokret: Marija Milenković Dizajn…",
       "source": "Narodno pozorište RS"
-    },
-    {
-      "id": "gpj-14305",
-      "title": "Čiča, Miča i njihova priča",
-      "category": "Za djecu",
-      "start": "2026-12-29T19:00:00+01:00",
-      "end": "2026-12-29T00:00:00+01:00",
-      "all_day": false,
-      "venue": "Gradsko pozorište Jazavac",
-      "image": "https://drive.google.com/thumbnail?id=1fjBypv7FEgTnlJj-nGVoTFxKfaaIHsl0&sz=w2000",
-      "url": "https://gpj.ba/repertoar/cica-mica-i-njihova-prica-dodjela-paketica-sa-deda-mrazom/",
-      "description": "dodjela paketića sa Deda Mrazom",
-      "source": "Gradsko pozorište Jazavac"
     },
     {
       "id": "np-25823",
