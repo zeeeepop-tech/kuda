@@ -459,11 +459,8 @@ def social(events: list) -> str:
     shown = (on or running)[:4]
     if shown:
         draw(story_list(day, shown, max(0, len(on) - len(shown)), films, len(running) if on else 0), 1080, 1920, "danas-1")
-    repeats: dict = {}
-    for e in events:
-        repeats[(fold(e["title"]), e.get("venue"))] = repeats.get((fold(e["title"]), e.get("venue")), 0) + 1
-    score = lambda e: (4 if e.get("highlight") else 0) + (2 if e.get("large") else 0) + (repeats[(fold(e["title"]), e.get("venue"))] == 1)
-    pick = max(on, key=lambda e: (score(e), -_times(e)[0].timestamp()), default=None)
+    evening = lambda e: not e.get("all_day") and 18 <= _times(e)[0].hour <= 21  # same tie-break as the page
+    pick = max(on, key=lambda e: (e.get("score", 0), evening(e), -_times(e)[0].timestamp()), default=None)
     if pick:
         draw(story_pick(pick, day), 1080, 1920, "danas-2")
     today_text = _caption(f"Danas u Banjaluci · {DAYS[day.weekday()]}, {day.day}. {MONTHS[day.month - 1]}",
@@ -476,14 +473,12 @@ def social(events: list) -> str:
     sunday = day + dt.timedelta(days=6 - day.weekday())
     weekend = [e for e in culture if friday <= _times(e)[0].date() <= sunday]
     weekend.sort(key=lambda e: _times(e)[0])
-    signal = lambda e: (10 if e.get("highlight") else 0) + (3 if re.search(r"premijer|festival", fold(f"{e['title']} {e.get('note') or ''}")) else 0) \
-        + (2 if "koncert" in fold(e["title"]) else 0) + (2 if e.get("large") else 0)
     seen, firsts = set(), []
     for e in weekend:
         if fold(e["title"]) not in seen:
             seen.add(fold(e["title"]))
             firsts.append(e)
-    picks = sorted(sorted(firsts, key=lambda e: -signal(e))[:5], key=lambda e: _times(e)[0])
+    picks = sorted(sorted(firsts, key=lambda e: (-e.get("score", 0), not evening(e), _times(e)[0]))[:5], key=lambda e: _times(e)[0])
     weekend_text = ""
     if picks:
         of = len(picks) + 2

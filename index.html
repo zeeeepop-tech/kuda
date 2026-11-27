@@ -445,8 +445,6 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   }).filter((e) => !isNaN(e.start) && e.until >= now).sort((a, b) => a.start - b.start);
 
   const byId = (id) => all.find((e) => e.id === id) || null;
-  const repeats = {};
-  all.forEach((e) => { const k = fold(e.title) + "|" + e.venue; repeats[k] = (repeats[k] || 0) + 1; });
 
   const state = { day: todayKey, cat: "Sve", free: false, savedOnly: false, q: "" };
   const saved = new Set(store.get("kuda.saved", []));
@@ -552,10 +550,15 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   }
 
   // One pick per day: an event pinned in rules.json first, then one with a photo, preferring one-off events over repeated shows.
+  // Points come with the data (rules.json "bodovi": premiere, picture, one-off date, the house; Istakni always wins).
+  // Ties: an evening show (18-21h) first, then the earlier one.
+  const points = (e) => (typeof e.score === "number" ? e.score : (e.highlight ? 100 : 0) + (safeUrl(e.image) ? 3 : 0));
+  const evening = (e) => (!e.all_day && e.start.getHours() >= 18 && e.start.getHours() <= 21 ? 1 : 0);
+  const byPoints = (a, b) => points(b) - points(a) || evening(b) - evening(a) || a.start - b.start;
+
   function featuredFor(key) {
     const pool = all.filter((e) => e.key === key && !isKino(e) && !(e.span && keyOf(e.start) !== key) && matches(e, "day"));
-    const score = (e) => (e.highlight ? 4 : 0) + (safeUrl(e.image) ? 2 : 0) + (repeats[fold(e.title) + "|" + e.venue] === 1 ? 1 : 0);
-    return pool.sort((a, b) => score(b) - score(a) || a.start - b.start)[0] || null;
+    return pool.sort(byPoints)[0] || null;
   }
 
   function currentFeatured() {
@@ -728,14 +731,7 @@ footer .logo { display: inline-block; margin-bottom: 10px; color: #fff; }
   function nextSection(later) {
     const seen = new Set();
     const firsts = later.filter((e) => { const k = fold(e.title); if (seen.has(k)) return false; seen.add(k); return true; });
-    const signal = (e) => {
-      const text = fold([e.title, e.description, e.note].join(" ")), title = fold(e.title);
-      return (e.highlight ? 10 : 0) + (/premijer|festival/.test(text) ? 3 : 0)
-        + (/koncert/.test(title) || /gigstix/.test(fold(e.source)) ? 2 : /koncert/.test(text) ? 1 : 0);
-    };
-    const picks = firsts.map((e) => ({ e, s: signal(e) })).filter((x) => x.s > 0)
-      .sort((a, b) => (b.s + (pic(b.e) ? 1 : 0)) - (a.s + (pic(a.e) ? 1 : 0)) || a.e.start - b.e.start)
-      .slice(0, 6).map((x) => x.e).sort((a, b) => a.start - b.start);
+    const picks = firsts.filter((e) => points(e) >= 6).sort(byPoints).slice(0, 6).sort((a, b) => a.start - b.start);
     if (!picks.length) return "";
     return `<section class="group" aria-labelledby="g-next">
       <h2 id="g-next">Ne propusti<span>Veliki događaji narednih sedmica</span></h2>

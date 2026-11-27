@@ -1,5 +1,5 @@
 {
-  "_help": "Words from event titles, not case-sensitive, accents optional. 'keep' always shows an event, 'drop' always hides it, 'highlight' pins it to Ne propusti (and makes it Preporuka dana on its day). 'titles': whole titles written the way they should look, for names that automatic sentence case writes in lower case.",
+  "_help": "Words from event titles, not case-sensitive, accents optional. 'keep' always shows an event, 'drop' always hides it, 'highlight' pins it to Ne propusti (and makes it Preporuka dana on its day). 'titles': whole titles written the way they should look, for names that automatic sentence case writes in lower case. 'bodovi': points for Preporuka dana and Ne propusti (see its own _help).",
   "keep": [
     "Zoster"
   ],
@@ -8,5 +8,32 @@
   "titles": [
     "Kroz život sa Veljom",
     "Čiča, Miča i njihova priča"
-  ]
+  ],
+  "bodovi": {
+    "_help": "Bodovi za Preporuku dana i Ne propusti. Pobjeđuje događaj s najviše bodova; kad je izjednačeno, večernji termin (18–21h), pa raniji. Istakni u tabeli i riječi iz 'highlight' uvijek pobjeđuju. 'posebno_rijeci': riječi u naslovu ili napomeni koje događaj čine posebnim. 'kuce': dio imena mjesta i njegovi bodovi; sva ostala mjesta dobijaju 'ostala_mjesta'. 'cesta_repriza' važi kad se ista predstava igra 3 ili više puta.",
+    "istaknuto": 100,
+    "posebno": 5,
+    "posebno_rijeci": [
+      "premijer",
+      "gostovanj",
+      "gostuje",
+      "festival",
+      "otvaranje",
+      "jubilej",
+      "jubilarn"
+    ],
+    "slika": 3,
+    "jedino_izvodjenje": 2,
+    "cesta_repriza": -1,
+    "rasprodato": -3,
+    "kuce": {
+      "Narodno pozorište": 3,
+      "Banski dvor": 3,
+      "Jazavac": 2,
+      "Muzej savremene umjetnosti": 2,
+      "Dječije pozorište": 1
+    },
+    "ostala_mjesta": 1,
+    "za_djecu_vikendom_prije_podne": 2
+  }
 }

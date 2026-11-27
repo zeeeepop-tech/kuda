@@ -1106,13 +1106,13 @@ def load_rules(path: Path) -> tuple:
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except FileNotFoundError:
-        return [], [], [], {}
+        return [], [], [], {}, {}
     except ValueError as ex:
         print(f"rules.json is not valid JSON, ignoring it ({ex})")
-        return [], [], [], {}
+        return [], [], [], {}, {}
     words = lambda name: [fold(x) for x in data.get(name, []) if x]
     titles = {title_key(t): t.strip() for t in data.get("titles", []) if isinstance(t, str) and t.strip()}
-    return words("keep"), words("drop"), words("highlight"), titles
+    return words("keep"), words("drop"), words("highlight"), titles, data.get("bodovi") or {}
 
 # ------------------------------------------------------------------ plain HTML tables (SC Borik)
 
@@ -1342,7 +1342,7 @@ def categorize(e: dict, default: str) -> str:
 
 FIELDS = ["id", "kind", "title", "title_original", "category", "start", "end", "all_day", "venue", "hall", "price", "age",
           "organizer", "genre", "duration", "showtimes", "note", "image", "backdrop", "image_credit", "url", "ticket_url",
-          "description", "source", "also_listed_at", "highlight", "reason"]
+          "description", "source", "also_listed_at", "highlight", "score", "reason"]
 
 
 def make_id(key: str, e: dict) -> str:
@@ -1350,6 +1350,43 @@ def make_id(key: str, e: dict) -> str:
         return f"{key}-{e['source_id']}"
     basis = f"{e.get('title')}|{e['start'].isoformat()}|{e.get('hall') or ''}"
     return f"{key}-" + hashlib.sha1(basis.encode()).hexdigest()[:10]
+
+
+SCORE_DEFAULTS = {
+    "istaknuto": 100, "posebno": 5, "slika": 3, "jedino_izvodjenje": 2, "cesta_repriza": -1, "rasprodato": -3,
+    "posebno_rijeci": ["premijer", "gostovanj", "gostuje", "festival", "otvaranje", "jubilej", "jubilarn"],
+    "kuce": {"Narodno pozorište": 3, "Banski dvor": 3, "Jazavac": 2, "Muzej savremene umjetnosti": 2, "Dječije pozorište": 1},
+    "ostala_mjesta": 1, "za_djecu_vikendom_prije_podne": 2,
+}
+
+
+def score_events(events: list, points: dict) -> None:
+    """Points for Preporuka dana and Ne propusti (rules.json "bodovi"): something special (a premiere, a guest show,
+    a festival, an opening) counts most, a good picture and a one-off date next, the house only a little. Istakni in
+    the sheet and the "highlight" words always win. The page breaks ties: evening (18-21h) first, then earlier."""
+    cfg = {**SCORE_DEFAULTS, **{k: v for k, v in (points or {}).items() if not k.startswith("_")}}
+    num = lambda key: float(cfg.get(key) or 0)
+    special = [fold(w) for w in cfg.get("posebno_rijeci") or [] if w]
+    houses = [(fold(k), float(v)) for k, v in (cfg.get("kuce") or {}).items() if not k.startswith("_")]
+    dates: dict = {}
+    for e in events:
+        dates.setdefault((fold(e["title"]), e.get("venue")), set()).add(e["start"].date())
+    for e in events:
+        if e.get("kind") == "kino":
+            continue  # films have their own row
+        start, end = e["start"], e.get("end")
+        text = fold(" ".join([e["title"], e.get("note") or "", (e.get("description") or "")[:80]]))
+        opening = bool(end) and end - start > dt.timedelta(days=1) and not e.get("all_day")
+        n = len(dates[(fold(e["title"]), e.get("venue"))])
+        house = next((v for k, v in houses if k in fold(e.get("venue") or "")), num("ostala_mjesta"))
+        if e.get("category") == "Za djecu" and start.weekday() >= 5 and start.hour < 14 and not e.get("all_day"):
+            house = max(house, num("za_djecu_vikendom_prije_podne"))
+        score = (num("istaknuto") if e.get("highlight") else 0) + house \
+            + (num("posebno") if opening or any(w in text for w in special) else 0) \
+            + (num("slika") if e.get("image") else 0) \
+            + (num("jedino_izvodjenje") if n == 1 else num("cesta_repriza") if n >= 3 else 0) \
+            + (num("rasprodato") if "rasprodat" in fold(e.get("note") or "") else 0)
+        e["score"] = int(score) if score == int(score) else round(score, 1)
 
 
 def dedupe(events: list) -> list:
@@ -1414,7 +1451,7 @@ def main() -> int:
     log: list = []
     kept, review, excluded = [], [], []
     fetched = 0
-    keep_rules, drop_rules, highlight_rules, title_fixes = load_rules(Path(__file__).resolve().parent / "rules.json")
+    keep_rules, drop_rules, highlight_rules, title_fixes, points = load_rules(Path(__file__).resolve().parent / "rules.json")
 
     for src in SOURCES:
         if args.only and src["key"] != args.only:
@@ -1487,6 +1524,7 @@ def main() -> int:
         probe(log)
 
     kept = sorted(dedupe(kept), key=lambda e: e["start"])
+    score_events(kept, points)
     review.sort(key=lambda e: e["start"])
     excluded.sort(key=lambda e: e["start"])
 
