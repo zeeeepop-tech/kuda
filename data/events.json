@@ -1,29 +1,22 @@
 {
-  "generated_at": "2026-11-27T11:48:25+01:00",
+  "generated_at": "2026-11-27T12:57:35+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
   "log": [
     "Narodno pozorište RS: REST API, 23 events",
-    "Banski dvor: REST API not available (HTTP 403), trying iCal",
-    "Banski dvor: iCal /events/?ical=1 failed (ValueError: no events in the feed)",
-    "Banski dvor: iCal /events/list/?ical=1 failed (ValueError: no events in the feed)",
-    "Banski dvor: page /events/ failed (ValueError: no event data on the page)",
-    "WARNING: Banski dvor gave 0 events; kept 3 from the run of 2026-11-27.",
-    "Gradsko pozorište Jazavac: no shows on the page (12123 characters, title: One moment, please...)",
-    "Gradsko pozorište Jazavac: repertoire page, 0 shows (0 with a start time)",
-    "WARNING: Gradsko pozorište Jazavac gave 0 events. The site may have changed.",
+    "Banski dvor: REST API, 4 events",
+    "Gradsko pozorište Jazavac: repertoire page, 7 shows (7 with a start time)",
     "Dječije pozorište RS: repertoire, 1 shows playing, 2 performances coming up",
     "SC Borik: table on /?page_id=6913, 115 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 27 films, 112 film-days",
-    "Sheet: 22 events added by hand, 10 picture swaps",
+    "Sheet: 22 events added by hand (0 from the form), 10 picture swaps",
+    "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 17 of 20 films (0 looked up now)"
   ],
-  "problems": [
-    "WARNING: Banski dvor gave 0 events; kept 3 from the run of 2026-11-27.",
-    "WARNING: Gradsko pozorište Jazavac gave 0 events. The site may have changed."
-  ],
+  "problems": [],
+  "form": "https://docs.google.com/forms/d/e/1FAIpQLSflNv7M4L31t8sBUV0ctrHxFMpU8Gq9oHSv1_KasTwuyW5OhA/viewform",
   "count": 160,
   "events": [
     {
@@ -1398,9 +1391,9 @@
     {
       "id": "rucno-20261129-pidzama-za-sestoro",
       "title": "Pidžama za šestoro",
-      "title_original": "ПРЕДСТАВА: ПИЏАМА ЗА ШЕСТОРО",
       "category": "Pozorište",
       "start": "2026-11-29T20:00:00+01:00",
+      "end": "2026-11-29T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
@@ -1409,6 +1402,7 @@
       "description": "Komedija M. Kamoletija, vodvilj u kojem oženjeni junak želi ljubavnu vezu sa drugom ženom i zapada u niz komičnih situacija. Komedija zapleta, ali i naravi. Režija Željko Stjepanović; igraju Željko Erkić, Zlatan Vidović, Anja Ilić, Snježana Mišić / Miljka Brđanin, Dragana Marić i Velimir Blanić.",
       "source": "kuda.",
       "also_listed_at": [
+        "Gradsko pozorište Jazavac",
         "SC Borik"
       ],
       "score": 7
@@ -1712,23 +1706,29 @@
     {
       "id": "rucno-20261130-koncert-piazzolla-105-tango-ansambla-lib",
       "title": "Koncert „Piazzolla 105“ tango ansambla Libercuatro (Beograd)",
+      "title_original": "Kонцерт „Piazzolla 105“ танго ансамбла LIBERCUATRO (Београд)",
       "category": "Muzika",
       "start": "2026-11-30T20:00:00+01:00",
+      "end": "2026-11-30T21:00:00+01:00",
       "all_day": false,
       "venue": "Banski dvor Kulturni centar",
       "hall": "Koncertna dvorana",
       "price": "Besplatno, uz pozivnicu",
       "image": "https://drive.google.com/thumbnail?id=1csOgRQgzzozwb6GKzJIl9domddb1v8Jd&sz=w2000",
+      "url": "https://banskidvor.org/event/koncert-tango-ansambla-libercuatro-piazzolla-105-beograd/",
       "description": "Koncert povodom 105 godina od rođenja Astora Pjacole, tvorca tanga nuevo. Svira beogradski ansambl Libercuatro: Ksenija Ristić (klavir), Aleksandar Mišović (vokal), Martina Dimić Radovanović (violina), Petar Mirkov (bandoneon) i Nikola Buljančević (kontrabas). Pozivnice se preuzimaju na biletarnici Banskog dvora radnim danom od 12 do 18 časova.",
       "source": "kuda.",
+      "also_listed_at": [
+        "Banski dvor"
+      ],
       "score": 8
     },
     {
       "id": "rucno-20261130-kroz-zivot-sa-veljom",
       "title": "Kroz život sa Veljom",
-      "title_original": "ПРЕДСТАВА: КРОЗ ЖИВОТ СА ВЕЉОМ",
       "category": "Pozorište",
       "start": "2026-11-30T20:00:00+01:00",
+      "end": "2026-11-30T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
@@ -1737,6 +1737,7 @@
       "description": "Kabare u režiji Slobodana Perišića, koprodukcija sa Gradskim pozorištem Gradiška. Velimir Blanić vodi publiku kroz svoj i njihov život uz muziku, a Jazavac postaje kabaretski klub. Igraju i sviraju Velimir Blanić, Vladimir Đorđević, Aleksandar Blanić, Sava Knežević i Milan Savić.",
       "source": "kuda.",
       "also_listed_at": [
+        "Gradsko pozorište Jazavac",
         "SC Borik"
       ],
       "score": 7
@@ -2439,13 +2440,18 @@
       "title": "Šta će nići kad posadiš srce",
       "category": "Pozorište",
       "start": "2026-12-02T20:00:00+01:00",
+      "end": "2026-12-02T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "image": "https://drive.google.com/thumbnail?id=1pwbtWQOd19u5JQWT6JaRhgDGutKVm4ha&sz=w2000",
       "url": "https://gpj.ba/repertoar/",
       "description": "Monodrama Vladimira Nićiforovića Nićija po tekstu Đorđa Kosića, u režiji Nikole Zavišića. Autori je opisuju kao modernu bajku sa pjevanjem, plakanjem i konceptualnim pozorišnim narativom.",
       "source": "kuda.",
-      "score": 7
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac"
+      ],
+      "highlight": true,
+      "score": 107
     },
     {
       "id": "cs-6622-20261202",
@@ -2636,6 +2642,7 @@
       "hall": "Univerzitetski grad",
       "price": "Besplatno",
       "image": "https://drive.google.com/thumbnail?id=1iWWCEaApxxVQAYQan7lKNBuuOP0Fd6kS&sz=w2000",
+      "url": "https://www.facebook.com/events/1126451656952320/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22video_feed%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
       "description": "Prvo veče 4. Revije dokumentarnih filmova o ljudskim pravima. U 17:30 panel o ekološkim braniteljima i braniteljicama ljudskih prava u BiH, a u 19:00 film „Planina“ Biljane Tutorov i Petra Glomazića (1 h 43 min), dobitnik Velike nagrade žirija na Sandensu i Srca Sarajeva. Majka i kćerka na Sinjajevini brane svoju planinu od vojnog poligona. Organizuje Kuća ljudskih prava Banjaluka.",
       "source": "kuda.",
       "score": 6
@@ -2768,6 +2775,7 @@
       "hall": "Univerzitetski grad",
       "price": "Besplatno",
       "image": "https://drive.google.com/thumbnail?id=1Px1lLJRB8Us-1lwdrCvLcgEO7KwoHBKv&sz=w2000",
+      "url": "https://www.facebook.com/events/1126451656952320/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22video_feed%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
       "description": "Drugo veče Revije: u 17:30 blok kratkih dokumentaraca iz regiona, od studentskih protesta do suočavanja s prošlošću. U 19:00 banjalučka premijera filma „Magarac pred sudom“ Jelene Medić, o košarkašici u kolicima koja dovodi domaće životinje na parking-mjesta za osobe s invaliditetom. Poslije filma panel o ulozi filma u zaštiti ljudskih prava.",
       "source": "kuda.",
       "score": 6
@@ -3109,12 +3117,16 @@
       "title": "Šećer je sitan, osim kad je kocka",
       "category": "Pozorište",
       "start": "2026-12-06T20:00:00+01:00",
+      "end": "2026-12-06T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "image": "https://drive.google.com/thumbnail?id=1sGgaiDTcaA2W-o6pIM5fMzCvHati8XhV&sz=w2000",
       "url": "https://gpj.ba/repertoar/",
       "description": "Komedija Nikole Kolje Pejakovića o braku: Zoran i Nevenka ulaze u brak bez jasne predstave šta je brak i ko su oni, pa od svakodnevnih prepirki stignu do pred razvod. Tekst i režija Nikola Pejaković; igraju Aleksandra Spasojević, Ljubiša Savanović, Miljka Brđanin i Velimir Blanić.",
       "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac"
+      ],
       "score": 7
     },
     {
@@ -3196,12 +3208,16 @@
       "title": "Bračno savjetovanje",
       "category": "Pozorište",
       "start": "2026-12-07T20:00:00+01:00",
+      "end": "2026-12-07T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "image": "https://drive.google.com/thumbnail?id=1lD0laYc5N_GrjtLHoH2WTuR7IDx7kRKK&sz=w2000",
       "url": "https://gpj.ba/repertoar/",
       "description": "Komedija D. Glatauera o bračnom paru kod psihoterapeuta: od prvog susreta i zaljubljenosti do ćorsokaka u kojem su sada. Pokazuje da odlazak kod terapeuta ne mora biti mučan, nego može biti duhovit. Režija Željko Stjepanović.",
       "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac"
+      ],
       "score": 7
     },
     {
@@ -3620,6 +3636,7 @@
       "title": "Čiča, Miča i njihova priča",
       "category": "Za djecu",
       "start": "2026-12-14T18:00:00+01:00",
+      "end": "2026-12-14T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "hall": "Dječija Juhu scena",
@@ -3627,6 +3644,9 @@
       "url": "https://gpj.ba/repertoar/",
       "description": "Premijera lutkarske predstave za djecu u dramatizaciji Aleksandra Vasiljevića i režiji Belinde Stijak. Igraju Slobodan Perišić, Velimir Blanić i, prvi put u profesionalnom angažmanu, Mila Stanojević. Scenografija i kostimi: Zorana Klječanin.",
       "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac"
+      ],
       "score": 10
     },
     {
@@ -4149,6 +4169,7 @@
       "title": "Čiča, Miča i njihova priča",
       "category": "Za djecu",
       "start": "2026-12-29T19:00:00+01:00",
+      "end": "2026-12-29T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "hall": "Dječija Juhu scena",
@@ -4156,6 +4177,9 @@
       "url": "https://gpj.ba/repertoar/",
       "description": "Lutkarska predstava za djecu u dramatizaciji Aleksandra Vasiljevića i režiji Belinde Stijak, uz dodjelu paketića sa Deda Mrazom. Igraju Slobodan Perišić, Velimir Blanić i Mila Stanojević.",
       "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac"
+      ],
       "score": 5
     },
     {
