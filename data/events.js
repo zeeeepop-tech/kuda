@@ -1,26 +1,22 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-27T10:14:09+01:00",
+  "generated_at": "2026-11-27T11:29:23+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
   "log": [
     "Narodno pozorište RS: REST API, 23 events",
-    "Banski dvor: REST API not available (HTTP 403), trying iCal",
-    "Banski dvor: iCal /events/?ical=1 failed (ValueError: no events in the feed)",
-    "Banski dvor: iCal /events/list/?ical=1 failed (ValueError: no events in the feed)",
-    "Banski dvor: page /events/ failed (ValueError: no event data on the page)",
-    "WARNING: Banski dvor gave 0 events. The site may have changed.",
-    "Gradsko pozorište Jazavac: no shows on the page (12114 characters, title: One moment, please...)",
-    "Gradsko pozorište Jazavac: repertoire page, 0 shows (0 with a start time)",
-    "WARNING: Gradsko pozorište Jazavac gave 0 events. The site may have changed.",
+    "Banski dvor: REST API, 4 events",
+    "Gradsko pozorište Jazavac: repertoire page, 7 shows (7 with a start time)",
     "Dječije pozorište RS: repertoire, 1 shows playing, 2 performances coming up",
     "SC Borik: table on /?page_id=6913, 115 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
-    "Cinestar Delta Planet: programme, 27 films, 110 film-days",
-    "Sheet: 11 events added by hand, 10 picture swaps",
+    "Cinestar Delta Planet: programme, 27 films, 112 film-days",
+    "Sheet: 22 events added by hand, 10 picture swaps",
+    "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 17 of 20 films (0 looked up now)"
   ],
-  "count": 149,
+  "problems": [],
+  "count": 163,
   "events": [
     {
       "id": "rucno-20260924-izlozba-viktor-majdandzic-umjetnost-kroz",
@@ -1316,6 +1312,36 @@ window.KUDA_DATA = {
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "rucno-20261129-premijera-predstave-mali-princ",
+      "title": "Premijera predstave „Mali princ“",
+      "category": "Pozorište",
+      "start": "2026-11-29T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Banski dvor Kulturni centar",
+      "hall": "Vijećnica",
+      "image": "https://drive.google.com/thumbnail?id=1ZQCG0_2YVkzph7bkJBypOvjkHvaDTjdZ&sz=w2000",
+      "description": "Mlađa grupa Dramskog studija ATRIJUM izvodi predstavu nastalu prema istoimenoj noveli Antoana de Sent Egziperija. Predstavu je sa polaznicima pripremila glumica Aleksandra Spasojević.",
+      "source": "kuda.",
+      "score": 13
+    },
+    {
+      "id": "bd-40335",
+      "title": "Premijera predstave „Mali princ“ u izvođenju mlađe grupe Dramskog studija Atrijum",
+      "title_original": "Премијера представе „Мали принц“ у извођењу млађе групе Драмског студија АТРИЈУМ",
+      "category": "Pozorište",
+      "start": "2026-11-29T19:00:00+01:00",
+      "end": "2026-11-29T19:45:00+01:00",
+      "all_day": false,
+      "venue": "Banski dvor Kulturni centar",
+      "hall": "Vijećnica Banskog dvora",
+      "price": "Ulaz slobodan",
+      "image": "https://banskidvor.org/wp-content/uploads/2026/11/MaliPrinc-1.jpg",
+      "url": "https://banskidvor.org/event/premijera-predstave-mali-princ-u-izvodjenju-mladje-grupe-dramskog-studija-atrijum/",
+      "description": "U nedjelju, 29. novembra 2026. godine, u 19.00 časova, u Vijećnici Banskog dvora održaće se premijera predstave „Mali princ“ , nastale prema istoimenoj noveli Antoana de Sent Egziperija, u izvođenju mlađe grupe Dramskog studija ATRIJUM. Predstavu je sa polaznicima mlađe grupe…",
+      "source": "Banski dvor",
+      "score": 13
+    },
+    {
       "id": "cs-6605-20261129",
       "kind": "kino",
       "title": "Tigar od papira",
@@ -1372,17 +1398,23 @@ window.KUDA_DATA = {
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "borik-1cf31e33a8",
+      "id": "rucno-20261129-pidzama-za-sestoro",
       "title": "Pidžama za šestoro",
-      "title_original": "ПРЕДСТАВА: ПИЏАМА ЗА ШЕСТОРО",
       "category": "Pozorište",
       "start": "2026-11-29T20:00:00+01:00",
+      "end": "2026-11-29T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
-      "url": "https://scborik.com/?page_id=6913",
-      "source": "SC Borik",
-      "score": 4
+      "image": "https://drive.google.com/thumbnail?id=1XC5uUcAqlLG9xu27dBSvf8TVKtBkK5tL&sz=w2000",
+      "url": "https://gpj.ba/repertoar/pidzama-za-sestoro-2-3/",
+      "description": "Komedija M. Kamoletija, vodvilj u kojem oženjeni junak želi ljubavnu vezu sa drugom ženom i zapada u niz komičnih situacija. Komedija zapleta, ali i naravi. Režija Željko Stjepanović; igraju Željko Erkić, Zlatan Vidović, Anja Ilić, Snježana Mišić / Miljka Brđanin, Dragana Marić i Velimir Blanić.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac",
+        "SC Borik"
+      ],
+      "score": 7
     },
     {
       "id": "cs-6622-20261129",
@@ -1681,6 +1713,45 @@ window.KUDA_DATA = {
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "rucno-20261130-koncert-piazzolla-105-tango-ansambla-lib",
+      "title": "Koncert „Piazzolla 105“ tango ansambla Libercuatro (Beograd)",
+      "title_original": "Kонцерт „Piazzolla 105“ танго ансамбла LIBERCUATRO (Београд)",
+      "category": "Muzika",
+      "start": "2026-11-30T20:00:00+01:00",
+      "end": "2026-11-30T21:00:00+01:00",
+      "all_day": false,
+      "venue": "Banski dvor Kulturni centar",
+      "hall": "Koncertna dvorana",
+      "price": "Besplatno, uz pozivnicu",
+      "image": "https://drive.google.com/thumbnail?id=1csOgRQgzzozwb6GKzJIl9domddb1v8Jd&sz=w2000",
+      "url": "https://banskidvor.org/event/koncert-tango-ansambla-libercuatro-piazzolla-105-beograd/",
+      "description": "Koncert povodom 105 godina od rođenja Astora Pjacole, tvorca tanga nuevo. Svira beogradski ansambl Libercuatro: Ksenija Ristić (klavir), Aleksandar Mišović (vokal), Martina Dimić Radovanović (violina), Petar Mirkov (bandoneon) i Nikola Buljančević (kontrabas). Pozivnice se preuzimaju na biletarnici Banskog dvora radnim danom od 12 do 18 časova.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Banski dvor"
+      ],
+      "score": 8
+    },
+    {
+      "id": "rucno-20261130-kroz-zivot-sa-veljom",
+      "title": "Kroz život sa Veljom",
+      "category": "Pozorište",
+      "start": "2026-11-30T20:00:00+01:00",
+      "end": "2026-11-30T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "organizer": "GP Jazavac",
+      "image": "https://drive.google.com/thumbnail?id=1_jXZbxjmpszb3uwNP-89YTDyFgE5zIq7&sz=w2000",
+      "url": "https://gpj.ba/repertoar/",
+      "description": "Kabare u režiji Slobodana Perišića, koprodukcija sa Gradskim pozorištem Gradiška. Velimir Blanić vodi publiku kroz svoj i njihov život uz muziku, a Jazavac postaje kabaretski klub. Igraju i sviraju Velimir Blanić, Vladimir Đorđević, Aleksandar Blanić, Sava Knežević i Milan Savić.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac",
+        "SC Borik"
+      ],
+      "score": 7
+    },
+    {
       "id": "np-25650",
       "title": "Martin udio",
       "title_original": "Мартин удио",
@@ -1696,19 +1767,6 @@ window.KUDA_DATA = {
       "description": "Autorka romana i dramatizacije: Sanja Savić Milosavljević Reditelj: Nikola Bundalo Dramaturg: Goran Starčević Scenografkinja: Dragana Purković Macan Kostimografkinja: Ivana Ristić Kompozitor: Petar Topalović Scenski govor: Biljana Đurović Scenski pokret: Marija Milenković Dizajn…",
       "source": "Narodno pozorište RS",
       "score": 5
-    },
-    {
-      "id": "borik-b2f4d819ce",
-      "title": "Kroz život sa Veljom",
-      "title_original": "ПРЕДСТАВА: КРОЗ ЖИВОТ СА ВЕЉОМ",
-      "category": "Pozorište",
-      "start": "2026-11-30T20:00:00+01:00",
-      "all_day": false,
-      "venue": "Gradsko pozorište Jazavac",
-      "organizer": "GP Jazavac",
-      "url": "https://scborik.com/?page_id=6913",
-      "source": "SC Borik",
-      "score": 4
     },
     {
       "id": "cs-6622-20261130",
@@ -2293,6 +2351,35 @@ window.KUDA_DATA = {
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "rucno-20261202-promocija-monografije-vlado-s-milosevic-",
+      "title": "Promocija monografije „Vlado S. Milošević: svjedok i stvaralac epohe“",
+      "category": "Razgovori",
+      "start": "2026-12-02T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Banski dvor Kulturni centar",
+      "hall": "Vijećnica",
+      "image": "https://drive.google.com/thumbnail?id=1VTUA02BI_R3j8O77UPNUeWyMhvNBxCsL&sz=w2000",
+      "description": "Promocija monografije prof. dr Sande Dodik o Vladi S. Miloševiću. O knjizi govore prof. dr Sonja Marinković, prof. dr Dragica Panić-Kašanski i autorka.",
+      "source": "kuda.",
+      "score": 8
+    },
+    {
+      "id": "bd-40355",
+      "title": "Promocija monografije „Vlado S. Milošević: Svjedok I Stvaralac Epohe“, autora prof. dr Sande Dodik",
+      "title_original": "Промоција монографије „ВЛАДО С. МИЛОШЕВИЋ: СВЈЕДОК И СТВАРАЛАЦ ЕПОХЕ“, аутора проф. др Санде Додик",
+      "category": "Razgovori",
+      "start": "2026-12-02T19:00:00+01:00",
+      "end": "2026-12-02T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Banski dvor Kulturni centar",
+      "hall": "Vijećnica Banskog dvora",
+      "image": "https://banskidvor.org/wp-content/uploads/2026/11/IMG_5513.jpeg",
+      "url": "https://banskidvor.org/event/promocija-monografije-vlado-s-milosevic-svjedok-i-stvaralac-epohe-autora-prof-dr-sande-dodik/",
+      "description": "u Vijećnici Banskog dvora 2. decembra (srijeda) 2026. godine, u 19.00 časova, biće održana promocija monografije „VLADO S. MILOŠEVIĆ: SVJEDOK I STVARALAC EPOHE“ , autora prof. dr Sande Dodik. O knjizi će govoriti prof. dr Sonja Marinković, prof. dr Dagica Panić-Kašanski i autor…",
+      "source": "Banski dvor",
+      "score": 8
+    },
+    {
       "id": "cs-6605-20261202",
       "kind": "kino",
       "title": "Tigar od papira",
@@ -2347,6 +2434,52 @@ window.KUDA_DATA = {
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ja-sam-rocky/6603",
       "description": "Pedeset godina nakon što je ROCKY osvojio publiku i postao jedan od najslavnijih filmova svih vremena, stiže nevjerojatna istinita priča o borbi koja se odvijala iza kamera. Prije nego je osvojio nominacije za čak tri Oscara®, Zlatni globus i svjetsku slavu, Sylvester Stallone…",
       "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "rucno-20261202-koncert-tamare-dojcinovic-viola-dobitnic",
+      "title": "Koncert Tamare Dojčinović (viola) dobitnice plakete Banskog dvora",
+      "category": "Muzika",
+      "start": "2026-12-02T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Banski dvor Kulturni centar",
+      "hall": "Koncertna dvorana",
+      "image": "https://drive.google.com/thumbnail?id=1s0ekBRZLfCYSVkDFRV7voIhRQJ--5nCO&sz=w2000",
+      "description": "Tamara Dojčinović, dobitnica plakete Banskog dvora za najuspješnijeg studenta muzičke umjetnosti na Akademiji umjetnosti Univerziteta u Banjoj Luci, svira violu uz klavirsku pratnju Dunje Jovanić.",
+      "source": "kuda.",
+      "score": 8
+    },
+    {
+      "id": "rucno-20261202-sta-ce-nici-kad-posadis-srce",
+      "title": "Šta će nići kad posadiš srce",
+      "category": "Pozorište",
+      "start": "2026-12-02T20:00:00+01:00",
+      "end": "2026-12-02T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "image": "https://drive.google.com/thumbnail?id=1pwbtWQOd19u5JQWT6JaRhgDGutKVm4ha&sz=w2000",
+      "url": "https://gpj.ba/repertoar/",
+      "description": "Monodrama Vladimira Nićiforovića Nićija po tekstu Đorđa Kosića, u režiji Nikole Zavišića. Autori je opisuju kao modernu bajku sa pjevanjem, plakanjem i konceptualnim pozorišnim narativom.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac"
+      ],
+      "score": 7
+    },
+    {
+      "id": "bd-40351",
+      "title": "Koncert Tamare Dojčinović (viola) dobitnice plakete Banskog",
+      "title_original": "Концерт Тамаре Дојчиновић (виола) добитнице плакете Банског",
+      "category": "Muzika",
+      "start": "2026-12-02T20:00:00+01:00",
+      "end": "2026-12-02T21:30:00+01:00",
+      "all_day": false,
+      "venue": "Banski dvor Kulturni centar",
+      "hall": "Koncertna dvorana",
+      "image": "https://drive.google.com/thumbnail?id=1s0ekBRZLfCYSVkDFRV7voIhRQJ--5nCO&sz=w2000",
+      "url": "https://banskidvor.org/event/koncert-tamare-dojcinovic-viola-dobitnice-plakete-banskog/",
+      "description": "U Koncertnoj dvorani Banskog dvora 2. decembra (srijeda) 2026. godine u 20.00 časova odžaće se koncert Tamare Dojčinović (viola), dobitnice plakete Banskog dvora za najuspješnijeg studenta Studijskog programa muzičke umjetnosti Akademije umjetnosti Univerziteta u Banjoj Luci, uz…",
+      "source": "Banski dvor",
+      "score": 8
     },
     {
       "id": "cs-6622-20261202",
@@ -3006,6 +3139,23 @@ window.KUDA_DATA = {
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "rucno-20261206-secer-je-sitan-osim-kad-je-kocka",
+      "title": "Šećer je sitan, osim kad je kocka",
+      "category": "Pozorište",
+      "start": "2026-12-06T20:00:00+01:00",
+      "end": "2026-12-06T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "image": "https://drive.google.com/thumbnail?id=1sGgaiDTcaA2W-o6pIM5fMzCvHati8XhV&sz=w2000",
+      "url": "https://gpj.ba/repertoar/",
+      "description": "Komedija Nikole Kolje Pejakovića o braku: Zoran i Nevenka ulaze u brak bez jasne predstave šta je brak i ko su oni, pa od svakodnevnih prepirki stignu do pred razvod. Tekst i režija Nikola Pejaković; igraju Aleksandra Spasojević, Ljubiša Savanović, Miljka Brđanin i Velimir Blanić.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac"
+      ],
+      "score": 7
+    },
+    {
       "id": "cs-6642-20261206",
       "kind": "kino",
       "title": "Dina: Drugi dio Re-release",
@@ -3078,6 +3228,23 @@ window.KUDA_DATA = {
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
       "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
       "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "rucno-20261207-bracno-savjetovanje",
+      "title": "Bračno savjetovanje",
+      "category": "Pozorište",
+      "start": "2026-12-07T20:00:00+01:00",
+      "end": "2026-12-07T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "image": "https://drive.google.com/thumbnail?id=1lD0laYc5N_GrjtLHoH2WTuR7IDx7kRKK&sz=w2000",
+      "url": "https://gpj.ba/repertoar/",
+      "description": "Komedija D. Glatauera o bračnom paru kod psihoterapeuta: od prvog susreta i zaljubljenosti do ćorsokaka u kojem su sada. Pokazuje da odlazak kod terapeuta ne mora biti mučan, nego može biti duhovit. Režija Željko Stjepanović.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac"
+      ],
+      "score": 7
     },
     {
       "id": "cs-6558-20261208",
@@ -3336,6 +3503,37 @@ window.KUDA_DATA = {
       "score": 6
     },
     {
+      "id": "cs-6558-20261212",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-12T11:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 50min",
+      "showtimes": [
+        {
+          "time": "11:00",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/C5D01000023IXUNOEM"
+        },
+        {
+          "time": "16:00",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/D5D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "cs-6607-20261212",
       "kind": "kino",
       "title": "Asterix: Kraljevstvo Nubije",
@@ -3391,6 +3589,37 @@ window.KUDA_DATA = {
       "score": 8
     },
     {
+      "id": "cs-6558-20261213",
+      "kind": "kino",
+      "title": "Hexe: Kraljevstvo čarolije",
+      "category": "Kino",
+      "start": "2026-12-13T11:00:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 50min",
+      "showtimes": [
+        {
+          "time": "11:00",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/E5D01000023IXUNOEM"
+        },
+        {
+          "time": "16:00",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/F5D01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/8mBVhEwQOhnT2ee6pQIuDUlMk3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wdjW11Tp4w9EfDBxbjyBJvDVHDA.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/hexe-kraljevstvo-carolije/6558",
+      "description": "Walt Disney Animation Studios predstavlja potpuno novu čarobnu pustolovinu o odrastanju, obitelji i otkrivanju vlastite moći. Živahna i nekonvencionalna tinejdžerica Billie iznenada otkriva da posjeduje tajanstvene čarobne moći. Nakon što ih nenamjerno oslobodi, njezin se život…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "cs-6607-20261213",
       "kind": "kino",
       "title": "Asterix: Kraljevstvo Nubije",
@@ -3427,6 +3656,24 @@ window.KUDA_DATA = {
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/asterix-kraljevstvo-nubije/6607",
       "description": "Najhrabriji galski junaci ponovno kreću u nezaboravnu pustolovinu – samo što su ovog puta neustrašivi ratnici pretvoreni u nestašnu djecu! Kada rijedak eliksir mladosti slučajno završi u čarobnom napitku, nepokorivi Gali pretvore se u bezopasne mališane. Kako bi pronašli…",
       "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "rucno-20261214-cica-mica-i-njihova-prica",
+      "title": "Čiča, Miča i njihova priča",
+      "category": "Za djecu",
+      "start": "2026-12-14T18:00:00+01:00",
+      "end": "2026-12-14T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "hall": "Dječija Juhu scena",
+      "image": "https://drive.google.com/thumbnail?id=1fjBypv7FEgTnlJj-nGVoTFxKfaaIHsl0&sz=w2000",
+      "url": "https://gpj.ba/repertoar/",
+      "description": "Premijera lutkarske predstave za djecu u dramatizaciji Aleksandra Vasiljevića i režiji Belinde Stijak. Igraju Slobodan Perišić, Velimir Blanić i, prvi put u profesionalnom angažmanu, Mila Stanojević. Scenografija i kostimi: Zorana Klječanin.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac"
+      ],
+      "score": 10
     },
     {
       "id": "cs-6359-20261215",
@@ -3941,6 +4188,24 @@ window.KUDA_DATA = {
       "url": "https://www.np.rs.ba/predstava/martin-udio-9/",
       "description": "Autorka romana i dramatizacije: Sanja Savić Milosavljević Reditelj: Nikola Bundalo Dramaturg: Goran Starčević Scenografkinja: Dragana Purković Macan Kostimografkinja: Ivana Ristić Kompozitor: Petar Topalović Scenski govor: Biljana Đurović Scenski pokret: Marija Milenković Dizajn…",
       "source": "Narodno pozorište RS",
+      "score": 5
+    },
+    {
+      "id": "rucno-20261229-cica-mica-i-njihova-prica",
+      "title": "Čiča, Miča i njihova priča",
+      "category": "Za djecu",
+      "start": "2026-12-29T19:00:00+01:00",
+      "end": "2026-12-29T00:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "hall": "Dječija Juhu scena",
+      "image": "https://drive.google.com/thumbnail?id=1fjBypv7FEgTnlJj-nGVoTFxKfaaIHsl0&sz=w2000",
+      "url": "https://gpj.ba/repertoar/",
+      "description": "Lutkarska predstava za djecu u dramatizaciji Aleksandra Vasiljevića i režiji Belinde Stijak, uz dodjelu paketića sa Deda Mrazom. Igraju Slobodan Perišić, Velimir Blanić i Mila Stanojević.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Gradsko pozorište Jazavac"
+      ],
       "score": 5
     },
     {
