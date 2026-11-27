@@ -32,7 +32,7 @@
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; background: var(--ink); }
 html.at-top { background: var(--paper); }
-body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 var(--text); }
+body { margin: 0; min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; background: var(--paper); color: var(--ink); font: 16px/1.5 var(--text); }
 body:has(dialog[open]) { overflow: hidden; }
 a { color: inherit; }
 button, input { font: inherit; color: inherit; }
@@ -229,6 +229,7 @@ dialog.detail::backdrop { background: rgba(15, 15, 15, 0.55); }
 .media .bg { filter: blur(22px) brightness(0.6); transform: scale(1.15); }
 .media .fg.tall { object-fit: contain; } /* posters: the whole poster on a blurred copy of itself */
 .detail .body { display: flex; flex-direction: column; gap: 18px; padding: 22px 18px 32px; }
+.detail .body-main, .detail .body-side, .detail .body-rest { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
 .detail h2 { margin: 0; font: 800 clamp(30px, 4vw, 48px)/1 var(--display); letter-spacing: -0.03em; }
 .eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .orig { margin: 6px 0 0; color: var(--muted); }
@@ -246,7 +247,7 @@ dialog.detail::backdrop { background: rgba(15, 15, 15, 0.55); }
 .source { margin: 0; padding: 12px 14px; border-radius: 14px; background: var(--soft); font-size: 14px; color: var(--muted); }
 .source b { color: var(--ink); font-weight: 600; }
 
-footer { background: var(--ink); color: #fff; }
+footer { margin-top: auto; background: var(--ink); color: #fff; } /* always at the end, also on short pages */
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; padding-top: 36px; padding-bottom: 36px; }
 footer p { margin: 0; max-width: 560px; font-size: 14px; color: #B5B5AD; }
 footer .status, footer #sources, footer .tmdb { font-size: 12px; color: #8E8E86; } /* tertiary: update time, sources, credits */
@@ -293,8 +294,11 @@ footer .links { margin-top: 12px; }
   .card h3 { margin-top: 4px; font-size: 20px; }
   .where { white-space: normal; font-size: 14px; }
   dialog.detail { width: min(980px, calc(100% - 32px)); height: auto; max-height: calc(100% - 32px); margin: auto; border-radius: 22px; }
-  .detail .media { aspect-ratio: auto; min-height: 420px; }
-  .detail .body { padding: 32px; }
+  .detail-grid { grid-template-columns: 1fr; }  /* the picture on top, in a wide box */
+  .detail .media { aspect-ratio: 21 / 9; }
+  .detail .media .bg { filter: blur(30px) brightness(0.5); }  /* closer to the blurred frame a poster comes in */
+  .detail .body { padding: 32px 36px 36px; }
+  .close { margin: 16px 16px 0 0; }
 }
 
 /* ---------- desktop: three columns; header, days, featured and filters share the grid's width ---------- */
@@ -302,6 +306,15 @@ footer .links { margin-top: 12px; }
   .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .rows { columns: 2; column-gap: 40px; }
   .rows li { break-inside: avoid; }
+  /* event detail: text on the left, facts and buttons on the right */
+  .detail .body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; grid-template-rows: auto 1fr; grid-template-areas: "main side" "rest side"; align-items: start; gap: 18px 36px; }
+  .detail .body-main { grid-area: main; }
+  .detail .body-side { grid-area: side; gap: 16px; }
+  .detail .body-rest { grid-area: rest; }
+  .detail .body-side .btn { min-height: 44px; padding: 0 14px; font-size: 14px; }
+  .detail .body-side .btn.primary { flex: 1 1 100%; justify-content: center; min-height: 48px; font-size: 15px; }
+  .detail h2 { font-size: clamp(34px, 3.4vw, 44px); line-height: 1.02; }
+  .detail .desc-full.clamp { -webkit-line-clamp: 5; }
 }
 @media (min-width: 1100px) {
   .bar { flex-wrap: nowrap; min-height: 72px; }
@@ -494,7 +507,11 @@ footer .links { margin-top: 12px; }
       + (img && fit ? `<img class="bg" src="${esc(img)}" alt="" aria-hidden="true" decoding="async" referrerpolicy="no-referrer">` : "")
       + (img ? `<img${fit ? ' class="fg"' : ""} src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : "");
   }
-  const markTall = (im) => { if (im.complete && im.naturalWidth) im.classList.toggle("tall", im.naturalHeight > im.naturalWidth * 1.05); };
+  const markTall = (im) => {
+    if (!im.complete || !im.naturalWidth) return;
+    const wide = im.closest(".detail") && matchMedia("(min-width: 720px)").matches;  // the detail's wide picture on a computer
+    im.classList.toggle("tall", im.naturalWidth < im.naturalHeight * (wide ? 1.9 : 1 / 1.05));  // posters come framed at 7:4
+  };
 
   function tags(e) {
     const t = [];
@@ -856,11 +873,14 @@ footer .links { margin-top: 12px; }
     <div class="detail-grid">
       <div class="media">${media(e, true, true)}</div>
       <div class="body">
+        <div class="body-main">
         <p class="eyebrow">${esc(e.category)}</p>
         <div>
           <h2 id="d-title">${esc(e.title)}</h2>
         </div>
         ${e.description ? `<p class="desc-full clamp" id="d-desc">${esc(credits(e.description))}</p><button class="desc-more" type="button" data-more aria-expanded="false" aria-controls="d-desc" hidden>Prikaži više</button>` : ""}
+        </div>
+        <div class="body-side">
         <ul class="facts">
           <li>${ICON.cal}<div><b>${esc(span ? days : longDate(e.start))}</b>${time ? `<span>${esc(time)}</span>` : ""}</div></li>
           <li>${ICON.pin}<div><b>${esc(e.place)}</b>${e.hall ? `<span>${esc(e.hall)}</span>` : ""}</div></li>
@@ -872,15 +892,18 @@ footer .links { margin-top: 12px; }
           ${ticket ? `<a class="btn primary" href="${esc(ticket)}" target="_blank" rel="noopener" data-count="karte/${esc(e.id)}" data-title="${esc(e.title)}">Karte ${ICON.out}</a>` : ""}
           ${url ? `<a class="btn${ticket ? "" : " primary"}" href="${esc(url)}" target="_blank" rel="noopener" data-count="izvor/${esc(e.id)}" data-title="${esc(e.title)}">Više na sajtu izvora ${ICON.out}</a>` : ""}
           <button class="btn" type="button" data-ics="${esc(e.id)}">${ICON.cal}Dodaj u kalendar</button>
+          ${saveText(e)}
           <a class="btn" href="${esc(gcal(e))}" target="_blank" rel="noopener">Google Kalendar ${ICON.out}</a>
           <button class="btn" type="button" data-share="${esc(e.id)}">${ICON.share}Podijeli</button>
-          ${saveText(e)}
         </div>
+        </div>
+        <div class="body-rest">
         ${shows.length ? `<div><h3 class="mini">Karte za projekciju</h3><div class="others">${shows.map((s) =>
           `<a class="chip" href="${esc(safeUrl(s.ticket) || "#")}" target="_blank" rel="noopener">${esc([s.time, s.hall, s.format].filter(Boolean).join(" · "))}</a>`).join("")}</div></div>` : ""}
         ${others.length ? `<div><h3 class="mini">${shows.length ? "Drugi dani" : "Druga izvođenja"}</h3><div class="others">${others.map((o) =>
           `<a class="chip" href="#e=${encodeURIComponent(o.id)}">${esc(shortDate(o.start))}${o.all_day ? "" : " · " + hhmm(o.start)}</a>`).join("")}</div></div>` : ""}
         <p class="source">Izvor: <b>${esc(e.source)}</b>${url ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">originalna objava</a>` : ""}${pic(e, true) ? " · foto: " + esc(e.image_credit || e.source) : ""}${e.page ? ` · <a href="${esc(e.page)}">stranica događaja</a>` : ""}. Podaci se preuzimaju automatski, pa konačne informacije provjeri kod izvora.${e.image_credit === "TMDB" ? " Poster i fotografija filma: TMDB." : ""} Nešto nije tačno? <a href="${esc(fixMail(e))}">Javi nam</a>.</p>
+        </div>
       </div>
     </div>`;
   }
