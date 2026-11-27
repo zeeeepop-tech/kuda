@@ -1,22 +1,30 @@
 {
-  "generated_at": "2026-11-27T11:31:13+01:00",
+  "generated_at": "2026-11-27T11:48:25+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
   "log": [
     "Narodno pozorište RS: REST API, 23 events",
-    "Banski dvor: REST API, 4 events",
-    "Gradsko pozorište Jazavac: repertoire page, 7 shows (7 with a start time)",
+    "Banski dvor: REST API not available (HTTP 403), trying iCal",
+    "Banski dvor: iCal /events/?ical=1 failed (ValueError: no events in the feed)",
+    "Banski dvor: iCal /events/list/?ical=1 failed (ValueError: no events in the feed)",
+    "Banski dvor: page /events/ failed (ValueError: no event data on the page)",
+    "WARNING: Banski dvor gave 0 events; kept 3 from the run of 2026-11-27.",
+    "Gradsko pozorište Jazavac: no shows on the page (12123 characters, title: One moment, please...)",
+    "Gradsko pozorište Jazavac: repertoire page, 0 shows (0 with a start time)",
+    "WARNING: Gradsko pozorište Jazavac gave 0 events. The site may have changed.",
     "Dječije pozorište RS: repertoire, 1 shows playing, 2 performances coming up",
     "SC Borik: table on /?page_id=6913, 115 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 27 films, 112 film-days",
     "Sheet: 22 events added by hand, 10 picture swaps",
-    "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 17 of 20 films (0 looked up now)"
   ],
-  "problems": [],
-  "count": 163,
+  "problems": [
+    "WARNING: Banski dvor gave 0 events; kept 3 from the run of 2026-11-27.",
+    "WARNING: Gradsko pozorište Jazavac gave 0 events. The site may have changed."
+  ],
+  "count": 160,
   "events": [
     {
       "id": "rucno-20260924-izlozba-viktor-majdandzic-umjetnost-kroz",
@@ -1314,31 +1322,21 @@
     {
       "id": "rucno-20261129-premijera-predstave-mali-princ",
       "title": "Premijera predstave „Mali princ“",
-      "category": "Pozorište",
-      "start": "2026-11-29T19:00:00+01:00",
-      "all_day": false,
-      "venue": "Banski dvor Kulturni centar",
-      "hall": "Vijećnica",
-      "image": "https://drive.google.com/thumbnail?id=1ZQCG0_2YVkzph7bkJBypOvjkHvaDTjdZ&sz=w2000",
-      "description": "Mlađa grupa Dramskog studija ATRIJUM izvodi predstavu nastalu prema istoimenoj noveli Antoana de Sent Egziperija. Predstavu je sa polaznicima pripremila glumica Aleksandra Spasojević.",
-      "source": "kuda.",
-      "score": 13
-    },
-    {
-      "id": "bd-40335",
-      "title": "Premijera predstave „Mali princ“ u izvođenju mlađe grupe Dramskog studija Atrijum",
       "title_original": "Премијера представе „Мали принц“ у извођењу млађе групе Драмског студија АТРИЈУМ",
       "category": "Pozorište",
       "start": "2026-11-29T19:00:00+01:00",
       "end": "2026-11-29T19:45:00+01:00",
       "all_day": false,
       "venue": "Banski dvor Kulturni centar",
-      "hall": "Vijećnica Banskog dvora",
+      "hall": "Vijećnica",
       "price": "Ulaz slobodan",
-      "image": "https://banskidvor.org/wp-content/uploads/2026/11/MaliPrinc-1.jpg",
+      "image": "https://drive.google.com/thumbnail?id=1ZQCG0_2YVkzph7bkJBypOvjkHvaDTjdZ&sz=w2000",
       "url": "https://banskidvor.org/event/premijera-predstave-mali-princ-u-izvodjenju-mladje-grupe-dramskog-studija-atrijum/",
-      "description": "U nedjelju, 29. novembra 2026. godine, u 19.00 časova, u Vijećnici Banskog dvora održaće se premijera predstave „Mali princ“ , nastale prema istoimenoj noveli Antoana de Sent Egziperija, u izvođenju mlađe grupe Dramskog studija ATRIJUM. Predstavu je sa polaznicima mlađe grupe…",
-      "source": "Banski dvor",
+      "description": "Mlađa grupa Dramskog studija ATRIJUM izvodi predstavu nastalu prema istoimenoj noveli Antoana de Sent Egziperija. Predstavu je sa polaznicima pripremila glumica Aleksandra Spasojević.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Banski dvor"
+      ],
       "score": 13
     },
     {
@@ -1400,9 +1398,9 @@
     {
       "id": "rucno-20261129-pidzama-za-sestoro",
       "title": "Pidžama za šestoro",
+      "title_original": "ПРЕДСТАВА: ПИЏАМА ЗА ШЕСТОРО",
       "category": "Pozorište",
       "start": "2026-11-29T20:00:00+01:00",
-      "end": "2026-11-29T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
@@ -1411,7 +1409,6 @@
       "description": "Komedija M. Kamoletija, vodvilj u kojem oženjeni junak želi ljubavnu vezu sa drugom ženom i zapada u niz komičnih situacija. Komedija zapleta, ali i naravi. Režija Željko Stjepanović; igraju Željko Erkić, Zlatan Vidović, Anja Ilić, Snježana Mišić / Miljka Brđanin, Dragana Marić i Velimir Blanić.",
       "source": "kuda.",
       "also_listed_at": [
-        "Gradsko pozorište Jazavac",
         "SC Borik"
       ],
       "score": 7
@@ -1715,29 +1712,23 @@
     {
       "id": "rucno-20261130-koncert-piazzolla-105-tango-ansambla-lib",
       "title": "Koncert „Piazzolla 105“ tango ansambla Libercuatro (Beograd)",
-      "title_original": "Kонцерт „Piazzolla 105“ танго ансамбла LIBERCUATRO (Београд)",
       "category": "Muzika",
       "start": "2026-11-30T20:00:00+01:00",
-      "end": "2026-11-30T21:00:00+01:00",
       "all_day": false,
       "venue": "Banski dvor Kulturni centar",
       "hall": "Koncertna dvorana",
       "price": "Besplatno, uz pozivnicu",
       "image": "https://drive.google.com/thumbnail?id=1csOgRQgzzozwb6GKzJIl9domddb1v8Jd&sz=w2000",
-      "url": "https://banskidvor.org/event/koncert-tango-ansambla-libercuatro-piazzolla-105-beograd/",
       "description": "Koncert povodom 105 godina od rođenja Astora Pjacole, tvorca tanga nuevo. Svira beogradski ansambl Libercuatro: Ksenija Ristić (klavir), Aleksandar Mišović (vokal), Martina Dimić Radovanović (violina), Petar Mirkov (bandoneon) i Nikola Buljančević (kontrabas). Pozivnice se preuzimaju na biletarnici Banskog dvora radnim danom od 12 do 18 časova.",
       "source": "kuda.",
-      "also_listed_at": [
-        "Banski dvor"
-      ],
       "score": 8
     },
     {
       "id": "rucno-20261130-kroz-zivot-sa-veljom",
       "title": "Kroz život sa Veljom",
+      "title_original": "ПРЕДСТАВА: КРОЗ ЖИВОТ СА ВЕЉОМ",
       "category": "Pozorište",
       "start": "2026-11-30T20:00:00+01:00",
-      "end": "2026-11-30T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
@@ -1746,7 +1737,6 @@
       "description": "Kabare u režiji Slobodana Perišića, koprodukcija sa Gradskim pozorištem Gradiška. Velimir Blanić vodi publiku kroz svoj i njihov život uz muziku, a Jazavac postaje kabaretski klub. Igraju i sviraju Velimir Blanić, Vladimir Đorđević, Aleksandar Blanić, Sava Knežević i Milan Savić.",
       "source": "kuda.",
       "also_listed_at": [
-        "Gradsko pozorište Jazavac",
         "SC Borik"
       ],
       "score": 7
@@ -2353,30 +2343,20 @@
     {
       "id": "rucno-20261202-promocija-monografije-vlado-s-milosevic-",
       "title": "Promocija monografije „Vlado S. Milošević: svjedok i stvaralac epohe“",
-      "category": "Razgovori",
-      "start": "2026-12-02T19:00:00+01:00",
-      "all_day": false,
-      "venue": "Banski dvor Kulturni centar",
-      "hall": "Vijećnica",
-      "image": "https://drive.google.com/thumbnail?id=1VTUA02BI_R3j8O77UPNUeWyMhvNBxCsL&sz=w2000",
-      "description": "Promocija monografije prof. dr Sande Dodik o Vladi S. Miloševiću. O knjizi govore prof. dr Sonja Marinković, prof. dr Dragica Panić-Kašanski i autorka.",
-      "source": "kuda.",
-      "score": 8
-    },
-    {
-      "id": "bd-40355",
-      "title": "Promocija monografije „Vlado S. Milošević: Svjedok I Stvaralac Epohe“, autora prof. dr Sande Dodik",
       "title_original": "Промоција монографије „ВЛАДО С. МИЛОШЕВИЋ: СВЈЕДОК И СТВАРАЛАЦ ЕПОХЕ“, аутора проф. др Санде Додик",
       "category": "Razgovori",
       "start": "2026-12-02T19:00:00+01:00",
       "end": "2026-12-02T20:00:00+01:00",
       "all_day": false,
       "venue": "Banski dvor Kulturni centar",
-      "hall": "Vijećnica Banskog dvora",
-      "image": "https://banskidvor.org/wp-content/uploads/2026/11/IMG_5513.jpeg",
+      "hall": "Vijećnica",
+      "image": "https://drive.google.com/thumbnail?id=1VTUA02BI_R3j8O77UPNUeWyMhvNBxCsL&sz=w2000",
       "url": "https://banskidvor.org/event/promocija-monografije-vlado-s-milosevic-svjedok-i-stvaralac-epohe-autora-prof-dr-sande-dodik/",
-      "description": "u Vijećnici Banskog dvora 2. decembra (srijeda) 2026. godine, u 19.00 časova, biće održana promocija monografije „VLADO S. MILOŠEVIĆ: SVJEDOK I STVARALAC EPOHE“ , autora prof. dr Sande Dodik. O knjizi će govoriti prof. dr Sonja Marinković, prof. dr Dagica Panić-Kašanski i autor…",
-      "source": "Banski dvor",
+      "description": "Promocija monografije prof. dr Sande Dodik o Vladi S. Miloševiću. O knjizi govore prof. dr Sonja Marinković, prof. dr Dragica Panić-Kašanski i autorka.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Banski dvor"
+      ],
       "score": 8
     },
     {
@@ -2438,36 +2418,6 @@
     {
       "id": "rucno-20261202-koncert-tamare-dojcinovic-viola-dobitnic",
       "title": "Koncert Tamare Dojčinović (viola) dobitnice plakete Banskog dvora",
-      "category": "Muzika",
-      "start": "2026-12-02T20:00:00+01:00",
-      "all_day": false,
-      "venue": "Banski dvor Kulturni centar",
-      "hall": "Koncertna dvorana",
-      "image": "https://drive.google.com/thumbnail?id=1s0ekBRZLfCYSVkDFRV7voIhRQJ--5nCO&sz=w2000",
-      "description": "Tamara Dojčinović, dobitnica plakete Banskog dvora za najuspješnijeg studenta muzičke umjetnosti na Akademiji umjetnosti Univerziteta u Banjoj Luci, svira violu uz klavirsku pratnju Dunje Jovanić.",
-      "source": "kuda.",
-      "score": 8
-    },
-    {
-      "id": "rucno-20261202-sta-ce-nici-kad-posadis-srce",
-      "title": "Šta će nići kad posadiš srce",
-      "category": "Pozorište",
-      "start": "2026-12-02T20:00:00+01:00",
-      "end": "2026-12-02T00:00:00+01:00",
-      "all_day": false,
-      "venue": "Gradsko pozorište Jazavac",
-      "image": "https://drive.google.com/thumbnail?id=1pwbtWQOd19u5JQWT6JaRhgDGutKVm4ha&sz=w2000",
-      "url": "https://gpj.ba/repertoar/",
-      "description": "Monodrama Vladimira Nićiforovića Nićija po tekstu Đorđa Kosića, u režiji Nikole Zavišića. Autori je opisuju kao modernu bajku sa pjevanjem, plakanjem i konceptualnim pozorišnim narativom.",
-      "source": "kuda.",
-      "also_listed_at": [
-        "Gradsko pozorište Jazavac"
-      ],
-      "score": 7
-    },
-    {
-      "id": "bd-40351",
-      "title": "Koncert Tamare Dojčinović (viola) dobitnice plakete Banskog",
       "title_original": "Концерт Тамаре Дојчиновић (виола) добитнице плакете Банског",
       "category": "Muzika",
       "start": "2026-12-02T20:00:00+01:00",
@@ -2477,9 +2427,25 @@
       "hall": "Koncertna dvorana",
       "image": "https://drive.google.com/thumbnail?id=1s0ekBRZLfCYSVkDFRV7voIhRQJ--5nCO&sz=w2000",
       "url": "https://banskidvor.org/event/koncert-tamare-dojcinovic-viola-dobitnice-plakete-banskog/",
-      "description": "U Koncertnoj dvorani Banskog dvora 2. decembra (srijeda) 2026. godine u 20.00 časova odžaće se koncert Tamare Dojčinović (viola), dobitnice plakete Banskog dvora za najuspješnijeg studenta Studijskog programa muzičke umjetnosti Akademije umjetnosti Univerziteta u Banjoj Luci, uz…",
-      "source": "Banski dvor",
+      "description": "Tamara Dojčinović, dobitnica plakete Banskog dvora za najuspješnijeg studenta muzičke umjetnosti na Akademiji umjetnosti Univerziteta u Banjoj Luci, svira violu uz klavirsku pratnju Dunje Jovanić.",
+      "source": "kuda.",
+      "also_listed_at": [
+        "Banski dvor"
+      ],
       "score": 8
+    },
+    {
+      "id": "rucno-20261202-sta-ce-nici-kad-posadis-srce",
+      "title": "Šta će nići kad posadiš srce",
+      "category": "Pozorište",
+      "start": "2026-12-02T20:00:00+01:00",
+      "all_day": false,
+      "venue": "Gradsko pozorište Jazavac",
+      "image": "https://drive.google.com/thumbnail?id=1pwbtWQOd19u5JQWT6JaRhgDGutKVm4ha&sz=w2000",
+      "url": "https://gpj.ba/repertoar/",
+      "description": "Monodrama Vladimira Nićiforovića Nićija po tekstu Đorđa Kosića, u režiji Nikole Zavišića. Autori je opisuju kao modernu bajku sa pjevanjem, plakanjem i konceptualnim pozorišnim narativom.",
+      "source": "kuda.",
+      "score": 7
     },
     {
       "id": "cs-6622-20261202",
@@ -3143,16 +3109,12 @@
       "title": "Šećer je sitan, osim kad je kocka",
       "category": "Pozorište",
       "start": "2026-12-06T20:00:00+01:00",
-      "end": "2026-12-06T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "image": "https://drive.google.com/thumbnail?id=1sGgaiDTcaA2W-o6pIM5fMzCvHati8XhV&sz=w2000",
       "url": "https://gpj.ba/repertoar/",
       "description": "Komedija Nikole Kolje Pejakovića o braku: Zoran i Nevenka ulaze u brak bez jasne predstave šta je brak i ko su oni, pa od svakodnevnih prepirki stignu do pred razvod. Tekst i režija Nikola Pejaković; igraju Aleksandra Spasojević, Ljubiša Savanović, Miljka Brđanin i Velimir Blanić.",
       "source": "kuda.",
-      "also_listed_at": [
-        "Gradsko pozorište Jazavac"
-      ],
       "score": 7
     },
     {
@@ -3234,16 +3196,12 @@
       "title": "Bračno savjetovanje",
       "category": "Pozorište",
       "start": "2026-12-07T20:00:00+01:00",
-      "end": "2026-12-07T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "image": "https://drive.google.com/thumbnail?id=1lD0laYc5N_GrjtLHoH2WTuR7IDx7kRKK&sz=w2000",
       "url": "https://gpj.ba/repertoar/",
       "description": "Komedija D. Glatauera o bračnom paru kod psihoterapeuta: od prvog susreta i zaljubljenosti do ćorsokaka u kojem su sada. Pokazuje da odlazak kod terapeuta ne mora biti mučan, nego može biti duhovit. Režija Željko Stjepanović.",
       "source": "kuda.",
-      "also_listed_at": [
-        "Gradsko pozorište Jazavac"
-      ],
       "score": 7
     },
     {
@@ -3662,7 +3620,6 @@
       "title": "Čiča, Miča i njihova priča",
       "category": "Za djecu",
       "start": "2026-12-14T18:00:00+01:00",
-      "end": "2026-12-14T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "hall": "Dječija Juhu scena",
@@ -3670,9 +3627,6 @@
       "url": "https://gpj.ba/repertoar/",
       "description": "Premijera lutkarske predstave za djecu u dramatizaciji Aleksandra Vasiljevića i režiji Belinde Stijak. Igraju Slobodan Perišić, Velimir Blanić i, prvi put u profesionalnom angažmanu, Mila Stanojević. Scenografija i kostimi: Zorana Klječanin.",
       "source": "kuda.",
-      "also_listed_at": [
-        "Gradsko pozorište Jazavac"
-      ],
       "score": 10
     },
     {
@@ -4195,7 +4149,6 @@
       "title": "Čiča, Miča i njihova priča",
       "category": "Za djecu",
       "start": "2026-12-29T19:00:00+01:00",
-      "end": "2026-12-29T00:00:00+01:00",
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "hall": "Dječija Juhu scena",
@@ -4203,9 +4156,6 @@
       "url": "https://gpj.ba/repertoar/",
       "description": "Lutkarska predstava za djecu u dramatizaciji Aleksandra Vasiljevića i režiji Belinde Stijak, uz dodjelu paketića sa Deda Mrazom. Igraju Slobodan Perišić, Velimir Blanić i Mila Stanojević.",
       "source": "kuda.",
-      "also_listed_at": [
-        "Gradsko pozorište Jazavac"
-      ],
       "score": 5
     },
     {
