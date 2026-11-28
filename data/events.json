@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T06:12:05+01:00",
+  "generated_at": "2026-11-28T09:55:23+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -13,7 +13,7 @@
     "Cinestar Delta Planet: programme, 28 films, 115 film-days",
     "Sheet: 44 events added by hand (0 from the form), 10 picture swaps",
     "Banski dvor: pictures from event pages for 1 of 1 events",
-    "TMDB: sharper pictures for 18 of 21 films (1 looked up now)"
+    "TMDB: sharper pictures for 30 of 33 films (12 looked up now)"
   ],
   "problems": [],
   "form": "https://docs.google.com/forms/d/e/1FAIpQLSflNv7M4L31t8sBUV0ctrHxFMpU8Gq9oHSv1_KasTwuyW5OhA/viewform",
@@ -1558,9 +1558,12 @@
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/9BDAiVDAklUz8iN0MICUKOi7Jly.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/amYJCuJIvL2kuVHPQKlOmrVUMFl.jpg",
+      "image_credit": "TMDB",
       "description": "Revija ruskog filma za mlade u Studentskom kulturnom centru. Režija: Sergej Iljin. Ulaz slobodan.",
       "source": "kuda.",
-      "score": 3
+      "score": 6
     },
     {
       "id": "cs-6558-20261201",
@@ -1735,9 +1738,12 @@
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/aHEr9gFNOLRYXLcRCCz1uT8DEOc.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1EYMFlz6zYq9etcMV4mIcoN8w3J.jpg",
+      "image_credit": "TMDB",
       "description": "Klasik iz 1944. (The Curse of the Cat People) u programu Filmostorija. Režija: Robert Wise i Gunther von Fritsch. Ulaz slobodan.",
       "source": "kuda.",
-      "score": 3
+      "score": 6
     },
     {
       "id": "np-25487",
@@ -1886,9 +1892,12 @@
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/An3iR7yPP6GKQi2SDscWlEMFXAC.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/r3oPwy5HILetFqKlTI6BElFoAWf.jpg",
+      "image_credit": "TMDB",
       "description": "Revija ruskog filma za mlade u Studentskom kulturnom centru. Režija: Igor Vološin. Ulaz slobodan.",
       "source": "kuda.",
-      "score": 3
+      "score": 6
     },
     {
       "id": "cs-6558-20261202",
@@ -2144,9 +2153,12 @@
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/5K8GhYPPt7LlKJv4BYBxSyqq9FD.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/7nxNnR9yftqVUoFvBdfr2akgu2A.jpg",
+      "image_credit": "TMDB",
       "description": "Horor klasik iz 1974. (Black Christmas) u programu Filmostorija. Režija: Bob Clark. Ulaz slobodan.",
       "source": "kuda.",
-      "score": 3
+      "score": 6
     },
     {
       "id": "cs-6622-20261202",
@@ -2343,16 +2355,19 @@
       "score": 6
     },
     {
-      "id": "rucno-20261203-na-margini-en-los-margenes",
-      "title": "Na margini (En los márgenes)",
+      "id": "rucno-20261203-ciklus-spanskog-filma-na-margini-en-los-",
+      "title": "Ciklus španskog filma: Na margini (En los márgenes)",
       "category": "Film",
       "start": "2026-12-03T19:00:00+01:00",
       "all_day": false,
       "venue": "Cineplexx Banja Luka",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/5Prjpx6Vt1hoRh9B7Fsh1o36aub.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/mmyPXpBXEuVvpfrvR01nCZ81CpM.jpg",
+      "image_credit": "TMDB",
       "description": "Drama o ljudima kojima prijeti deložacija u Madridu. Režija: Juan Diego Botto (2022); igraju Luis Tosar i Penélope Cruz. Ciklus španske kinematografije, ulaz slobodan.",
       "source": "kuda.",
-      "score": 3
+      "score": 6
     },
     {
       "id": "cs-6641-20261203",
@@ -2502,16 +2517,19 @@
       "score": 6
     },
     {
-      "id": "rucno-20261204-kuca-u-plamenu-la-casa-en-llamas",
-      "title": "Kuća u plamenu (La casa en llamas)",
+      "id": "rucno-20261204-ciklus-spanskog-filma-kuca-u-plamenu-la-",
+      "title": "Ciklus španskog filma: Kuća u plamenu (La casa en llamas)",
       "category": "Film",
       "start": "2026-12-04T19:00:00+01:00",
       "all_day": false,
       "venue": "Cineplexx Banja Luka",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/62XgBKjAcKP0xarT4zJeZZPmfGT.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/gV73dl2hKOHVIt6hQ126egLfwO5.jpg",
+      "image_credit": "TMDB",
       "description": "Porodična komedija: majka okuplja djecu za vikend u kući na moru prije nego što je proda, a stare razmirice izbijaju na površinu. Režija: Dani de la Orden (2024). Ciklus španske kinematografije, ulaz slobodan.",
       "source": "kuda.",
-      "score": 3
+      "score": 6
     },
     {
       "id": "rucno-20261204-ubuntu-guitarfest-joao-carlos-victor-bra",
@@ -2661,16 +2679,19 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "rucno-20261205-prednost-putovanja-vozom-ventajas-de-via",
-      "title": "Prednost putovanja vozom (Ventajas de viajar en tren)",
+      "id": "rucno-20261205-ciklus-spanskog-filma-prednost-putovanja",
+      "title": "Ciklus španskog filma: Prednost putovanja vozom (Ventajas de viajar en tren)",
       "category": "Film",
       "start": "2026-12-05T19:00:00+01:00",
       "all_day": false,
       "venue": "Cineplexx Banja Luka",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/hWGnq0UgUWpbFLQFAijYpVeIAVP.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/enP0oniuGoWgVe2639Q3TjuYTnd.jpg",
+      "image_credit": "TMDB",
       "description": "Crna komedija po romanu Antonija Orehuda: na putovanju vozom neznanac ženi priča sve neobičnije priče. Režija: Aritz Moreno (2019); igraju Luis Tosar i Pilar Castro. Ciklus španske kinematografije, ulaz slobodan.",
       "source": "kuda.",
-      "score": 3
+      "score": 6
     },
     {
       "id": "cs-6641-20261205",
@@ -2886,16 +2907,19 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "rucno-20261206-mortadelo-i-filemon-nevjerovatna-misija",
-      "title": "Mortadelo i Filemon: nevjerovatna misija",
+      "id": "rucno-20261206-ciklus-spanskog-filma-mortadelo-i-filemo",
+      "title": "Ciklus španskog filma: Mortadelo i Filemon: nevjerovatna misija",
       "category": "Film",
       "start": "2026-12-06T19:00:00+01:00",
       "all_day": false,
       "venue": "Cineplexx Banja Luka",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/20msmZ6kEpA90euZOMIp2z0TmsK.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/tvu9nCRms4CDlzJPkrIhzpsXb81.jpg",
+      "image_credit": "TMDB",
       "description": "Animirana avantura po čuvenom španskom stripu o dvojici nespretnih tajnih agenata, dobitnik nagrade Goja za najbolji animirani film. Režija: Javier Fesser (2014). Ciklus španske kinematografije, ulaz slobodan.",
       "source": "kuda.",
-      "score": 3
+      "score": 6
     },
     {
       "id": "rucno-20261206-secer-je-sitan-osim-kad-je-kocka",
@@ -2989,16 +3013,19 @@
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "rucno-20261207-ja-sam-nevenka-soy-nevenka",
-      "title": "Ja sam Nevenka (Soy Nevenka)",
+      "id": "rucno-20261207-ciklus-spanskog-filma-ja-sam-nevenka-soy",
+      "title": "Ciklus španskog filma: Ja sam Nevenka (Soy Nevenka)",
       "category": "Film",
       "start": "2026-12-07T19:00:00+01:00",
       "all_day": false,
       "venue": "Cineplexx Banja Luka",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/aE2lnlUhXaD3enmbxAmgGjb3MPS.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/acfd8XGsi64apGvuIQEN7YgkUxM.jpg",
+      "image_credit": "TMDB",
       "description": "Istinita priča o Nevenki Fernández, prvoj ženi u Španiji koja je na sudu dobila slučaj seksualnog uznemiravanja protiv političara. Režija: Icíar Bollaín (2024). Ciklus španske kinematografije, ulaz slobodan.",
       "source": "kuda.",
-      "score": 3
+      "score": 6
     },
     {
       "id": "rucno-20261207-bracno-savjetovanje",
@@ -3202,9 +3229,12 @@
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/hX2h0usqdY801jIimsO0EvXLIg.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/uNwJfK94Izy8GgXylekOM8VyTFe.jpg",
+      "image_credit": "TMDB",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
-      "score": 6
+      "score": 9
     },
     {
       "id": "rucno-20261209-japanski-filmski-festival-rodjen-kost-ro",
@@ -3214,9 +3244,12 @@
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/1GEZJpkpAtzogNQXBKtpjocRT79.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/AdpgGFPu2GGgb6fAIVcqy8qV5fp.jpg",
+      "image_credit": "TMDB",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
-      "score": 6
+      "score": 9
     },
     {
       "id": "np-25794",
@@ -3281,9 +3314,12 @@
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/8Im0EqH9PmgurlbmZ0P2xSPTclu.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/uNA8FrsbAYQaHp960FMgJv4p0mV.jpg",
+      "image_credit": "TMDB",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
-      "score": 6
+      "score": 9
     },
     {
       "id": "rucno-20261210-japanski-filmski-festival-samo-macka-zna",
@@ -3293,9 +3329,12 @@
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/hX2h0usqdY801jIimsO0EvXLIg.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/uNwJfK94Izy8GgXylekOM8VyTFe.jpg",
+      "image_credit": "TMDB",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
-      "score": 6
+      "score": 9
     },
     {
       "id": "np-25796",
@@ -3322,9 +3361,12 @@
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/8Im0EqH9PmgurlbmZ0P2xSPTclu.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/uNA8FrsbAYQaHp960FMgJv4p0mV.jpg",
+      "image_credit": "TMDB",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
-      "score": 6
+      "score": 9
     },
     {
       "id": "cs-6607-20261211",
@@ -3384,9 +3426,12 @@
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "image": "https://image.tmdb.org/t/p/w780/1GEZJpkpAtzogNQXBKtpjocRT79.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/AdpgGFPu2GGgb6fAIVcqy8qV5fp.jpg",
+      "image_credit": "TMDB",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
-      "score": 6
+      "score": 9
     },
     {
       "id": "np-25798",
