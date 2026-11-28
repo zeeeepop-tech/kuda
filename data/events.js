@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-28T10:48:32+01:00",
+  "generated_at": "2026-11-28T11:37:46+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -10,14 +10,14 @@ window.KUDA_DATA = {
     "Dječije pozorište RS: repertoire, 1 shows playing, 2 performances coming up",
     "SC Borik: table on /?page_id=6913, 115 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
-    "Cinestar Delta Planet: programme, 28 films, 115 film-days",
+    "Cinestar Delta Planet: programme, 28 films, 114 film-days",
     "Sheet: 45 events added by hand (0 from the form), 10 picture swaps",
     "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 30 of 33 films (0 looked up now)"
   ],
   "problems": [],
   "form": "https://docs.google.com/forms/d/e/1FAIpQLSflNv7M4L31t8sBUV0ctrHxFMpU8Gq9oHSv1_KasTwuyW5OhA/viewform",
-  "count": 185,
+  "count": 184,
   "events": [
     {
       "id": "rucno-20260924-izlozba-viktor-majdandzic-umjetnost-kroz",
@@ -81,22 +81,59 @@ window.KUDA_DATA = {
       "score": 6
     },
     {
+      "id": "cs-6512-20261128",
+      "kind": "kino",
+      "title": "Mačak u šeširu",
+      "category": "Kino",
+      "start": "2026-11-28T11:30:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 47min",
+      "showtimes": [
+        {
+          "time": "11:30",
+          "hall": "Sala 5",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/CAC01000023IXUNOEM"
+        },
+        {
+          "time": "13:05",
+          "hall": "Sala 6",
+          "format": "4DX - 3D - SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/EAC01000023IXUNOEM"
+        },
+        {
+          "time": "15:20",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/BEC01000023IXUNOEM"
+        },
+        {
+          "time": "17:30",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/7AC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
+      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "cs-6558-20261128",
       "kind": "kino",
       "title": "Hexe: Kraljevstvo čarolije",
       "category": "Kino",
-      "start": "2026-11-28T11:00:00+01:00",
+      "start": "2026-11-28T11:45:00+01:00",
       "all_day": false,
       "venue": "Cinestar Delta Planet",
       "genre": "Animirani",
       "duration": "1h 50min",
       "showtimes": [
-        {
-          "time": "11:00",
-          "hall": "Sala 6",
-          "format": "4DX - 3D - SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/hexe-kraljevstvo-carolije/E6B01000023IXUNOEM"
-        },
         {
           "time": "11:45",
           "hall": "Sala 1",
@@ -160,136 +197,6 @@ window.KUDA_DATA = {
       "source": "Cinestar Delta Planet"
     },
     {
-      "id": "cs-6544-20261128",
-      "kind": "kino",
-      "title": "Ostrvo sjećanja",
-      "category": "Kino",
-      "start": "2026-11-28T11:00:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Animirani",
-      "duration": "1h 49min",
-      "showtimes": [
-        {
-          "time": "11:00",
-          "hall": "Sala 3",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/ostrvo-sjecanja/2BC01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/rVllj4zmmmNffcsblWjmR7tU887.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/2o9FzuBzCqrDTdlHRuEVnGD2d5h.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ostrvo-sjecanja/6544",
-      "description": "\"Vrijedi se boriti za vaše najbolje prijateljstvo.\" Studio DreamWorks Animation, poznat po nezaboravnim vezama između dječaka i zmaja u Kako da dresirate svog zmaja, između ogra i magarca u Shreku, kao i između robota i guščeta u filmu Neukrotivi robot, donosi novu, blistavu i…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6599-20261128",
-      "kind": "kino",
-      "title": "Životinjska farma",
-      "category": "Kino",
-      "start": "2026-11-28T11:15:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Animirani",
-      "duration": "1h 35min",
-      "showtimes": [
-        {
-          "time": "11:15",
-          "hall": "Sala 4",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/6BC01000023IXUNOEM"
-        },
-        {
-          "time": "15:15",
-          "hall": "Sala 4",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/9BC01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/yM9xRTolPXSjhyQWXwmkcV3Wtne.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/kGGYjn3KpB2FUa5X7wAGs7MZQFD.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/zivotinjska-farma/6599",
-      "description": "Iz maštovitog svijeta Andyja Serkisa stiže nova, zabavna i pustolovna ekranizacija Orwellova bezvremenskoga klasika. Kada životinje preuzmu upravljanje farmom, vjeruju da ih očekuje pravedniji i bolji život. No njihove se velike zamisli ubrzo počinju mijenjati, a zajedništvo…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6539-20261128",
-      "kind": "kino",
-      "title": "Janko Strižić film: Bundevasti kaos",
-      "category": "Kino",
-      "start": "2026-11-28T11:15:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Animirani",
-      "duration": "1h 21min",
-      "showtimes": [
-        {
-          "time": "11:15",
-          "hall": "Sala 2",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/89C01000023IXUNOEM"
-        },
-        {
-          "time": "13:15",
-          "hall": "Sala 2",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/9EC01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/luhCgKwlISVg583ZB68QeIceOEH.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/mG8tVv1RPAKnARWxKTND5dRgMpw.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/6539",
-      "description": "Od studija Aardman Animations, višestrukih dobitnika Oscara i autora nezaboravnih hitova Wallace i Gromit te Bijeg iz kokošinjca, stiže treći nastavak urnebesne animirane avanture za cijelu obitelj! Stanovnici farme Mossy Bottom s veseljem iščekuju Noć vještica, no njihove…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
-      "id": "cs-6512-20261128",
-      "kind": "kino",
-      "title": "Mačak u šeširu",
-      "category": "Kino",
-      "start": "2026-11-28T11:30:00+01:00",
-      "all_day": false,
-      "venue": "Cinestar Delta Planet",
-      "genre": "Animirani",
-      "duration": "1h 47min",
-      "showtimes": [
-        {
-          "time": "11:30",
-          "hall": "Sala 5",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/CAC01000023IXUNOEM"
-        },
-        {
-          "time": "13:05",
-          "hall": "Sala 6",
-          "format": "4DX - 3D - SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/EAC01000023IXUNOEM"
-        },
-        {
-          "time": "15:20",
-          "hall": "Sala 2",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/BEC01000023IXUNOEM"
-        },
-        {
-          "time": "17:30",
-          "hall": "Sala 2",
-          "format": "SINK",
-          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/macak-u-sesiru/7AC01000023IXUNOEM"
-        }
-      ],
-      "image": "https://image.tmdb.org/t/p/w780/yq7YRlxVU59bcg1GbzrTTJj5P1P.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/56Bepb58k71UUTVwKN1SxHmfzPK.jpg",
-      "image_credit": "TMDB",
-      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/macak-u-sesiru/6512",
-      "description": "Animirana suvremena interpretacija klasika dr. Seussa donosi posve novu epsku pustolovinu u kojoj vladaju nestašluk, čarolija i razigranost. Kada u dom dvoje djece neočekivano uđe ekscentrični i šarmantno nepredvidivi Mačak u šeširu, njihov se miran dan pretvara u živahnu…",
-      "source": "Cinestar Delta Planet"
-    },
-    {
       "id": "cs-6533-20261128",
       "kind": "kino",
       "title": "Kristalni planet",
@@ -315,6 +222,31 @@ window.KUDA_DATA = {
       "source": "Cinestar Delta Planet"
     },
     {
+      "id": "cs-6539-20261128",
+      "kind": "kino",
+      "title": "Janko Strižić film: Bundevasti kaos",
+      "category": "Kino",
+      "start": "2026-11-28T13:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 21min",
+      "showtimes": [
+        {
+          "time": "13:15",
+          "hall": "Sala 2",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/9EC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/luhCgKwlISVg583ZB68QeIceOEH.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/mG8tVv1RPAKnARWxKTND5dRgMpw.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/janko-strizic-film-bundevasti-kaos/6539",
+      "description": "Od studija Aardman Animations, višestrukih dobitnika Oscara i autora nezaboravnih hitova Wallace i Gromit te Bijeg iz kokošinjca, stiže treći nastavak urnebesne animirane avanture za cijelu obitelj! Stanovnici farme Mossy Bottom s veseljem iščekuju Noć vještica, no njihove…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
       "id": "cs-6518-20261128",
       "kind": "kino",
       "title": "Malci i monstrumi",
@@ -335,6 +267,31 @@ window.KUDA_DATA = {
       "image": "https://cinestarcinemas.ba/remote/185.155.226.145/movies/Minions%20and%20Monsters/minions_300x400_bih.jpg?preset=film",
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/malci-i-monstrumi/6518",
       "description": "Ubrzo nakon ogromnog svjetskog uspeha blockbustera GROZAN JA 4, najduhovitije letnje komedije u 2024. godini, Ilummination proširuje svoj veseli animirani univerzum novim urnebesnim poglavljem, uz potpuno nove likove, u najvećoj globalnoj animiranoj franšizi u istoriji: MALCI I…",
+      "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "cs-6599-20261128",
+      "kind": "kino",
+      "title": "Životinjska farma",
+      "category": "Kino",
+      "start": "2026-11-28T15:15:00+01:00",
+      "all_day": false,
+      "venue": "Cinestar Delta Planet",
+      "genre": "Animirani",
+      "duration": "1h 35min",
+      "showtimes": [
+        {
+          "time": "15:15",
+          "hall": "Sala 4",
+          "format": "SINK",
+          "ticket": "https://cinestarcinemas.ba/Shop/banja-luka-delta-planet/zivotinjska-farma/9BC01000023IXUNOEM"
+        }
+      ],
+      "image": "https://image.tmdb.org/t/p/w780/yM9xRTolPXSjhyQWXwmkcV3Wtne.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/kGGYjn3KpB2FUa5X7wAGs7MZQFD.jpg",
+      "image_credit": "TMDB",
+      "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/zivotinjska-farma/6599",
+      "description": "Iz maštovitog svijeta Andyja Serkisa stiže nova, zabavna i pustolovna ekranizacija Orwellova bezvremenskoga klasika. Kada životinje preuzmu upravljanje farmom, vjeruju da ih očekuje pravedniji i bolji život. No njihove se velike zamisli ubrzo počinju mijenjati, a zajedništvo…",
       "source": "Cinestar Delta Planet"
     },
     {
@@ -1045,6 +1002,7 @@ window.KUDA_DATA = {
       "all_day": false,
       "venue": "Gradsko pozorište Jazavac",
       "organizer": "GP Jazavac",
+      "note": "Last Few Tickets",
       "image": "https://drive.google.com/thumbnail?id=1XC5uUcAqlLG9xu27dBSvf8TVKtBkK5tL&sz=w2000",
       "url": "https://gpj.ba/repertoar/pidzama-za-sestoro-2-3/",
       "description": "Komedija M. Kamoletija, vodvilj u kojem oženjeni junak želi ljubavnu vezu sa drugom ženom i zapada u niz komičnih situacija. Komedija zapleta, ali i naravi. Režija Željko Stjepanović; igraju Željko Erkić, Zlatan Vidović, Anja Ilić, Snježana Mišić / Miljka Brđanin, Dragana Marić i Velimir Blanić.",
@@ -1384,7 +1342,8 @@ window.KUDA_DATA = {
       "also_listed_at": [
         "Banski dvor"
       ],
-      "score": 8
+      "highlight": true,
+      "score": 108
     },
     {
       "id": "rucno-20261130-kroz-zivot-sa-veljom",
