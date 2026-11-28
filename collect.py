@@ -696,14 +696,14 @@ def _film_page_facts(url: str) -> tuple:
     return (title or None, int(when.group(3)) if when else None)
 
 
-def _tmdb_match(titles: list, year) -> dict | None:
+def _tmdb_match(titles: list, year, language: str = "hr-HR") -> dict | None:
     """The TMDB film with exactly this title (original or local), preferring the right year."""
     norm = lambda t: re.sub(r"[^a-z0-9]+", "", fold(t or ""))
     titles = [t for t in dict.fromkeys(titles) if t]
-    wanted = {norm(t) for t in titles}
+    wanted = {norm(t) for t in titles} - {""}
     for query in titles:
         for y in ([year, year - 1, None] if year else [None]):
-            found = _tmdb("/search/movie", query=query, primary_release_year=y, include_adult="false", language="hr-HR")
+            found = _tmdb("/search/movie", query=query, primary_release_year=y, include_adult="false", language=language)
             hits = [m for m in found.get("results", []) if m.get("poster_path")
                     and wanted & {norm(m.get("title")), norm(m.get("original_title"))}]
             if hits:
@@ -732,6 +732,9 @@ def film_pictures(events: list, log: list, offline: bool = False) -> None:
     for e in events:
         if e.get("kind") == "kino" and e.get("url"):
             films.setdefault(e["url"], []).append(e)
+        elif e.get("tmdb"):  # a film from the sheet: "tmdb: Original title 2019" or a TMDB link in the Slika column
+            wish = e["tmdb"]
+            films.setdefault(f"tmdb:{wish['id']}" if wish.get("id") else f"tmdb:{fold('/'.join(wish['titles']))}:{wish.get('year') or ''}", []).append(e)
     if not films:
         return
     try:
@@ -747,8 +750,13 @@ def film_pictures(events: list, log: list, offline: bool = False) -> None:
         if can_ask and (not known or stale):
             asked += 1
             try:
-                original, year = _film_page_facts(url)
-                hit = _tmdb_match([original, items[0]["title"]], year)
+                wish = items[0].get("tmdb")
+                if wish:
+                    hit = ({"id": wish["id"]} if wish.get("id") else _tmdb_match(wish["titles"], wish.get("year"))
+                           or _tmdb_match(wish["titles"], wish.get("year"), language="en-US"))
+                else:
+                    original, year = _film_page_facts(url)
+                    hit = _tmdb_match([original, items[0]["title"]], year)
                 poster, still = _tmdb_pictures(hit["id"]) if hit else (None, None)
                 known = cache[url] = {"tmdb": hit["id"] if hit else None, "poster": poster, "backdrop": still,
                                       "checked": today.isoformat()}
@@ -759,6 +767,8 @@ def film_pictures(events: list, log: list, offline: bool = False) -> None:
                 continue
         if known:
             known["seen"] = today.isoformat()
+            if items[0].get("tmdb") and not known.get("poster"):
+                log.append(f"Sheet: could not find \"{items[0]['title']}\" on TMDB; check the film in its Slika column")
             if known.get("poster"):
                 found += 1
                 for e in items:
@@ -790,9 +800,24 @@ def _cell(row: dict, name: str) -> str:
     return next((v for k, v in row.items() if k.startswith(name)), "")
 
 
+def _sheet_tmdb(value: str):
+    """A film's pictures from TMDB, asked for in the Slika column: a TMDB film link, or "tmdb: Original title 2019"
+    (several titles may be given, split by " / ")."""
+    link = re.search(r"themoviedb\.org/(?:[a-z-]+/)?movie/(\d+)", value)
+    if link:
+        return {"id": int(link.group(1))}
+    spec = re.match(r"\s*tmdb\s*:\s*(.+?)\s*(?:\(?((?:19|20)\d\d)\)?)?\s*$", value, re.I)
+    if not spec:
+        return None
+    titles = [t.strip() for t in spec.group(1).split(" / ") if t.strip()]
+    return {"titles": titles, "year": int(spec.group(2)) if spec.group(2) else None} if titles else None
+
+
 def _sheet_picture(value: str):
     """A picture from the sheet: an image link, a Google Drive link (shared with anyone), or a file in the repository."""
     value = value.strip()
+    if _sheet_tmdb(value):
+        return None  # film pictures from TMDB come later, in film_pictures
     drive = re.search(r"drive\.google\.com/(?:file/d/|open\?id=|uc\?(?:[^#]*&)?id=)([\w-]{20,})", value)
     if drive:
         return f"https://drive.google.com/thumbnail?id={drive.group(1)}&sz=w2000"
@@ -850,7 +875,7 @@ def from_sheet(today: dt.date, horizon: dt.date, log: list) -> tuple:
         e = {"title": title, "start": _day_start(day, hm), "end": end, "all_day": hm is None, "kind": None,
              "venue": one_line(_cell(row, "mjesto")) or None, "hall": one_line(_cell(row, "sala")) or None,
              "price": one_line(_cell(row, "cijena")) or None, "description": _cell(row, "opis") or None,
-             "image": _sheet_picture(_cell(row, "slika")), "url": _cell(row, "link") or None,
+             "image": _sheet_picture(_cell(row, "slika")), "tmdb": _sheet_tmdb(_cell(row, "slika")), "url": _cell(row, "link") or None,
              "ticket_url": _cell(row, "karte") or None, "source": "kuda.",
              "source_id": f"{day:%Y%m%d}-" + re.sub(r"[^a-z0-9]+", "-", fold(title)).strip("-")[:40]}
         e["category"] = categories.get(fold(_cell(row, "kategorija"))) or categorize(e, "Izložbe" if end else "Ostalo")
