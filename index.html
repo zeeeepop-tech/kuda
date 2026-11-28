@@ -462,6 +462,8 @@ footer .links { margin-top: 12px; }
 
   const byId = (id) => all.find((e) => e.id === id) || null;
 
+  // free: "Ulaz slobodan" from the sites, or "Besplatno" (also "Besplatno, uz pozivnicu") typed in the sheet
+  const isFree = (e) => /^(ulaz (je )?slobodan|slobodan ulaz|besplat|free\b)/i.test((e.price || "").trim());
   const state = { day: todayKey, cat: "Sve", free: false, savedOnly: false, q: "" };
   const saved = new Set(store.get("kuda.saved", []));
   const dlg = $("#detail");
@@ -475,7 +477,7 @@ footer .links { margin-top: 12px; }
   function matches(e, ignore) {
     if (ignore !== "day" && !state.q && !state.savedOnly && !inView(e)) return false;
     if (ignore !== "cat" && state.cat !== "Sve" && e.category !== state.cat) return false;
-    if (state.free && e.price !== "Ulaz slobodan") return false;
+    if (state.free && !isFree(e)) return false;
     if (state.savedOnly && !saved.has(e.id)) return false;
     if (state.q && !state.q.split(/\s+/).every((w) => e.find.includes(w))) return false;
     return true;
@@ -515,7 +517,7 @@ footer .links { margin-top: 12px; }
 
   function tags(e) {
     const t = [];
-    if (e.price) t.push(`<span class="tag${e.price === "Ulaz slobodan" ? " free" : ""}">${esc(e.price)}</span>`);
+    if (e.price) t.push(`<span class="tag${isFree(e) ? " free" : ""}">${esc(e.price)}</span>`);
     if (e.age) t.push(`<span class="tag">${esc(e.age)}</span>`);
     return t.length ? `<div class="tags">${t.join("")}</div>` : "";
   }
