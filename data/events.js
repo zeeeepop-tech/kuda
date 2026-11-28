@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-28T10:24:07+01:00",
+  "generated_at": "2026-11-28T10:48:32+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -11,13 +11,13 @@ window.KUDA_DATA = {
     "SC Borik: table on /?page_id=6913, 115 rows with a date",
     "Gigstix: listing, 3 events in Banja Luka",
     "Cinestar Delta Planet: programme, 28 films, 115 film-days",
-    "Sheet: 44 events added by hand (0 from the form), 10 picture swaps",
+    "Sheet: 45 events added by hand (0 from the form), 10 picture swaps",
     "Banski dvor: pictures from event pages for 1 of 1 events",
     "TMDB: sharper pictures for 30 of 33 films (0 looked up now)"
   ],
   "problems": [],
   "form": "https://docs.google.com/forms/d/e/1FAIpQLSflNv7M4L31t8sBUV0ctrHxFMpU8Gq9oHSv1_KasTwuyW5OhA/viewform",
-  "count": 184,
+  "count": 185,
   "events": [
     {
       "id": "rucno-20260924-izlozba-viktor-majdandzic-umjetnost-kroz",
@@ -1325,6 +1325,21 @@ window.KUDA_DATA = {
       "url": "https://cinestarcinemas.ba/banja-luka-delta-planet/ebenezer-bozicna-prica/6557",
       "description": "Ovog novembra, Johnny Depp je Ebenezer Scrooge. Ime koje znate, priča koju ne znate. Film EBENEZER - BOŽIĆNA PRIČA\" režirao je Ti West, a u glavnim ulogama gledaćemo i Ruperta Grinta, Andreu Riseborough, Sama Claflina, Daisy Ridley, Arthur Conti, Ellie Bamber, Henry…",
       "source": "Cinestar Delta Planet"
+    },
+    {
+      "id": "rucno-20261130-otvaranje-izlozbe-oslobadjanje-forme-slo",
+      "title": "Otvaranje izložbe „Oslobađanje forme: Slobodan Dragaš – stvaranje u objektivu“",
+      "category": "Izložbe",
+      "start": "2026-11-30T19:00:00+01:00",
+      "all_day": false,
+      "venue": "Narodna i univerzitetska biblioteka Republike Srpske",
+      "hall": "Izložbeni salon",
+      "price": "Besplatno",
+      "image": "https://drive.google.com/thumbnail?id=1ICRtJNtzHcCeE9o8xiPRTLPy7HxMyfcw&sz=w2000",
+      "url": "https://nub.rs/?p=337",
+      "description": "Izložba povodom 20 godina od smrti vajara Slobodana Dragaša: izbor njegovih crteža i skulptura, od prve godine srednje škole u Splitu do prvih studija anatomije na Akademiji u Sarajevu, i elektronska izložba fotografija o nastanku skulptura. Izložbu potpisuje Vanja Šmulja.",
+      "source": "kuda.",
+      "score": 11
     },
     {
       "id": "cs-6603-20261130",
