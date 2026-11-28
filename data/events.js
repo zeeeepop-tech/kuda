@@ -1,5 +1,5 @@
 window.KUDA_DATA = {
-  "generated_at": "2026-11-28T09:55:23+01:00",
+  "generated_at": "2026-11-28T10:24:07+01:00",
   "timezone": "Europe/Sarajevo",
   "days_ahead": 90,
   "offline_rerun": false,
@@ -13,7 +13,7 @@ window.KUDA_DATA = {
     "Cinestar Delta Planet: programme, 28 films, 115 film-days",
     "Sheet: 44 events added by hand (0 from the form), 10 picture swaps",
     "Banski dvor: pictures from event pages for 1 of 1 events",
-    "TMDB: sharper pictures for 30 of 33 films (12 looked up now)"
+    "TMDB: sharper pictures for 30 of 33 films (0 looked up now)"
   ],
   "problems": [],
   "form": "https://docs.google.com/forms/d/e/1FAIpQLSflNv7M4L31t8sBUV0ctrHxFMpU8Gq9oHSv1_KasTwuyW5OhA/viewform",
@@ -1561,6 +1561,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/9BDAiVDAklUz8iN0MICUKOi7Jly.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/amYJCuJIvL2kuVHPQKlOmrVUMFl.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Revija ruskog filma za mlade u Studentskom kulturnom centru. Režija: Sergej Iljin. Ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -1741,6 +1742,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/aHEr9gFNOLRYXLcRCCz1uT8DEOc.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/1EYMFlz6zYq9etcMV4mIcoN8w3J.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Klasik iz 1944. (The Curse of the Cat People) u programu Filmostorija. Režija: Robert Wise i Gunther von Fritsch. Ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -1895,6 +1897,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/An3iR7yPP6GKQi2SDscWlEMFXAC.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/r3oPwy5HILetFqKlTI6BElFoAWf.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Revija ruskog filma za mlade u Studentskom kulturnom centru. Režija: Igor Vološin. Ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -2156,6 +2159,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/5K8GhYPPt7LlKJv4BYBxSyqq9FD.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/7nxNnR9yftqVUoFvBdfr2akgu2A.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Horor klasik iz 1974. (Black Christmas) u programu Filmostorija. Režija: Bob Clark. Ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -2365,6 +2369,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/5Prjpx6Vt1hoRh9B7Fsh1o36aub.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/mmyPXpBXEuVvpfrvR01nCZ81CpM.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.cineplexxpalas.ba/uskoro/1736-na-margini",
       "description": "Drama o ljudima kojima prijeti deložacija u Madridu. Režija: Juan Diego Botto (2022); igraju Luis Tosar i Penélope Cruz. Ciklus španske kinematografije, ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -2527,6 +2532,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/62XgBKjAcKP0xarT4zJeZZPmfGT.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/gV73dl2hKOHVIt6hQ126egLfwO5.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.cineplexxpalas.ba/uskoro/1737-kua-u-plamenu",
       "description": "Porodična komedija: majka okuplja djecu za vikend u kući na moru prije nego što je proda, a stare razmirice izbijaju na površinu. Režija: Dani de la Orden (2024). Ciklus španske kinematografije, ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -2689,6 +2695,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/hWGnq0UgUWpbFLQFAijYpVeIAVP.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/enP0oniuGoWgVe2639Q3TjuYTnd.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.cineplexxpalas.ba/uskoro/1738-prednost-putovanja-vozom",
       "description": "Crna komedija po romanu Antonija Orehuda: na putovanju vozom neznanac ženi priča sve neobičnije priče. Režija: Aritz Moreno (2019); igraju Luis Tosar i Pilar Castro. Ciklus španske kinematografije, ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -2917,6 +2924,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/20msmZ6kEpA90euZOMIp2z0TmsK.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/tvu9nCRms4CDlzJPkrIhzpsXb81.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.cineplexxpalas.ba/uskoro/1739-mortadelo-u-filemon",
       "description": "Animirana avantura po čuvenom španskom stripu o dvojici nespretnih tajnih agenata, dobitnik nagrade Goja za najbolji animirani film. Režija: Javier Fesser (2014). Ciklus španske kinematografije, ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -3023,6 +3031,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/aE2lnlUhXaD3enmbxAmgGjb3MPS.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/acfd8XGsi64apGvuIQEN7YgkUxM.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.cineplexxpalas.ba/uskoro/1740-ja-sam-nevenka",
       "description": "Istinita priča o Nevenki Fernández, prvoj ženi u Španiji koja je na sudu dobila slučaj seksualnog uznemiravanja protiv političara. Režija: Icíar Bollaín (2024). Ciklus španske kinematografije, ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -3052,6 +3061,7 @@ window.KUDA_DATA = {
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Ispitna predstava studenata treće godine glume Akademije umjetnosti Univerziteta u Banjoj Luci, po drami Henrika Ibzena. Ulaz slobodan.",
       "source": "kuda.",
       "score": 3
@@ -3128,6 +3138,7 @@ window.KUDA_DATA = {
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Ispitna predstava studenata četvrte godine glume Akademije umjetnosti Univerziteta u Banjoj Luci. Ulaz slobodan.",
       "source": "kuda.",
       "score": 3
@@ -3232,6 +3243,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/hX2h0usqdY801jIimsO0EvXLIg.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/uNwJfK94Izy8GgXylekOM8VyTFe.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
       "score": 9
@@ -3247,6 +3259,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/1GEZJpkpAtzogNQXBKtpjocRT79.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/AdpgGFPu2GGgb6fAIVcqy8qV5fp.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
       "score": 9
@@ -3276,6 +3289,7 @@ window.KUDA_DATA = {
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Program stop-animacije Takeši Jašira na Japanskom filmskom festivalu, koji traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -3317,6 +3331,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/8Im0EqH9PmgurlbmZ0P2xSPTclu.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/uNA8FrsbAYQaHp960FMgJv4p0mV.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
       "score": 9
@@ -3332,6 +3347,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/hX2h0usqdY801jIimsO0EvXLIg.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/uNwJfK94Izy8GgXylekOM8VyTFe.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
       "score": 9
@@ -3364,6 +3380,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/8Im0EqH9PmgurlbmZ0P2xSPTclu.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/uNA8FrsbAYQaHp960FMgJv4p0mV.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
       "score": 9
@@ -3402,6 +3419,7 @@ window.KUDA_DATA = {
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Program stop-animacije Takeši Jašira na Japanskom filmskom festivalu, koji traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
       "score": 6
@@ -3414,6 +3432,7 @@ window.KUDA_DATA = {
       "all_day": false,
       "venue": "Studentski kulturni centar UNIBL",
       "price": "Besplatno",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Retrospektiva radova studenata arhitekture Univerziteta u Banjoj Luci. Ulaz slobodan.",
       "source": "kuda.",
       "score": 8
@@ -3429,6 +3448,7 @@ window.KUDA_DATA = {
       "image": "https://image.tmdb.org/t/p/w780/1GEZJpkpAtzogNQXBKtpjocRT79.jpg",
       "backdrop": "https://image.tmdb.org/t/p/w1280/AdpgGFPu2GGgb6fAIVcqy8qV5fp.jpg",
       "image_credit": "TMDB",
+      "url": "https://www.instagram.com/p/DgQGIrRRbPg/",
       "description": "Japanski filmski festival u Studentskom kulturnom centru traje od 9. do 11. decembra. Ulaz slobodan.",
       "source": "kuda.",
       "score": 9
